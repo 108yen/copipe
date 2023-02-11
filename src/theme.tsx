@@ -1,7 +1,14 @@
 import { createTheme } from '@mui/material/styles';
 
 const theme = createTheme({
-    // TODO:テーマ設定を行います
+    palette: {
+        mode: 'light',
+        primary: {
+            main: '#eceff1',
+            light: '#ffffff',
+            dark: '#babdbe',
+        }
+    }
 });
 
 export default theme;
