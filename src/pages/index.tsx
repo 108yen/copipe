@@ -1,10 +1,16 @@
 import type { NextPage } from 'next'
-import { Button } from '@mui/material';
+import { Container, Button, Box } from '@mui/material';
+import SearchAppBar from './searchAppBar';
 
 const Home: NextPage = () => {
   return (
     <>
-      <Button variant="contained">Hello World</Button>
+      <SearchAppBar />
+      <Container fixed>
+        <Box sx={{ bgcolor: '#cfe8fc', height: '100vh' }} >
+          <Button variant="contained">Hello World</Button>
+        </Box>
+      </Container>
     </>
   )
 }
