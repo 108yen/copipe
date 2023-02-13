@@ -1,8 +1,12 @@
 import type { NextPage } from 'next'
 import { Container, Button, Box, Grid, Card, CardContent } from '@mui/material';
 import SearchAppBar from './searchAppBar';
+import { postData } from "./Atoms";
+import { useAtom } from 'jotai';
 
 const Home: NextPage = () => {
+  const [post] = useAtom(postData)
+
   return (
     <>
       <SearchAppBar />
@@ -11,7 +15,12 @@ const Home: NextPage = () => {
           <Grid item xs={12} md={6}>
             <Card sx={{ bgcolor: 'primary.main' }}>
               <CardContent>
-                xs=8
+                {/* <ul>
+                  {post?.map((item) => <li>{item}</li>)}
+                </ul> */}
+                <ul>
+                  {post}
+                </ul>
               </CardContent>
             </Card>
             {/* xs=8 */}
