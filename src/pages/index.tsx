@@ -1,11 +1,11 @@
 import type { NextPage } from 'next'
 import { Container, Button, Box, Grid, Card, CardContent } from '@mui/material';
 import SearchAppBar from './searchAppBar';
-import { postData } from "./Atoms";
+import { postAllCopipeAtom } from "./Atoms";
 import { useAtom } from 'jotai';
 
 const Home: NextPage = () => {
-  const [post] = useAtom(postData)
+  const [post] = useAtom(postAllCopipeAtom)
 
   return (
     <>
