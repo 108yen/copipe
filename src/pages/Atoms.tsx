@@ -1,5 +1,9 @@
+import theme from "@/theme";
 import supabase from "@/utils/supabase";
+import { Button, Divider, Paper, Stack, Typography } from "@mui/material";
+import { Box, Container } from "@mui/system";
 import { atom, useAtom } from "jotai";
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 type Copipe = {
     id: number;
@@ -22,10 +26,46 @@ export const postAllCopipeAtom = atom(async (get) => {
         return copipe;
     }) : [];
 
-    return copipes.map((e) => <li>{e.title}</li>);
+    return copipes.map((e) =>
+        <Box
+            sx={{
+                margin: theme.spacing(2),
+            }}
+        >
+            <Stack
+                direction='row'
+                justifyContent="space-between"
+            >
+                <Typography
+                    variant="h5"
+                    noWrap
+                    sx={{
+                        flexGrow: 1,
+                        display: 'block',
+                    }}
+                >
+                    {e.title}
+                </Typography>
+                <Button
+                    variant="outlined"
+                    color="inherit"
+                    size="small"
+                    startIcon={<ContentCopyIcon />}
+                >
+                    copy
+                </Button>
+            </Stack>
+            <Divider />
+            <Typography
+                variant="body1"
+                sx={{
+                    flexGrow: 1,
+                    display: 'block',
+                }}
+                gutterBottom
+            >
+                {e.data}
+            </Typography>
+        </Box>
+    );
 })
-
-
-// export const copipe = atom(
-//     (get)=>get(postDataAtom).
-// )
