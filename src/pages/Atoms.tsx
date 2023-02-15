@@ -29,7 +29,8 @@ export const postAllCopipeAtom = atom(async (get) => {
     return copipes.map((e) =>
         <Box
             sx={{
-                margin: theme.spacing(2),
+                // margin: theme.spacing(2),
+                margin: 2,
             }}
         >
             <Stack
@@ -48,7 +49,7 @@ export const postAllCopipeAtom = atom(async (get) => {
                 </Typography>
                 <Button
                     variant="outlined"
-                    color="inherit"
+                    color="secondary"
                     size="small"
                     startIcon={<ContentCopyIcon />}
                 >

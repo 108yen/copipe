@@ -13,7 +13,7 @@ const Home: NextPage = () => {
       <Box sx={{ flexGrow: 1, p: 3 }}>
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={7}>
-            <Card sx={{ bgcolor: 'primary.main' }}>
+            <Card>
               <CardContent>
                   {post}
               </CardContent>
