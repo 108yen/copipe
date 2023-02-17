@@ -14,8 +14,10 @@ export type Copipe = {
 }
 
 export const postAllCopipeAtom = atom(async (get) => {
-    const response = await supabase.from('copipe').select('*');
-    const copipes: Array<Copipe> = response.data != null ? response.data.map(e => {
+    const { data, error } = await supabase
+        .from('copipe')
+        .select('*');
+    const copipes: Array<Copipe> = data != null ? data.map(e => {
         const copipeItem: Copipe = {
             id: e.id,
             inserted_at: e.inserted_at,
