@@ -39,7 +39,7 @@ const CopipeItemWidget=(copipeItem: Copipe)=> {
             </Typography>
             <IconButton
                 color="secondary"
-                aria-labe="copy"
+                aria-label="copy"
                 size="small"
                 onClick={async () => { await global.navigator.clipboard.writeText(copipeItem.data); }}
             >
