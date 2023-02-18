@@ -8,12 +8,19 @@ import { Card } from '@mui/material';
 import theme from '@/theme';
 import { useAtom } from 'jotai';
 import { searchTextAtom } from '../Atoms';
+import styled from '@emotion/styled';
+
+const SearchCard = styled(Card)(() => ({
+    position: "sticky",
+    top: 0,
+    zIndex: 100,
+}));
 
 export default function SearchForm() {
     const [searchText, setSearchText] = useAtom(searchTextAtom);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key=='Enter') {
+        if (event.key == 'Enter') {
             handleSubmit();
         }
     }
@@ -29,7 +36,7 @@ export default function SearchForm() {
     }
 
     return (
-        <Card
+        <SearchCard
             sx={{ m: theme.spacing(2) }}
         >
             <FormControl fullWidth>
@@ -39,7 +46,7 @@ export default function SearchForm() {
                         endAdornment: (
                             <InputAdornment position="end">
                                 <IconButton
-                                onClick={handleSubmit}
+                                    onClick={handleSubmit}
                                 >
                                     <SearchIcon />
                                 </IconButton>
@@ -52,6 +59,6 @@ export default function SearchForm() {
                 >
                 </TextField>
             </FormControl>
-        </Card>
+        </SearchCard>
     );
 }
