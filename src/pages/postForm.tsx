@@ -23,7 +23,6 @@ const PostForm: NextPage = () => {
         if (formProps.body != '') {
             setBodyFormValidate(true);
         }
-        console.log(bodyFormValidate);
     }
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();

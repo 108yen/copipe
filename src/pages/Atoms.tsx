@@ -1,9 +1,5 @@
-import theme from "@/theme";
 import supabase from "@/utils/supabase";
-import { Button, Divider, Paper, Stack, Typography } from "@mui/material";
-import { Box, Container } from "@mui/system";
-import { atom, useAtom } from "jotai";
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { atom } from "jotai";
 
 export type Copipe = {
     id: number;
@@ -42,3 +38,5 @@ export const formPropsAtom = atom<FormProps>({
 })
 
 export const bodyFormValidateAtom = atom(true);
+
+export const searchTextAtom = atom("");
