@@ -30,3 +30,13 @@ export const postAllCopipeAtom = atom(async (get) => {
 
     return copipes;
 })
+
+export type FormProps = {
+    title: string;
+    body: string;
+}
+
+export const formPropsAtom=atom<FormProps>({
+    title:'',
+    body:'',
+})
