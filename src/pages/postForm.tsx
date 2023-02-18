@@ -3,7 +3,7 @@ import { Box, Button, Card, CardContent, Grid, styled, TextField, Typography } f
 import { useAtom } from "jotai";
 import { NextPage } from "next";
 import { FormEventHandler } from "react";
-import { formPropsAtom } from "./Atoms";
+import { bodyFormValidateAtom, formPropsAtom } from "./Atoms";
 import SearchAppBar from "./modules/searchAppBar";
 
 const ExpandableTextField = styled(TextField)(({ theme }) => ({
@@ -15,21 +15,32 @@ const ExpandableTextField = styled(TextField)(({ theme }) => ({
 
 const PostForm: NextPage = () => {
     const [formProps, setFormProps] = useAtom(formPropsAtom);
+    const [bodyFormValidate, setBodyFormValidate] = useAtom(bodyFormValidateAtom);
+
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { id, value } = event.target;
         setFormProps((prev) => ({ ...prev, [id]: value }));
+        if (formProps.body != '') {
+            setBodyFormValidate(true);
+        }
+        console.log(bodyFormValidate);
     }
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
         //todo:vaidationチェックとかもうないかとかいろいろ確認したい。ポップアップも出したい
-        const { data, error } = await supabase
-            .from('copipe')
-            .insert([
-                {
-                    title: formProps.title,
-                    body: formProps.body,
-                },
-            ]);
+        if (formProps.body == "") {
+            setBodyFormValidate(false);
+        } else {
+            //!一旦オフ
+            // const { data, error } = await supabase
+            //     .from('copipe')
+            //     .insert([
+            //         {
+            //             title: formProps.title,
+            //             body: formProps.body,
+            //         },
+            //     ]);
+        }
     }
 
     return (
@@ -43,23 +54,24 @@ const PostForm: NextPage = () => {
                                 <form onSubmit={handleSubmit}>
                                     <TextField
                                         id="title"
-                                        label="Title"
+                                        label="タイトル"
                                         fullWidth
                                         margin="normal"
+                                        color='secondary'
                                         onChange={handleChange}
                                     />
                                     <ExpandableTextField
                                         id="body"
-                                        label="Content"
+                                        label="本文"
                                         fullWidth
                                         multiline
                                         minRows={4}
                                         maxRows={30}
                                         margin="normal"
+                                        color='secondary'
                                         onChange={handleChange}
-                                        sx={{
-                                            overflow:'hidden',
-                                        }}
+                                        error={!bodyFormValidate}
+                                        helperText={bodyFormValidate ? "" : "本文を入力してください"}
                                     />
                                     <Box sx={{
                                         display: 'flex',

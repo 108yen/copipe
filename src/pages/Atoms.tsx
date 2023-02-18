@@ -36,7 +36,9 @@ export type FormProps = {
     body: string;
 }
 
-export const formPropsAtom=atom<FormProps>({
-    title:'',
-    body:'',
+export const formPropsAtom = atom<FormProps>({
+    title: '',
+    body: '',
 })
+
+export const bodyFormValidateAtom = atom(true);
