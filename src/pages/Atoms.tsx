@@ -9,7 +9,7 @@ export type Copipe = {
     id: number;
     inserted_at: Date;
     updated_at: Date;
-    data: string;
+    body: string;
     title: string;
 }
 
@@ -22,7 +22,7 @@ export const postAllCopipeAtom = atom(async (get) => {
             id: e.id,
             inserted_at: e.inserted_at,
             updated_at: e.updated_at,
-            data: e.data,
+            body: e.body,
             title: e.title,
         };
         return copipeItem;

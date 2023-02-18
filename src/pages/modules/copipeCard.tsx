@@ -52,7 +52,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
                     color="secondary"
                     aria-label="copy"
                     size="small"
-                    onClick={() => handleClickCopy(copipeItem.data, copipeItem.id)}
+                    onClick={() => handleClickCopy(copipeItem.body, copipeItem.id)}
                 >
                     <ContentCopyIcon fontSize="inherit" />
                 </IconButton>
@@ -66,7 +66,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
                 }}
                 gutterBottom
             >
-                {copipeItem.data}
+                {copipeItem.body}
             </Typography>
         </Box>
     );

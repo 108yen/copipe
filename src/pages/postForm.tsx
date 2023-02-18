@@ -1,3 +1,4 @@
+import supabase from "@/utils/supabase";
 import { Box, Button, Card, CardContent, Grid, TextField, Typography } from "@mui/material";
 import { useAtom } from "jotai";
 import { NextPage } from "next";
@@ -12,9 +13,16 @@ const PostForm: NextPage = () => {
         const { id, value } = event.target;
         setFormProps((prev) => ({ ...prev, [id]: value }));
     }
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
-        console.log(formProps);
+        const { data, error } = await supabase
+            .from('copipe')
+            .insert([
+                {
+                    title: formProps.title,
+                    body: formProps.body,
+                },
+            ]);
     }
 
     return (
