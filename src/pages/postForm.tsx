@@ -1,11 +1,17 @@
 import supabase from "@/utils/supabase";
-import { Box, Button, Card, CardContent, Grid, TextField, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Grid, styled, TextField, Typography } from "@mui/material";
 import { useAtom } from "jotai";
 import { NextPage } from "next";
 import { FormEventHandler } from "react";
 import { formPropsAtom } from "./Atoms";
 import SearchAppBar from "./modules/searchAppBar";
 
+const ExpandableTextField = styled(TextField)(({ theme }) => ({
+    '& > textarea': {
+        lineHeight: 1.5,
+        overflow: 'hidden',
+    },
+}));
 
 const PostForm: NextPage = () => {
     const [formProps, setFormProps] = useAtom(formPropsAtom);
@@ -15,6 +21,7 @@ const PostForm: NextPage = () => {
     }
     const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
         event.preventDefault();
+        //todo:vaidationチェックとかもうないかとかいろいろ確認したい。ポップアップも出したい
         const { data, error } = await supabase
             .from('copipe')
             .insert([
@@ -41,14 +48,18 @@ const PostForm: NextPage = () => {
                                         margin="normal"
                                         onChange={handleChange}
                                     />
-                                    <TextField
+                                    <ExpandableTextField
                                         id="body"
                                         label="Content"
                                         fullWidth
                                         multiline
-                                        rows={4}
+                                        minRows={4}
+                                        maxRows={30}
                                         margin="normal"
                                         onChange={handleChange}
+                                        sx={{
+                                            overflow:'hidden',
+                                        }}
                                     />
                                     <Box sx={{
                                         display: 'flex',
