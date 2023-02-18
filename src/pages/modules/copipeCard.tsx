@@ -9,7 +9,9 @@ export default function CopipeCard() {
     const [post] = useAtom(postAllCopipeAtom);
 
     return (
-        <Card>
+        <Card
+            sx={{ m: theme.spacing(2) }}
+        >
             <CardContent>
                 {post.map((e) => CopipeItemWidget(e))}
             </CardContent>

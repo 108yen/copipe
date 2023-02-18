@@ -76,7 +76,7 @@ export default function SearchAppBar() {
                     >
                         copipe
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
                         <Button
                             key={'postform'}
                             onClick={() => { router.push("/postForm") }}
