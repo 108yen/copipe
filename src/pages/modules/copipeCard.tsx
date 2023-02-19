@@ -6,7 +6,6 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 
 const CopipeCard = (copipeList: Array<Copipe>) => {
-
     return (
         <Card
             sx={{ m: theme.spacing(2) }}
