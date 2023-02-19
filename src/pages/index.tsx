@@ -48,7 +48,7 @@ const Home: NextPage = () => {
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={7}>
             {SearchForm(setCopipeList)}
-            {CopipeCard(Object.values(copipeList))}
+            {CopipeCard(copipeList)}
           </Grid>
         </Grid>
       </Box>
