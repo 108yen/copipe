@@ -68,7 +68,7 @@ export default function SearchAppBar() {
                         href="/"
                         sx={{
                             mr: 2,
-                            display: { xs: 'none', sm: 'block' },
+                            display: { xs: 'block' },
                             color: 'inherit',
                             textDecoration: 'none',
                         }}
