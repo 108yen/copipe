@@ -1,11 +1,11 @@
 import theme from "@/theme";
 import { Box, Button, Card, CardContent, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { useAtom } from "jotai";
-import { Copipe } from "../Atoms";
+import { Copipe } from "./Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 
-const CopipeCard = (copipeList:Array<Copipe>) => {
+const CopipeCard = (copipeList: Array<Copipe>) => {
 
     return (
         <Card

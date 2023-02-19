@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Container, Button, Box, Grid, Card, CardContent, TextField, IconButton, FormControl, InputLabel, OutlinedInput, InputAdornment } from '@mui/material';
 import SearchAppBar from './modules/searchAppBar';
-import { Copipe, copipeListAtom } from "./Atoms";
+import { Copipe, copipeListAtom } from "./modules/Atoms";
 import { useAtom } from 'jotai';
 import CopipeCard from './modules/copipeCard';
 import { Search, Visibility, VisibilityOff } from '@mui/icons-material';
