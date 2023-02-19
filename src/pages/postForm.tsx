@@ -30,15 +30,15 @@ const PostForm: NextPage = () => {
         if (formProps.body == "") {
             setBodyFormValidate(false);
         } else {
-            //!一旦オフ
-            // const { data, error } = await supabase
-            //     .from('copipe')
-            //     .insert([
-            //         {
-            //             title: formProps.title,
-            //             body: formProps.body,
-            //         },
-            //     ]);
+            //todo:確認のポップアップとかほしい
+            const { data, error } = await supabase
+                .from('copipe')
+                .insert([
+                    {
+                        title: formProps.title,
+                        body: formProps.body,
+                    },
+                ]);
         }
     }
 

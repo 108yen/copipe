@@ -76,7 +76,7 @@ export default function SearchAppBar() {
                     >
                         copipe
                     </Typography>
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
                         <Button
                             key={'postform'}
                             onClick={() => { router.push("/postForm") }}
@@ -84,16 +84,7 @@ export default function SearchAppBar() {
                         >
                             post form
                         </Button>
-                    </Box>
-                    {/* <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </Search> */}
+                    </Box> */}
                 </Toolbar>
             </AppBar>
         </Box>

@@ -8,11 +8,14 @@ import { Search, Visibility, VisibilityOff } from '@mui/icons-material';
 import SearchForm from './modules/searchForm';
 import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
+import router from 'next/router';
+import theme from '@/theme';
 
 const postAllCopipe = async () => {
   const { data, error } = await supabase
     .from('copipe')
-    .select('*');
+    .select('*')
+    .range(0, 9);
   const copipes: Array<Copipe> = data != null ? data.map(e => {
     const copipeItem: Copipe = {
       id: e.id,
@@ -33,7 +36,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-        setCopipeList(await postAllCopipe());
+      setCopipeList(await postAllCopipe());
     }
     fetchData();
   }, []);
@@ -45,6 +48,7 @@ const Home: NextPage = () => {
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={7}>
             {SearchForm(setCopipeList)}
+            
             {CopipeCard(copipeList)}
           </Grid>
         </Grid>

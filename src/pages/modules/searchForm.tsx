@@ -3,13 +3,15 @@ import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
 import DirectionsIcon from '@mui/icons-material/Directions';
-import { FormControl, InputAdornment, TextField } from '@mui/material';
+import { Button, FormControl, InputAdornment, TextField } from '@mui/material';
 import { Card } from '@mui/material';
 import theme from '@/theme';
 import { SetStateAction, useAtom } from 'jotai';
 import { Copipe, copipeListAtom, searchTextAtom } from '../Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
+import { Box } from '@mui/system';
+import router from 'next/router';
 
 const SearchCard = styled(Card)(() => ({
     position: "sticky",
@@ -55,30 +57,48 @@ const SearchForm = (setCopipeList: any) => {
     }
 
     return (
-        <SearchCard
-            sx={{ m: theme.spacing(2) }}
-        >
-            <FormControl fullWidth>
-                <TextField
-                    placeholder="search"
-                    InputProps={{
-                        endAdornment: (
-                            <InputAdornment position="end">
-                                <IconButton
-                                    onClick={handleSubmit}
-                                >
-                                    <SearchIcon />
-                                </IconButton>
-                            </InputAdornment>
-                        ),
-                    }}
-                    size="small"
-                    onKeyDown={handleKeyDown}
-                    onChange={handleChange}
+        <>
+            <SearchCard
+                sx={{ m: theme.spacing(2) }}
+            >
+                <FormControl fullWidth>
+                    <TextField
+                        placeholder="search"
+                        InputProps={{
+                            endAdornment: (
+                                <InputAdornment position="end">
+                                    <IconButton
+                                        onClick={handleSubmit}
+                                    >
+                                        <SearchIcon />
+                                    </IconButton>
+                                </InputAdornment>
+                            ),
+                        }}
+                        size="small"
+                        onKeyDown={handleKeyDown}
+                        onChange={handleChange}
+                    >
+                    </TextField>
+                </FormControl>
+            </SearchCard>
+            <Box sx={{
+                display: 'flex',
+                justifyContent: "flex-end",
+                m: theme.spacing(2),
+                marginTop: -2.4,
+            }}>
+                <Button
+                    key={'postform'}
+                    onClick={() => { router.push("/postForm") }}
+                    color='secondary'
+                    size='small'
+                    style={{color:'gray'}}
                 >
-                </TextField>
-            </FormControl>
-        </SearchCard>
+                    追加はこちらから
+                </Button>
+            </Box>
+        </>
     );
 }
 
