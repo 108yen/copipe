@@ -8,6 +8,10 @@ import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
+import { Button, Menu, MenuItem } from '@mui/material';
+import theme from '@/theme';
+import Link from 'next/link';
+import { Router, useRouter } from 'next/router';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -52,36 +56,35 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 export default function SearchAppBar() {
+    const router = useRouter();
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static">
-                <Toolbar>
-                    {/* <IconButton
-                        size="large"
-                        edge="start"
-                        color="inherit"
-                        aria-label="open drawer"
-                        sx={{ mr: 2 }}
-                    >
-                        <MenuIcon />
-                    </IconButton> */}
+                <Toolbar >
                     <Typography
                         variant="h6"
                         noWrap
-                        component="div"
-                        sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
+                        component="a"
+                        href="/"
+                        sx={{
+                            mr: 2,
+                            display: { xs: 'block' },
+                            color: 'inherit',
+                            textDecoration: 'none',
+                        }}
+                        onClick={() => { router.push("/") }}
                     >
                         copipe
                     </Typography>
-                    <Search>
-                        <SearchIconWrapper>
-                            <SearchIcon />
-                        </SearchIconWrapper>
-                        <StyledInputBase
-                            placeholder="Search…"
-                            inputProps={{ 'aria-label': 'search' }}
-                        />
-                    </Search>
+                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
+                        <Button
+                            key={'postform'}
+                            onClick={() => { router.push("/postForm") }}
+                            sx={{ my: 2, color: 'black', display: 'block' }}
+                        >
+                            post form
+                        </Button>
+                    </Box> */}
                 </Toolbar>
             </AppBar>
         </Box>
