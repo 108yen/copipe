@@ -20,6 +20,8 @@ export const formPropsAtom = atom<FormProps>({
     body: '',
 })
 
-export const bodyFormValidateAtom = atom(true);
+export const bodyFormValidateAtom = atom(0);
 
 export const searchTextAtom = atom("");
+
+export const dialogStateAtom = atom(0);
