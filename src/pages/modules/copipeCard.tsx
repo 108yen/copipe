@@ -11,7 +11,7 @@ const CopipeCard = (copipeList: Array<Copipe>) => {
             sx={{ m: theme.spacing(2) }}
         >
             <CardContent>
-                {copipeList.map((e) => CopipeItemWidget(e))}
+                {Object.values(copipeList).map((e) => CopipeItemWidget(e))}
             </CardContent>
         </Card>
     );
