@@ -1,4 +1,3 @@
-import supabase from "@/utils/supabase";
 import { atom } from "jotai";
 
 export type Copipe = {
@@ -9,44 +8,7 @@ export type Copipe = {
     title: string;
 }
 
-export const CopipeListAtom = atom<Array<Copipe>>([]);
-
-export const postAllCopipeAtom = atom(async (get) => {
-    const { data, error } = await supabase
-        .from('copipe')
-        .select('*');
-    const copipes: Array<Copipe> = data != null ? data.map(e => {
-        const copipeItem: Copipe = {
-            id: e.id,
-            inserted_at: e.inserted_at,
-            updated_at: e.updated_at,
-            body: e.body,
-            title: e.title,
-        };
-        return copipeItem;
-    }) : [];
-
-    return copipes;
-})
-
-export const postSearchCopipeAtom = atom(async (word: string) => {
-    const { data, error } = await supabase
-        .from('copipe')
-        .select('*')
-        .like('body', word);
-    const copipes: Array<Copipe> = data != null ? data.map(e => {
-        const copipeItem: Copipe = {
-            id: e.id,
-            inserted_at: e.inserted_at,
-            updated_at: e.updated_at,
-            body: e.body,
-            title: e.title,
-        };
-        return copipeItem;
-    }) : [];
-
-    return copipes;
-})
+export const copipeListAtom = atom<Array<Copipe>>([]);
 
 export type FormProps = {
     title: string;

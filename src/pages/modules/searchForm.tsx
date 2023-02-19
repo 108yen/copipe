@@ -7,7 +7,7 @@ import { FormControl, InputAdornment, TextField } from '@mui/material';
 import { Card } from '@mui/material';
 import theme from '@/theme';
 import { SetStateAction, useAtom } from 'jotai';
-import { Copipe, CopipeListAtom, postSearchCopipeAtom, searchTextAtom } from '../Atoms';
+import { Copipe, copipeListAtom, searchTextAtom } from '../Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
 
@@ -19,7 +19,6 @@ const SearchCard = styled(Card)(() => ({
 
 const SearchForm = (setCopipeList: any) => {
     const [searchText, setSearchText] = useAtom(searchTextAtom);
-    // const [copipeList, setCopipeList] = useAtom(CopipeListAtom);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key == 'Enter') {
@@ -30,7 +29,6 @@ const SearchForm = (setCopipeList: any) => {
         if (searchText != '') {
             //todo:検索処理
             await setCopipeList(await searchCopipe(searchText));
-            // console.log(copipeList);
         }
     }
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
