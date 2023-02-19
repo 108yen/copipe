@@ -5,15 +5,15 @@ import { Copipe, postAllCopipeAtom } from "../Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 
-export default function CopipeCard() {
-    const [post] = useAtom(postAllCopipeAtom);
+const CopipeCard = (copipeList:Array<Copipe>) => {
+    // const [post] = useAtom(postAllCopipeAtom);
 
     return (
         <Card
             sx={{ m: theme.spacing(2) }}
         >
             <CardContent>
-                {post.map((e) => CopipeItemWidget(e))}
+                {copipeList.map((e) => CopipeItemWidget(e))}
             </CardContent>
         </Card>
     );
@@ -73,3 +73,5 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
         </Box>
     );
 }
+
+export default CopipeCard;
