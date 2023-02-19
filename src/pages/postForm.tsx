@@ -3,7 +3,7 @@ import { Box, Button, Card, CardContent, Dialog, DialogActions, DialogTitle, Gri
 import { useAtom } from "jotai";
 import { NextPage } from "next";
 import { FormEventHandler } from "react";
-import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "./modules/Atoms";
+import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "../components/Atoms";
 import SearchAppBar from "./modules/searchAppBar";
 
 const ExpandableTextField = styled(TextField)(({ theme }) => ({

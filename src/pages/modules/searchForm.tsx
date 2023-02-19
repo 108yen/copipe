@@ -7,7 +7,7 @@ import { Button, FormControl, InputAdornment, TextField } from '@mui/material';
 import { Card } from '@mui/material';
 import theme from '@/theme';
 import { SetStateAction, useAtom } from 'jotai';
-import { Copipe, copipeListAtom, searchTextAtom } from './Atoms';
+import { Copipe, copipeListAtom, searchTextAtom } from '../../components/Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
 import { Box } from '@mui/system';
