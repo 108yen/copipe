@@ -23,6 +23,7 @@ const postAllCopipe = async () => {
     };
     return copipeItem;
   }) : [];
+  // console.log('実行');
 
   return copipes;
 }
@@ -32,7 +33,7 @@ const Home: NextPage = () => {
 
   useEffect(() => {
     async function fetchData() {
-      setCopipeList(await postAllCopipe());
+        setCopipeList(await postAllCopipe());
     }
     fetchData();
   }, []);

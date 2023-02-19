@@ -64,6 +64,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
                 sx={{
                     flexGrow: 1,
                     display: 'block',
+                    whiteSpace: 'pre-line',
                 }}
                 gutterBottom
             >
