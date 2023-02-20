@@ -1,8 +1,7 @@
 import supabase from "@/utils/supabase";
-import { Box, Button, Card, CardContent, Dialog, DialogActions, DialogTitle, Grid, styled, TextField, Typography } from "@mui/material";
+import { Box, Button, Card, CardContent, Dialog, DialogActions, DialogTitle, Grid, styled, TextField } from "@mui/material";
 import { useAtom } from "jotai";
 import { NextPage } from "next";
-import { FormEventHandler } from "react";
 import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "../components/Atoms";
 import SearchAppBar from "./modules/searchAppBar";
 
@@ -50,12 +49,16 @@ const PostForm: NextPage = () => {
     const handleDialogClose = () => {
         setDialogState(0);
     }
-    const isDupulicate = async (body: string) => {
+    const isDupulicate = async (inputData: string) => {
         const { data, error } = await supabase
             .from('copipe')
             .select()
-            .eq('body', body);
-        console.log(data);
+            .match({ body: inputData });
+        if (error) {
+            //!文章が長いときにエラーになる
+            console.log(error);
+            return false;
+        }
         return data?.length != 0;
     }
     const bodyTextFieldHelperText = () => {

@@ -1,16 +1,11 @@
 import * as React from 'react';
-import IconButton from '@mui/material/IconButton';
-import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
-import DirectionsIcon from '@mui/icons-material/Directions';
-import { Button, FormControl, InputAdornment, TextField } from '@mui/material';
-import { Card } from '@mui/material';
+import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
 import theme from '@/theme';
-import { SetStateAction, useAtom } from 'jotai';
-import { Copipe, copipeListAtom, searchTextAtom } from '../../components/Atoms';
+import {  useAtom } from 'jotai';
+import { Copipe,  searchTextAtom } from '../../components/Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
-import { Box } from '@mui/system';
 import router from 'next/router';
 
 const SearchCard = styled(Card)(() => ({

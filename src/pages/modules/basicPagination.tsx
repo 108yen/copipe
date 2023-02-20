@@ -19,6 +19,7 @@ const postCopipe = async (page: number) => {
         };
         return copipeItem;
     }) : [];
+    console.log('pagination fetch');
 
     return copipes;
 }
