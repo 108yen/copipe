@@ -15,7 +15,8 @@ const postAllCopipe = async () => {
   const { data, error } = await supabase
     .from('copipe')
     .select('*')
-    .range(0, 9);
+    .order('id', { ascending: false })
+    .limit(10);
   const copipes: Array<Copipe> = data != null ? data.map(e => {
     const copipeItem: Copipe = {
       id: e.id,
