@@ -25,3 +25,5 @@ export const bodyFormValidateAtom = atom(0);
 export const searchTextAtom = atom("");
 
 export const dialogStateAtom = atom(0);
+
+export const pageNumAtom = atom(1);
