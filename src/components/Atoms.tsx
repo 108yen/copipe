@@ -26,4 +26,4 @@ export const searchTextAtom = atom("");
 
 export const dialogStateAtom = atom(0);
 
-export const pageAtom = atom(1);
+export const pageNumAtom = atom(1);

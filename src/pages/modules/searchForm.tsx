@@ -19,7 +19,7 @@ const SearchCard = styled(Card)(() => ({
     zIndex: 100,
 }));
 
-const SearchForm = (setCopipeList: any) => {
+const SearchForm = (setCopipeList: (copipeList: Array<Copipe>) => void) => {
     const [searchText, setSearchText] = useAtom(searchTextAtom);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
