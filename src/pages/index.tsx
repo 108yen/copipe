@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Container, Button, Box, Grid, Card, CardContent, TextField, IconButton, FormControl, InputLabel, OutlinedInput, InputAdornment } from '@mui/material';
 import SearchAppBar from './modules/searchAppBar';
-import { Copipe, copipeListAtom } from "../components/Atoms";
+import { Copipe, copipeListAtom, pageAtom } from "../components/Atoms";
 import { useAtom } from 'jotai';
 import CopipeCard from './modules/copipeCard';
 import { Search, Visibility, VisibilityOff } from '@mui/icons-material';
@@ -10,6 +10,7 @@ import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
 import router from 'next/router';
 import theme from '@/theme';
+import BasicPagination from './modules/basicPagination';
 
 const postAllCopipe = async () => {
   const { data, error } = await supabase
@@ -34,6 +35,7 @@ const postAllCopipe = async () => {
 
 const Home: NextPage = () => {
   const [copipeList, setCopipeList] = useAtom(copipeListAtom);
+  const [page, setPage] = useAtom(pageAtom);
 
   useEffect(() => {
     async function fetchData() {
@@ -50,6 +52,7 @@ const Home: NextPage = () => {
           <Grid item xs={12} md={7}>
             {SearchForm(setCopipeList)}
             {CopipeCard(copipeList)}
+            {BasicPagination()}
           </Grid>
         </Grid>
       </Box>
