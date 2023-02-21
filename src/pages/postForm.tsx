@@ -53,7 +53,8 @@ const PostForm: NextPage = () => {
         const { data, error } = await supabase
             .from('copipe')
             .select()
-            .match({ body: inputData });
+            .eq('body', inputData);
+            // .match({ body: inputData });
         if (error) {
             //!文章が長いときにエラーになる
             console.log(error);

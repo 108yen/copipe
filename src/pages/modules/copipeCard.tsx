@@ -1,10 +1,14 @@
 import theme from "@/theme";
-import { Box,  Card, CardContent, Divider, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Card, CardContent, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { Copipe } from "../../components/Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 
-const CopipeCard = (copipeList: Array<Copipe>) => {
+type Props = {
+    copipeList: Array<Copipe>;
+}
+
+const CopipeCard: React.FC<Props> = ({ copipeList }) => {
     return (
         <Card
             sx={{ m: theme.spacing(2) }}

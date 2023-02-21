@@ -61,9 +61,9 @@ const Home: NextPage = () => {
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={7}>
             {/* 検索したときにページネーションがそのままになる */}
-            {SearchForm(setCopipeList)}
-            {CopipeCard(copipeList)}
-            {BasicPagination(pageNum, setCopipeList)}
+            <SearchForm setCopipeList={setCopipeList} />
+            <CopipeCard copipeList={copipeList} />
+            <BasicPagination pageNum={pageNum} setCopipeList={setCopipeList} />
           </Grid>
         </Grid>
       </Box>

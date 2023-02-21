@@ -24,7 +24,15 @@ const postCopipe = async (page: number) => {
     return copipes;
 }
 
-const BasicPagination = (pageNum: number, setCopipeList: (copipeList: Array<Copipe>) => void) => {
+type Props = {
+    pageNum: number;
+    setCopipeList: (copipeList: Array<Copipe>) => void;
+}
+
+const BasicPagination: React.FC<Props> = ({
+    pageNum,
+    setCopipeList,
+}) => {
     const handleChange = async (event: React.ChangeEvent<unknown>, value: number) => {
         await setCopipeList(await postCopipe(value));
         window.scrollTo({

@@ -2,8 +2,8 @@ import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
 import theme from '@/theme';
-import {  useAtom } from 'jotai';
-import { Copipe,  searchTextAtom } from '../../components/Atoms';
+import { useAtom } from 'jotai';
+import { Copipe, searchTextAtom } from '../../components/Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
 import router from 'next/router';
@@ -14,7 +14,11 @@ const SearchCard = styled(Card)(() => ({
     zIndex: 100,
 }));
 
-const SearchForm = (setCopipeList: (copipeList: Array<Copipe>) => void) => {
+type Props = {
+    setCopipeList: (copipeList: Array<Copipe>) => void;
+}
+
+const SearchForm: React.FC<Props> = ({ setCopipeList }) => {
     const [searchText, setSearchText] = useAtom(searchTextAtom);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
