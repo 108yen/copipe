@@ -1,15 +1,12 @@
 import type { NextPage } from 'next'
-import { Container, Button, Box, Grid, Card, CardContent, TextField, IconButton, FormControl, InputLabel, OutlinedInput, InputAdornment } from '@mui/material';
+import { Box, Grid } from '@mui/material';
 import SearchAppBar from './modules/searchAppBar';
 import { Copipe, copipeListAtom, pageNumAtom } from "../components/Atoms";
 import { useAtom } from 'jotai';
 import CopipeCard from './modules/copipeCard';
-import { Search, Visibility, VisibilityOff } from '@mui/icons-material';
 import SearchForm from './modules/searchForm';
 import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
-import router from 'next/router';
-import theme from '@/theme';
 import BasicPagination from './modules/basicPagination';
 
 const postAllCopipe = async () => {
@@ -28,6 +25,7 @@ const postAllCopipe = async () => {
     };
     return copipeItem;
   }) : [];
+  console.log('index fetch');
 
   return copipes;
 }
@@ -62,6 +60,7 @@ const Home: NextPage = () => {
       <Box sx={{ flexGrow: 1, p: 3 }}>
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={7}>
+            {/* 検索したときにページネーションがそのままになる */}
             {SearchForm(setCopipeList)}
             {CopipeCard(copipeList)}
             {BasicPagination(pageNum, setCopipeList)}

@@ -1,6 +1,5 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import createEmotionServer from '@emotion/server/create-instance';
-import theme from '../theme';
 import createEmotionCache from '../createEmotionCache';
 
 export default class MyDocument extends Document {
@@ -8,10 +7,6 @@ export default class MyDocument extends Document {
     return (
       <Html lang="ja">
         <Head>
-          {/* <meta name="theme-color" content={theme.palette.primary.main} />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
-          {(this.props as any).emotionStyleTags} */}
           <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
