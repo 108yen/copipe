@@ -14,7 +14,7 @@ const CopipeCard: React.FC<Props> = ({ copipeList }) => {
             sx={{ m: theme.spacing(2) }}
         >
             <CardContent>
-                {copipeList.map((e) => CopipeItemWidget(e))}
+                {copipeList?.map((e) => CopipeItemWidget(e))}
             </CardContent>
         </Card>
     );
