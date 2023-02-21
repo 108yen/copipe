@@ -1,5 +1,4 @@
 import { Copipe } from "@/components/Atoms";
-import supabase from "@/utils/supabase";
 import { Pagination } from "@mui/material";
 import { Box } from "@mui/system";
 
@@ -18,7 +17,6 @@ const BasicPagination: React.FC<Props> = ({
             top: 0,
             behavior: "smooth",
         });
-        // console.log(value);
     };
 
     return (

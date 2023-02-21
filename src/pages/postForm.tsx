@@ -40,6 +40,7 @@ const PostForm: NextPage = () => {
                         body: formProps.body,
                     },
                 ]);
+            if (error) console.log('post copipe error', error);
 
             //投稿完了後の操作
             setFormProps({ title: "", body: "" });
@@ -54,10 +55,10 @@ const PostForm: NextPage = () => {
             .from('copipe')
             .select()
             .eq('body', inputData);
-            // .match({ body: inputData });
+        // .match({ body: inputData });
         if (error) {
             //!文章が長いときにエラーになる
-            console.log(error);
+            console.log('check dupulicate error', error);
             return false;
         }
         return data?.length != 0;

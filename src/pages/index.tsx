@@ -16,6 +16,8 @@ const postCopipe = async (word: string, page: number) => {
     .like('body', '%' + word + '%')
     .order('id', { ascending: false })
     .range(10 * (page - 1), 9 + 10 * (page - 1));
+  if (error) console.log('post copipe error', error);
+
   const copipes: Array<Copipe> = data != null ? data.map(e => {
     const copipeItem: Copipe = {
       id: e.id,
@@ -26,7 +28,6 @@ const postCopipe = async (word: string, page: number) => {
     };
     return copipeItem;
   }) : [];
-  console.log('index fetch');
 
   return copipes;
 }
@@ -41,6 +42,8 @@ const countCopipeRows = async (word: string) => {
     .from('copipe')
     .select('*', { count: 'exact', head: true })
     .like('body', '%' + word + '%');
+  if (error) console.log('copipe row count error', error);
+  
   return count ?? 0;
 }
 
