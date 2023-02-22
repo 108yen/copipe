@@ -17,6 +17,7 @@ export default class MyDocument extends Document {
           <meta name="description" content="コピペが検索できるサイト。" />
         </Head>
         <body>
+          <script> </script>
           <Main />
           <NextScript />
         </body>
