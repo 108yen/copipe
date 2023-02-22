@@ -31,6 +31,10 @@ const SearchForm: React.FC<Props> = ({
     const handleSubmit = async () => {
         //todo:検索処理
         setSearchText(text);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     }
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value } = event.target;
