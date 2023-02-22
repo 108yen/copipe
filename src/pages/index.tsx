@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Box, Grid } from '@mui/material';
 import SearchAppBar from './modules/searchAppBar';
-import { Copipe, copipeListAtom, pageNumAtom } from "../components/Atoms";
+import { Copipe, copipeListAtom, pageNumAtom, searchTextAtom } from "../components/Atoms";
 import { useAtom } from 'jotai';
 import CopipeCard from './modules/copipeCard';
 import SearchForm from './modules/searchForm';
@@ -9,12 +9,15 @@ import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
 import BasicPagination from './modules/basicPagination';
 
-const postAllCopipe = async () => {
+const postCopipe = async (word: string, page: number) => {
   const { data, error } = await supabase
     .from('copipe')
     .select()
+    .like('body', '%' + word + '%')
     .order('id', { ascending: false })
-    .range(0, 9);
+    .range(10 * (page - 1), 9 + 10 * (page - 1));
+  if (error) console.log('post copipe error', error);
+
   const copipes: Array<Copipe> = data != null ? data.map(e => {
     const copipeItem: Copipe = {
       id: e.id,
@@ -25,34 +28,37 @@ const postAllCopipe = async () => {
     };
     return copipeItem;
   }) : [];
-  console.log('index fetch');
 
   return copipes;
 }
 
-const calcPageNum = async () => {
-  const copipeRow = await countCopipeRows();
+const calcPageNum = async (word: string) => {
+  const copipeRow = await countCopipeRows(word);
   return Math.ceil(copipeRow / 10);
 }
 
-const countCopipeRows = async () => {
+const countCopipeRows = async (word: string) => {
   const { data, error, status, count } = await supabase
     .from('copipe')
-    .select('*', { count: 'exact', head: true });
+    .select('*', { count: 'exact', head: true })
+    .like('body', '%' + word + '%');
+  if (error) console.log('copipe row count error', error);
+  
   return count ?? 0;
 }
 
 const Home: NextPage = () => {
   const [copipeList, setCopipeList] = useAtom(copipeListAtom);
   const [pageNum, setPageNum] = useAtom(pageNumAtom);
+  const [searchText, setSearchText] = useAtom(searchTextAtom);
 
   useEffect(() => {
     async function fetchData() {
-      setCopipeList(await postAllCopipe());
-      setPageNum(await calcPageNum());
+      setCopipeList(await postCopipe(searchText, 1));
+      setPageNum(await calcPageNum(searchText));
     }
     fetchData();
-  }, []);
+  }, [searchText]);
 
   return (
     <>
@@ -61,9 +67,15 @@ const Home: NextPage = () => {
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={7}>
             {/* 検索したときにページネーションがそのままになる */}
-            {SearchForm(setCopipeList)}
-            {CopipeCard(copipeList)}
-            {BasicPagination(pageNum, setCopipeList)}
+            <SearchForm setSearchText={setSearchText} />
+            <CopipeCard copipeList={copipeList} />
+            <BasicPagination
+              pageNum={pageNum}
+              setCopipeList={
+                async (page: number) => {
+                  await setCopipeList(await postCopipe(searchText, page))
+                }
+              } />
           </Grid>
         </Grid>
       </Box>

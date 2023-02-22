@@ -6,6 +6,7 @@ import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme from '../theme';
 import createEmotionCache from '../createEmotionCache';
 import { Analytics } from '@vercel/analytics/react';
+import { useEffect, useState } from 'react';
 
 const clientSideEmotionCache = createEmotionCache();
 interface MyAppProps extends AppProps {
@@ -14,6 +15,12 @@ interface MyAppProps extends AppProps {
 
 function MyApp(props: MyAppProps) {
   const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const [show_screen, setShowScreen] = useState(false)
+
+  useEffect(() => {
+    setShowScreen(true)
+  }, [])
+
   return (
     <CacheProvider value={emotionCache}>
       <Head>
@@ -24,7 +31,7 @@ function MyApp(props: MyAppProps) {
       </Head>
       <ThemeProvider theme={theme}>
         <CssBaseline />
-        <Component {...pageProps} />
+        {show_screen ? <Component {...pageProps} /> : null}
         <Analytics />
       </ThemeProvider>
     </CacheProvider>

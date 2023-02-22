@@ -2,8 +2,8 @@ import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
 import theme from '@/theme';
-import {  useAtom } from 'jotai';
-import { Copipe,  searchTextAtom } from '../../components/Atoms';
+import { useAtom } from 'jotai';
+import { Copipe, searchTextAtom, textFormAtom } from '../../components/Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
 import router from 'next/router';
@@ -14,8 +14,14 @@ const SearchCard = styled(Card)(() => ({
     zIndex: 100,
 }));
 
-const SearchForm = (setCopipeList: (copipeList: Array<Copipe>) => void) => {
-    const [searchText, setSearchText] = useAtom(searchTextAtom);
+type Props = {
+    setSearchText: (text: string) => void;
+}
+
+const SearchForm: React.FC<Props> = ({
+    setSearchText,
+}) => {
+    const [text, setText] = useAtom(textFormAtom);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key == 'Enter') {
@@ -23,19 +29,21 @@ const SearchForm = (setCopipeList: (copipeList: Array<Copipe>) => void) => {
         }
     }
     const handleSubmit = async () => {
-        if (searchText != '') {
-            //todo:検索処理
-            await setCopipeList(await searchCopipe(searchText));
-        }
+        //todo:検索処理
+        setSearchText(text);
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth",
+        });
     }
     const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { value } = event.target;
-        setSearchText(value);
+        setText(value);
     }
     const searchCopipe = async (word: string) => {
-        const { data, error } = await supabase
+        const { data, error, count } = await supabase
             .from('copipe')
-            .select('*')
+            .select('*', { count: 'exact' })
             .like('body', '%' + word + '%');
         const copipes: Array<Copipe> = data != null ? data.map(e => {
             const copipeItem: Copipe = {
