@@ -43,7 +43,7 @@ const countCopipeRows = async (word: string) => {
     .select('*', { count: 'exact', head: true })
     .like('body', '%' + word + '%');
   if (error) console.log('copipe row count error', error);
-  
+
   return count ?? 0;
 }
 
@@ -53,7 +53,7 @@ const Home: NextPage = () => {
   const [searchText, setSearchText] = useAtom(searchTextAtom);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       setCopipeList(await postCopipe(searchText, 1));
       setPageNum(await calcPageNum(searchText));
     }
@@ -65,8 +65,7 @@ const Home: NextPage = () => {
       <SearchAppBar />
       <Box sx={{ flexGrow: 1, p: 3 }}>
         <Grid container justifyContent="center" spacing={2}>
-          <Grid item xs={12} md={7}>
-            {/* 検索したときにページネーションがそのままになる */}
+          <Grid item xs={12} md={10} lg={8} xl={6}>
             <SearchForm setSearchText={setSearchText} />
             <CopipeCard copipeList={copipeList} />
             <BasicPagination
