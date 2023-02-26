@@ -8,6 +8,7 @@ import SearchForm from './modules/searchForm';
 import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
 import BasicPagination from './modules/basicPagination';
+import { ArticleJsonLd } from 'next-seo';
 
 const postCopipe = async (word: string, page: number) => {
   const { data, error } = await supabase
@@ -43,7 +44,7 @@ const countCopipeRows = async (word: string) => {
     .select('*', { count: 'exact', head: true })
     .like('body', '%' + word + '%');
   if (error) console.log('copipe row count error', error);
-  
+
   return count ?? 0;
 }
 
@@ -53,7 +54,7 @@ const Home: NextPage = () => {
   const [searchText, setSearchText] = useAtom(searchTextAtom);
 
   useEffect(() => {
-    async function fetchData() {
+    const fetchData = async () => {
       setCopipeList(await postCopipe(searchText, 1));
       setPageNum(await calcPageNum(searchText));
     }
@@ -62,11 +63,21 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <ArticleJsonLd
+        url="https://www.netcopipe.com/"
+        title="コピペ検索ページ"
+        images={["https://www.netcopipe.com/android-chrome-512x512.png"]}
+        datePublished="20230226"
+        dateModified="20230226"
+        authorName="108yen"
+        publisherName="108yen"
+        publisherLogo=""
+        description="投稿されているコピペの閲覧、コピペの検索が可能なページ"
+      />
       <SearchAppBar />
       <Box sx={{ flexGrow: 1, p: 3 }}>
         <Grid container justifyContent="center" spacing={2}>
-          <Grid item xs={12} md={7}>
-            {/* 検索したときにページネーションがそのままになる */}
+          <Grid item xs={12} md={10} lg={8} xl={6}>
             <SearchForm setSearchText={setSearchText} />
             <CopipeCard copipeList={copipeList} />
             <BasicPagination

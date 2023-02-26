@@ -7,6 +7,7 @@ import theme from '../theme';
 import createEmotionCache from '../createEmotionCache';
 import { Analytics } from '@vercel/analytics/react';
 import { useEffect, useState } from 'react';
+import { DefaultSeo } from 'next-seo';
 
 const clientSideEmotionCache = createEmotionCache();
 interface MyAppProps extends AppProps {
@@ -25,10 +26,32 @@ function MyApp(props: MyAppProps) {
     <CacheProvider value={emotionCache}>
       <Head>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
-        <title>
-          copipe
-        </title>
       </Head>
+      <DefaultSeo
+        defaultTitle='copipe'
+        description='コピペが検索できるサイト'
+        openGraph={{
+          type: 'website',
+          title: 'copipe',
+          description: 'コピペが検索できるサイト',
+          siteName: 'copipe',
+          url: 'https://www.netcopipe.com/',
+          images: [
+            {
+              url: "https://www.netcopipe.com/android-chrome-512x512.png",
+              width: 512,
+              height: 512,
+              alt: 'Og Image Alt',
+              type: 'image/png',
+            }
+          ]
+        }}
+        twitter={{
+          handle: '@handle',
+          site: '@site',
+          cardType: "summary_large_image",
+        }}
+      />
       <ThemeProvider theme={theme}>
         <CssBaseline />
         {show_screen ? <Component {...pageProps} /> : null}
