@@ -2,6 +2,7 @@ import supabase from "@/utils/supabase";
 import { Box, Button, Card, CardContent, Dialog, DialogActions, DialogTitle, Grid, styled, TextField } from "@mui/material";
 import { useAtom } from "jotai";
 import { NextPage } from "next";
+import { ArticleJsonLd, NextSeo } from "next-seo";
 import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "../components/Atoms";
 import SearchAppBar from "./modules/searchAppBar";
 
@@ -76,6 +77,31 @@ const PostForm: NextPage = () => {
 
     return (
         <>
+            <NextSeo
+                title="copipe/コピペ投稿ページ"
+                description="該当するコピペがなかった場合、投稿可能なページ"
+                openGraph={{
+                    url: "https://www.netcopipe.com/postForm",
+                    title: "コピペ投稿ページ",
+                    description: "該当するコピペがなかった場合、投稿可能なページ",
+                    images: [
+                        {
+                            url: "https://www.netcopipe.com/android-chrome-512x512.png",
+                        },
+                    ],
+                }}
+            />
+            <ArticleJsonLd
+                url="https://www.netcopipe.com/postForm"
+                title="コピペ投稿ページ"
+                images={["https://www.netcopipe.com/android-chrome-512x512.png"]}
+                datePublished="20230226"
+                dateModified="20230226"
+                authorName="108yen"
+                publisherName="108yen"
+                publisherLogo=""
+                description="該当するコピペがなかった場合、投稿可能なページ"
+            />
             <SearchAppBar />
             <Box sx={{ flexGrow: 1, p: 3 }}>
                 <Grid container justifyContent="center" spacing={2}>

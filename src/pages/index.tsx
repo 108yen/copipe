@@ -8,6 +8,7 @@ import SearchForm from './modules/searchForm';
 import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
 import BasicPagination from './modules/basicPagination';
+import { ArticleJsonLd } from 'next-seo';
 
 const postCopipe = async (word: string, page: number) => {
   const { data, error } = await supabase
@@ -62,6 +63,17 @@ const Home: NextPage = () => {
 
   return (
     <>
+      <ArticleJsonLd
+        url="https://www.netcopipe.com/"
+        title="コピペ検索ページ"
+        images={["https://www.netcopipe.com/android-chrome-512x512.png"]}
+        datePublished="20230226"
+        dateModified="20230226"
+        authorName="108yen"
+        publisherName="108yen"
+        publisherLogo=""
+        description="投稿されているコピペの閲覧、コピペの検索が可能なページ"
+      />
       <SearchAppBar />
       <Box sx={{ flexGrow: 1, p: 3 }}>
         <Grid container justifyContent="center" spacing={2}>
