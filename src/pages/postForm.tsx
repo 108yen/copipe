@@ -4,7 +4,7 @@ import { useAtom } from "jotai";
 import { NextPage } from "next";
 import { ArticleJsonLd, NextSeo } from "next-seo";
 import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "../components/Atoms";
-import SearchAppBar from "./modules/searchAppBar";
+import SearchAppBar from "../modules/searchAppBar";
 
 const ExpandableTextField = styled(TextField)(({ theme }) => ({
     '& > textarea': {

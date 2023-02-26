@@ -1,13 +1,13 @@
 import type { NextPage } from 'next'
 import { Box, Grid } from '@mui/material';
-import SearchAppBar from './modules/searchAppBar';
+import SearchAppBar from '../modules/searchAppBar';
 import { Copipe, copipeListAtom, pageNumAtom, searchTextAtom } from "../components/Atoms";
 import { useAtom } from 'jotai';
-import CopipeCard from './modules/copipeCard';
-import SearchForm from './modules/searchForm';
+import CopipeCard from '../modules/copipeCard';
+import SearchForm from '../modules/searchForm';
 import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
-import BasicPagination from './modules/basicPagination';
+import BasicPagination from '../modules/basicPagination';
 import { ArticleJsonLd } from 'next-seo';
 
 const postCopipe = async (word: string, page: number) => {

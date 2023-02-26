@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
 import theme from '@/theme';
 import { useAtom } from 'jotai';
-import { Copipe, searchTextAtom, textFormAtom } from '../../components/Atoms';
+import { Copipe, searchTextAtom, textFormAtom } from '../components/Atoms';
 import styled from '@emotion/styled';
 import supabase from '@/utils/supabase';
 import router from 'next/router';
