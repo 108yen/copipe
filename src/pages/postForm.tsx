@@ -78,7 +78,7 @@ const PostForm: NextPage = () => {
     return (
         <>
             <NextSeo
-                title="copipe/コピペ投稿ページ"
+                title="copipe|コピペ投稿ページ"
                 description="該当するコピペがなかった場合、投稿可能なページ"
                 openGraph={{
                     url: "https://www.netcopipe.com/postForm",

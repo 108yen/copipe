@@ -8,7 +8,7 @@ import SearchForm from '../modules/searchForm';
 import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
 import BasicPagination from '../modules/basicPagination';
-import { ArticleJsonLd } from 'next-seo';
+import { ArticleJsonLd, NextSeo } from 'next-seo';
 
 const postCopipe = async (word: string, page: number) => {
   const { data, error } = await supabase
@@ -61,8 +61,27 @@ const Home: NextPage = () => {
     fetchData();
   }, [searchText]);
 
+  const headDiscription = (copipeList:Array<Copipe>) => {
+    return "コピペの検索が可能\n"
+      + (copipeList.length != 0 ? copipeList[0].body : "");
+  }
+
   return (
     <>
+      <NextSeo
+        title="copipe|コピペ検索ページ"
+        description={headDiscription(copipeList)}
+        openGraph={{
+          url: "https://www.netcopipe.com/postForm",
+          title: "コピペ投稿ページ",
+          description: "コピペが検索できるサイト。",
+          images: [
+            {
+              url: "https://www.netcopipe.com/android-chrome-512x512.png",
+            },
+          ],
+        }}
+      />
       <ArticleJsonLd
         url="https://www.netcopipe.com/"
         title="コピペ検索ページ"
