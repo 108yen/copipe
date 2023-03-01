@@ -30,6 +30,7 @@ function MyApp(props: MyAppProps) {
       <DefaultSeo
         defaultTitle='copipe'
         description='コピペが検索できるサイト'
+        
         openGraph={{
           type: 'website',
           title: 'copipe',
