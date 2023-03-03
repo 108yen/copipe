@@ -69,7 +69,7 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="copipe|コピペ検索ページ"
+        title="copipe|コピペ検索"
         description={headDiscription(copipeList)}
         openGraph={{
           url: "https://www.netcopipe.com/postForm",
