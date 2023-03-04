@@ -62,14 +62,13 @@ const Home: NextPage = () => {
   }, [searchText]);
 
   const headDiscription = (copipeList:Array<Copipe>) => {
-    return "コピペの検索が可能\n"
-      + (copipeList.length != 0 ? copipeList[0].body : "");
+    return copipeList.length != 0 ? copipeList[0].body : "";
   }
 
   return (
     <>
       <NextSeo
-        title="copipe|コピペ検索"
+        title="copipe|2ch、まとめのコピペ検索"
         description={headDiscription(copipeList)}
         openGraph={{
           url: "https://www.netcopipe.com/postForm",
