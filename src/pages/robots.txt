@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /postForm
-
-Sitemap: https://netcopipe.com/sitemap.xml
