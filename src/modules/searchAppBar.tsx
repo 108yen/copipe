@@ -56,7 +56,8 @@ export default function SearchAppBar() {
             <AppBar position="static">
                 <Toolbar >
                     <Typography
-                        variant="h6"
+                        variant="h5"
+                        fontWeight='bold'
                         noWrap
                         component="a"
                         href="/"
