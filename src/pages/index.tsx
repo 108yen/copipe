@@ -61,15 +61,16 @@ const Home: NextPage = () => {
     fetchData();
   }, [searchText]);
 
-  const headDiscription = (copipeList:Array<Copipe>) => {
-    return copipeList.length != 0 ? copipeList[0].body : "";
-  }
+  // const headDiscription = (copipeList:Array<Copipe>) => {
+  //   return copipeList.length != 0 ? copipeList[0].body : "";
+  // }
 
   return (
     <>
       <NextSeo
-        title="copipe|2ch、まとめのコピペ検索"
-        description={headDiscription(copipeList)}
+        title="copipe | 2ch・まとめのコピペ検索"
+        description="2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。
+        検索機能を使えば、コピペを簡単に探すことができます。面白いコピペを探したい方、暇つぶしに読みたい方、ぜひ当サイトをご活用ください。"
         openGraph={{
           url: "https://www.netcopipe.com/postForm",
           title: "コピペ投稿ページ",
