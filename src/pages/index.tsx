@@ -1,7 +1,7 @@
 import type { NextPage } from 'next'
 import { Box, Grid } from '@mui/material';
 import SearchAppBar from '../modules/searchAppBar';
-import { Copipe, copipeListAtom, pageNumAtom, searchTextAtom } from "../components/Atoms";
+import { Copipe, copipeListAtom, pageAtom, pageNumAtom, searchTextAtom } from "../components/Atoms";
 import { useAtom } from 'jotai';
 import CopipeCard from '../modules/copipeCard';
 import SearchForm from '../modules/searchForm';
@@ -9,6 +9,7 @@ import supabase from '@/utils/supabase';
 import { useEffect } from 'react';
 import BasicPagination from '../modules/basicPagination';
 import { ArticleJsonLd, NextSeo } from 'next-seo';
+import { useRouter } from 'next/router';
 
 const postCopipe = async (word: string, page: number) => {
   const { data, error } = await supabase
@@ -51,15 +52,41 @@ const countCopipeRows = async (word: string) => {
 const Home: NextPage = () => {
   const [copipeList, setCopipeList] = useAtom(copipeListAtom);
   const [pageNum, setPageNum] = useAtom(pageNumAtom);
+  const [page, setPage] = useAtom(pageAtom);
   const [searchText, setSearchText] = useAtom(searchTextAtom);
+  const router = useRouter();
+  const { p } = router.query;
 
   useEffect(() => {
-    const fetchData = async () => {
-      setCopipeList(await postCopipe(searchText, 1));
-      setPageNum(await calcPageNum(searchText));
+    if (router.isReady) {
+      if (p != undefined && typeof p === 'string' && isStringInt(p)) {
+        const postPage = Number(p);
+        setPage(postPage);
+        fetch(postPage, searchText);
+      }
     }
-    fetchData();
-  }, [searchText]);
+  }, [router]);
+
+  useEffect(() => {
+    if (router.isReady) {
+      fetch(page, searchText);
+    }
+  }, [page, searchText])
+
+  async function fetch(page: number, searchText: string) {
+    const fetchPageNum = await calcPageNum(searchText);
+    setPageNum(fetchPageNum);
+    if (page <= fetchPageNum) {
+      setCopipeList(await postCopipe(searchText, page));
+    } else {
+      setPage(1);
+    }
+  }
+
+  function isStringInt(value: string): boolean {
+    const intValue = Number(value)
+    return Number.isInteger(intValue)
+  }
 
   const headDiscription = (copipeList: Array<Copipe>) => {
     return copipeList.length != 0 ? copipeList[0].body : "";
@@ -68,8 +95,9 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="copipe | 2chコピペネタ帳"
+        title={"copipe | " + (searchText == "" ? "2chコピペネタ帳" : searchText)}
         description={"2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。" + headDiscription(copipeList)}
+        canonical={"https://www.netcopipe.com?p=" + page}
         openGraph={{
           url: "https://www.netcopipe.com/",
           title: "copipe | 2chコピペネタ帳",
@@ -100,11 +128,13 @@ const Home: NextPage = () => {
             <CopipeCard copipeList={copipeList} />
             <BasicPagination
               pageNum={pageNum}
-              setCopipeList={
+              currentPage={page}
+              setCurrentPage={
                 async (page: number) => {
-                  await setCopipeList(await postCopipe(searchText, page))
+                  await setPage(page);
                 }
-              } />
+              }
+            />
           </Grid>
         </Grid>
       </Box>

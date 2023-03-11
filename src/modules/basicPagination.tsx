@@ -4,15 +4,19 @@ import { Box } from "@mui/system";
 
 type Props = {
     pageNum: number;
-    setCopipeList: (page:number) => void;
+    currentPage: number;
+    setCurrentPage: (page:number) => void;
+    // setCopipeList: (page:number) => void;
 }
 
 const BasicPagination: React.FC<Props> = ({
     pageNum,
-    setCopipeList,
+    currentPage,
+    setCurrentPage,
+    // setCopipeList,
 }) => {
     const handleChange = async (event: React.ChangeEvent<unknown>, value: number) => {
-        await setCopipeList(value);
+        await setCurrentPage(value);
         window.scrollTo({
             top: 0,
             behavior: "smooth",
@@ -24,7 +28,7 @@ const BasicPagination: React.FC<Props> = ({
             display: 'flex',
             justifyContent: "center"
         }}>
-            <Pagination count={pageNum} onChange={handleChange} />
+            <Pagination count={pageNum} page={currentPage} onChange={handleChange} />
         </Box>
     );
 }
