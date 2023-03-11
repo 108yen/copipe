@@ -13,7 +13,7 @@ export default function Archive() {
     const router = useRouter();
     const { id } = router.query;
 
-    async function postCopipe(id:number) {
+    async function postCopipe(id: number) {
         const { data, error } = await supabase
             .from('copipe')
             .select()
@@ -32,10 +32,10 @@ export default function Archive() {
         return copipes;
     }
 
-    
+
     useEffect(() => {
         function isStringInt(value: string | string[] | undefined): boolean {
-            if (typeof value==="string") {
+            if (typeof value === "string") {
                 const intValue = Number(value)
                 return Number.isInteger(intValue)
             } else {
@@ -49,20 +49,30 @@ export default function Archive() {
             fetch();
         }
     }, [router]);
-    
-    const headDiscription = (copipeList: Array<Copipe>) => {
+
+    function headDiscription(copipeList: Array<Copipe>) {
         return copipeList.length != 0 ? copipeList[0].body : "";
     }
-    
+
+    function title(copipeList: Array<Copipe>) {
+        if (copipeList.length == 0) {
+            return "copipe | アーカイブ";
+        } else if (copipeList[0].title != "") {
+            return "copipe | " + copipeList[0].title;
+        } else {
+            return "copipe | " + copipeList[0].body.substring(0, 20);
+        }
+    }
+
     return (
         <>
             <NextSeo
-                title="copipe | アーカイブ"
+                title={title(copipeList)}
                 description={headDiscription(copipeList)}
                 openGraph={{
                     url: "https://www.netcopipe.com/",
-                    title: "copipe | アーカイブ",
-                    description: "コピペが検索できるサイト。",
+                    title: title(copipeList),
+                    description: headDiscription(copipeList),
                     images: [
                         {
                             url: "https://www.netcopipe.com/android-chrome-512x512.png",
@@ -72,7 +82,7 @@ export default function Archive() {
             />
             <ArticleJsonLd
                 url="https://www.netcopipe.com/"
-                title="copipe | アーカイブ"
+                title={title(copipeList)}
                 images={["https://www.netcopipe.com/android-chrome-512x512.png"]}
                 datePublished="20230226"
                 dateModified="20230226"
@@ -81,7 +91,7 @@ export default function Archive() {
                 publisherLogo=""
                 description="個々のコピペが閲覧可能なページ"
             />
-            
+
             <SearchAppBar />
             <Box sx={{ flexGrow: 1, p: 3 }}>
                 <Grid container justifyContent="center" spacing={2}>
