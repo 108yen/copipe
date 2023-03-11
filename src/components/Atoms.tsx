@@ -28,6 +28,8 @@ export const dialogStateAtom = atom(0);
 
 export const pageNumAtom = atom(1);
 
+export const pageAtom = atom(1);
+
 export const textFormAtom = atom("");
 
 // export const presentPageAtom = atom(1);
