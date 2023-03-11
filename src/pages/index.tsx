@@ -58,12 +58,18 @@ const Home: NextPage = () => {
   const { p } = router.query;
 
   useEffect(() => {
-    if (router.isReady) {
-      if (p != undefined && typeof p === 'string' && isStringInt(p)) {
+    function isStringInt(value: string | string[] | undefined): boolean {
+      if (typeof value === "string") {
+        const intValue = Number(value)
+        return Number.isInteger(intValue)
+      } else {
+        return false;
+      }
+    }
+    if (router.isReady && isStringInt(p)) {
         const postPage = Number(p);
         setPage(postPage);
         fetch(postPage, searchText);
-      }
     }
   }, [router]);
 
@@ -83,10 +89,10 @@ const Home: NextPage = () => {
     }
   }
 
-  function isStringInt(value: string): boolean {
-    const intValue = Number(value)
-    return Number.isInteger(intValue)
-  }
+  // function isStringInt(value: string): boolean {
+  //   const intValue = Number(value)
+  //   return Number.isInteger(intValue)
+  // }
 
   const headDiscription = (copipeList: Array<Copipe>) => {
     return copipeList.length != 0 ? copipeList[0].body : "";
