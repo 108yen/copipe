@@ -36,6 +36,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
         <Box key={copipeItem.id}
             sx={{
                 margin: theme.spacing(2),
+                paddingY: theme.spacing(1),
             }}
         >
             <Stack
