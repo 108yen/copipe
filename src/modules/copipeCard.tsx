@@ -3,6 +3,7 @@ import { Box, Card, CardContent, Divider, IconButton, Stack, Typography } from "
 import { Copipe } from "../components/Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
+import Link from "next/link";
 
 type Props = {
     copipeList: Array<Copipe>;
@@ -41,16 +42,24 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
                 direction='row'
                 justifyContent="space-between"
             >
-                <Typography
-                    variant="h5"
-                    noWrap
-                    sx={{
-                        flexGrow: 1,
-                        display: 'block',
+                <Link
+                    href={'/archives/' + copipeItem.id}
+                    style={{
+                        textDecoration: 'none',
+                        color: theme.palette.text.primary,
                     }}
                 >
-                    {copipeItem.title}
-                </Typography>
+                    <Typography
+                        variant="h5"
+                        noWrap
+                        sx={{
+                            flexGrow: 1,
+                            display: 'block',
+                        }}
+                    >
+                        {copipeItem.title}
+                    </Typography>
+                </Link>
                 <IconButton
                     color="secondary"
                     aria-label="copy"

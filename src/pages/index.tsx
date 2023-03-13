@@ -101,9 +101,9 @@ const Home: NextPage = () => {
   return (
     <>
       <NextSeo
-        title="copipe | 2chコピペネタ帳"
+        title="copipe | 2chコピペネタ帳" //アーカイブとかでもよいかもしれん
         description={"2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。" + headDiscription(copipeList)}
-        canonical={"https://www.netcopipe.com"}
+        canonical="https://www.netcopipe.com"
         openGraph={{
           url: "https://www.netcopipe.com/",
           title: "copipe | 2chコピペネタ帳",
