@@ -42,7 +42,7 @@ function MyApp(props: MyAppProps) {
               url: "https://www.netcopipe.com/android-chrome-512x512.png",
               width: 512,
               height: 512,
-              alt: 'Og Image Alt',
+              alt: 'copipe',
               type: 'image/png',
             }
           ]
