@@ -67,9 +67,9 @@ const Home: NextPage = () => {
       }
     }
     if (router.isReady && isStringInt(p)) {
-        const postPage = Number(p);
-        setPage(postPage);
-        fetch(postPage, searchText);
+      const postPage = Number(p);
+      setPage(postPage);
+      fetch(postPage, searchText);
     }
   }, [router]);
 
@@ -82,7 +82,9 @@ const Home: NextPage = () => {
   async function fetch(page: number, searchText: string) {
     const fetchPageNum = await calcPageNum(searchText);
     setPageNum(fetchPageNum);
-    if (page <= fetchPageNum) {
+    if (fetchPageNum == 0) {
+      setCopipeList([]);
+    } else if (page <= fetchPageNum) {
       setCopipeList(await postCopipe(searchText, page));
     } else {
       setPage(1);
