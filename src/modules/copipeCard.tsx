@@ -12,7 +12,9 @@ type Props = {
 const CopipeCard: React.FC<Props> = ({ copipeList }) => {
     return (
         <Card
-            sx={{ m: theme.spacing(2) }}
+            sx={{
+                m: { xs: theme.spacing(1), sm: theme.spacing(2) }
+            }}
         >
             <CardContent>
                 {copipeList?.map((e) => CopipeItemWidget(e))}
@@ -35,7 +37,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
     return (
         <Box key={copipeItem.id}
             sx={{
-                margin: theme.spacing(2),
+                margin: { xs: theme.spacing(1), sm: theme.spacing(2) },
                 paddingY: theme.spacing(1),
             }}
         >
@@ -48,6 +50,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
                     style={{
                         textDecoration: 'none',
                         color: theme.palette.text.primary,
+                        overflow: 'hidden'
                     }}
                 >
                     <Typography

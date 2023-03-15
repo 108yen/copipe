@@ -129,7 +129,10 @@ const Home: NextPage = () => {
         description="投稿されているコピペの閲覧、コピペの検索が可能なページ"
       />
       <SearchAppBar />
-      <Box sx={{ flexGrow: 1, p: 3 }}>
+      <Box sx={{
+        flexGrow: 1,
+        p: { xs: 0, sm: 3 }
+      }}>
         <Grid container justifyContent="center" spacing={2}>
           <Grid item xs={12} md={10} lg={8} xl={6}>
             <SearchForm setSearchText={setSearchText} />
