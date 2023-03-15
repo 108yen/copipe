@@ -48,6 +48,7 @@ const CopipeItemWidget = (copipeItem: Copipe) => {
                     style={{
                         textDecoration: 'none',
                         color: theme.palette.text.primary,
+                        overflow: 'hidden'
                     }}
                 >
                     <Typography
