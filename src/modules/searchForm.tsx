@@ -3,7 +3,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
 import theme from '@/theme';
 import { useAtom } from 'jotai';
-import { searchTextAtom, textFormAtom } from '../components/Atoms';
+import { textFormAtom, writeSearchTextAtom } from '../components/Atoms';
 import styled from '@emotion/styled';
 import router from 'next/router';
 
@@ -15,7 +15,7 @@ const SearchCard = styled(Card)(() => ({
 
 const SearchForm: React.FC = () => {
     const [text, setText] = useAtom(textFormAtom);
-    const [, setSearchText] = useAtom(searchTextAtom);
+    const [, setSearchText] = useAtom(writeSearchTextAtom);
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key == 'Enter') {

@@ -50,7 +50,14 @@ export const formPropsAtom = atom<FormProps>({
 
 export const bodyFormValidateAtom = atom(0);
 
-export const searchTextAtom = atom("");
+const searchTextAtom = atom("");
+export const writeSearchTextAtom = atom(
+    null,
+    (get, set, update: string) => {
+        set(pageAtom, 1);
+        set(searchTextAtom, update);
+    }
+)
 
 export const dialogStateAtom = atom(0);
 
