@@ -1,15 +1,38 @@
 import theme from "@/theme";
-import { Box, Card, CardContent, Divider, IconButton, Stack, Typography } from "@mui/material";
-import { Copipe } from "../components/Atoms";
+import { Box, Card, CardContent, CircularProgress, Divider, IconButton, Stack, Typography } from "@mui/material";
+import { Copipe, copipeListAtom } from "../components/Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 import Link from "next/link";
+import { useAtom } from "jotai";
+import { loadable } from "jotai/utils"
 
-type Props = {
-    copipeList: Array<Copipe>;
-}
+const CopipeCard: React.FC = () => {
+    const loadableAtom = loadable(copipeListAtom);
+    const [value] = useAtom(loadableAtom);
 
-const CopipeCard: React.FC<Props> = ({ copipeList }) => {
+    if (value.state === 'hasError') {
+        return <Box
+            key={0}
+            sx={{
+                m: 3,
+                display: "flex",
+                justifyContent: "center"
+            }}>
+            <Typography>error</Typography>
+        </Box>;
+    }
+    if (value.state === 'loading') {
+        return <Box
+            key={0}
+            sx={{
+                m: 3,
+                display: "flex",
+                justifyContent: "center"
+            }}>
+            <CircularProgress color="secondary" />
+        </Box>;
+    }
     return (
         <Card
             sx={{
@@ -17,7 +40,7 @@ const CopipeCard: React.FC<Props> = ({ copipeList }) => {
             }}
         >
             <CardContent>
-                {copipeList?.map((e) => CopipeItemWidget(e))}
+                {value.data.map((e) => CopipeItemWidget(e))}
             </CardContent>
         </Card>
     );
@@ -33,7 +56,7 @@ const handleClickCopy = async (copyText: string, id: number) => {
         ])
 }
 
-const CopipeItemWidget = (copipeItem: Copipe) => {
+export const CopipeItemWidget = (copipeItem: Copipe) => {
     return (
         <Box key={copipeItem.id}
             sx={{

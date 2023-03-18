@@ -1,36 +1,33 @@
-import { Copipe } from "@/components/Atoms";
+import { pageAtom, pageNumAtom } from "@/components/Atoms";
 import { Pagination } from "@mui/material";
 import { Box } from "@mui/system";
+import { useAtom } from "jotai";
+import { loadable } from "jotai/utils";
 
-type Props = {
-    pageNum: number;
-    currentPage: number;
-    setCurrentPage: (page:number) => void;
-    // setCopipeList: (page:number) => void;
-}
+const BasicPagination = () => {
+    const [page, setPage] = useAtom(pageAtom);
+    const loadableAtom = loadable(pageNumAtom);
+    const [value] = useAtom(loadableAtom);
 
-const BasicPagination: React.FC<Props> = ({
-    pageNum,
-    currentPage,
-    setCurrentPage,
-    // setCopipeList,
-}) => {
-    const handleChange = async (event: React.ChangeEvent<unknown>, value: number) => {
-        await setCurrentPage(value);
+    const handleChange = (event: React.ChangeEvent<unknown>, value: number) => {
+        setPage(value);
         window.scrollTo({
             top: 0,
             behavior: "smooth",
         });
     };
 
-    return (
-        <Box sx={{
-            display: 'flex',
-            justifyContent: "center"
-        }}>
-            <Pagination count={pageNum} page={currentPage} onChange={handleChange} />
-        </Box>
-    );
+    if (value.state === 'hasData') {
+        return (
+            <Box sx={{
+                display: 'flex',
+                justifyContent: "center"
+            }}>
+                <Pagination count={value.data} page={page} onChange={handleChange} />
+            </Box>
+        );
+    }
+    return <></>;
 }
 
 export default BasicPagination;
