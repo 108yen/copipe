@@ -56,7 +56,7 @@ const handleClickCopy = async (copyText: string, id: number) => {
         ])
 }
 
-const CopipeItemWidget = (copipeItem: Copipe) => {
+export const CopipeItemWidget = (copipeItem: Copipe) => {
     return (
         <Box key={copipeItem.id}
             sx={{
