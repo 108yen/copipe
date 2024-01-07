@@ -2,6 +2,10 @@ import { Box, Card, CardContent, Grid } from "@mui/material";
 import SearchAppBar from "@/modules/searchAppBar";
 import CopipeSubmitForm from "./copipeSubmitForm";
 
+export const metadata = {
+    title:'投稿フォーム'
+}
+
 export default function Page() {
     return (
         <>
