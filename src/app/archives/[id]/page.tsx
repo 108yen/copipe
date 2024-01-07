@@ -1,14 +1,15 @@
 import { Copipe } from "@/components/Atoms";
 import SearchAppBar from "@/modules/searchAppBar";
 import supabase from "@/utils/supabase";
-import { Box, Card, CardContent, Divider, Grid, List, ListItem, ListItemText, Typography } from "@mui/material";
+import { Card, CardContent, Grid } from "@mui/material";
 import { CopipeItemWidget } from "@/modules/copipeCard";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import { CopipeComment } from "@/models/comment";
 import React from "react";
-import { formatDate } from "@/utils/formatDate";
-import CommentForm from "./commentForm";
+import { Comments } from "./commentList";
+
+export const revalidate = 0;
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -65,57 +66,6 @@ function ArchiveBody(props: { copipe: Copipe }) {
             </Grid>
         </Grid>
     );
-}
-
-//別ファイルにするとなぜがエラーが出る
-function CommentItem(props: { comment: CopipeComment }) {
-    const { comment } = props;
-
-    return (
-        <ListItem alignItems="flex-start">
-            <ListItemText
-                primary={
-                    <Typography variant="caption" color="grey">
-                        {`${formatDate(comment.created_at!)}`}
-                    </Typography>
-                }
-                secondary={
-                    <Typography sx={{ whiteSpace: "pre-line" }}>
-                        {comment.body}
-                    </Typography>
-                }
-            />
-        </ListItem>
-    );
-}
-
-function Comments(props: { comments: CopipeComment[], copipe_id: number }) {
-    const { comments, copipe_id } = props;
-
-    return (
-        <Grid container justifyContent="center">
-            <Grid item xs={12} md={10} lg={8} xl={6}>
-                <Card
-                    sx={{
-                        m: { xs: 1, sm: 2 }
-                    }}
-                >
-                    <CardContent>
-                        <List>
-                            {comments.map((comment, index) =>
-                            (
-                                <React.Fragment key={comment.id}>
-                                    <CommentItem comment={comment} />
-                                    {index < comments.length - 1 && <Divider variant="middle" />}
-                                </React.Fragment>
-                            ))}
-                        </List>
-                        <CommentForm copipe_id={copipe_id} />
-                    </CardContent>
-                </Card>
-            </Grid>
-        </Grid>
-    )
 }
 
 export default async function Page({ params }: { params: { id: string } }) {

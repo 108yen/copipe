@@ -5,6 +5,7 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { postComment } from "./serverActions";
 import { useState } from "react";
 import { Snackbar, Alert, Box, Button } from "@mui/material";
+import { CopipeComment } from "@/models/comment";
 
 type Inputs = {
     body: string;
@@ -16,8 +17,8 @@ type SnackbarStateProps = {
     message: string
 }
 
-export default function CommentForm(props: { copipe_id: number }) {
-    const { copipe_id } = props;
+export default function CommentForm(props: { copipe_id: number, addOptimisticComment: (action: CopipeComment) => void }) {
+    const { copipe_id, addOptimisticComment } = props;
 
     const { control, handleSubmit, reset } = useForm<Inputs>({
         defaultValues: {
@@ -39,6 +40,11 @@ export default function CommentForm(props: { copipe_id: number }) {
     }
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
+        addOptimisticComment({
+            id: Math.random(),
+            body: data.body
+        })
+        
         const result = await postComment(copipe_id, data.body)
 
         if (result?.error) {
