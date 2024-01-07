@@ -61,8 +61,8 @@ export const CopipeItemWidget = (copipeItem: Copipe) => {
     return (
         <Box key={copipeItem.id}
             sx={{
-                margin: { xs: theme.spacing(1), sm: theme.spacing(2) },
-                paddingY: theme.spacing(1),
+                margin: { xs: 1, sm: 2 },
+                paddingY: 1,
             }}
         >
             <Stack
