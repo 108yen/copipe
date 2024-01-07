@@ -1,12 +1,11 @@
+'use client'
 import { Copipe } from "@/components/Atoms";
 import SearchAppBar from "@/modules/searchAppBar";
-import theme from "@/theme";
+import theme from "@/theme/theme";
 import supabase from "@/utils/supabase";
 import { Box, Card, CardContent, CircularProgress, Grid, Typography } from "@mui/material";
 import { atom, useAtom } from "jotai";
 import { loadable } from "jotai/utils";
-import { ArticleJsonLd, NextSeo } from "next-seo";
-import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { CopipeItemWidget } from "@/modules/copipeCard";
 
@@ -96,79 +95,20 @@ function ArchiveBody() {
     );
 }
 
-export default function Archive() {
+export default function Page({ params }: { params: { id: string } }) {
     const [, setCopipeId] = useAtom(copipeIdAtom);
-    const loadableAtom = loadable(copipeAtom);
-    const [value] = useAtom(loadableAtom);
-    const router = useRouter();
-    const { id } = router.query;
-
-
+    const id=params.id
 
     useEffect(() => {
-        function isStringInt(value: string | string[] | undefined): boolean {
-            if (typeof value === "string") {
-                const intValue = Number(value)
-                return Number.isInteger(intValue)
-            } else {
-                return false;
-            }
-        }
         async function fetch() {
             setCopipeId(Number(id));
         }
-        if (router.isReady && isStringInt(id)) {
-            fetch();
-        }
-    }, [router]);
-
-    function headDiscription() {
-        if (value.state === 'hasData' && value.data != undefined) {
-            if (value.data.title == "") {
-                return "copipe | " + value.data.body.substring(0, 20);
-            }
-            return "copipe | " + value.data.title;
-        } else {
-            return "copipe | アーカイブ";
-        }
-    }
-
-    function title() {
-        if (value.state === 'hasData' && value.data != undefined) {
-            return "copipe | " + value.data.body;
-        } else {
-            return "2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。";
-        }
-    }
+        fetch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     return (
         <>
-            <NextSeo
-                title={title()}
-                description={headDiscription()}
-                openGraph={{
-                    url: "https://www.netcopipe.com/",
-                    title: title(),
-                    description: headDiscription(),
-                    images: [
-                        {
-                            url: "https://www.netcopipe.com/android-chrome-512x512.png",
-                        },
-                    ],
-                }}
-            />
-            <ArticleJsonLd
-                url="https://www.netcopipe.com/"
-                title={title()}
-                images={["https://www.netcopipe.com/android-chrome-512x512.png"]}
-                datePublished="20230226"
-                dateModified="20230226"
-                authorName="108yen"
-                publisherName="108yen"
-                publisherLogo=""
-                description="個々のコピペが閲覧可能なページ"
-            />
-
             <SearchAppBar />
             <ArchiveBody />
         </>

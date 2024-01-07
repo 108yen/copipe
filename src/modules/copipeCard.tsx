@@ -1,4 +1,4 @@
-import theme from "@/theme";
+import theme from "@/theme/theme";
 import { Box, Card, CardContent, CircularProgress, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { Copipe, copipeListAtom } from "../components/Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';

@@ -1,11 +1,11 @@
 import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
-import theme from '@/theme';
+import theme from '@/theme/theme';
 import { useAtom } from 'jotai';
 import { textFormAtom, writeSearchTextAtom } from '../components/Atoms';
 import styled from '@emotion/styled';
-import router from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const SearchCard = styled(Card)(() => ({
     position: "sticky",
@@ -14,6 +14,8 @@ const SearchCard = styled(Card)(() => ({
 }));
 
 const SearchForm: React.FC = () => {
+    const router = useRouter()
+    
     const [text, setText] = useAtom(textFormAtom);
     const [, setSearchText] = useAtom(writeSearchTextAtom);
 
