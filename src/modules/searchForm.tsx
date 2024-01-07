@@ -1,7 +1,7 @@
 import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
-import theme from '@/theme';
+import theme from '@/theme/theme';
 import { useAtom } from 'jotai';
 import { textFormAtom, writeSearchTextAtom } from '../components/Atoms';
 import styled from '@emotion/styled';

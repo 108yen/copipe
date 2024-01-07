@@ -1,11 +1,10 @@
 import { Copipe } from "@/components/Atoms";
 import SearchAppBar from "@/modules/searchAppBar";
-import theme from "@/theme";
+import theme from "@/theme/theme";
 import supabase from "@/utils/supabase";
 import { Box, Card, CardContent, CircularProgress, Grid, Typography } from "@mui/material";
 import { atom, useAtom } from "jotai";
 import { loadable } from "jotai/utils";
-import { ArticleJsonLd, NextSeo } from "next-seo";
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import { CopipeItemWidget } from "@/modules/copipeCard";
@@ -143,31 +142,6 @@ export default function Archive() {
 
     return (
         <>
-            <NextSeo
-                title={title()}
-                description={headDiscription()}
-                openGraph={{
-                    url: "https://www.netcopipe.com/",
-                    title: title(),
-                    description: headDiscription(),
-                    images: [
-                        {
-                            url: "https://www.netcopipe.com/android-chrome-512x512.png",
-                        },
-                    ],
-                }}
-            />
-            <ArticleJsonLd
-                url="https://www.netcopipe.com/"
-                title={title()}
-                images={["https://www.netcopipe.com/android-chrome-512x512.png"]}
-                datePublished="20230226"
-                dateModified="20230226"
-                authorName="108yen"
-                publisherName="108yen"
-                publisherLogo=""
-                description="個々のコピペが閲覧可能なページ"
-            />
 
             <SearchAppBar />
             <ArchiveBody />
