@@ -1,13 +1,6 @@
+import { Copipe } from "@/models/copipe";
 import supabase from "@/utils/supabase";
 import { atom } from "jotai";
-
-export type Copipe = {
-    id: number;
-    inserted_at: Date;
-    updated_at: Date;
-    body: string;
-    title: string;
-}
 
 export const copipeListAtom = atom<Promise<Array<Copipe>>>(
     async (get) => {

@@ -1,3 +1,4 @@
+'use client'
 import * as React from 'react';
 import { styled, alpha } from '@mui/material/styles';
 import AppBar from '@mui/material/AppBar';
@@ -5,7 +6,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import InputBase from '@mui/material/InputBase';
-import {  useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 const Search = styled('div')(({ theme }) => ({
     position: 'relative',
@@ -71,15 +72,6 @@ export default function SearchAppBar() {
                     >
                         copipe
                     </Typography>
-                    {/* <Box sx={{ flexGrow: 1, display: { xs: 'none', sm: 'flex' } }}>
-                        <Button
-                            key={'postform'}
-                            onClick={() => { router.push("/postForm") }}
-                            sx={{ my: 2, color: 'black', display: 'block' }}
-                        >
-                            post form
-                        </Button>
-                    </Box> */}
                 </Toolbar>
             </AppBar>
         </Box>

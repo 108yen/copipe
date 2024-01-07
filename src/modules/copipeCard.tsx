@@ -1,11 +1,13 @@
-import theme from "@/theme";
+'use client'
+import theme from "@/theme/theme";
 import { Box, Card, CardContent, CircularProgress, Divider, IconButton, Stack, Typography } from "@mui/material";
-import { Copipe, copipeListAtom } from "../components/Atoms";
+import { copipeListAtom } from "../components/Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 import Link from "next/link";
 import { useAtom } from "jotai";
 import { loadable } from "jotai/utils"
+import { Copipe } from "@/models/copipe";
 
 const CopipeCard: React.FC = () => {
     const loadableAtom = loadable(copipeListAtom);
@@ -36,7 +38,7 @@ const CopipeCard: React.FC = () => {
     return (
         <Card
             sx={{
-                m: { xs: theme.spacing(1), sm: theme.spacing(2) }
+                m: { xs: 1, sm: 2 }
             }}
         >
             <CardContent>
@@ -60,8 +62,8 @@ export const CopipeItemWidget = (copipeItem: Copipe) => {
     return (
         <Box key={copipeItem.id}
             sx={{
-                margin: { xs: theme.spacing(1), sm: theme.spacing(2) },
-                paddingY: theme.spacing(1),
+                margin: { xs: 1, sm: 2 },
+                paddingY: 1,
             }}
         >
             <Stack
