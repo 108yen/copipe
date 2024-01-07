@@ -20,7 +20,7 @@ type SnackbarStateProps = {
 export default function CommentForm(props: { copipe_id: number, addOptimisticComment: (action: CopipeComment) => void }) {
     const { copipe_id, addOptimisticComment } = props;
 
-    const { control, handleSubmit, reset } = useForm<Inputs>({
+    const { control, handleSubmit, reset, formState } = useForm<Inputs>({
         defaultValues: {
             body: ''
         }
@@ -44,7 +44,7 @@ export default function CommentForm(props: { copipe_id: number, addOptimisticCom
             id: Math.random(),
             body: data.body
         })
-        
+
         const result = await postComment(copipe_id, data.body)
 
         if (result?.error) {
@@ -110,6 +110,7 @@ export default function CommentForm(props: { copipe_id: number, addOptimisticCom
                     variant="contained"
                     color="secondary"
                     type="submit"
+                    disabled={formState.isSubmitting}
                 >
                     コメント
                 </Button>
