@@ -1,9 +1,10 @@
+'use client'
+
 import supabase from "@/utils/supabase";
 import { Box, Button, Card, CardContent, Dialog, DialogActions, DialogTitle, Grid, styled, TextField } from "@mui/material";
 import { useAtom } from "jotai";
-import { NextPage } from "next";
-import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "../components/Atoms";
-import SearchAppBar from "../modules/searchAppBar";
+import { bodyFormValidateAtom, dialogStateAtom, formPropsAtom } from "@/components/Atoms";
+import SearchAppBar from "@/modules/searchAppBar";
 
 const ExpandableTextField = styled(TextField)(({ theme }) => ({
     '& > textarea': {
@@ -12,7 +13,7 @@ const ExpandableTextField = styled(TextField)(({ theme }) => ({
     },
 }));
 
-const PostForm: NextPage = () => {
+export default function Page() {
     const [formProps, setFormProps] = useAtom(formPropsAtom);
     const [bodyFormValidate, setBodyFormValidate] = useAtom(bodyFormValidateAtom);
     const [dialogState, setDialogState] = useAtom(dialogStateAtom);
@@ -139,5 +140,3 @@ const PostForm: NextPage = () => {
         </>
     );
 }
-
-export default PostForm;
