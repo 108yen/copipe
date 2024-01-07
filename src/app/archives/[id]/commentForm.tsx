@@ -42,7 +42,8 @@ export default function CommentForm(props: { copipe_id: number, addOptimisticCom
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
         addOptimisticComment({
             id: Math.random(),
-            body: data.body
+            body: data.body,
+            created_at: new Date()
         })
 
         const result = await postComment(copipe_id, data.body)
