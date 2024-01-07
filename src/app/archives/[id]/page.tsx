@@ -1,14 +1,19 @@
-import { Copipe } from "@/components/Atoms";
+import { Copipe } from "@/models/copipe";
 import SearchAppBar from "@/modules/searchAppBar";
 import supabase from "@/utils/supabase";
-import { Box, Card, CardContent,  Grid } from "@mui/material";
+import { Card, CardContent, Grid } from "@mui/material";
 import { CopipeItemWidget } from "@/modules/copipeCard";
 import { notFound } from "next/navigation";
 import { cache } from "react";
+import { CopipeComment } from "@/models/comment";
+import React from "react";
+import { Comments } from "./commentList";
+
+export const revalidate = 0;
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
-    const copipe = await getCopipe(Number(id))
+    const { copipe, comments } = await getCopipe(Number(id))
 
     return {
         title: copipe.title
@@ -18,7 +23,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 const getCopipe = cache(async (id: number) => {
     const { data, error } = await supabase
         .from('copipe')
-        .select()
+        .select('*, comments(*)')
         .eq("id", id)
         .maybeSingle();
     if (error) notFound();
@@ -31,39 +36,47 @@ const getCopipe = cache(async (id: number) => {
         title: data.title,
     };
 
-    return copipe;
-});    
+    const comments: CopipeComment[] = data.comments.map((comment: CopipeComment) => {
+        return {
+            id: comment.id,
+            created_at: new Date(comment.created_at!),
+            copipe_id: comment.copipe_id,
+            body: comment.body
+        } as CopipeComment
+    })
 
-function ArchiveBody(props: {copipe: Copipe}) {
+    return { copipe, comments };
+});
+
+function ArchiveBody(props: { copipe: Copipe }) {
     const { copipe } = props;
 
     return (
-        <Box sx={{ flexGrow: 1, p: 3 }}>
-            <Grid container justifyContent="center" spacing={2}>
-                <Grid item xs={12} md={10} lg={8} xl={6}>
-                    <Card
-                        sx={{
-                            m: { xs: 1, sm: 2 }
-                        }}
-                    >
-                        <CardContent>
-                            <CopipeItemWidget id={copipe.id} inserted_at={copipe.inserted_at} updated_at={copipe.updated_at} body={copipe.body} title={copipe.title} />
-                        </CardContent>
-                    </Card>
-                </Grid>
+        <Grid container justifyContent="center" spacing={2}>
+            <Grid item xs={12} md={10} lg={8} xl={6}>
+                <Card
+                    sx={{
+                        m: { xs: 1, sm: 2 }
+                    }}
+                >
+                    <CardContent>
+                        <CopipeItemWidget id={copipe.id} inserted_at={copipe.inserted_at} updated_at={copipe.updated_at} body={copipe.body} title={copipe.title} />
+                    </CardContent>
+                </Card>
             </Grid>
-        </Box>
+        </Grid>
     );
 }
 
 export default async function Page({ params }: { params: { id: string } }) {
-    const id = params.id;
-    const copipe = await getCopipe(Number(id))
+    const id = Number(params.id);
+    const { copipe, comments } = await getCopipe(id)
 
     return (
         <>
             <SearchAppBar />
-            <ArchiveBody copipe={copipe}/>
+            <ArchiveBody copipe={copipe} />
+            <Comments comments={comments} copipe_id={id} />
         </>
     );
 }
