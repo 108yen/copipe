@@ -3,7 +3,10 @@ import { Metadata } from 'next'
 import ThemeRegistry from "@/theme/themeRegistry";
 
 export const metadata:Metadata = {
-    title:'copipe | コピペのアーカイブ',
+    title: {
+        default: 'copipe | コピペのアーカイブ',
+        template: '%s | copipe'
+    },
     description: "2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。",
      openGraph:{
         url: "https://www.netcopipe.com/",

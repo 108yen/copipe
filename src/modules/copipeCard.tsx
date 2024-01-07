@@ -1,3 +1,4 @@
+'use client'
 import theme from "@/theme/theme";
 import { Box, Card, CardContent, CircularProgress, Divider, IconButton, Stack, Typography } from "@mui/material";
 import { Copipe, copipeListAtom } from "../components/Atoms";
@@ -36,7 +37,7 @@ const CopipeCard: React.FC = () => {
     return (
         <Card
             sx={{
-                m: { xs: theme.spacing(1), sm: theme.spacing(2) }
+                m: { xs: 1, sm: 2 }
             }}
         >
             <CardContent>
