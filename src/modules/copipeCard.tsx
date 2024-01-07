@@ -1,12 +1,13 @@
 'use client'
 import theme from "@/theme/theme";
 import { Box, Card, CardContent, CircularProgress, Divider, IconButton, Stack, Typography } from "@mui/material";
-import { Copipe, copipeListAtom } from "../components/Atoms";
+import { copipeListAtom } from "../components/Atoms";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import supabase from "@/utils/supabase";
 import Link from "next/link";
 import { useAtom } from "jotai";
 import { loadable } from "jotai/utils"
+import { Copipe } from "@/models/copipe";
 
 const CopipeCard: React.FC = () => {
     const loadableAtom = loadable(copipeListAtom);

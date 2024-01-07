@@ -1,4 +1,4 @@
-import { Copipe } from "@/components/Atoms";
+import { Copipe } from "@/models/copipe";
 import SearchAppBar from "@/modules/searchAppBar";
 import supabase from "@/utils/supabase";
 import { Card, CardContent, Grid } from "@mui/material";
