@@ -4,8 +4,18 @@ import supabase from "@/utils/supabase";
 import { Box, Card, CardContent,  Grid } from "@mui/material";
 import { CopipeItemWidget } from "@/modules/copipeCard";
 import { notFound } from "next/navigation";
+import { cache } from "react";
 
-async function getCopipe(id: number) {
+export async function generateMetadata({ params }: { params: { id: string } }) {
+    const { id } = params;
+    const copipe = await getCopipe(Number(id))
+
+    return {
+        title: copipe.title
+    };
+}
+
+const getCopipe = cache(async (id: number) => {
     const { data, error } = await supabase
         .from('copipe')
         .select()
@@ -22,7 +32,7 @@ async function getCopipe(id: number) {
     };
 
     return copipe;
-}
+});    
 
 function ArchiveBody(props: {copipe: Copipe}) {
     const { copipe } = props;
