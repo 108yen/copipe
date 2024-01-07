@@ -18,7 +18,6 @@ export async function postNewCopipe(props: { title: string, body: string }) {
             },
         ]);
     if (error) return { error: JSON.stringify(error) };
-    return { error: 'debug' }
 }
 
 async function checkDupulicate(body: string) {

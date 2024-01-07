@@ -1,13 +1,12 @@
 'use client'
 
-import { Alert, Box, Button, Snackbar, TextField } from "@mui/material";
-import { useState } from "react";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import {postNewCopipe} from "./serverActions";
 import { ExpandableTextField } from "@/components/expandableTextField";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { postComment } from "./serverActions";
+import { useState } from "react";
+import { Snackbar, Alert, Box, Button } from "@mui/material";
 
 type Inputs = {
-    title: string;
     body: string;
 }
 
@@ -17,13 +16,15 @@ type SnackbarStateProps = {
     message: string
 }
 
-export default function CopipeSubmitForm() {
+export default function CommentForm(props: { copipe_id: number }) {
+    const { copipe_id } = props;
+
     const { control, handleSubmit, reset } = useForm<Inputs>({
         defaultValues: {
-            title: '',
-            body:''
+            body: ''
         }
     })
+
     const [snackbarState, setSnackbarState] = useState<SnackbarStateProps>({
         open: false,
         severity: `success`,
@@ -31,18 +32,14 @@ export default function CopipeSubmitForm() {
     })
 
     const validationRules = {
-        title: {
-            required: 'タイトルを入力して下さい',
-            minLength:{value:1,message:'タイトルを入力して下さい'}
-        },
         body: {
-            required: '本文を入力して下さい',
-            minLength:{value:1,message:'本文を入力して下さい'}
+            required: 'コメントを入力して下さい',
+            minLength: { value: 1, message: 'コメントを入力して下さい' }
         }
     }
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
-        const result = await postNewCopipe(data)
+        const result = await postComment(copipe_id, data.body)
 
         if (result?.error) {
             setSnackbarState({
@@ -50,13 +47,6 @@ export default function CopipeSubmitForm() {
                 severity: `error`,
                 message: '投稿失敗'
             })
-        } else if (result?.message) {
-            setSnackbarState({
-                open: true,
-                severity: `warning`,
-                message: result.message
-            })
-            reset()
         } else {
             setSnackbarState({
                 open: true,
@@ -83,25 +73,8 @@ export default function CopipeSubmitForm() {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            onKeyDown={e=>checkKeyDown(e)}
+            onKeyDown={e => checkKeyDown(e)}
         >
-            <Controller
-                name="title"
-                control={control}
-                rules={validationRules.title}
-                render={({ field, fieldState }) => (
-                    <TextField
-                        {...field}
-                        id='title'
-                        label="タイトル"
-                        fullWidth
-                        margin="normal"
-                        color='secondary'
-                        error={fieldState.invalid}
-                        helperText={fieldState.error?.message}
-                    />
-                )}
-            />
             <Controller
                 name="body"
                 control={control}
@@ -110,18 +83,19 @@ export default function CopipeSubmitForm() {
                     <ExpandableTextField
                         {...field}
                         id="body"
-                        label="本文"
+                        label="コメント"
                         fullWidth
                         multiline
-                        minRows={4}
+                        minRows={1}
                         maxRows={30}
                         margin="normal"
                         color='secondary'
                         error={fieldState.invalid}
-                        helperText={fieldState.error?.message}
+                        helperText={fieldState.error?.message ?? "改行: shift + enter"}
                     />
                 )}
             />
+
             <Box sx={{
                 display: 'flex',
                 justifyContent: 'center',
@@ -131,7 +105,7 @@ export default function CopipeSubmitForm() {
                     color="secondary"
                     type="submit"
                 >
-                    投稿
+                    コメント
                 </Button>
             </Box>
             <Snackbar
