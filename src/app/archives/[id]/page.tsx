@@ -36,14 +36,14 @@ const getCopipe = cache(async (id: number) => {
         title: data.title,
     };
 
-    const comments: CopipeComment[] = data.comments.map(
-        (comment: CopipeComment) => new CopipeComment({
+    const comments: CopipeComment[] = data.comments.map((comment: CopipeComment) => {
+        return {
             id: comment.id,
-            created_at: comment.created_at,
+            created_at: new Date(comment.created_at!),
             copipe_id: comment.copipe_id,
             body: comment.body
-        })
-    )
+        } as CopipeComment
+    })
 
     return { copipe, comments };
 });

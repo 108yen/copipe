@@ -13,7 +13,7 @@ export async function postComment(copipe_id: number, body: string) {
             },
         ]);
     if (error) {
-        revalidatePath('/archives/[id]', 'page')
+        revalidatePath('/archives/[id]','page')
         return { error: JSON.stringify(error) }
     };
 }
