@@ -25,13 +25,11 @@ async function checkDupulicate(body: string) {
         .from('copipe')
         .select()
         .eq('body', body)
-        .limit(1)
         .maybeSingle();
-    // .match({ body: inputData });
     if (error) {
         //!文章が長いときにエラーになる
         console.log('check dupulicate error', error);
         return false;
     }
-    return data?.length != 0;
+    return data != null;
 }
