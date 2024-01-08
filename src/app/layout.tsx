@@ -4,7 +4,8 @@ import ThemeRegistry from "@/theme/themeRegistry";
 import SearchAppBar from "@/modules/searchAppBar";
 import Grid from "@mui/material/Grid";
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
-import { GoogleAnalytics } from "@next/third-parties/google";
+import GoogleAnalytics from "@/analytics/GoogleAnalytics";
+import { headers } from 'next/headers'
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
@@ -31,13 +32,14 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
+    const header = headers()
+    const ip = (header.get(`x-forwarded-for`) ?? ``).split(`,`)[0]
+
     return (
         <html lang="ja">
             <head>
                 <Suspense>
-                    {process.env.NODE_ENV === "production" && (
-                        <GoogleAnalytics gaId='G-RT0VSWZG3X' />
-                    )}
+                    <GoogleAnalytics debugMode={process.env.NODE_ENV !== "production"} clientIp={ip} />
                 </Suspense>
             </head>
             <body>
