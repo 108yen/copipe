@@ -2,7 +2,7 @@
 
 import { CopipeComment } from "@/models/comment";
 import { formatDate } from "@/utils/formatDate";
-import { ListItem, ListItemText, Typography, Grid, Card, CardContent, List, Divider } from "@mui/material";
+import { ListItem, ListItemText, Typography, Card, CardContent, List, Divider } from "@mui/material";
 import React, { useOptimistic } from "react";
 import CommentForm from "./commentForm";
 
@@ -39,27 +39,23 @@ export function Comments(props: { comments: CopipeComment[], copipe_id: number }
     )
 
     return (
-        <Grid container justifyContent="center">
-            <Grid item xs={12} md={10} lg={8} xl={6}>
-                <Card
-                    sx={{
-                        m: { xs: 1, sm: 2 }
-                    }}
-                >
-                    <CardContent>
-                        <List>
-                            {optimisticComments.map((comment, index) =>
-                            (
-                                <React.Fragment key={comment.id}>
-                                    <CommentItem comment={comment} />
-                                    {index < comments.length - 1 && <Divider variant="middle" />}
-                                </React.Fragment>
-                            ))}
-                        </List>
-                        <CommentForm copipe_id={copipe_id} addOptimisticComment={addOptimisticComment} />
-                    </CardContent>
-                </Card>
-            </Grid>
-        </Grid>
+        <Card
+            sx={{
+                m: { xs: 1, sm: 2 }
+            }}
+        >
+            <CardContent>
+                <List>
+                    {optimisticComments.map((comment, index) =>
+                    (
+                        <React.Fragment key={comment.id}>
+                            <CommentItem comment={comment} />
+                            {index < comments.length - 1 && <Divider variant="middle" />}
+                        </React.Fragment>
+                    ))}
+                </List>
+                <CommentForm copipe_id={copipe_id} addOptimisticComment={addOptimisticComment} />
+            </CardContent>
+        </Card>
     )
 }

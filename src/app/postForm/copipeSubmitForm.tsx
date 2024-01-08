@@ -18,7 +18,7 @@ type SnackbarStateProps = {
 }
 
 export default function CopipeSubmitForm() {
-    const { control, handleSubmit, reset } = useForm<Inputs>({
+    const { control, handleSubmit, reset, formState } = useForm<Inputs>({
         defaultValues: {
             title: '',
             body:''
@@ -130,6 +130,7 @@ export default function CopipeSubmitForm() {
                     variant="contained"
                     color="secondary"
                     type="submit"
+                    disabled={formState.isSubmitting}
                 >
                     投稿
                 </Button>
