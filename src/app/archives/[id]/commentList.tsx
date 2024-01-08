@@ -2,9 +2,15 @@
 
 import { CopipeComment } from "@/models/comment";
 import { formatDate } from "@/utils/formatDate";
-import { ListItem, ListItemText, Typography, Card, CardContent, List, Divider } from "@mui/material";
 import React, { useOptimistic } from "react";
 import CommentForm from "./commentForm";
+import ListItem from "@mui/material/ListItem";
+import ListItemText from "@mui/material/ListItemText";
+import Typography from "@mui/material/Typography";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import List from "@mui/material/List";
+import Divider from "@mui/material/Divider";
 
 
 //別ファイルにするとなぜがエラーが出る

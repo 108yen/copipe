@@ -15,7 +15,7 @@ const SearchCard = styled(Card)(() => ({
 
 const SearchForm: React.FC = () => {
     const router = useRouter()
-    
+
     const [text, setText] = useAtom(textFormAtom);
     const [, setSearchText] = useAtom(writeSearchTextAtom);
 
