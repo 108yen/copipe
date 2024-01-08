@@ -6,7 +6,6 @@ import { postComment } from "./serverActions";
 import { useState } from "react";
 import { Snackbar, Alert, Box, Button } from "@mui/material";
 import { CopipeComment } from "@/models/comment";
-import { sendGAEvent } from "@next/third-parties/google";
 
 type Inputs = {
     body: string;
@@ -41,11 +40,6 @@ export default function CommentForm(props: { copipe_id: number, addOptimisticCom
     }
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
-        //ga
-        sendGAEvent({
-            event: 'click',
-            event_label: 'click_post_comment'
-        })
 
         addOptimisticComment({
             id: Math.random(),

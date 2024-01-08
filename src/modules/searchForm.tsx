@@ -6,6 +6,7 @@ import { useAtom } from 'jotai';
 import { textFormAtom, writeSearchTextAtom } from '../components/Atoms';
 import styled from '@emotion/styled';
 import { useRouter } from 'next/navigation';
+import { sendGAEvent } from '@next/third-parties/google';
 
 const SearchCard = styled(Card)(() => ({
     position: "sticky",
@@ -15,7 +16,7 @@ const SearchCard = styled(Card)(() => ({
 
 const SearchForm: React.FC = () => {
     const router = useRouter()
-    
+
     const [text, setText] = useAtom(textFormAtom);
     const [, setSearchText] = useAtom(writeSearchTextAtom);
 
@@ -25,6 +26,10 @@ const SearchForm: React.FC = () => {
         }
     }
     const handleSubmit = () => {
+        sendGAEvent({
+            event: 'form_start',
+            value: 'search_form'
+        })
         setSearchText(text);
         window.scrollTo({
             top: 0,
