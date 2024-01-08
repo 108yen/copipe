@@ -3,8 +3,9 @@
 import { Alert, Box, Button, Snackbar, TextField } from "@mui/material";
 import { useState } from "react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import {postNewCopipe} from "./serverActions";
+import { postNewCopipe } from "./serverActions";
 import { ExpandableTextField } from "@/components/expandableTextField";
+import { event } from "@/analytics/gtag";
 
 type Inputs = {
     title: string;
@@ -21,7 +22,7 @@ export default function CopipeSubmitForm() {
     const { control, handleSubmit, reset, formState } = useForm<Inputs>({
         defaultValues: {
             title: '',
-            body:''
+            body: ''
         }
     })
     const [snackbarState, setSnackbarState] = useState<SnackbarStateProps>({
@@ -33,15 +34,19 @@ export default function CopipeSubmitForm() {
     const validationRules = {
         title: {
             required: 'タイトルを入力して下さい',
-            minLength:{value:1,message:'タイトルを入力して下さい'}
+            minLength: { value: 1, message: 'タイトルを入力して下さい' }
         },
         body: {
             required: '本文を入力して下さい',
-            minLength:{value:1,message:'本文を入力して下さい'}
+            minLength: { value: 1, message: '本文を入力して下さい' }
         }
     }
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
+        event('click', {
+            label: 'post_copipe'
+        })
+        
         const result = await postNewCopipe(data)
 
         if (result?.error) {
@@ -83,7 +88,7 @@ export default function CopipeSubmitForm() {
     return (
         <form
             onSubmit={handleSubmit(onSubmit)}
-            onKeyDown={e=>checkKeyDown(e)}
+            onKeyDown={e => checkKeyDown(e)}
         >
             <Controller
                 name="title"
