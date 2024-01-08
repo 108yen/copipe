@@ -8,6 +8,7 @@ import { CopipeComment } from "@/models/comment";
 import React from "react";
 import { Comments } from "./commentList";
 import PageNation from "./pageNation";
+import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -71,6 +72,7 @@ export default async function Page({ params }: { params: { id: string } }) {
         <>
             <ArchiveBody copipe={copipe} />
             <Comments comments={comments} copipe_id={id} />
+            <AdmaxUnderSwitch />
             <PageNation copipe_id={id} />
         </>
     );
