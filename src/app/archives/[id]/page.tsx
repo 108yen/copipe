@@ -8,8 +8,7 @@ import { cache } from "react";
 import { CopipeComment } from "@/models/comment";
 import React from "react";
 import { Comments } from "./commentList";
-
-export const revalidate = 0;
+import PageNation from "./pageNation";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -27,6 +26,7 @@ const getCopipe = cache(async (id: number) => {
         .eq("id", id)
         .maybeSingle();
     if (error) notFound();
+    if (data == null) notFound();
 
     const copipe: Copipe = {
         id: data.id,
@@ -77,6 +77,7 @@ export default async function Page({ params }: { params: { id: string } }) {
             <SearchAppBar />
             <ArchiveBody copipe={copipe} />
             <Comments comments={comments} copipe_id={id} />
+            <PageNation copipe_id={id} />
         </>
     );
 }
