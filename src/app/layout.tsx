@@ -1,6 +1,7 @@
 import { ReactNode } from "react";
 import { Metadata } from 'next'
 import ThemeRegistry from "@/theme/themeRegistry";
+import SearchAppBar from "@/modules/searchAppBar";
 
 export const metadata:Metadata = {
     title: {
@@ -32,6 +33,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return <html lang="ja">
         <body>
             <ThemeRegistry options={{ key: `css`, prepend: true }}>
+                <SearchAppBar />
                 {children}
             </ThemeRegistry>
         </body>

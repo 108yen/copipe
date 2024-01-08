@@ -1,13 +1,12 @@
 'use client'
 import BasicPagination from "@/modules/basicPagination";
 import CopipeCard from "@/modules/copipeCard";
-import SearchAppBar from "@/modules/searchAppBar";
 import SearchForm from "@/modules/searchForm";
 import { Box, Grid } from "@mui/material";
 
 export default function Home() {
-    return(<>
-      <SearchAppBar />
+  return (
+    <>
       <Box sx={{
         flexGrow: 1,
         p: { xs: 0, sm: 3 }
@@ -20,5 +19,6 @@ export default function Home() {
           </Grid>
         </Grid>
       </Box>
-    </>)
+    </>
+  )
 }

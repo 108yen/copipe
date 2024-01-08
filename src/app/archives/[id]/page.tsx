@@ -1,5 +1,4 @@
 import { Copipe } from "@/models/copipe";
-import SearchAppBar from "@/modules/searchAppBar";
 import supabase from "@/utils/supabase";
 import { Card, CardContent, Grid } from "@mui/material";
 import { CopipeItemWidget } from "@/modules/copipeCard";
@@ -52,15 +51,15 @@ function ArchiveBody(props: { copipe: Copipe }) {
     const { copipe } = props;
 
     return (
-                <Card
-                    sx={{
-                        m: { xs: 1, sm: 2 }
-                    }}
-                >
-                    <CardContent>
-                        <CopipeItemWidget id={copipe.id} inserted_at={copipe.inserted_at} updated_at={copipe.updated_at} body={copipe.body} title={copipe.title} />
-                    </CardContent>
-                </Card>
+        <Card
+            sx={{
+                m: { xs: 1, sm: 2 }
+            }}
+        >
+            <CardContent>
+                <CopipeItemWidget id={copipe.id} inserted_at={copipe.inserted_at} updated_at={copipe.updated_at} body={copipe.body} title={copipe.title} />
+            </CardContent>
+        </Card>
     );
 }
 
@@ -69,15 +68,12 @@ export default async function Page({ params }: { params: { id: string } }) {
     const { copipe, comments } = await getCopipe(id)
 
     return (
-        <>
-            <SearchAppBar />
-            <Grid container justifyContent="center" spacing={2}>
-                <Grid item zeroMinWidth xs={12} md={10} lg={8} xl={6}>
-                    <ArchiveBody copipe={copipe} />
-                    <Comments comments={comments} copipe_id={id} />
-                    <PageNation copipe_id={id} />
-                </Grid>
+        <Grid container justifyContent="center" spacing={2}>
+            <Grid item zeroMinWidth xs={12} md={10} lg={8} xl={6}>
+                <ArchiveBody copipe={copipe} />
+                <Comments comments={comments} copipe_id={id} />
+                <PageNation copipe_id={id} />
             </Grid>
-        </>
+        </Grid>
     );
 }
