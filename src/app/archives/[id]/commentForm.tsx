@@ -4,8 +4,12 @@ import { ExpandableTextField } from "@/components/expandableTextField";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { postComment } from "./serverActions";
 import { useState } from "react";
-import { Snackbar, Alert, Box, Button } from "@mui/material";
 import { CopipeComment } from "@/models/comment";
+import { event } from "@/analytics/gtag";
+import Box from "@mui/material/Box";
+import Button from "@mui/material/Button";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
 type Inputs = {
     body: string;
@@ -40,6 +44,11 @@ export default function CommentForm(props: { copipe_id: number, addOptimisticCom
     }
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
+
+        event('click', {
+            label: 'post_comment'
+        })
+
         addOptimisticComment({
             id: Math.random(),
             body: data.body,

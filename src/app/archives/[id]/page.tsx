@@ -1,6 +1,5 @@
 import { Copipe } from "@/models/copipe";
 import supabase from "@/utils/supabase";
-import { Card, CardContent, Grid } from "@mui/material";
 import { CopipeItemWidget } from "@/modules/copipeCard";
 import { notFound } from "next/navigation";
 import { cache } from "react";
@@ -9,6 +8,8 @@ import React from "react";
 import { Comments } from "./commentList";
 import PageNation from "./pageNation";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
