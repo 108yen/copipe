@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import ThemeRegistry from "@/theme/themeRegistry";
 import SearchAppBar from "@/modules/searchAppBar";
 import Grid from "@mui/material/Grid";
+import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
 
 export const metadata: Metadata = {
     title: {
@@ -35,9 +36,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <body>
             <ThemeRegistry options={{ key: `css`, prepend: true }}>
                 <SearchAppBar />
-                <Grid container justifyContent="center" spacing={2} marginY={1}>
-                    <Grid item xs={12} md={10} lg={8} xl={6}>
+                <Grid container justifyContent="center" spacing={1} marginY={1}>
+                    <Grid item xs={12} md={9} lg={8} xl={6}>
                         {children}
+                    </Grid>
+                    <Grid item md={1} display={{ md: 'flex', xs: 'none' }}>
+                        <AdmaxPCSideVertical />
                     </Grid>
                 </Grid>
             </ThemeRegistry>

@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { useEffect } from "react"
 import { AdmaxAdType } from "./conf"
 
-export function AdmaxPCSideCard({ top = 100 }: { top?: number }) {
+export default function AdmaxPCSideVertical({ top = 100 }: { top?: number }) {
     const adMaxId = `ca6a1a88388a364c63924bc1c541b6ef`
     const pathname = usePathname()
 
