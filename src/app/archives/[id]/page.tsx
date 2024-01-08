@@ -68,12 +68,10 @@ export default async function Page({ params }: { params: { id: string } }) {
     const { copipe, comments } = await getCopipe(id)
 
     return (
-        <Grid container justifyContent="center" spacing={2}>
-            <Grid item zeroMinWidth xs={12} md={10} lg={8} xl={6}>
-                <ArchiveBody copipe={copipe} />
-                <Comments comments={comments} copipe_id={id} />
-                <PageNation copipe_id={id} />
-            </Grid>
-        </Grid>
+        <>
+            <ArchiveBody copipe={copipe} />
+            <Comments comments={comments} copipe_id={id} />
+            <PageNation copipe_id={id} />
+        </>
     );
 }
