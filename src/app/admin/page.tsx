@@ -1,18 +1,8 @@
-import { Copipe } from "@/models/copipe";
+import { CopipeWithTag } from "@/models/copipeWithTag";
 import supabase from "@/utils/supabase"
-import Chip from "@mui/material/Chip";
-import Divider from "@mui/material/Divider";
 import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Stack from "@mui/material/Stack";
+import ListComponent from "./listComponent";
 
-type CopipeWithTag = {
-    copipe_id: number;
-    title: string;
-    body: string;
-    tag_bodies: string[];
-}
 
 export default async function Page() {
     const { data, error } = await supabase
@@ -21,7 +11,7 @@ export default async function Page() {
         .range(0, 10);
     const copipes: CopipeWithTag[] | undefined = data?.map(value => {
         return {
-            copipe_id: value.id,
+            copipe_id: value.copipe_id,
             body: value.body,
             title: value.title,
             tag_bodies: value.tag_bodies
@@ -30,24 +20,7 @@ export default async function Page() {
     return (
         <>
             <List>
-                {copipes?.map(copipe => (
-                    <div key={copipe.copipe_id} >
-                        <ListItem alignItems="flex-start">
-                            <ListItemText
-                                primary={
-                                    <Stack direction='column'>
-                                        {copipe.title}
-                                        <Stack direction='row'>
-                                            {copipe.tag_bodies.map(tag => tag == null ? null : <Chip key={tag} label={tag} size="small" />)}
-                                        </Stack>
-                                    </Stack>
-                                }
-                                secondary={copipe.body}
-                            />
-                        </ListItem>
-                        <Divider variant="middle" />
-                    </div>
-                ))}
+                {copipes?.map(copipe => <ListComponent key={copipe.copipe_id} copipe={copipe} />)}
             </List>
         </>
     )
