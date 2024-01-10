@@ -1,15 +1,15 @@
 import { CopipeWithTag } from "@/models/copipeWithTag";
 import supabase from "@/utils/supabase"
-import List from "@mui/material/List";
-import ListComponent from "./listComponent";
+import { Tag } from "@/models/tag";
+import PageTemplate from "./pageTemplate";
 
 
 export default async function Page() {
-    const { data, error } = await supabase
+    const fetchCopipeWithTag = await supabase
         .from('copipe_with_tag')
         .select('*')
         .range(0, 10);
-    const copipes: CopipeWithTag[] | undefined = data?.map(value => {
+    const copipes: CopipeWithTag[] = fetchCopipeWithTag.data!.map(value => {
         return {
             copipe_id: value.copipe_id,
             body: value.body,
@@ -17,11 +17,18 @@ export default async function Page() {
             tag_bodies: value.tag_bodies
         }
     })
-    return (
-        <>
-            <List>
-                {copipes?.map(copipe => <ListComponent key={copipe.copipe_id} copipe={copipe} />)}
-            </List>
-        </>
-    )
+
+    const fetchTags = await supabase
+        .from('tag')
+        .select('*');
+    console.log(fetchTags)
+    const tags: Tag[] = fetchTags.data!.map(value => {
+        return {
+            id: value.id,
+            created_at: new Date(value.created_at),
+            body: value.body
+        }
+    })
+
+    return <PageTemplate copipes={copipes} tags={tags}/>
 }
