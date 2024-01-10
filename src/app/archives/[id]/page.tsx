@@ -1,6 +1,5 @@
 import { Copipe } from "@/models/copipe";
 import supabase from "@/utils/supabase";
-import { CopipeItemWidget } from "@/modules/copipeCard";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import { CopipeComment } from "@/models/comment";
@@ -11,6 +10,7 @@ import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import { CopipeWithTag } from "@/models/copipeWithTag";
+import { CopipeCardItem } from "@/modules/copipeCardItem";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 }
 
 const getCopipe = cache(async (id: number) => {
-    const {data,error} = await supabase
+    const { data, error } = await supabase
         .from('copipe_with_tag')
         .select('*, comments(*)')
         .eq("copipe_id", id)
@@ -59,7 +59,7 @@ function ArchiveBody(props: { copipe: CopipeWithTag }) {
             }}
         >
             <CardContent>
-                <CopipeItemWidget {...copipe} />
+                <CopipeCardItem copipeItem={copipe} />
             </CardContent>
         </Card>
     );

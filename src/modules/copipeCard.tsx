@@ -1,9 +1,5 @@
 'use client'
-import theme from "@/theme/theme";
 import { copipeListAtom } from "../components/Atoms";
-import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import supabase from "@/utils/supabase";
-import Link from "next/link";
 import { useAtom } from "jotai";
 import { loadable } from "jotai/utils"
 import Box from "@mui/material/Box";
@@ -11,11 +7,7 @@ import Typography from "@mui/material/Typography";
 import CircularProgress from "@mui/material/CircularProgress";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Stack from "@mui/material/Stack";
-import IconButton from "@mui/material/IconButton";
-import Divider from "@mui/material/Divider";
-import { CopipeWithTag } from "@/models/copipeWithTag";
-import Chip from "@mui/material/Chip";
+import { CopipeCardItem } from "./copipeCardItem";
 
 const CopipeCard: React.FC = () => {
     const loadableAtom = loadable(copipeListAtom);
@@ -50,87 +42,9 @@ const CopipeCard: React.FC = () => {
             }}
         >
             <CardContent>
-                {value.data.map((e) => CopipeItemWidget(e))}
+                {value.data.map((e) => <CopipeCardItem key={e.copipe_id} copipeItem={e} />)}
             </CardContent>
         </Card>
-    );
-}
-
-const handleClickCopy = async (copyText: string, id: number) => {
-    await global.navigator.clipboard.writeText(copyText);
-
-    const { data, error } = await supabase
-        .from('copy_history')
-        .insert([
-            { copipe_id: id },
-        ])
-}
-
-export const CopipeItemWidget = (copipeItem: CopipeWithTag) => {
-    return (
-        <Box key={copipeItem.copipe_id}
-            sx={{
-                margin: { xs: 1, sm: 2 },
-                paddingY: 1,
-            }}
-        >
-            <Stack
-                direction='row'
-                justifyContent="space-between"
-            >
-                <Link
-                    href={'/archives/' + copipeItem.copipe_id}
-                    style={{
-                        textDecoration: 'none',
-                        color: theme.palette.text.primary,
-                        overflow: 'hidden'
-                    }}
-                >
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        sx={{
-                            flexGrow: 1,
-                            display: 'block',
-                        }}
-                    >
-                        {copipeItem.title}
-                    </Typography>
-                </Link>
-                <IconButton
-                    color="secondary"
-                    aria-label="copy"
-                    size="small"
-                    onClick={() => handleClickCopy(copipeItem.body, copipeItem.copipe_id)}
-                >
-                    <ContentCopyIcon fontSize="inherit" />
-                </IconButton>
-            </Stack>
-            <Stack direction='row'>
-                {copipeItem.tags.map(tag =>
-                    tag.tag_body == null
-                        ? null
-                        : <Chip
-                            key={tag.id}
-                            label={tag.tag_body}
-                            variant="outlined"
-                            color="secondary"
-                            size="small"
-                        />)}
-            </Stack>
-            <Divider />
-            <Typography
-                variant="body1"
-                sx={{
-                    flexGrow: 1,
-                    display: 'block',
-                    whiteSpace: 'pre-line',
-                }}
-                gutterBottom
-            >
-                {copipeItem.body}
-            </Typography>
-        </Box>
     );
 }
 

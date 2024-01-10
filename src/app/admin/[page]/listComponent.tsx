@@ -45,7 +45,7 @@ export default function ListComponent(props: {
                         open
                             ? <Stack direction='column'>
                                 <Stack direction='row'>
-                                    {copipe.tags.map(tag => tag.tag_body == null ? null : <Chip key={tag.id} label={tag.tag_body} size="small" />)}
+                                    {copipe.tags.map(tag => tag.tag_body == null ? null : <Chip key={tag.tag_id} label={tag.tag_body} size="small" />)}
                                 </Stack>
                                 {copipe.body}
                             </Stack>
