@@ -4,7 +4,7 @@ import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from '@mui/material/Typography';
 import Link from 'next/link';
-import { Divider } from '@mui/material';
+import Divider from '@mui/material/Divider';
 
 export default function SearchAppBar() {
     return (

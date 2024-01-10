@@ -1,6 +1,5 @@
 import { Copipe } from "@/models/copipe";
 import supabase from "@/utils/supabase";
-import { CopipeItemWidget } from "@/modules/copipeCard";
 import { notFound } from "next/navigation";
 import { cache } from "react";
 import { CopipeComment } from "@/models/comment";
@@ -10,6 +9,8 @@ import PageNation from "./pageNation";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
+import { CopipeWithTag } from "@/models/copipeWithTag";
+import { CopipeCardItem } from "@/modules/copipeCardItem";
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
@@ -22,19 +23,18 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
 
 const getCopipe = cache(async (id: number) => {
     const { data, error } = await supabase
-        .from('copipe')
+        .from('copipe_with_tag')
         .select('*, comments(*)')
-        .eq("id", id)
+        .eq("copipe_id", id)
         .maybeSingle();
     if (error) notFound();
     if (data == null) notFound();
 
-    const copipe: Copipe = {
-        id: data.id,
-        inserted_at: data.inserted_at,
-        updated_at: data.updated_at,
+    const copipe: CopipeWithTag = {
+        copipe_id: data.id,
         body: data.body,
         title: data.title,
+        tags: data.tags
     };
 
     const comments: CopipeComment[] = data.comments.map((comment: CopipeComment) => {
@@ -49,7 +49,7 @@ const getCopipe = cache(async (id: number) => {
     return { copipe, comments };
 });
 
-function ArchiveBody(props: { copipe: Copipe }) {
+function ArchiveBody(props: { copipe: CopipeWithTag }) {
     const { copipe } = props;
 
     return (
@@ -59,7 +59,7 @@ function ArchiveBody(props: { copipe: Copipe }) {
             }}
         >
             <CardContent>
-                <CopipeItemWidget id={copipe.id} inserted_at={copipe.inserted_at} updated_at={copipe.updated_at} body={copipe.body} title={copipe.title} />
+                <CopipeCardItem copipeItem={copipe} />
             </CardContent>
         </Card>
     );

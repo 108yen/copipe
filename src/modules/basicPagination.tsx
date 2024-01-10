@@ -1,6 +1,6 @@
 import { pageAtom, pageNumAtom } from "@/components/Atoms";
-import { Pagination } from "@mui/material";
-import { Box } from "@mui/system";
+import Box from "@mui/material/Box";
+import Pagination from "@mui/material/Pagination";
 import { useAtom } from "jotai";
 import { loadable } from "jotai/utils";
 

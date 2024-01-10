@@ -1,25 +1,24 @@
-import { Copipe } from "@/models/copipe";
+import { CopipeWithTag } from "@/models/copipeWithTag";
 import supabase from "@/utils/supabase";
 import { atom } from "jotai";
 
-export const copipeListAtom = atom<Promise<Array<Copipe>>>(
+export const copipeListAtom = atom<Promise<Array<CopipeWithTag>>>(
     async (get) => {
         const postCopipe = async (word: string, page: number) => {
             const { data, error } = await supabase
-                .from('copipe')
+                .from('copipe_with_tag')
                 .select()
                 .like('body', '%' + word + '%')
-                .order('id', { ascending: false })
+                .order('copipe_id', { ascending: false })
                 .range(10 * (page - 1), 9 + 10 * (page - 1));
             if (error) console.log('post copipe error', error);
 
-            const copipes: Array<Copipe> = data != null ? data.map(e => {
-                const copipeItem: Copipe = {
-                    id: e.id,
-                    inserted_at: e.inserted_at,
-                    updated_at: e.updated_at,
+            const copipes: Array<CopipeWithTag> = data != null ? data.map(e => {
+                const copipeItem: CopipeWithTag = {
+                    copipe_id: e.copipe_id,
                     body: e.body,
                     title: e.title,
+                    tags: e.tags
                 };
                 return copipeItem;
             }) : [];
@@ -30,18 +29,6 @@ export const copipeListAtom = atom<Promise<Array<Copipe>>>(
         return await postCopipe(get(searchTextAtom), get(pageAtom));
     }
 );
-
-export type FormProps = {
-    title: string;
-    body: string;
-}
-
-export const formPropsAtom = atom<FormProps>({
-    title: '',
-    body: '',
-})
-
-export const bodyFormValidateAtom = atom(0);
 
 const searchTextAtom = atom("");
 export const writeSearchTextAtom = atom(

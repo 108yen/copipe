@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     }
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({ children }: { children: ReactNode }) {
     const header = headers()
     const ip = (header.get(`x-forwarded-for`) ?? ``).split(`,`)[0]
 

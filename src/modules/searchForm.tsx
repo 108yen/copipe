@@ -1,11 +1,18 @@
 import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
-import { Button, FormControl, InputAdornment, TextField, Card, Box, IconButton } from '@mui/material';
 import theme from '@/theme/theme';
 import { useAtom } from 'jotai';
 import { textFormAtom, writeSearchTextAtom } from '../components/Atoms';
 import styled from '@emotion/styled';
 import { useRouter } from 'next/navigation';
+import Card from '@mui/material/Card';
+import FormControl from '@mui/material/FormControl';
+import TextField from '@mui/material/TextField';
+import InputAdornment from '@mui/material/InputAdornment';
+import IconButton from '@mui/material/IconButton';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 const SearchCard = styled(Card)(() => ({
     position: "sticky",
@@ -18,6 +25,11 @@ const SearchForm: React.FC = () => {
 
     const [text, setText] = useAtom(textFormAtom);
     const [, setSearchText] = useAtom(writeSearchTextAtom);
+
+    useEffect(() => {
+        setSearchText('')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key == 'Enter') {
