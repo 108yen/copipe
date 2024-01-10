@@ -4,7 +4,8 @@ module.exports = {
     robotsTxtOptions: {
         policies: [
             { userAgent: '*', allow: '/' },
-            { userAgent: '*', disallow: '/postForm' }
+            { userAgent: '*', disallow: '/postForm' },
+            { userAgent: '*', disallow: '/admin' },
         ],
     },
 };
