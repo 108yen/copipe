@@ -21,7 +21,6 @@ export default async function Page() {
     const fetchTags = await supabase
         .from('tag')
         .select('*');
-    console.log(fetchTags)
     const tags: Tag[] = fetchTags.data!.map(value => {
         return {
             id: value.id,
