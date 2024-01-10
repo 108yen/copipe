@@ -16,7 +16,7 @@ export default async function Page({ params }: { params: { page: string } }) {
             copipe_id: value.copipe_id,
             body: value.body,
             title: value.title,
-            tag_bodies: value.tag_bodies
+            tags: value.tags
         }
     })
 

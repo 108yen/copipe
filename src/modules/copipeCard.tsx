@@ -107,12 +107,12 @@ export const CopipeItemWidget = (copipeItem: CopipeWithTag) => {
                 </IconButton>
             </Stack>
             <Stack direction='row'>
-                {copipeItem.tag_bodies.map(tag =>
-                    tag == null
+                {copipeItem.tags.map(tag =>
+                    tag.tag_body == null
                         ? null
                         : <Chip
-                            key={tag}
-                            label={tag}
+                            key={tag.id}
+                            label={tag.tag_body}
                             variant="outlined"
                             color="secondary"
                             size="small"

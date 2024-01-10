@@ -18,7 +18,7 @@ export const copipeListAtom = atom<Promise<Array<CopipeWithTag>>>(
                     copipe_id: e.copipe_id,
                     body: e.body,
                     title: e.title,
-                    tag_bodies: e.tag_bodies
+                    tags: e.tags
                 };
                 return copipeItem;
             }) : [];

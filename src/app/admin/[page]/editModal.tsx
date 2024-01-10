@@ -32,11 +32,7 @@ export default function EditModal(props: {
 }) {
     const { open, onClose, copipe, tags } = props;
 
-    const { control, handleSubmit, formState, setValue, reset } = useForm<Inputs>({
-        defaultValues: {
-            tags: copipe?.tag_bodies
-        }
-    })
+    const { control, handleSubmit, formState, setValue, reset } = useForm<Inputs>()
     const [snackbarState, setSnackbarState] = useState<SnackbarStateProps>({
         open: false,
         severity: `success`,
