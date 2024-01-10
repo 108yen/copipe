@@ -12,6 +12,7 @@ import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
+import { useEffect } from 'react';
 
 const SearchCard = styled(Card)(() => ({
     position: "sticky",
@@ -24,6 +25,11 @@ const SearchForm: React.FC = () => {
 
     const [text, setText] = useAtom(textFormAtom);
     const [, setSearchText] = useAtom(writeSearchTextAtom);
+
+    useEffect(() => {
+        setSearchText('')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
         if (event.key == 'Enter') {
