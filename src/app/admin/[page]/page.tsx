@@ -4,11 +4,13 @@ import { Tag } from "@/models/tag";
 import PageTemplate from "./pageTemplate";
 
 
-export default async function Page() {
+export default async function Page({ params }: { params: { page: string } }) {
+    const page = Number(params.page)
     const fetchCopipeWithTag = await supabase
         .from('copipe_with_tag')
         .select('*')
-        .range(0, 10);
+        .order('copipe_id', { ascending: false })
+        .range((page - 1) * 100, 100 * page - 1);
     const copipes: CopipeWithTag[] = fetchCopipeWithTag.data!.map(value => {
         return {
             copipe_id: value.copipe_id,
@@ -29,5 +31,5 @@ export default async function Page() {
         }
     })
 
-    return <PageTemplate copipes={copipes} tags={tags}/>
+    return <PageTemplate copipes={copipes} tags={tags} />
 }
