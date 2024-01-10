@@ -6,7 +6,6 @@ import supabase from "@/utils/supabase";
 import Link from "next/link";
 import { useAtom } from "jotai";
 import { loadable } from "jotai/utils"
-import { Copipe } from "@/models/copipe";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import CircularProgress from "@mui/material/CircularProgress";
@@ -15,6 +14,8 @@ import CardContent from "@mui/material/CardContent";
 import Stack from "@mui/material/Stack";
 import IconButton from "@mui/material/IconButton";
 import Divider from "@mui/material/Divider";
+import { CopipeWithTag } from "@/models/copipeWithTag";
+import Chip from "@mui/material/Chip";
 
 const CopipeCard: React.FC = () => {
     const loadableAtom = loadable(copipeListAtom);
@@ -65,9 +66,9 @@ const handleClickCopy = async (copyText: string, id: number) => {
         ])
 }
 
-export const CopipeItemWidget = (copipeItem: Copipe) => {
+export const CopipeItemWidget = (copipeItem: CopipeWithTag) => {
     return (
-        <Box key={copipeItem.id}
+        <Box key={copipeItem.copipe_id}
             sx={{
                 margin: { xs: 1, sm: 2 },
                 paddingY: 1,
@@ -78,7 +79,7 @@ export const CopipeItemWidget = (copipeItem: Copipe) => {
                 justifyContent="space-between"
             >
                 <Link
-                    href={'/archives/' + copipeItem.id}
+                    href={'/archives/' + copipeItem.copipe_id}
                     style={{
                         textDecoration: 'none',
                         color: theme.palette.text.primary,
@@ -100,10 +101,22 @@ export const CopipeItemWidget = (copipeItem: Copipe) => {
                     color="secondary"
                     aria-label="copy"
                     size="small"
-                    onClick={() => handleClickCopy(copipeItem.body, copipeItem.id)}
+                    onClick={() => handleClickCopy(copipeItem.body, copipeItem.copipe_id)}
                 >
                     <ContentCopyIcon fontSize="inherit" />
                 </IconButton>
+            </Stack>
+            <Stack direction='row'>
+                {copipeItem.tag_bodies.map(tag =>
+                    tag == null
+                        ? null
+                        : <Chip
+                            key={tag}
+                            label={tag}
+                            variant="outlined"
+                            color="secondary"
+                            size="small"
+                        />)}
             </Stack>
             <Divider />
             <Typography
