@@ -6,7 +6,6 @@ export default withAuth(
   //   console.log("in middleware: ", req.nextauth.token);
   // },
   {
-    secret: process.env.NEXTAUTH_SECRET,
     callbacks: {
       authorized: ({ req, token }) => {
         return token?.email === 'kazuking.1911@gmail.com'
