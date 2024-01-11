@@ -10,14 +10,14 @@ import { headers } from 'next/headers'
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
     title: {
-        default: 'copipe | コピペのアーカイブ',
+        default: 'copipe | コピペ検索データベース',
         template: '%s | copipe'
     },
     description: "2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。コピペの検索、投稿、コメントが可能です。",
     openGraph: {
         type: `website`,
         url: "https://www.netcopipe.com/",
-        title: "copipe | コピペのアーカイブ",
+        title: "copipe | コピペ検索データベース",
         description: "2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。コピペの検索、投稿、コメントが可能です。",
         images: [
             {

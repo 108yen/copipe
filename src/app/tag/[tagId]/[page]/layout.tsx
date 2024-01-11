@@ -2,6 +2,7 @@ import supabase from "@/utils/supabase"
 import { notFound } from "next/navigation"
 import { ReactNode } from "react"
 import TagPageNation from "./tagPageNation"
+import AdmaxUnderSwitch from "@/ad/admax/underSwitch"
 
 export async function generateMetadata({ params }: { params: { tagId: string } }) {
     const tagId = Number(params.tagId)
@@ -34,6 +35,7 @@ export default async function layout({ params, children }: {
     return (
         <>
             {children}
+            <AdmaxUnderSwitch />
             <TagPageNation tagId={tagId} page={page} count={count} />
         </>
     )
