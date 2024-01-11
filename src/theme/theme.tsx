@@ -15,7 +15,7 @@ export const themeOptions: ThemeOptions = {
             main: '#607d8b',
         },
         background: {
-            default: "#DAE0E6",
+            default: "#f5f5f5",
         },
     },
 };
