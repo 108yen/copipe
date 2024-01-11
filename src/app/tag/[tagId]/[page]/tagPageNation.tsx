@@ -21,7 +21,7 @@ export default function TagPageNation(props: {
             display: 'flex',
             justifyContent: "center"
         }}>
-            <Pagination count={count ? Math.ceil(count / 100) : 0} page={page} onChange={handleChange} />
+            <Pagination count={count ? Math.ceil(count / 10) : 0} page={page} onChange={handleChange} />
         </Box>
     )
 }

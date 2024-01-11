@@ -16,7 +16,7 @@ export default async function page({ params }: {
         .select('*,copipe_with_tag(*)')
         .eq('tag_id', tagId)
         .order('copipe_id', { ascending: true })
-        .range((page - 1) * 100, 100 * page - 1)
+        .range((page - 1) * 10, 10 * page - 1)
     if (error) notFound()
 
     const copipe: CopipeWithTag[] = data.map(
