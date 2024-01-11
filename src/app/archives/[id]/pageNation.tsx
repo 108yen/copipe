@@ -11,7 +11,13 @@ export default function PageNation(props: { beforeId: number, afterId: number })
 
     return (
         <Box textAlign='center' flexGrow={1}>
-            <ButtonGroup variant="outlined" color="secondary">
+            <ButtonGroup
+                variant="outlined"
+                color="secondary"
+                disableElevation
+                sx={{
+                    backgroundColor: 'background.paper'
+                }}>
                 <Button
                     startIcon={<ArrowBackIosIcon />}
                     disabled={beforeId == -1}

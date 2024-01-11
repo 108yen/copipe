@@ -136,6 +136,7 @@ export default function CopipeSubmitForm() {
                     color="secondary"
                     type="submit"
                     disabled={formState.isSubmitting}
+                    disableElevation
                 >
                     投稿
                 </Button>

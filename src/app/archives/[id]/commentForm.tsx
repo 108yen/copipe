@@ -120,6 +120,7 @@ export default function CommentForm(props: { copipe_id: number, addOptimisticCom
                     variant="contained"
                     color="secondary"
                     type="submit"
+                    disableElevation
                     disabled={formState.isSubmitting}
                 >
                     コメント

@@ -1,8 +1,7 @@
 import { CopipeWithTag } from "@/models/copipeWithTag"
+import CopipeCard from "@/modules/copipeCard"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import supabase from "@/utils/supabase"
-import Card from "@mui/material/Card"
-import CardContent from "@mui/material/CardContent"
 import { notFound } from "next/navigation"
 
 export default async function page({ params }: {
@@ -31,15 +30,9 @@ export default async function page({ params }: {
     )
 
     return (
-        <Card
-            sx={{
-                m: { xs: 1, sm: 2 }
-            }}
-        >
-            <CardContent>
-                {copipe.map((e) => <CopipeCardItem key={e.copipe_id} copipeItem={e} />)}
-            </CardContent>
-        </Card>
+        <CopipeCard>
+            {copipe.map((e) => <CopipeCardItem key={e.copipe_id} copipeItem={e} />)}
+        </CopipeCard>
     )
 
 }
