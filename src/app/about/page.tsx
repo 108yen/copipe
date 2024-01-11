@@ -5,6 +5,10 @@ import ListItem from "@mui/material/ListItem";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 
+export const metadata = {
+    title: 'このサイトについて'
+}
+
 export default function page() {
     return (
         <CopipeCard>
