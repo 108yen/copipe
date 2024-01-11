@@ -6,10 +6,9 @@ import React from "react";
 import { Comments } from "./commentList";
 import PageNation from "./pageNation";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import { CopipeWithTag } from "@/models/copipeWithTag";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
+import CopipeCard from "@/modules/copipeCard";
 
 async function checkBeforeAndAfterPage(currendId: number) {
     const { data, error, status, count } = await supabase
@@ -55,15 +54,9 @@ function ArchiveBody(props: { copipe: CopipeWithTag }) {
     const { copipe } = props;
 
     return (
-        <Card
-            sx={{
-                m: { xs: 1, sm: 2 }
-            }}
-        >
-            <CardContent>
-                <CopipeCardItem copipeItem={copipe} />
-            </CardContent>
-        </Card>
+        <CopipeCard>
+            <CopipeCardItem copipeItem={copipe} />
+        </CopipeCard>
     );
 }
 

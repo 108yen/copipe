@@ -52,6 +52,7 @@ const SearchForm: React.FC = () => {
         <>
             <SearchCard
                 sx={{ m: theme.spacing(2) }}
+                elevation={0}
             >
                 <FormControl fullWidth>
                     <TextField

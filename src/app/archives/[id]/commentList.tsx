@@ -7,10 +7,9 @@ import CommentForm from "./commentForm";
 import ListItem from "@mui/material/ListItem";
 import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
-import Card from "@mui/material/Card";
-import CardContent from "@mui/material/CardContent";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
+import CopipeCard from "@/modules/copipeCard";
 
 
 //別ファイルにするとなぜがエラーが出る
@@ -45,23 +44,17 @@ export function Comments(props: { comments: CopipeComment[], copipe_id: number }
     )
 
     return (
-        <Card
-            sx={{
-                m: { xs: 1, sm: 2 }
-            }}
-        >
-            <CardContent>
-                <List>
-                    {optimisticComments.map((comment, index) =>
-                    (
-                        <React.Fragment key={comment.id}>
-                            <CommentItem comment={comment} />
-                            {index < comments.length - 1 && <Divider variant="middle" />}
-                        </React.Fragment>
-                    ))}
-                </List>
-                <CommentForm copipe_id={copipe_id} addOptimisticComment={addOptimisticComment} />
-            </CardContent>
-        </Card>
+        <CopipeCard>
+            <List>
+                {optimisticComments.map((comment, index) =>
+                (
+                    <React.Fragment key={comment.id}>
+                        <CommentItem comment={comment} />
+                        {index < comments.length - 1 && <Divider variant="middle" />}
+                    </React.Fragment>
+                ))}
+            </List>
+            <CommentForm copipe_id={copipe_id} addOptimisticComment={addOptimisticComment} />
+        </CopipeCard>
     )
 }
