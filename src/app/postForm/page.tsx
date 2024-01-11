@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@mui/material";
 import CopipeSubmitForm from "./copipeSubmitForm";
+import CopipeCard from "@/modules/copipeCard";
 
 export const metadata = {
     title: '投稿フォーム'
@@ -7,10 +7,8 @@ export const metadata = {
 
 export default function Page() {
     return (
-        <Card>
-            <CardContent>
-                <CopipeSubmitForm />
-            </CardContent>
-        </Card>
+        <CopipeCard>
+            <CopipeSubmitForm />
+        </CopipeCard>
     );
 }
