@@ -1,4 +1,3 @@
-import { Copipe } from "@/models/copipe";
 import supabase from "@/utils/supabase";
 import { notFound } from "next/navigation";
 import { cache } from "react";
@@ -68,6 +67,7 @@ function ArchiveBody(props: { copipe: CopipeWithTag }) {
 export default async function Page({ params }: { params: { id: string } }) {
     const id = Number(params.id);
     const { copipe, comments } = await getCopipe(id)
+    //todo ページ前後のデータが存在するかチェックする機能が欲しい
 
     return (
         <>
