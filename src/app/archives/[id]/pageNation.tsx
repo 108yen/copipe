@@ -4,8 +4,8 @@ import { useRouter } from "next/navigation";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
 
-export default function PageNation(props: { copipe_id: number }) {
-    const { copipe_id } = props;
+export default function PageNation(props: { beforeId: number, afterId: number }) {
+    const { beforeId, afterId } = props;
 
     const router = useRouter()
 
@@ -14,14 +14,15 @@ export default function PageNation(props: { copipe_id: number }) {
             <ButtonGroup variant="outlined" color="secondary">
                 <Button
                     startIcon={<ArrowBackIosIcon />}
-                    disabled={copipe_id == 1}
-                    onClick={() => { router.push(`/archives/${copipe_id - 1}`) }}
+                    disabled={beforeId == -1}
+                    onClick={() => { router.push(`/archives/${beforeId}`) }}
                 >
                     前のコピペ
                 </Button>
                 <Button
                     endIcon={<ArrowForwardIosIcon />}
-                    onClick={() => { router.push(`/archives/${copipe_id + 1}`) }}
+                    disabled={afterId == -1}
+                    onClick={() => { router.push(`/archives/${afterId}`) }}
                 >
                     次のコピペ
                 </Button>
