@@ -9,6 +9,7 @@ import ListItem from "@mui/material/ListItem";
 import IconButton from "@mui/material/IconButton";
 import EditIcon from '@mui/icons-material/Edit';
 import { Typography } from "@mui/material";
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 export default function ListComponent(props: {
     copipe: CopipeWithTag,
@@ -21,6 +22,8 @@ export default function ListComponent(props: {
         setOpen(!open);
     };
 
+    const notSetTag = copipe.tags.length == 1 && copipe.tags[0].tag_body == null;
+
     return (
         <>
             <ListItem
@@ -28,7 +31,7 @@ export default function ListComponent(props: {
             >
                 <ListItemText
                     primary={
-                        <Stack direction='row'>
+                        <Stack direction='row' justifyContent='center'>
                             <Typography
                                 variant="h6"
                                 flexGrow={1}
@@ -36,6 +39,7 @@ export default function ListComponent(props: {
                             >
                                 {`${copipe.copipe_id}. ${copipe.title}`}
                             </Typography>
+                            {notSetTag ? <ErrorOutlineIcon display='flex' color="warning" /> : null}
                             <IconButton onClick={() => openModal(copipe)}>
                                 <EditIcon fontSize="small" />
                             </IconButton>
