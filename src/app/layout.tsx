@@ -21,7 +21,7 @@ export const metadata: Metadata = {
         description: "2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。コピペの検索、投稿、コメントが可能です。",
         images: [
             {
-                url: "https://www.netcopipe.com/android-chrome-512x512.png",
+                url: "https://www.netcopipe.com/og.png",
                 type: `image/png`
             },
         ],
