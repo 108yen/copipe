@@ -13,7 +13,6 @@ export default async function layout({ params, children }: { params: { page: str
     const page = Number(params.page)
 
     const { data, error, status, count } = await getCopipeCount()
-    console.log(count)
     if (error) notFound()
 
     return (
