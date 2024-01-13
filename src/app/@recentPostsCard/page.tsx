@@ -27,7 +27,7 @@ export default async function page() {
     })
 
     return (
-        <CopipeCard >
+        <CopipeCard>
             <Stack direction='column'>
                 <Typography variant="h5">
                     最近の投稿
@@ -35,7 +35,7 @@ export default async function page() {
                 <Divider />
                 {copipes?.map(copipe => (
                     <Link
-                        key={copipe.copipe_id}
+                        key={`recent-copipe-${copipe.copipe_id}`}
                         href={`/archives/${copipe.copipe_id}`}
                         style={{
                             textDecoration: 'none',
@@ -46,6 +46,11 @@ export default async function page() {
                             variant="body2"
                             color='text.primary'
                             noWrap
+                            sx={{
+                                '&:hover': {
+                                    textDecorationLine: `underline`
+                                }
+                            }}
                         >
                             {copipe.title}
                         </Typography>
