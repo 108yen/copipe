@@ -56,15 +56,9 @@ export default async function RootLayout({
                         <Grid item xs={12} md={9} lg={8} xl={6}>
                             {children}
                         </Grid>
-                        <Grid item md={2} display={{ md: 'flex', xs: 'none' }}>
+                        <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
                             <AdmaxPCSideVertical />
-                            <Box sx={{
-                                position: 'relative',
-                                top: 620,
-                                zIndex: 1
-                            }}>
-                                {tagListCard}
-                            </Box>
+                            {tagListCard}
                         </Grid>
                     </Grid>
                 </ThemeRegistry>

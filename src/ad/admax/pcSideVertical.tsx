@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { useEffect } from "react"
 import { AdmaxAdType } from "./conf"
 
-export default function AdmaxPCSideVertical({ top = 80 }: { top?: number }) {
+export default function AdmaxPCSideVertical() {
     const adMaxId = `ca6a1a88388a364c63924bc1c541b6ef`
     const pathname = usePathname()
 
@@ -42,8 +42,6 @@ export default function AdmaxPCSideVertical({ top = 80 }: { top?: number }) {
             flexGrow={1}
             justifyContent='flex-start'
             alignItems='center'
-            position='fixed'
-            top={top}
             zIndex={10}
         >
             <Box position='relative'>
