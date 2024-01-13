@@ -5,9 +5,18 @@ import supabase from "@/utils/supabase";
 import SearchPagination from "./searchPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import SearchForm from "@/modules/searchForm";
+import Typography from "@mui/material/Typography";
 
 export const metadata = {
     title: '検索'
+}
+
+function NotHit() {
+    return (
+        <Typography variant="body1" flexGrow={1} textAlign='center' color='grey'>
+            該当なし
+        </Typography>
+    )
 }
 
 export default async function page({
@@ -40,7 +49,9 @@ export default async function page({
         <>
             <SearchForm />
             <CopipeCard>
-                {copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
+                {copipes.length == 0
+                    ? <NotHit />
+                    : copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
             </CopipeCard>
             <AdmaxUnderSwitch />
             <SearchPagination searchText={searchText} count={Math.ceil((count ?? 0) / 10)} page={page} />
