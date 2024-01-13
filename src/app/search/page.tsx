@@ -2,6 +2,11 @@ import { CopipeWithTag } from "@/models/copipeWithTag";
 import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import supabase from "@/utils/supabase";
+import SearchPagination from "./searchPagination";
+
+export const metadata = {
+    title: '検索'
+}
 
 export default async function page({
     searchParams,
@@ -30,8 +35,11 @@ export default async function page({
     }) : [];
 
     return (
-        <CopipeCard>
-            {copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
-        </CopipeCard>
+        <>
+            <CopipeCard>
+                {copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
+            </CopipeCard>
+            <SearchPagination searchText={searchText} count={count!} page={page} />
+        </>
     );
 }

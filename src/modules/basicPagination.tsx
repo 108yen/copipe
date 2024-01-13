@@ -1,3 +1,4 @@
+'use client'
 import { pageAtom, pageNumAtom } from "@/components/Atoms";
 import Box from "@mui/material/Box";
 import Pagination from "@mui/material/Pagination";

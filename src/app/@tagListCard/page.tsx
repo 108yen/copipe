@@ -38,7 +38,7 @@ export default async function page() {
                 <Divider />
                 <Box>
                     {tags?.map(tag => (
-                        <Link key={tag.id} href={`/tag/${tag.id}/1`}>
+                        <Link key={`tag-${tag.id}`} href={`/tag/${tag.id}/1`}>
                             <Chip key={tag.id} label={tag.body} color="secondary" size="small" variant="outlined" />
                         </Link>
                     ))}

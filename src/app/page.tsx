@@ -1,4 +1,3 @@
-'use client'
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import BasicPagination from "@/modules/basicPagination";
 import CopipeCardLoader from "@/modules/copipeCardLoader";
