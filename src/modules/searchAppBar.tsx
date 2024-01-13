@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import Link from 'next/link';
 import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
+import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
 export default function SearchAppBar() {
     return (
@@ -25,19 +26,22 @@ export default function SearchAppBar() {
                                 overflow: 'hidden'
                             }}
                         >
-                            <Typography
-                                variant="h5"
-                                fontWeight='bold'
-                                noWrap
-                                sx={{
-                                    mr: 2,
-                                    display: { xs: 'block' },
-                                    color: 'text.primary',
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                copipe
-                            </Typography>
+                            <Stack direction='row' alignItems='center' spacing={1} color='text.primary'>
+                                <ContentCopyIcon />
+                                <Typography
+                                    variant="h5"
+                                    fontWeight='bold'
+                                    noWrap
+                                    sx={{
+                                        mr: 2,
+                                        display: { xs: 'block' },
+                                        color: 'text.primary',
+                                        textDecoration: 'none',
+                                    }}
+                                >
+                                    copipe
+                                </Typography>
+                            </Stack>
                         </Link>
                         <Link
                             href='/about'
