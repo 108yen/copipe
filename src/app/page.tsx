@@ -40,7 +40,7 @@ export default async function Home() {
         {copipes.map(copipe => <CopipeCardItem key={`copipe-card-item-${copipe.copipe_id}`} copipeItem={copipe} />)}
       </CopipeCard>
       <AdmaxUnderSwitch />
-      <SearchPagination searchText="" count={Math.ceil(count / 10)} page={1}/>
+      <SearchPagination searchText="" count={Math.ceil(count / 10)} page={1} />
     </>
   )
 }
