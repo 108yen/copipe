@@ -46,6 +46,11 @@ export default async function page() {
                             variant="body2"
                             color='text.primary'
                             noWrap
+                            sx={{
+                                '&:hover': {
+                                    textDecorationLine: `underline`
+                                }
+                            }}
                         >
                             {copipe.title}
                         </Typography>
