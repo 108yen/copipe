@@ -5,7 +5,7 @@ import { usePathname } from "next/navigation"
 import { useEffect } from "react"
 import { AdmaxAdType } from "./conf"
 
-export default function AdmaxPCSideVertical({ top = 100 }: { top?: number }) {
+export default function AdmaxPCSideVertical({ top = 80 }: { top?: number }) {
     const adMaxId = `ca6a1a88388a364c63924bc1c541b6ef`
     const pathname = usePathname()
 
@@ -33,7 +33,7 @@ export default function AdmaxPCSideVertical({ top = 100 }: { top?: number }) {
 
             window.__admax_tag__ = undefined
         }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [pathname])
 
     return (
@@ -44,6 +44,7 @@ export default function AdmaxPCSideVertical({ top = 100 }: { top?: number }) {
             alignItems='center'
             position='fixed'
             top={top}
+            zIndex={10}
         >
             <Box position='relative'>
                 <Box
