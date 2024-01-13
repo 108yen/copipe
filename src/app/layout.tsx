@@ -6,7 +6,6 @@ import Grid from "@mui/material/Grid";
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
-import Box from "@mui/material/Box";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
@@ -35,9 +34,11 @@ export const metadata: Metadata = {
 export default async function RootLayout({
     children,
     tagListCard,
+    recentPostsCard
 }: {
     children: ReactNode,
-    tagListCard: ReactNode
+    tagListCard: ReactNode,
+    recentPostsCard: ReactNode,
 }) {
     const header = headers()
     const ip = (header.get(`x-forwarded-for`) ?? ``).split(`,`)[0]
@@ -59,6 +60,7 @@ export default async function RootLayout({
                         <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
                             <AdmaxPCSideVertical />
                             {tagListCard}
+                            {recentPostsCard}
                         </Grid>
                     </Grid>
                 </ThemeRegistry>

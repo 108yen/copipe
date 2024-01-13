@@ -12,6 +12,7 @@ import { cache } from "react";
 export const revalidate = 86400
 
 const fetchTags = cache(async () => {
+    console.log('tag get')
     return await supabase
         .from('tag')
         .select()
