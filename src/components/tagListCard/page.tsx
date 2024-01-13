@@ -9,8 +9,6 @@ import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import { cache } from "react";
 
-export const revalidate = 86400
-
 const fetchTags = cache(async () => {
     console.log('tag get')
     return await supabase
@@ -18,7 +16,7 @@ const fetchTags = cache(async () => {
         .select()
 })
 
-export default async function page() {
+export default async function TagListCard() {
     const { data, error } = await fetchTags()
     const tags: Tag[] | undefined = data?.map(
         tag => {
