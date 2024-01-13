@@ -43,7 +43,7 @@ export default async function page({
                 {copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
             </CopipeCard>
             <AdmaxUnderSwitch />
-            <SearchPagination searchText={searchText} count={Math.ceil(count ?? 0 / 10)} page={page} />
+            <SearchPagination searchText={searchText} count={Math.ceil((count ?? 0) / 10)} page={page} />
         </>
     );
 }
