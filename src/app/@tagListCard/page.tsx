@@ -3,6 +3,7 @@ import CopipeCard from "@/modules/copipeCard";
 import supabase from "@/utils/supabase";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";
+import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
@@ -27,6 +28,7 @@ export default async function page() {
                 <Typography variant="h5">
                     タグ一覧
                 </Typography>
+                <Divider/>
                 <Box>
                     {tags?.map(tag => (
                         <Link key={tag.id} href={`/tag/${tag.id}/1`}>
