@@ -1,6 +1,7 @@
 'use server'
 
 import supabase from "@/utils/supabase";
+import { revalidatePath } from "next/cache";
 
 export async function postNewCopipe(props: { title: string, body: string }) {
     const { title, body } = props;
@@ -18,6 +19,7 @@ export async function postNewCopipe(props: { title: string, body: string }) {
             },
         ]);
     if (error) return { error: JSON.stringify(error) };
+    revalidatePath('/')
 }
 
 async function checkDupulicate(body: string) {

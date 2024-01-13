@@ -6,6 +6,8 @@ import Grid from "@mui/material/Grid";
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
+import { getServerSession } from "next-auth";
+import { options } from "@/auth/auth.config";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
@@ -43,6 +45,10 @@ export default async function RootLayout({
     const header = headers()
     const ip = (header.get(`x-forwarded-for`) ?? ``).split(`,`)[0]
 
+    //admin繊維用
+    const session = await getServerSession(options)
+    const isVisibleAdminButton = session?.user?.email === 'kazuking.1911@gmail.com'
+
     return (
         <html lang="ja">
             <head>
@@ -52,7 +58,7 @@ export default async function RootLayout({
             </head>
             <body>
                 <ThemeRegistry options={{ key: `css`, prepend: true }}>
-                    <SearchAppBar />
+                    <SearchAppBar isVisibleAdminButton={isVisibleAdminButton} />
                     <Grid container justifyContent="center" spacing={1} marginY={1}>
                         <Grid item xs={12} md={9} lg={8} xl={6}>
                             {children}
