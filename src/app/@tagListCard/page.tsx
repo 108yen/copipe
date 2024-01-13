@@ -7,11 +7,18 @@ import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
+import { cache } from "react";
 
-export default async function page() {
-    const { data, error } = await supabase
+export const revalidate = 86400
+
+const fetchTags = cache(async () => {
+    return await supabase
         .from('tag')
         .select()
+})
+
+export default async function page() {
+    const { data, error } = await fetchTags()
     const tags: Tag[] | undefined = data?.map(
         tag => {
             return {
