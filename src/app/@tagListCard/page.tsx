@@ -21,14 +21,13 @@ export default async function page() {
             }
         }
     )
-
     return (
         <CopipeCard>
             <Stack direction='column'>
                 <Typography variant="h5">
                     タグ一覧
                 </Typography>
-                <Divider/>
+                <Divider />
                 <Box>
                     {tags?.map(tag => (
                         <Link key={tag.id} href={`/tag/${tag.id}/1`}>
