@@ -4,6 +4,7 @@ import { CopipeCardItem } from "@/modules/copipeCardItem";
 import supabase from "@/utils/supabase";
 import SearchPagination from "./searchPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
+import SearchForm from "@/modules/searchForm";
 
 export const metadata = {
     title: '検索'
@@ -37,6 +38,7 @@ export default async function page({
 
     return (
         <>
+            <SearchForm />
             <CopipeCard>
                 {copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
             </CopipeCard>

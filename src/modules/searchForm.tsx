@@ -22,7 +22,7 @@ const SearchCard = styled(Card)(() => ({
     zIndex: 100,
 }));
 
-const SearchForm: React.FC = () => {
+export default function SearchForm() {
     const router = useRouter()
     const { control, handleSubmit } = useForm<Inputs>({
         defaultValues: {
@@ -84,5 +84,3 @@ const SearchForm: React.FC = () => {
         </>
     );
 }
-
-export default SearchForm;
