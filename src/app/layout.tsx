@@ -31,7 +31,15 @@ export const metadata: Metadata = {
     }
 }
 
-export default async function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({
+    children,
+    tagListCard,
+    recentPostsCard
+}: {
+    children: ReactNode,
+    tagListCard: ReactNode,
+    recentPostsCard: ReactNode,
+}) {
     const header = headers()
     const ip = (header.get(`x-forwarded-for`) ?? ``).split(`,`)[0]
 
@@ -49,8 +57,10 @@ export default async function RootLayout({ children }: { children: ReactNode }) 
                         <Grid item xs={12} md={9} lg={8} xl={6}>
                             {children}
                         </Grid>
-                        <Grid item md={1} display={{ md: 'flex', xs: 'none' }}>
+                        <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
                             <AdmaxPCSideVertical />
+                            {tagListCard}
+                            {recentPostsCard}
                         </Grid>
                     </Grid>
                 </ThemeRegistry>
