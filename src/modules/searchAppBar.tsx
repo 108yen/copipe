@@ -8,8 +8,7 @@ import Divider from '@mui/material/Divider';
 import Stack from '@mui/material/Stack';
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 
-export default function SearchAppBar(props: { isVisibleAdminButton: boolean }) {
-    const { isVisibleAdminButton } = props;
+export default function SearchAppBar() {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position="static" elevation={0} sx={{ backgroundColor: 'primary.light' }}>
@@ -44,25 +43,6 @@ export default function SearchAppBar(props: { isVisibleAdminButton: boolean }) {
                                 </Typography>
                             </Stack>
                         </Link>
-                        {isVisibleAdminButton ? <Link
-                            href='/admin'
-                            style={{
-                                textDecoration: 'none',
-                                overflow: 'hidden',
-                            }}
-                        >
-                            <Typography
-                                variant="caption"
-                                noWrap
-                                sx={{
-                                    mr: 2,
-                                    display: { xs: 'block' },
-                                    textDecoration: 'none',
-                                }}
-                            >
-                                管理ページ
-                            </Typography>
-                        </Link> : null}
                         <Link
                             href='/about'
                             style={{
