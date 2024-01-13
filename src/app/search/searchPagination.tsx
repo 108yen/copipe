@@ -12,7 +12,8 @@ export default function SearchPagination(props: {
     const router = useRouter()
 
     function handleChange(event: React.ChangeEvent<unknown>, value: number) {
-        router.push(`/search?text=${searchText}?page=${value}`)
+        if (searchText == '') router.push(`/search?page=${value}`)
+        else router.push(`/search?text=${searchText}&page=${value}`)
     }
 
     return (

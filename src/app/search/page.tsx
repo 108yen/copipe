@@ -3,6 +3,7 @@ import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import supabase from "@/utils/supabase";
 import SearchPagination from "./searchPagination";
+import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 
 export const metadata = {
     title: '検索'
@@ -39,7 +40,8 @@ export default async function page({
             <CopipeCard>
                 {copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
             </CopipeCard>
-            <SearchPagination searchText={searchText} count={count!} page={page} />
+            <AdmaxUnderSwitch />
+            <SearchPagination searchText={searchText} count={Math.ceil(count ?? 0 / 10)} page={page} />
         </>
     );
 }
