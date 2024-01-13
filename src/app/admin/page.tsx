@@ -4,6 +4,9 @@ import supabase from "@/utils/supabase";
 import { CopipeWithTag } from "@/models/copipeWithTag";
 import Stack from "@mui/material/Stack";
 import Link from "next/link";
+import CopipeCard from "@/modules/copipeCard";
+
+export const revalidate = 0
 
 export default async function page() {
 
@@ -51,7 +54,7 @@ export default async function page() {
     }
 
     return (
-        <>
+        <CopipeCard>
             <Stack direction='row' spacing={2}>
                 <Link href='/admin/1'>
                     <Typography
@@ -74,6 +77,6 @@ export default async function page() {
                     ランダムツイート
                 </Typography>
             </Stack>
-        </>
+        </CopipeCard>
     )
 }

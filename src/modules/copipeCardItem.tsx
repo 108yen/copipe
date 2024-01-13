@@ -18,7 +18,7 @@ export function CopipeCardItem(props:{copipeItem: CopipeWithTag}) {
     const { copipeItem } = props;
 
     return (
-        <Box key={copipeItem.copipe_id}
+        <Box 
             sx={{
                 margin: { xs: 1, sm: 2 },
                 paddingY: 1,

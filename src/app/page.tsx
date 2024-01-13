@@ -28,7 +28,7 @@ const getHomePageCopipe = cache(async () => {
   return { copipes, count: count ?? 0 }
 })
 
-export const revalidate = 86400
+export const revalidate = 86400;
 
 export default async function Home() {
   const { copipes, count } = await getHomePageCopipe()
