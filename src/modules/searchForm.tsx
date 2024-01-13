@@ -1,18 +1,20 @@
+'use client'
 import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import theme from '@/theme/theme';
-import { useAtom } from 'jotai';
-import { textFormAtom, writeSearchTextAtom } from '../components/Atoms';
 import styled from '@emotion/styled';
 import { useRouter } from 'next/navigation';
 import Card from '@mui/material/Card';
-import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import InputAdornment from '@mui/material/InputAdornment';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
-import { useEffect } from 'react';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+
+type Inputs = {
+    text: string;
+}
 
 const SearchCard = styled(Card)(() => ({
     position: "sticky",
@@ -20,32 +22,16 @@ const SearchCard = styled(Card)(() => ({
     zIndex: 100,
 }));
 
-const SearchForm: React.FC = () => {
+export default function SearchForm() {
     const router = useRouter()
-
-    const [text, setText] = useAtom(textFormAtom);
-    const [, setSearchText] = useAtom(writeSearchTextAtom);
-
-    useEffect(() => {
-        setSearchText('')
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [])
-
-    const handleKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
-        if (event.key == 'Enter') {
-            handleSubmit();
+    const { control, handleSubmit } = useForm<Inputs>({
+        defaultValues: {
+            text: ''
         }
-    }
-    const handleSubmit = () => {
-        setSearchText(text);
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth",
-        });
-    }
-    const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-        const { value } = event.target;
-        setText(value);
+    })
+
+    const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
+        router.push(`/search?text=${encodeURIComponent(data.text)}`)
     }
 
     return (
@@ -54,26 +40,30 @@ const SearchForm: React.FC = () => {
                 sx={{ m: theme.spacing(2) }}
                 elevation={0}
             >
-                <FormControl fullWidth>
-                    <TextField
-                        placeholder="search"
-                        InputProps={{
-                            endAdornment: (
-                                <InputAdornment position="end">
-                                    <IconButton
-                                        onClick={handleSubmit}
-                                    >
-                                        <SearchIcon />
-                                    </IconButton>
-                                </InputAdornment>
-                            ),
-                        }}
-                        size="small"
-                        onKeyDown={handleKeyDown}
-                        onChange={handleChange}
-                    >
-                    </TextField>
-                </FormControl>
+                <form onSubmit={handleSubmit(onSubmit)}>
+                    <Controller
+                        name="text"
+                        control={control}
+                        render={({ field, fieldState }) => (
+                            <TextField
+                                {...field}
+                                id='text'
+                                placeholder="search"
+                                fullWidth
+                                InputProps={{
+                                    endAdornment: (
+                                        <InputAdornment position="end">
+                                            <IconButton type='submit'>
+                                                <SearchIcon />
+                                            </IconButton>
+                                        </InputAdornment>
+                                    ),
+                                }}
+                                size="small"
+                            />
+                        )}
+                    />
+                </form>
             </SearchCard>
             <Box sx={{
                 display: 'flex',
@@ -94,5 +84,3 @@ const SearchForm: React.FC = () => {
         </>
     );
 }
-
-export default SearchForm;

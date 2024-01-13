@@ -9,16 +9,9 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import supabase from "@/utils/supabase";
 
 async function handleClickCopy (copyText: string, id: number) {
     await global.navigator.clipboard.writeText(copyText);
-
-    const { data, error } = await supabase
-        .from('copy_history')
-        .insert([
-            { copipe_id: id },
-        ])
 }
 
 export function CopipeCardItem(props:{copipeItem: CopipeWithTag}) {
