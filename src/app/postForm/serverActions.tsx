@@ -19,6 +19,7 @@ export async function postNewCopipe(props: { title: string, body: string }) {
             },
         ]);
     if (error) return { error: JSON.stringify(error) };
+    else console.log('post copipe in postForm')
     revalidatePath('/')
 }
 

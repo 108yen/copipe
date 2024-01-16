@@ -13,7 +13,8 @@ const getHomePageCopipe = cache(async () => {
     .select('*', { count: 'exact' })
     .order('copipe_id', { ascending: false })
     .range(0, 9);
-  if (error) console.log('search copipe error', error);
+  if (error) console.log('fetch copipe error in /:', error);
+  else console.log('fetch copipe error in /')
 
   const copipes: Array<CopipeWithTag> = data != null ? data.map(e => {
     const copipeItem: CopipeWithTag = {

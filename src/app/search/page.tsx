@@ -33,7 +33,8 @@ export default async function page({
         .like('body', `%${searchText}%`)
         .order('copipe_id', { ascending: false })
         .range(10 * (page - 1), 9 + 10 * (page - 1));
-    if (error) console.log('search copipe error', error);
+    if (error) console.log('search copipe error in search/', error);
+    else console.log('fetch search copipe in search/', error);
 
     const copipes: Array<CopipeWithTag> = data != null ? data.map(e => {
         const copipeItem: CopipeWithTag = {
