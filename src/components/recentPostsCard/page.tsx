@@ -15,6 +15,8 @@ const fetchRecentCopipes = cache(async () => {
         .range(0, 99);
 })
 
+export const revalidate = 86400
+
 export default async function RecentPostsCard() {
     const { data, error } = await fetchRecentCopipes()
     const copipes: { copipe_id: number, title: string }[] | undefined = data?.map(value => {

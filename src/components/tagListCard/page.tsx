@@ -16,6 +16,8 @@ const fetchTags = cache(async () => {
         .select()
 })
 
+export const revalidate = 86400
+
 export default async function TagListCard() {
     const { data, error } = await fetchTags()
     const tags: Tag[] | undefined = data?.map(
