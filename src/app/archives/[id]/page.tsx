@@ -10,11 +10,20 @@ import { CopipeWithTag } from "@/models/copipeWithTag";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipeCard from "@/modules/copipeCard";
 
-async function checkBeforeAndAfterPage(currendId: number) {
-    const { data, error, status, count } = await supabase
+const getCopipeIds = cache(async () => {
+    const { data, error } = await supabase
         .from('copipe_with_tag')
         .select('copipe_id')
+    if (error) console.log(`fetch copipe_id for pagination in archives/[id] error: ${error}`)
     if (data == null) throw new Error("copipe_id[] is null");
+    else console.log(`fetch copipe_id for pagination in archives/[id]`)
+
+    return data
+})
+
+async function checkBeforeAndAfterPage(currendId: number) {
+    const data = await getCopipeIds()
+
     const copipeIds: number[] = data.map(value => value.copipe_id as number)
     const currendIdIndex = copipeIds.findIndex(value => value == currendId)
     const beforeId = currendIdIndex == 0 ? -1 : copipeIds[currendIdIndex - 1];
@@ -29,6 +38,7 @@ const getCopipe = cache(async (id: number) => {
         .eq("copipe_id", id)
         .maybeSingle();
     if (error) notFound();
+    else console.log(`fetch copipe in archives/${id}`)
     if (data == null) notFound();
 
     const copipe: CopipeWithTag = {
