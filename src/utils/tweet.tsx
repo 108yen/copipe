@@ -4,6 +4,8 @@ import supabase from "./supabase";
 export default async function getTweet() {
     const { data, error } = await supabase
         .rpc('get_random_copipe')
+    if (error) console.log(`get random copipe error: ${error}`)
+    else console.log('get random copipe')
     const copipe: CopipeWithTag = {
         copipe_id: data[0].copipe_id,
         title: data[0].title,
