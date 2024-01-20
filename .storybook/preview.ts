@@ -10,15 +10,15 @@ const preview: Preview = {
       },
     },
     backgrounds: {
-    default: "default",
+      default: "default",
       values: [
         {
           name: "default",
           value: "#f5f5f5",
         },
       ],
-  },
-  },
+    },
+  }
 };
 
 export default preview;
