@@ -1,5 +1,5 @@
 import { Tag } from "@/models/tag";
-import CopipeCard from "@/modules/copipeCard";
+import CopipeCard from "@/modules/mui/copipeCard";
 import supabase from "@/utils/supabase";
 import Box from "@mui/material/Box";
 import Chip from "@mui/material/Chip";

@@ -1,7 +1,7 @@
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
-import LoadingSearchForm from "@/modules/yamadaui/loadingSearchForm"
+import LoadingSearchForm from "@/modules/loadingSearchForm"
 
 const meta = {
     title: 'yamadaui/LoadingSearchForm',

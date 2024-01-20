@@ -1,7 +1,7 @@
 import { ReactNode, Suspense } from "react";
 import { Metadata } from 'next'
 import ThemeRegistry from "@/theme/themeRegistry";
-import SearchAppBar from "@/modules/searchAppBar";
+import SearchAppBar from "@/modules/mui/searchAppBar";
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
@@ -52,21 +52,21 @@ export default async function RootLayout({
             </head>
             <body>
                 <ThemeRegistry options={{ key: `css`, prepend: true }}>
-                        <SearchAppBar />
-                        <Grid container justifyContent="center" spacing={1} marginY={1}>
-                            <Grid item xs={12} md={9} lg={8} xl={6}>
-                                {children}
-                            </Grid>
-                            <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
-                                <AdmaxPCSideVertical />
-                                <Suspense fallback={<TagListCardLoading />}>
-                                    <TagListCard />
-                                </Suspense>
-                                <Suspense fallback={<RecentPostsCardLoading />}>
-                                    <RecentPostsCard />
-                                </Suspense>
-                            </Grid>
+                    <SearchAppBar />
+                    <Grid container justifyContent="center" spacing={1} marginY={1}>
+                        <Grid item xs={12} md={9} lg={8} xl={6}>
+                            {children}
                         </Grid>
+                        <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
+                            <AdmaxPCSideVertical />
+                            <Suspense fallback={<TagListCardLoading />}>
+                                <TagListCard />
+                            </Suspense>
+                            <Suspense fallback={<RecentPostsCardLoading />}>
+                                <RecentPostsCard />
+                            </Suspense>
+                        </Grid>
+                    </Grid>
                 </ThemeRegistry>
                 {/* //!themeregistoryはいつか削除する
                 <ThemeRegistry options={{ key: `css`, prepend: true }}>

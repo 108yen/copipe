@@ -1,10 +1,10 @@
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import CopipeCard from "@/modules/copipeCard";
-import { CopipeCardItem } from "@/modules/copipeCardItem";
+import CopipeCard from "@/modules/mui/copipeCard";
+import { CopipeCardItem } from "@/modules/mui/copipeCardItem";
 import supabase from "@/utils/supabase";
 import SearchPagination from "./searchPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
-import SearchForm from "@/modules/searchForm";
+import SearchForm from "@/modules/mui/searchForm";
 import Typography from "@mui/material/Typography";
 
 export const metadata = {

@@ -8,7 +8,7 @@ import ListItemText from "@mui/material/ListItemText";
 import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
-import CopipeCard from "@/modules/copipeCard";
+import CopipeCard from "@/modules/mui/copipeCard";
 import dayjs from "@/utils/dayjs";
 
 function CommentItem(props: { comment: CopipeComment }) {

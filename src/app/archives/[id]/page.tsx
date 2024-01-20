@@ -7,8 +7,8 @@ import { Comments } from "./commentList";
 import PageNation from "./pageNation";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import { CopipeCardItem } from "@/modules/copipeCardItem";
-import CopipeCard from "@/modules/copipeCard";
+import { CopipeCardItem } from "@/modules/mui/copipeCardItem";
+import CopipeCard from "@/modules/mui/copipeCard";
 
 const getCopipeIds = cache(async () => {
     const { data, error } = await supabase

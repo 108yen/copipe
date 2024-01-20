@@ -1,33 +1,20 @@
 'use client'
 
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import Box from "@mui/material/Box";
-import Chip from "@mui/material/Chip";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import Link from "next/link";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
+import { Box, Divider, HStack, Heading, Icon, IconButton, Spacer, Tag, Text } from "@yamada-ui/react";
 
-async function handleClickCopy (copyText: string, id: number) {
+async function handleClickCopy(copyText: string, id: number) {
     await global.navigator.clipboard.writeText(copyText);
 }
 
-export function CopipeCardItem(props:{copipeItem: CopipeWithTag}) {
+export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
     const { copipeItem } = props;
 
     return (
-        <Box 
-            sx={{
-                margin: { xs: 1, sm: 2 },
-                paddingY: 1,
-            }}
-        >
-            <Stack
-                direction='row'
-                justifyContent="space-between"
-            >
+        <Box m={{ sm: 1, base: 2 }} paddingY={1} width='full'>
+            <HStack>
                 <Link
                     href={'/archives/' + copipeItem.copipe_id}
                     style={{
@@ -35,54 +22,49 @@ export function CopipeCardItem(props:{copipeItem: CopipeWithTag}) {
                         overflow: 'hidden'
                     }}
                 >
-                    <Typography
+                    <Heading
                         variant="h5"
-                        noWrap
+                        size='lg'
+                        fontWeight='normal'
+                        isTruncated
                         color='text.primary'
-                        sx={{
-                            flexGrow: 1,
-                            display: 'block',
-                        }}
                     >
                         {copipeItem.title}
-                    </Typography>
+                    </Heading>
                 </Link>
+                <Spacer />
                 <IconButton
                     color="secondary"
+                    variant='ghost'
                     aria-label="copy"
-                    size="small"
+                    size="xs"
+                    icon={<Icon as={ContentCopyIcon} size='xl' />}
                     onClick={() => handleClickCopy(copipeItem.body, copipeItem.copipe_id)}
-                >
-                    <ContentCopyIcon fontSize="inherit" />
-                </IconButton>
-            </Stack>
-            <Stack direction='row'>
+                />
+            </HStack>
+            <HStack justifyContent='flex-start' gap='xs'>
                 {copipeItem.tags.map(tag =>
                     tag.tag_body == null
                         ? null
                         : <Link key={tag.tag_id} href={`/tag/${tag.tag_id}/1`}>
-                            <Chip
+                            <Tag
                                 key={tag.tag_id}
-                                label={tag.tag_body}
-                                variant="outlined"
+                                variant="outline"
                                 color="secondary"
-                                size="small"
-                            />
+                                boxShadow='inset 0 0 0px 1px'
+                                size="sm"
+                                rounded="full"
+                            >{tag.tag_body}</Tag>
                         </Link>
                 )}
-            </Stack>
+            </HStack>
             <Divider />
-            <Typography
+            <Text
                 variant="body1"
-                sx={{
-                    flexGrow: 1,
-                    display: 'block',
-                    whiteSpace: 'pre-line',
-                }}
-                gutterBottom
+                whiteSpace='pre-line'
             >
                 {copipeItem.body}
-            </Typography>
+            </Text>
         </Box>
     );
 }

@@ -2,7 +2,7 @@ import Typography from "@mui/material/Typography";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import Stack from "@mui/material/Stack";
 import Link from "next/link";
-import CopipeCard from "@/modules/copipeCard";
+import CopipeCard from "@/modules/mui/copipeCard";
 import getTweet from "@/utils/tweet";
 
 export const revalidate = 0

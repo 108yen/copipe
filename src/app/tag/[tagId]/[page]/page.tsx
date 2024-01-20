@@ -1,6 +1,6 @@
 import { CopipeWithTag } from "@/models/copipeWithTag"
-import CopipeCard from "@/modules/copipeCard"
-import { CopipeCardItem } from "@/modules/copipeCardItem"
+import CopipeCard from "@/modules/mui/copipeCard"
+import { CopipeCardItem } from "@/modules/mui/copipeCardItem"
 import supabase from "@/utils/supabase"
 import { notFound } from "next/navigation"
 

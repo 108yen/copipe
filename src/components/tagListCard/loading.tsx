@@ -1,4 +1,4 @@
-import CopipeCard from "@/modules/copipeCard";
+import CopipeCard from "@/modules/mui/copipeCard";
 import Box from "@mui/material/Box";
 import Divider from "@mui/material/Divider";
 import Skeleton from "@mui/material/Skeleton";

@@ -1,9 +1,9 @@
-import CopipeCard from "@/modules/yamadaui/copipeCard"
+import CopipeCard from "@/modules/copipeCard"
 import { Text, UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
-import { CopipeCardItem } from "@/modules/yamadaui/copipeCardItem"
-import { CopipeCardItemSkelton } from "@/modules/yamadaui/copipeCardItemSkeleton"
+import { CopipeCardItem } from "@/modules/copipeCardItem"
+import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
 
 const meta = {
     title: 'yamadaui/CopipeCard',

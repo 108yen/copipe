@@ -1,4 +1,4 @@
-import { CopipeCardItem } from "@/modules/copipeCardItem";
+import { CopipeCardItem } from "@/modules/mui/copipeCardItem";
 import { ThemeProvider } from "@emotion/react";
 import { CssBaseline } from "@mui/material";
 import { Meta, StoryObj } from '@storybook/react'

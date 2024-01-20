@@ -1,8 +1,8 @@
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import CopipeCard from "@/modules/copipeCard";
-import { CopipeCardItem } from "@/modules/copipeCardItem";
-import SearchForm from "@/modules/searchForm";
+import CopipeCard from "@/modules/mui/copipeCard";
+import { CopipeCardItem } from "@/modules/mui/copipeCardItem";
+import SearchForm from "@/modules/mui/searchForm";
 import supabase from "@/utils/supabase";
 import { cache } from "react";
 import SearchPagination from "./search/searchPagination";

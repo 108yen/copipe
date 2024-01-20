@@ -1,7 +1,7 @@
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
-import AppBar from "@/modules/yamadaui/appBar"
+import AppBar from "@/modules/appBar"
 
 const meta = {
     title: 'yamadaui/AppBar',

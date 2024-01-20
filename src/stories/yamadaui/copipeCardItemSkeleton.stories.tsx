@@ -1,7 +1,7 @@
 import yamadauiTheme from "@/yamadauiTheme";
 import { Meta, StoryObj } from '@storybook/react'
 import { UIProvider } from "@yamada-ui/react";
-import { CopipeCardItemSkelton } from "@/modules/yamadaui/copipeCardItemSkeleton";
+import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton";
 
 const meta = {
     title: 'yamadaui/CopipeCardItemSkelton',

@@ -1,4 +1,4 @@
-import CopipeCard from "@/modules/copipeCard";
+import CopipeCard from "@/modules/mui/copipeCard";
 import supabase from "@/utils/supabase";
 import Divider from "@mui/material/Divider";
 import Stack from "@mui/material/Stack";

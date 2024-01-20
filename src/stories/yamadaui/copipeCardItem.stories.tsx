@@ -1,4 +1,4 @@
-import { CopipeCardItem } from "@/modules/yamadaui/copipeCardItem"
+import { CopipeCardItem } from "@/modules/copipeCardItem"
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
