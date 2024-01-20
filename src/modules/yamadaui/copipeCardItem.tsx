@@ -35,7 +35,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
                 </Link>
                 <Spacer />
                 <IconButton
-                    colorScheme="secondary"
+                    color="secondary"
                     variant='ghost'
                     aria-label="copy"
                     size="xs"
@@ -51,7 +51,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
                             <Tag
                                 key={tag.tag_id}
                                 variant="outline"
-                                colorScheme="secondary"
+                                color="secondary"
                                 size="sm"
                                 rounded="full"
                             >{tag.tag_body}</Tag>
