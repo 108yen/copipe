@@ -1,7 +1,6 @@
 'use client'
 
 import { CopipeComment } from "@/models/comment";
-import { formatDate } from "@/utils/formatDate";
 import React, { useOptimistic } from "react";
 import CommentForm from "./commentForm";
 import ListItem from "@mui/material/ListItem";
@@ -10,9 +9,8 @@ import Typography from "@mui/material/Typography";
 import List from "@mui/material/List";
 import Divider from "@mui/material/Divider";
 import CopipeCard from "@/modules/copipeCard";
+import dayjs from "@/utils/dayjs";
 
-
-//別ファイルにするとなぜがエラーが出る
 function CommentItem(props: { comment: CopipeComment }) {
     const { comment } = props;
 
@@ -21,7 +19,7 @@ function CommentItem(props: { comment: CopipeComment }) {
             <ListItemText
                 primary={
                     <Typography variant="caption" color="grey">
-                        {`${formatDate(comment.created_at!)}`}
+                        {`${dayjs(comment.created_at!).format('YYYY/MM/DD HH:mm:ss')}`}
                     </Typography>
                 }
                 secondary={
