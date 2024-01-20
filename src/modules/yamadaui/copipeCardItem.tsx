@@ -13,8 +13,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
     const { copipeItem } = props;
 
     return (
-        <Box m={{ sm: 1, base: 2 }} paddingY={1}
-        >
+        <Box m={{ sm: 1, base: 2 }} paddingY={1} width='full'>
             <HStack>
                 <Link
                     href={'/archives/' + copipeItem.copipe_id}
