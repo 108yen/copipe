@@ -15,7 +15,7 @@ export function CopipeCardItemSkelton() {
                     icon={<Icon as={ContentCopyIcon} size='xl' />}
                 />
             </HStack>
-            <Skeleton w={50} marginY={1} />
+            <Skeleton w={100} marginY={1} />
             <Divider />
             <SkeletonText marginY={3} lineClamp={5} textHeight={5}/>
         </Box>

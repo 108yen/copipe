@@ -3,6 +3,7 @@ import { Text, UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
 import { CopipeCardItem } from "@/modules/yamadaui/copipeCardItem"
+import { CopipeCardItemSkelton } from "@/modules/yamadaui/copipeCardItemSkeleton"
 
 const meta = {
     title: 'yamadaui/CopipeCard',
@@ -68,6 +69,15 @@ export const InItem: Story = {
         children: <>
             <CopipeCardItem copipeItem={copipeItem} />
             <CopipeCardItem copipeItem={copipeItem} />
+        </>
+    }
+}
+
+export const Skeleton: Story = {
+    args: {
+        children: <>
+            <CopipeCardItemSkelton />
+            <CopipeCardItemSkelton />
         </>
     }
 }
