@@ -3,7 +3,7 @@
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { CopipeComment } from "@/models/comment";
 import { event } from "@/analytics/gtag";
-import { Button, FormControl, Snacks, Textarea, VStack, useNotice, useSnacks } from "@yamada-ui/react";
+import { Button, FormControl, Textarea, VStack, useNotice } from "@yamada-ui/react";
 
 type Inputs = {
     body: string;
@@ -24,7 +24,7 @@ export default function CommentForm(props: {
         }
     })
 
-    const notice = useNotice({ placement: 'bottom-left' })
+    const notice = useNotice({ placement: 'bottom-left', variant: 'solid' })
 
     const validationRules = {
         body: {
@@ -62,50 +62,50 @@ export default function CommentForm(props: {
     }
 
     //prevent submit by enter key down
-    const checkKeyDown = (e: React.KeyboardEvent<HTMLFormElement>) => {
+    const checkKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
         if (e.key === `Enter` && !e.shiftKey) {
             e.preventDefault()
         }
     }
 
     return (
-        <form
+        <VStack
+            as='form'
+            alignItems='center'
+            w='full'
             onSubmit={handleSubmit(onSubmit)}
             onKeyDown={e => checkKeyDown(e)}
         >
-            <VStack alignItems='center'>
-                <Controller
-                    name="body"
-                    control={control}
-                    rules={validationRules.body}
-                    render={({ field, fieldState }) => (
-                        <FormControl
-                            isInvalid={fieldState.invalid}
-                            helperMessage="改行: shift + enter"
-                            errorMessage={fieldState.error?.message}
-                        >
-                            <Textarea
-                                {...field}
-                                id="body"
-                                placeholder="コメント"
-                                w='full'
-                                color='secondary'
-                                focusBorderColor='secondary'
-                            />
-                        </FormControl>
-                    )}
-                />
-                <Button
-                    variant='outline'
-                    color="secondary"
-                    borderColor='secondary'
-                    w='fit-content'
-                    type="submit"
-                    isLoading={formState.isSubmitting}
-                >
-                    コメント
-                </Button>
-            </VStack>
-        </form>
+            <Controller
+                name="body"
+                control={control}
+                rules={validationRules.body}
+                render={({ field, fieldState }) => (
+                    <FormControl
+                        isInvalid={fieldState.invalid}
+                        helperMessage="改行: shift + enter"
+                        errorMessage={fieldState.error?.message}
+                    >
+                        <Textarea
+                            {...field}
+                            id="body"
+                            placeholder="コメント"
+                            color='secondary'
+                            focusBorderColor='secondary'
+                        />
+                    </FormControl>
+                )}
+            />
+            <Button
+                variant='outline'
+                color="secondary"
+                borderColor='secondary'
+                w='fit-content'
+                type="submit"
+                isLoading={formState.isSubmitting}
+            >
+                コメント
+            </Button>
+        </VStack>
     )
 }

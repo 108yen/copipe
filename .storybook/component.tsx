@@ -11,9 +11,11 @@ import {
     DocsContainerProps,
 } from "@storybook/blocks"
 import { themes } from "@storybook/theming"
+import yamadauiTheme from "../src/yamadauiTheme"
+
 export const StoryProvider: FC<{ children: ReactNode }> = ({ children }) => {
     return (
-        <UIProvider>
+        <UIProvider theme={yamadauiTheme}>
             <App p="md">{children}</App>
         </UIProvider>
     )

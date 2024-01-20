@@ -1,21 +1,10 @@
-import yamadauiTheme from "@/yamadauiTheme"
 import { CommentItem } from "@/modules/comment/commentItem"
-import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 
 const meta = {
     title: 'yamadaui/CommentItem',
     component: CommentItem,
-    tags: ['autodocs'],
-    decorators: [
-        (Story) => {
-            return (
-                <UIProvider theme={yamadauiTheme}>
-                    <Story />
-                </UIProvider>
-            )
-        },
-    ]
+    tags: ['autodocs']
 } satisfies Meta<typeof CommentItem>
 
 export default meta

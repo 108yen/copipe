@@ -4,7 +4,15 @@ import Link from "next/link";
 
 export default function AppBar() {
     return (
-        <Box as='header' bg='Background' height={65} display='flex' paddingX={5} borderBottom='solid 0.1px gray'>
+        <Box
+            as='header'
+            w='full'
+            bg='Background'
+            height={65}
+            display='flex'
+            paddingX={5}
+            borderBottom='solid 0.1px gray'
+        >
             <HStack justifyContent='space-between' alignItems='center' w='full'>
                 <Link
                     href='/'

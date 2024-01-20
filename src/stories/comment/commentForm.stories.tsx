@@ -1,21 +1,10 @@
-import yamadauiTheme from "@/yamadauiTheme"
-import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import CommentForm from "@/modules/comment/commentForm"
 
 const meta = {
     title: 'yamadaui/CommentForm',
     component: CommentForm,
-    tags: ['autodocs'],
-    decorators: [
-        (Story) => {
-            return (
-                <UIProvider theme={yamadauiTheme}>
-                    <Story />
-                </UIProvider>
-            )
-        },
-    ]
+    tags: ['autodocs']
 } satisfies Meta<typeof CommentForm>
 
 export default meta
