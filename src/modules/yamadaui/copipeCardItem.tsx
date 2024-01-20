@@ -52,6 +52,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
                                 key={tag.tag_id}
                                 variant="outline"
                                 color="secondary"
+                                boxShadow='inset 0 0 0px 1px'
                                 size="sm"
                                 rounded="full"
                             >{tag.tag_body}</Tag>
