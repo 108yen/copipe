@@ -1,13 +1,15 @@
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
-import SearchForm from "@/modules/yamadaui/searchForm"
+import LoadingRecentPostsCard from "@/modules/recentPostCard/loading"
 
 const meta = {
-    title: 'yamadaui/SearchForm',
-    component: SearchForm,
+    title: 'yamadaui/LoadingRecentPostsCard',
+    component: LoadingRecentPostsCard,
     parameters: {
-        // layout: 'centered',
+        nextjs: {
+            appDirectory: true,
+        },
     },
     tags: ['autodocs'],
     decorators: [
@@ -19,15 +21,9 @@ const meta = {
             )
         },
     ]
-} satisfies Meta<typeof SearchForm>
+} satisfies Meta<typeof LoadingRecentPostsCard>
 
 export default meta
 type Story = StoryObj<typeof meta>
 
-export const Default: Story = {
-    parameters: {
-        nextjs: {
-            appDirectory: true,
-        },
-    },
-}
+export const Default: Story = {}
