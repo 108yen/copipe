@@ -3,7 +3,7 @@ import * as React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 import { useRouter } from 'next/navigation';
 import { Controller, SubmitHandler, useForm } from 'react-hook-form';
-import { Box, Button, Card, Container, FormControl, IconButton, Input, InputGroup, InputRightElement, VStack } from '@yamada-ui/react';
+import { Button, Card, IconButton, Input, InputGroup, InputLeftElement, VStack } from '@yamada-ui/react';
 
 type Inputs = {
     text: string;
@@ -43,14 +43,14 @@ export default function SearchForm() {
                                     id='text'
                                     placeholder="search"
                                 />
-                                <InputRightElement isClick>
+                                <InputLeftElement isClick>
                                     <IconButton
                                         type='submit'
                                         variant='link'
                                     >
                                         <SearchIcon />
                                     </IconButton>
-                                </InputRightElement>
+                                </InputLeftElement>
                             </InputGroup>
                         )}
                     />
