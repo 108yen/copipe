@@ -2,14 +2,14 @@ import { ReactNode, Suspense } from "react";
 import { Metadata } from 'next'
 import ThemeRegistry from "@/theme/themeRegistry";
 import SearchAppBar from "@/modules/searchAppBar";
-import Grid from "@mui/material/Grid";
-import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
-import TagListCard from "@/components/tagListCard/page";
+import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
 import TagListCardLoading from "@/components/tagListCard/loading";
-import RecentPostsCard from "@/components/recentPostsCard/page";
+import TagListCard from "@/components/tagListCard/page";
 import RecentPostsCardLoading from "@/components/recentPostsCard/loading";
+import RecentPostsCard from "@/components/recentPostsCard/page";
+import Grid from "@mui/material/Grid";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
@@ -52,22 +52,42 @@ export default async function RootLayout({
             </head>
             <body>
                 <ThemeRegistry options={{ key: `css`, prepend: true }}>
-                    <SearchAppBar />
-                    <Grid container justifyContent="center" spacing={1} marginY={1}>
-                        <Grid item xs={12} md={9} lg={8} xl={6}>
-                            {children}
+                        <SearchAppBar />
+                        <Grid container justifyContent="center" spacing={1} marginY={1}>
+                            <Grid item xs={12} md={9} lg={8} xl={6}>
+                                {children}
+                            </Grid>
+                            <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
+                                <AdmaxPCSideVertical />
+                                <Suspense fallback={<TagListCardLoading />}>
+                                    <TagListCard />
+                                </Suspense>
+                                <Suspense fallback={<RecentPostsCardLoading />}>
+                                    <RecentPostsCard />
+                                </Suspense>
+                            </Grid>
                         </Grid>
-                        <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
-                            <AdmaxPCSideVertical />
-                            <Suspense fallback={<TagListCardLoading />}>
-                                <TagListCard />
-                            </Suspense>
-                            <Suspense fallback={<RecentPostsCardLoading />}>
-                                <RecentPostsCard />
-                            </Suspense>
-                        </Grid>
-                    </Grid>
                 </ThemeRegistry>
+                {/* //!themeregistoryはいつか削除する
+                <ThemeRegistry options={{ key: `css`, prepend: true }}>
+                    <UIProvider>
+                        <SearchAppBar />
+                        <Grid templateColumns="repeat(4, 1fr)" gap="md" w='full'>
+                            <GridItem colSpan={{ base: 3, md: 4 }} w='full'>
+                                {children}
+                            </GridItem>
+                            <GridItem colSpan={1} w='full' display={{ base: 'block', md: 'none' }}>
+                                <AdmaxPCSideVertical />
+                                <Suspense fallback={<TagListCardLoading />}>
+                                    <TagListCard />
+                                </Suspense>
+                                <Suspense fallback={<RecentPostsCardLoading />}>
+                                    <RecentPostsCard />
+                                </Suspense>
+                            </GridItem>
+                        </Grid>
+                    </UIProvider>
+                </ThemeRegistry> */}
             </body>
         </html>
     )
