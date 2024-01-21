@@ -1,14 +1,15 @@
 import { CopipeWithTag } from "@/models/copipeWithTag"
-import CopipeCard from "@/modules/mui/copipeCard"
-import { CopipeCardItem } from "@/modules/mui/copipeCardItem"
+import CopipeCard from "@/modules/copipeCard"
+import { CopipeCardItem } from "@/modules/copipeCardItem"
 import supabase from "@/utils/supabase"
 import { notFound } from "next/navigation"
 
-export default async function page({ params }: {
-    params: { tagId: string, page: string }
+export default async function page({ params, searchParams }: {
+    params: { tagId: string },
+    searchParams: { [key: string]: string | string[] | undefined }
 }) {
     const tagId = Number(params.tagId)
-    const page = Number(params.page)
+    const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1
 
     const { data, error } = await supabase
         .from('_copipeToTag')

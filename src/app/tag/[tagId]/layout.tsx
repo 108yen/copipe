@@ -1,8 +1,8 @@
 import supabase from "@/utils/supabase"
 import { notFound } from "next/navigation"
 import { ReactNode } from "react"
-import TagPageNation from "./tagPageNation"
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch"
+import CopipePagination from "@/modules/copipePagination"
 
 export async function generateMetadata({ params }: { params: { tagId: string } }) {
     const tagId = Number(params.tagId)
@@ -19,14 +19,15 @@ export async function generateMetadata({ params }: { params: { tagId: string } }
     }
 }
 
-export default async function layout({ params, children }: {
+export default async function layout({ params, searchParams, children }: {
     children: ReactNode,
-    params: { tagId: string, page: string }
+    params: { tagId: string },
+    searchParams: { [key: string]: string | string[] | undefined }
 }) {
     const tagId = Number(params.tagId)
-    const page = Number(params.page)
+    const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1
 
-    const { data, error, status, count } = await supabase
+    const { error, count } = await supabase
         .from('_copipeToTag')
         .select('*', { count: 'exact', head: true })
         .eq('tag_id', tagId)
@@ -36,7 +37,8 @@ export default async function layout({ params, children }: {
         <>
             {children}
             <AdmaxUnderSwitch />
-            <TagPageNation tagId={tagId} page={page} count={count} />
+            {/* <TagPageNation tagId={tagId} page={page} count={count} /> */}
+            <CopipePagination url={`/tag/${tagId}`} total={Math.ceil((count ?? 0) / 10)} page={page} />
         </>
     )
 
