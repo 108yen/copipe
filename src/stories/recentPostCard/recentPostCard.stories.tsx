@@ -1,11 +1,11 @@
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
-import RecentPostsCard from "@/modules/recentPostCard/recentPostCard"
+import RecentPostsCardTemplate from "@/modules/recentPostCard/recentPostCard"
 
 const meta = {
     title: 'yamadaui/RecentPostsCard',
-    component: RecentPostsCard,
+    component: RecentPostsCardTemplate,
     parameters: {
         nextjs: {
             appDirectory: true,
@@ -21,7 +21,7 @@ const meta = {
             )
         },
     ]
-} satisfies Meta<typeof RecentPostsCard>
+} satisfies Meta<typeof RecentPostsCardTemplate>
 
 export default meta
 type Story = StoryObj<typeof meta>

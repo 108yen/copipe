@@ -1,11 +1,11 @@
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
 import yamadauiTheme from "@/yamadauiTheme"
-import TagListCard from "@/modules/tagListCard/tagListCard"
+import TagListCardTemplate from "@/modules/tagListCard/tagListCard"
 
 const meta = {
     title: 'yamadaui/TagListCard',
-    component: TagListCard,
+    component: TagListCardTemplate,
     tags: ['autodocs'],
     decorators: [
         (Story) => {
@@ -16,7 +16,7 @@ const meta = {
             )
         },
     ]
-} satisfies Meta<typeof TagListCard>
+} satisfies Meta<typeof TagListCardTemplate>
 
 export default meta
 type Story = StoryObj<typeof meta>

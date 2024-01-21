@@ -2,7 +2,7 @@ import { Divider, Heading, Text, VStack } from "@yamada-ui/react";
 import CopipeCard from "../copipeCard";
 import Link from "next/link";
 
-export default function RecentPostsCard(props: {
+export default function RecentPostsCardTemplate(props: {
     copipes: { id: number, title: string }[]
 }) {
     const { copipes } = props;

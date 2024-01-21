@@ -3,7 +3,7 @@ import CopipeCard from "../copipeCard";
 import { Box, Divider, Heading, Tag, VStack } from "@yamada-ui/react";
 import Link from "next/link";
 
-export default function TagListCard(props: { tags: TagModel[] }) {
+export default function TagListCardTemplate(props: { tags: TagModel[] }) {
     const { tags } = props;
 
     return (
