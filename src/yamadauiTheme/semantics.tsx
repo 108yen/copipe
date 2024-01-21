@@ -6,6 +6,6 @@ export const semantics: ThemeSemantics = {
         secondary: "#607d8b"
     },
     colorSchemes: {
-        primary: "whiteAlpha"
+        primary: "blackAlpha"
     },
 }
