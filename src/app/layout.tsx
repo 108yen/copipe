@@ -3,12 +3,13 @@ import { Metadata } from 'next'
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
-import { Grid, GridItem, UIProvider } from "@yamada-ui/react";
+import { Grid, GridItem } from "@yamada-ui/react";
 import AppBar from "@/modules/appBar";
 import LoadingRecentPostsCard from "@/modules/recentPostCard/loading";
 import LoadingTagListCard from "@/modules/tagListCard/loading";
 import RecentPostsCard from "@/modules/recentPostCard";
 import TagListCard from "@/modules/tagListCard";
+import Provider from "./provider";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
@@ -50,7 +51,7 @@ export default async function RootLayout({
                 </Suspense>
             </head>
             <body>
-                <UIProvider>
+                <Provider>
                     <AppBar />
                     <Grid templateColumns="repeat(4, 1fr)" gap="md" w='full'>
                         <GridItem colSpan={{ base: 3, md: 4 }} w='full'>
@@ -66,7 +67,7 @@ export default async function RootLayout({
                             </Suspense>
                         </GridItem>
                     </Grid>
-                </UIProvider>
+                </Provider>
             </body>
         </html>
     )
