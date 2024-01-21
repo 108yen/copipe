@@ -5,14 +5,16 @@ import { useRouter } from "next/navigation";
 
 export default function CopipePagination(props: {
     url: string;
+    params?: { name: string, param: string };
     total: number;
     page: number;
 }) {
-    const { url, total, page } = props;
+    const { url, params, total, page } = props;
     const route = useRouter()
 
     function handleChange(value: number) {
-        route.push(`${url}&page=${value}`)
+        if (params) route.push(`${url}?page=${value}&${params.name}=${params.param}`)
+        else route.push(`${url}?page=${value}`)
     }
 
     return <Pagination
