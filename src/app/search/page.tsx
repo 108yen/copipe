@@ -22,7 +22,7 @@ function NotHit() {
 export default async function page({
     searchParams,
 }: {
-    searchParams: { [key: string]: string | string[] | undefined };
+    searchParams: { [key: string]: string | string[] | undefined }
 }) {
     const searchText = typeof searchParams.text === 'string' ? searchParams.text : ''
     const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1

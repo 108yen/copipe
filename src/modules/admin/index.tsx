@@ -5,7 +5,7 @@ import { Tag } from "@/models/tag";
 import { useState } from "react";
 import TitleList from "./titleList";
 import EditModal from "./editModal";
-import { updateTags } from "@/app/admin/[page]/serverActions";
+import { updateTags } from "@/app/admin/serverActions";
 
 export default function AdminPageTemplate(props: {
     copipes: CopipeWithTag[],
@@ -32,7 +32,7 @@ export default function AdminPageTemplate(props: {
 
     return (
         <>
-            <TitleList copipes={copipes} openModal={openModal}/>
+            <TitleList copipes={copipes} openModal={openModal} />
             <EditModal
                 open={modalProps.open}
                 onClose={closeModal}
@@ -42,5 +42,5 @@ export default function AdminPageTemplate(props: {
             />
         </>
     )
-    
+
 }
