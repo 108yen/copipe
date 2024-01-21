@@ -1,10 +1,10 @@
 'use client'
-import { ButtonGroup, Button, Box } from "@mui/material";
 import { useRouter } from "next/navigation";
 import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 import ArrowForwardIosIcon from '@mui/icons-material/ArrowForwardIos';
+import { Box, Button, ButtonGroup, Icon } from "@yamada-ui/react";
 
-export default function PageNation(props: { beforeId: number, afterId: number }) {
+export default function ArchivesPagination(props: { beforeId: number, afterId: number }) {
     const { beforeId, afterId } = props;
 
     const router = useRouter()
@@ -12,21 +12,19 @@ export default function PageNation(props: { beforeId: number, afterId: number })
     return (
         <Box textAlign='center' flexGrow={1}>
             <ButtonGroup
-                variant="outlined"
+                isAttached
+                variant="outline"
                 color="secondary"
-                disableElevation
-                sx={{
-                    backgroundColor: 'background.paper'
-                }}>
+            >
                 <Button
-                    startIcon={<ArrowBackIosIcon />}
+                    rightIcon={<Icon as={ArrowBackIosIcon} />}
                     disabled={beforeId == -1}
                     onClick={() => { router.push(`/archives/${beforeId}`) }}
                 >
                     前のコピペ
                 </Button>
                 <Button
-                    endIcon={<ArrowForwardIosIcon />}
+                    leftIcon={<Icon as={ArrowForwardIosIcon} />}
                     disabled={afterId == -1}
                     onClick={() => { router.push(`/archives/${afterId}`) }}
                 >
