@@ -1,12 +1,12 @@
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch"
-import CopipeCard from "@/modules/mui/copipeCard"
-import { CopipeCardItemSkelton } from "@/modules/mui/copipeCardItemSkeleton"
-import SearchForm from "@/modules/mui/searchForm"
+import CopipeCard from "@/modules/copipeCard"
+import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
+import LoadingSearchForm from "@/modules/loadingSearchForm"
 
 export default function loading() {
     return (
         <>
-            <SearchForm />
+            <LoadingSearchForm />
             <CopipeCard>
                 {[...Array(10)].map(value => <CopipeCardItemSkelton key={value} />)}
             </CopipeCard>

@@ -1,11 +1,11 @@
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import CopipeCard from "@/modules/mui/copipeCard";
-import { CopipeCardItem } from "@/modules/mui/copipeCardItem";
 import supabase from "@/utils/supabase";
-import SearchPagination from "./searchPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
-import SearchForm from "@/modules/mui/searchForm";
-import Typography from "@mui/material/Typography";
+import { Text } from "@yamada-ui/react";
+import SearchForm from "@/modules/searchForm";
+import CopipeCard from "@/modules/copipeCard";
+import { CopipeCardItem } from "@/modules/copipeCardItem";
+import CopipePagination from "@/modules/copipePagination";
 
 export const metadata = {
     title: '検索'
@@ -13,9 +13,9 @@ export const metadata = {
 
 function NotHit() {
     return (
-        <Typography variant="body1" flexGrow={1} textAlign='center' color='grey'>
+        <Text variant="body1" w='full' textAlign='center' color='grey'>
             該当なし
-        </Typography>
+        </Text>
     )
 }
 
@@ -55,7 +55,7 @@ export default async function page({
                     : copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
             </CopipeCard>
             <AdmaxUnderSwitch />
-            <SearchPagination searchText={searchText} count={Math.ceil((count ?? 0) / 10)} page={page} />
+            <CopipePagination url="/search" params={{ name: 'text', param: searchText }} total={Math.ceil((count ?? 0) / 10)} page={page} />
         </>
     );
 }
