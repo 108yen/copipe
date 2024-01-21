@@ -61,20 +61,11 @@ export default function CommentForm(props: {
         }
     }
 
-    //prevent submit by enter key down
-    const checkKeyDown = (e: React.KeyboardEvent<HTMLDivElement>) => {
-        if (e.key === `Enter` && !e.shiftKey) {
-            e.preventDefault()
-        }
-    }
-
     return (
         <VStack
             as='form'
             alignItems='center'
             w='full'
-            onSubmit={handleSubmit(onSubmit)}
-            onKeyDown={e => checkKeyDown(e)}
         >
             <Controller
                 name="body"
@@ -83,14 +74,12 @@ export default function CommentForm(props: {
                 render={({ field, fieldState }) => (
                     <FormControl
                         isInvalid={fieldState.invalid}
-                        helperMessage="改行: shift + enter"
                         errorMessage={fieldState.error?.message}
                     >
                         <Textarea
                             {...field}
                             id="body"
                             placeholder="コメント"
-                            color='secondary'
                             focusBorderColor='secondary'
                         />
                     </FormControl>
@@ -101,8 +90,8 @@ export default function CommentForm(props: {
                 color="secondary"
                 borderColor='secondary'
                 w='fit-content'
-                type="submit"
                 isLoading={formState.isSubmitting}
+                onClick={handleSubmit(onSubmit)}
             >
                 コメント
             </Button>

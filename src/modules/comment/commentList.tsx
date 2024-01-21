@@ -7,8 +7,8 @@ export function CommentList(props: { comments: CopipeComment[] }) {
 
     return (
         <VStack divider={<Divider />}>
-            {comments.map((comment, index) =>
-                <CommentItem comment={comment} />
+            {comments.map((comment) =>
+                <CommentItem key={comment.id} comment={comment} />
             )}
         </VStack>
     )
