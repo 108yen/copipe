@@ -4,6 +4,7 @@ import { Tag } from "@/models/tag"
 import AdminPageTemplate from "@/modules/admin";
 import CopipePagination from "@/modules/copipePagination";
 import { notFound } from "next/navigation";
+import { VStack } from "@yamada-ui/react";
 
 export const revalidate = 3600
 
@@ -39,12 +40,12 @@ export default async function Page({ searchParams }: {
         }
     })
     return (
-        <>
+        <VStack>
             <AdminPageTemplate copipes={copipes} tags={tags} />
             <CopipePagination
                 url="/admin"
                 total={count ? Math.ceil(count / 100) : 0}
                 page={page} />
-        </>
+        </VStack>
     )
 }

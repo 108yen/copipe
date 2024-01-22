@@ -46,7 +46,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
                 {copipeItem.tags.map(tag =>
                     tag.tag_body == null
                         ? null
-                        : <Link key={tag.tag_id} href={`/tag/${tag.tag_id}/1`}>
+                        : <Link key={tag.tag_id} href={`/tag/${tag.tag_id}`}>
                             <Tag
                                 key={tag.tag_id}
                                 variant="outline"

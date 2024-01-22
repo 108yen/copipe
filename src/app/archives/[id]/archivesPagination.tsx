@@ -17,14 +17,14 @@ export default function ArchivesPagination(props: { beforeId: number, afterId: n
                 color="secondary"
             >
                 <Button
-                    rightIcon={<Icon as={ArrowBackIosIcon} />}
+                    leftIcon={<Icon as={ArrowBackIosIcon} />}
                     disabled={beforeId == -1}
                     onClick={() => { router.push(`/archives/${beforeId}`) }}
                 >
                     前のコピペ
                 </Button>
                 <Button
-                    leftIcon={<Icon as={ArrowForwardIosIcon} />}
+                    rightIcon={<Icon as={ArrowForwardIosIcon} />}
                     disabled={afterId == -1}
                     onClick={() => { router.push(`/archives/${afterId}`) }}
                 >

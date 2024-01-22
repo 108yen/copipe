@@ -7,10 +7,5 @@ export default function CopipeCard({ children }: { children: ReactNode }) {
         <Container bg='background' rounded='xl'>
             {children}
         </Container>
-        // <Card variant='subtle' bg='background'>
-        //     <CardBody>
-        //         {children}
-        //     </CardBody>
-        // </Card>
-    );
+    )
 }

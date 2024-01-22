@@ -9,6 +9,7 @@ import { CopipeWithTag } from "@/models/copipeWithTag";
 import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import Comment from "@/modules/comment"
+import { VStack } from "@yamada-ui/react";
 
 const getCopipeIds = cache(async () => {
     const { data, error } = await supabase
@@ -85,11 +86,11 @@ export default async function Page({ params }: { params: { id: string } }) {
     const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
 
     return (
-        <>
+        <VStack>
             <ArchiveBody copipe={copipe} />
             <Comment comments={comments} copipe_id={id} />
             <AdmaxUnderSwitch />
             <ArchivesPagination beforeId={beforeId} afterId={afterId} />
-        </>
+        </VStack>
     );
 }

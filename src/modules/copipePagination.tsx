@@ -23,5 +23,6 @@ export default function CopipePagination(props: {
         page={page}
         onChange={handleChange}
         color='secondary'
+        margin='auto'
     />
 }

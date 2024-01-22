@@ -1,7 +1,7 @@
 import { CopipeWithTag } from "@/models/copipeWithTag";
 import supabase from "@/utils/supabase";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
-import { Text } from "@yamada-ui/react";
+import { Text, VStack } from "@yamada-ui/react";
 import SearchForm from "@/modules/searchForm";
 import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
@@ -47,7 +47,7 @@ export default async function page({
     }) : [];
 
     return (
-        <>
+        <VStack>
             <SearchForm />
             <CopipeCard>
                 {copipes.length == 0
@@ -56,6 +56,6 @@ export default async function page({
             </CopipeCard>
             <AdmaxUnderSwitch />
             <CopipePagination url="/search" params={{ name: 'text', param: searchText }} total={Math.ceil((count ?? 0) / 10)} page={page} />
-        </>
+        </VStack>
     );
 }
