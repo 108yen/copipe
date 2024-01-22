@@ -7,7 +7,7 @@ export default function AppBar() {
         <Box
             as='header'
             w='full'
-            bg='Background'
+            bg='white'
             height={65}
             display='flex'
             paddingX={5}
