@@ -26,9 +26,9 @@ async function checkBeforeAndAfterPage(currendId: number) {
     const data = await getCopipeIds()
 
     const copipeIds: number[] = data.map(value => value.copipe_id as number)
-    const currendIdIndex = copipeIds.findIndex(value => value == currendId)
-    const beforeId = currendIdIndex == 0 ? -1 : copipeIds[currendIdIndex - 1];
-    const afterId = currendIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currendIdIndex + 1];
+    const currentIdIndex = copipeIds.findIndex(value => value == currendId)
+    const beforeId = currentIdIndex == 0 ? -1 : copipeIds[currentIdIndex - 1];
+    const afterId = currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1];
     return { beforeId, afterId }
 }
 
@@ -79,6 +79,8 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
         title: copipe.title
     };
 }
+
+export const revalidate = 3600
 
 export default async function Page({ params }: { params: { id: string } }) {
     const id = Number(params.id);
