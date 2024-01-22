@@ -1,5 +1,6 @@
-import CopipeSubmitForm from "./copipeSubmitForm";
 import CopipeCard from "@/modules/copipeCard";
+import CopipePostForm from "@/modules/copipePostForm";
+import { postNewCopipe } from "./serverActions";
 
 export const metadata = {
     title: '投稿フォーム'
@@ -8,7 +9,7 @@ export const metadata = {
 export default function Page() {
     return (
         <CopipeCard>
-            <CopipeSubmitForm />
+            <CopipePostForm postNewCopipe={postNewCopipe}/>
         </CopipeCard>
     );
 }

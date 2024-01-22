@@ -1,42 +1,51 @@
-import Typography from "@mui/material/Typography";
-import TwitterIcon from "@mui/icons-material/Twitter";
-import Stack from "@mui/material/Stack";
-import Link from "next/link";
-import CopipeCard from "@/modules/copipeCard";
-import getTweet from "@/utils/tweet";
+import { CopipeWithTag } from "@/models/copipeWithTag";
+import supabase from "@/utils/supabase"
+import { Tag } from "@/models/tag"
+import AdminPageTemplate from "@/modules/admin";
+import CopipePagination from "@/modules/copipePagination";
+import { notFound } from "next/navigation";
+import { VStack } from "@yamada-ui/react";
 
-export const revalidate = 0
+export const revalidate = 3600
 
-export default async function page() {
+export default async function Page({ searchParams }: {
+    searchParams: { [key: string]: string | string[] | undefined }
+}) {
+    const page = typeof searchParams.page === 'string'
+        ? Number(searchParams.page) : 1
+    const { data, error, status, count } = await supabase
+        .from('copipe_with_tag')
+        .select('*', { count: 'exact' })
+        .order('copipe_id', { ascending: false })
+        .range((page - 1) * 100, 100 * page - 1);
 
-    const { text, url } = await getTweet()
-    const twitterLink = `https://twitter.com/intent/tweet?url=${url}&text=${encodeURIComponent(text)
-        }`;
+    if (error) notFound()
+    const copipes: CopipeWithTag[] = data!.map(value => {
+        return {
+            copipe_id: value.copipe_id,
+            body: value.body,
+            title: value.title,
+            tags: value.tags
+        }
+    })
 
+    const fetchTags = await supabase
+        .from('tag')
+        .select('*');
+    const tags: Tag[] = fetchTags.data!.map(value => {
+        return {
+            id: value.id,
+            created_at: new Date(value.created_at),
+            body: value.body
+        }
+    })
     return (
-        <CopipeCard>
-            <Stack direction='row' spacing={2}>
-                <Link href='/admin/1'>
-                    <Typography
-                        variant="body2"
-                    >
-                        コピペリスト
-                    </Typography>
-                </Link>
-                <Typography
-                    variant="body2"
-                    component="a"
-                    display="flex"
-                    alignItems="center"
-                    color="text.primary"
-                    sx={{ textDecorationLine: "none" }}
-                    href={twitterLink}
-                    target="_blank"
-                >
-                    <TwitterIcon fontSize="small" />
-                    ランダムツイート
-                </Typography>
-            </Stack>
-        </CopipeCard>
+        <VStack>
+            <AdminPageTemplate copipes={copipes} tags={tags} />
+            <CopipePagination
+                url="/admin"
+                total={count ? Math.ceil(count / 100) : 0}
+                page={page} />
+        </VStack>
     )
 }

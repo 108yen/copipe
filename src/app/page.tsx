@@ -2,10 +2,11 @@ import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { CopipeWithTag } from "@/models/copipeWithTag";
 import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
+import CopipePagination from "@/modules/copipePagination";
 import SearchForm from "@/modules/searchForm";
 import supabase from "@/utils/supabase";
+import { VStack } from "@yamada-ui/react";
 import { cache } from "react";
-import SearchPagination from "./search/searchPagination";
 
 const getHomePageCopipe = cache(async () => {
   const { data, error, count } = await supabase
@@ -35,13 +36,13 @@ export default async function Home() {
   const { copipes, count } = await getHomePageCopipe()
 
   return (
-    <>
+    <VStack>
       <SearchForm />
       <CopipeCard>
         {copipes.map(copipe => <CopipeCardItem key={`copipe-card-item-${copipe.copipe_id}`} copipeItem={copipe} />)}
       </CopipeCard>
       <AdmaxUnderSwitch />
-      <SearchPagination searchText="" count={Math.ceil(count / 10)} page={1} />
-    </>
+      <CopipePagination url="/search" total={Math.ceil(count / 10)} page={1} />
+    </VStack>
   )
 }

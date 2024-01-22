@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 import { CopipeComment } from "@/models/comment";
 import React from "react";
-import { Comments } from "./commentList";
-import PageNation from "./pageNation";
+import ArchivesPagination from "./archivesPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipeCard from "@/modules/copipeCard";
+import { CopipeCardItem } from "@/modules/copipeCardItem";
+import Comment from "@/modules/comment"
+import { VStack } from "@yamada-ui/react";
 
 const getCopipeIds = cache(async () => {
     const { data, error } = await supabase
@@ -25,9 +26,9 @@ async function checkBeforeAndAfterPage(currendId: number) {
     const data = await getCopipeIds()
 
     const copipeIds: number[] = data.map(value => value.copipe_id as number)
-    const currendIdIndex = copipeIds.findIndex(value => value == currendId)
-    const beforeId = currendIdIndex == 0 ? -1 : copipeIds[currendIdIndex - 1];
-    const afterId = currendIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currendIdIndex + 1];
+    const currentIdIndex = copipeIds.findIndex(value => value == currendId)
+    const beforeId = currentIdIndex == 0 ? -1 : copipeIds[currentIdIndex - 1];
+    const afterId = currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1];
     return { beforeId, afterId }
 }
 
@@ -79,17 +80,19 @@ export async function generateMetadata({ params }: { params: { id: string } }) {
     };
 }
 
+export const revalidate = 3600
+
 export default async function Page({ params }: { params: { id: string } }) {
     const id = Number(params.id);
     const { copipe, comments } = await getCopipe(id)
     const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
 
     return (
-        <>
+        <VStack>
             <ArchiveBody copipe={copipe} />
-            <Comments comments={comments} copipe_id={id} />
+            <Comment comments={comments} copipe_id={id} />
             <AdmaxUnderSwitch />
-            <PageNation beforeId={beforeId} afterId={afterId} />
-        </>
+            <ArchivesPagination beforeId={beforeId} afterId={afterId} />
+        </VStack>
     );
 }

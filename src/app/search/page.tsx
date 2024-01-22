@@ -1,11 +1,11 @@
 import { CopipeWithTag } from "@/models/copipeWithTag";
+import supabase from "@/utils/supabase";
+import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
+import { Text, VStack } from "@yamada-ui/react";
+import SearchForm from "@/modules/searchForm";
 import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
-import supabase from "@/utils/supabase";
-import SearchPagination from "./searchPagination";
-import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
-import SearchForm from "@/modules/searchForm";
-import Typography from "@mui/material/Typography";
+import CopipePagination from "@/modules/copipePagination";
 
 export const metadata = {
     title: '検索'
@@ -13,16 +13,16 @@ export const metadata = {
 
 function NotHit() {
     return (
-        <Typography variant="body1" flexGrow={1} textAlign='center' color='grey'>
+        <Text variant="body1" w='full' textAlign='center' color='grey'>
             該当なし
-        </Typography>
+        </Text>
     )
 }
 
 export default async function page({
     searchParams,
 }: {
-    searchParams: { [key: string]: string | string[] | undefined };
+    searchParams: { [key: string]: string | string[] | undefined }
 }) {
     const searchText = typeof searchParams.text === 'string' ? searchParams.text : ''
     const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1
@@ -47,7 +47,7 @@ export default async function page({
     }) : [];
 
     return (
-        <>
+        <VStack>
             <SearchForm />
             <CopipeCard>
                 {copipes.length == 0
@@ -55,7 +55,7 @@ export default async function page({
                     : copipes.map(copipe => <CopipeCardItem key={copipe.copipe_id} copipeItem={copipe} />)}
             </CopipeCard>
             <AdmaxUnderSwitch />
-            <SearchPagination searchText={searchText} count={Math.ceil((count ?? 0) / 10)} page={page} />
-        </>
+            <CopipePagination url="/search" params={{ name: 'text', param: searchText }} total={Math.ceil((count ?? 0) / 10)} page={page} />
+        </VStack>
     );
 }

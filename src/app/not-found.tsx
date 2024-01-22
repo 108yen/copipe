@@ -1,18 +1,17 @@
-import Typography from "@mui/material/Typography";
+import { Heading, Text } from "@yamada-ui/react";
 
 export default function NotFound() {
     return (
-        <Typography
+        <Heading
+            variant='h1'
             sx={{
                 position: "absolute",
                 top: "50%",
                 left: "50%",
                 transform: "translate(-50%, -50%)",
             }}
-            variant="h3"
-            fontWeight="bold"
         >
             404: Not Found
-        </Typography>
+        </Heading>
     );
 }
