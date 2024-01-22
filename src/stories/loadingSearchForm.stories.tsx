@@ -1,6 +1,6 @@
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
-import yamadauiTheme from "@/yamadauiTheme"
+import { theme } from "@/theme"
 import LoadingSearchForm from "@/modules/loadingSearchForm"
 
 const meta = {
@@ -13,7 +13,7 @@ const meta = {
     decorators: [
         (Story) => {
             return (
-                <UIProvider theme={yamadauiTheme}>
+                <UIProvider theme={theme}>
                     <Story />
                 </UIProvider>
             )

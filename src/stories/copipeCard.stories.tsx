@@ -1,7 +1,7 @@
 import CopipeCard from "@/modules/copipeCard"
 import { Text, UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from '@storybook/react'
-import yamadauiTheme from "@/yamadauiTheme"
+import { theme } from "@/theme"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
 
@@ -15,7 +15,7 @@ const meta = {
     decorators: [
         (Story) => {
             return (
-                <UIProvider theme={yamadauiTheme}>
+                <UIProvider theme={theme}>
                     <Story />
                 </UIProvider>
             )

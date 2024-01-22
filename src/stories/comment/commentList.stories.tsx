@@ -1,4 +1,4 @@
-import yamadauiTheme from "@/yamadauiTheme"
+import { theme } from "@/theme"
 import { UIProvider } from "@yamada-ui/react"
 import { Meta, StoryObj } from "@storybook/react"
 import { CommentList } from "@/modules/comment/commentList"
@@ -10,7 +10,7 @@ const meta = {
     decorators: [
         (Story) => {
             return (
-                <UIProvider theme={yamadauiTheme}>
+                <UIProvider theme={theme}>
                     <Story />
                 </UIProvider>
             )
