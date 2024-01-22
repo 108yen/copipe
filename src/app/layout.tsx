@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
-import { Grid, GridItem } from "@yamada-ui/react";
+import { Grid, GridItem, SimpleGrid, VStack } from "@yamada-ui/react";
 import AppBar from "@/modules/appBar";
 import LoadingRecentPostsCard from "@/modules/recentPostCard/loading";
 import LoadingTagListCard from "@/modules/tagListCard/loading";
@@ -53,20 +53,22 @@ export default async function RootLayout({
             <body>
                 <Provider>
                     <AppBar />
-                    <Grid templateColumns="repeat(4, 1fr)" gap="md" w='full'>
+                    <SimpleGrid columns={4} gap="lg" w='full' paddingX={350} marginY='lg'>
                         <GridItem colSpan={{ base: 3, md: 4 }} w='full'>
                             {children}
                         </GridItem>
                         <GridItem colSpan={1} w='full' display={{ base: 'block', md: 'none' }}>
-                            <AdmaxPCSideVertical />
-                            <Suspense fallback={<LoadingTagListCard />}>
-                                <TagListCard />
-                            </Suspense>
-                            <Suspense fallback={<LoadingRecentPostsCard />}>
-                                <RecentPostsCard />
-                            </Suspense>
+                            <VStack>
+                                <AdmaxPCSideVertical />
+                                <Suspense fallback={<LoadingTagListCard />}>
+                                    <TagListCard />
+                                </Suspense>
+                                <Suspense fallback={<LoadingRecentPostsCard />}>
+                                    <RecentPostsCard />
+                                </Suspense>
+                            </VStack>
                         </GridItem>
-                    </Grid>
+                    </SimpleGrid>
                 </Provider>
             </body>
         </html>

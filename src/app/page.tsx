@@ -5,6 +5,7 @@ import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipePagination from "@/modules/copipePagination";
 import SearchForm from "@/modules/searchForm";
 import supabase from "@/utils/supabase";
+import { VStack } from "@yamada-ui/react";
 import { cache } from "react";
 
 const getHomePageCopipe = cache(async () => {
@@ -35,13 +36,13 @@ export default async function Home() {
   const { copipes, count } = await getHomePageCopipe()
 
   return (
-    <>
+    <VStack>
       <SearchForm />
       <CopipeCard>
         {copipes.map(copipe => <CopipeCardItem key={`copipe-card-item-${copipe.copipe_id}`} copipeItem={copipe} />)}
       </CopipeCard>
       <AdmaxUnderSwitch />
       <CopipePagination url="/search" total={Math.ceil(count / 10)} page={1} />
-    </>
+    </VStack>
   )
 }
