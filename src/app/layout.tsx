@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
 import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
-import { Grid, GridItem, SimpleGrid, VStack } from "@yamada-ui/react";
+import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react";
 import AppBar from "@/modules/appBar";
 import LoadingRecentPostsCard from "@/modules/recentPostCard/loading";
 import LoadingTagListCard from "@/modules/tagListCard/loading";
