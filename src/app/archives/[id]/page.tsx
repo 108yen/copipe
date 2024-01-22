@@ -3,12 +3,13 @@ import { notFound } from "next/navigation";
 import { cache } from "react";
 import { CopipeComment } from "@/models/comment";
 import React from "react";
-import { Comments } from "./commentList";
-import PageNation from "./pageNation";
+import ArchivesPagination from "./archivesPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { CopipeWithTag } from "@/models/copipeWithTag";
-import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipeCard from "@/modules/copipeCard";
+import { CopipeCardItem } from "@/modules/copipeCardItem";
+import Comment from "@/modules/comment"
+import { VStack } from "@yamada-ui/react";
 
 const getCopipeIds = cache(async () => {
     const { data, error } = await supabase
@@ -85,11 +86,11 @@ export default async function Page({ params }: { params: { id: string } }) {
     const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
 
     return (
-        <>
+        <VStack>
             <ArchiveBody copipe={copipe} />
-            <Comments comments={comments} copipe_id={id} />
+            <Comment comments={comments} copipe_id={id} />
             <AdmaxUnderSwitch />
-            <PageNation beforeId={beforeId} afterId={afterId} />
-        </>
+            <ArchivesPagination beforeId={beforeId} afterId={afterId} />
+        </VStack>
     );
 }

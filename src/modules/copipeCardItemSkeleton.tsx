@@ -1,46 +1,23 @@
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
-import IconButton from "@mui/material/IconButton";
-import Stack from "@mui/material/Stack";
-import Typography from "@mui/material/Typography";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
-import { Skeleton } from "@mui/material";
-
+import { Box, Divider, HStack, Icon, IconButton, Skeleton, SkeletonText, Spacer } from "@yamada-ui/react";
 
 export function CopipeCardItemSkelton() {
     return (
-        <Box
-            sx={{
-                margin: { xs: 1, sm: 2 },
-                paddingY: 1,
-            }}
-        >
-            <Stack
-                direction='row'
-                justifyContent="space-between"
-            >
-                <Typography
-                    variant="h5"
-                    noWrap
-                    color='text.primary'
-                    sx={{
-                        flexGrow: 1,
-                        display: 'block',
-                    }}
-                >
-                    <Skeleton width={500} />
-                </Typography>
+        <Box m={{ sm: 1, base: 2 }} paddingY={1} width='full' gap='md'>
+            <HStack>
+                <Skeleton h={10} marginY={1} />
+                <Spacer />
                 <IconButton
                     color="secondary"
+                    variant='ghost'
                     aria-label="copy"
-                    size="small"
-                >
-                    <ContentCopyIcon fontSize="inherit" />
-                </IconButton>
-            </Stack>
-            <Skeleton height={20} width={100} />
+                    size="xs"
+                    icon={<Icon as={ContentCopyIcon} size='xl' />}
+                />
+            </HStack>
+            <Skeleton w={100} marginY={1} />
             <Divider />
-            <Skeleton height={200} />
+            <SkeletonText marginY={3} lineClamp={5} textHeight={5}/>
         </Box>
     );
 }

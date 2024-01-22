@@ -1,15 +1,15 @@
 import { ReactNode, Suspense } from "react";
 import { Metadata } from 'next'
-import ThemeRegistry from "@/theme/themeRegistry";
-import SearchAppBar from "@/modules/searchAppBar";
-import Grid from "@mui/material/Grid";
-import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
-import TagListCard from "@/components/tagListCard/page";
-import TagListCardLoading from "@/components/tagListCard/loading";
-import RecentPostsCard from "@/components/recentPostsCard/page";
-import RecentPostsCardLoading from "@/components/recentPostsCard/loading";
+import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
+import { Grid, GridItem, SimpleGrid, VStack } from "@yamada-ui/react";
+import AppBar from "@/modules/appBar";
+import LoadingRecentPostsCard from "@/modules/recentPostCard/loading";
+import LoadingTagListCard from "@/modules/tagListCard/loading";
+import RecentPostsCard from "@/modules/recentPostCard";
+import TagListCard from "@/modules/tagListCard";
+import Provider from "./provider";
 
 export const metadata: Metadata = {
     metadataBase: new URL("https://www.netcopipe.com/"),
@@ -51,23 +51,25 @@ export default async function RootLayout({
                 </Suspense>
             </head>
             <body>
-                <ThemeRegistry options={{ key: `css`, prepend: true }}>
-                    <SearchAppBar />
-                    <Grid container justifyContent="center" spacing={1} marginY={1}>
-                        <Grid item xs={12} md={9} lg={8} xl={6}>
+                <Provider>
+                    <AppBar />
+                    <SimpleGrid columns={4} gap="lg" w='full' paddingX={{ base: 350, "2xl": 100, xl: 50, lg: 25, md: 0 }} marginY='lg'>
+                        <GridItem colSpan={{ base: 3, md: 4 }} w='full'>
                             {children}
-                        </Grid>
-                        <Grid item md={2} display={{ md: 'block', xs: 'none' }}>
-                            <AdmaxPCSideVertical />
-                            <Suspense fallback={<TagListCardLoading />}>
-                                <TagListCard />
-                            </Suspense>
-                            <Suspense fallback={<RecentPostsCardLoading />}>
-                                <RecentPostsCard />
-                            </Suspense>
-                        </Grid>
-                    </Grid>
-                </ThemeRegistry>
+                        </GridItem>
+                        <GridItem colSpan={{ base: 1, md: 0 }} w='full' display={{ base: 'block', md: 'none' }}>
+                            <VStack>
+                                <AdmaxPCSideVertical />
+                                <Suspense fallback={<LoadingTagListCard />}>
+                                    <TagListCard />
+                                </Suspense>
+                                <Suspense fallback={<LoadingRecentPostsCard />}>
+                                    <RecentPostsCard />
+                                </Suspense>
+                            </VStack>
+                        </GridItem>
+                    </SimpleGrid>
+                </Provider>
             </body>
         </html>
     )

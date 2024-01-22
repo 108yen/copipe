@@ -1,9 +1,9 @@
 'use client'
 
-import { Stack, Box } from "@mui/material"
 import { usePathname } from "next/navigation"
 import { useEffect } from "react"
 import { AdmaxAdType } from "./conf"
+import { Box, VStack } from "@yamada-ui/react"
 
 export default function AdmaxPCSideVertical() {
     const adMaxId = `ca6a1a88388a364c63924bc1c541b6ef`
@@ -37,8 +37,7 @@ export default function AdmaxPCSideVertical() {
     }, [pathname])
 
     return (
-        <Stack
-            direction='column'
+        <VStack
             flexGrow={1}
             justifyContent='flex-start'
             alignItems='center'
@@ -63,6 +62,6 @@ export default function AdmaxPCSideVertical() {
                     ></div>
                 </Box>
             </Box>
-        </Stack>
+        </VStack>
     )
 }

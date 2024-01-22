@@ -1,8 +1,8 @@
 'use client'
-import { Box } from "@mui/material"
 import { AdmaxAdType } from "./conf"
 import { useEffect } from "react"
 import { usePathname } from "next/navigation"
+import { Box } from "@yamada-ui/react"
 
 export default function AdmaxUnderSwitch() {
     const adMaxId = `cf8aafa751eac37052292db258534613`
@@ -40,7 +40,7 @@ export default function AdmaxUnderSwitch() {
             key={pathname}
             flexGrow={1}
             m={1}
-            sx={{ textAlign: { xs: 'none', sm: 'center' } }}
+            textAlign={{ md: 'unset', base: 'center' }}
         >
             <div
                 className='admax-switch'
