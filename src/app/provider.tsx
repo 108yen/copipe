@@ -1,7 +1,7 @@
 'use client'
 
-import { theme, config } from "@/theme"
-import { ColorModeScript, ThemeSchemeScript, UIProvider, colorModeManager, defaultConfig, themeSchemeManager } from "@yamada-ui/react"
+import { theme } from "@/theme"
+import { ColorModeScript, ThemeSchemeScript, UIProvider, colorModeManager } from "@yamada-ui/react"
 import { ReactNode, useEffect, useState } from "react"
 
 export default function Provider({
@@ -17,14 +17,11 @@ export default function Provider({
 
     return (
         <>
-            <ColorModeScript initialColorMode={defaultConfig.initialColorMode} />
-            <ThemeSchemeScript
-                initialThemeScheme={config.initialThemeScheme}
-            />
+            <ColorModeScript type="cookie" nonce="testing" />
+            <ThemeSchemeScript type="cookie" nonce="testing" />
             <UIProvider
                 theme={theme}
-                colorModeManager={colorModeManager.cookieStorage}
-                themeSchemeManager={themeSchemeManager.cookieStorage}
+                colorModeManager={{ ...colorModeManager }.cookieStorage}
             >
                 {show_screen ? children : null}
             </UIProvider>
