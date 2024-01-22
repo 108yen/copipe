@@ -23,7 +23,7 @@ export default function AppBar() {
                 >
                     <HStack alignItems='center'>
                         <Icon as={ContentCopyIcon} />
-                        <Heading variant='h1' size='lg'>copipe</Heading>
+                        <Heading variant='h1' fontSize='25px' fontFamily='san-serif'>copipe</Heading>
                     </HStack>
                 </Link>
                 <Link

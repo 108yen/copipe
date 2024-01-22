@@ -107,6 +107,7 @@ export default function CopipePostForm(props: {
                             id="body"
                             placeholder="本文"
                             focusBorderColor='secondary'
+                            height={400}
                         />
                     </FormControl>
                 )}

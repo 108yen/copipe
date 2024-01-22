@@ -53,11 +53,11 @@ export default async function RootLayout({
             <body>
                 <Provider>
                     <AppBar />
-                    <SimpleGrid columns={4} gap="lg" w='full' paddingX={350} marginY='lg'>
+                    <SimpleGrid columns={4} gap="lg" w='full' paddingX={{ base: 350, "2xl": 100, xl: 50, lg: 25, md: 0 }} marginY='lg'>
                         <GridItem colSpan={{ base: 3, md: 4 }} w='full'>
                             {children}
                         </GridItem>
-                        <GridItem colSpan={1} w='full' display={{ base: 'block', md: 'none' }}>
+                        <GridItem colSpan={{ base: 1, md: 0 }} w='full' display={{ base: 'block', md: 'none' }}>
                             <VStack>
                                 <AdmaxPCSideVertical />
                                 <Suspense fallback={<LoadingTagListCard />}>
