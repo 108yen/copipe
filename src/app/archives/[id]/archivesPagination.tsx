@@ -14,7 +14,7 @@ export default function ArchivesPagination(props: { beforeId: number, afterId: n
             <ButtonGroup
                 isAttached
                 variant="outline"
-                bg='Background'
+                bg='white'
             >
                 <Button
                     leftIcon={<Icon as={ArrowBackIosIcon} />}
