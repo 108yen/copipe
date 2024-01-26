@@ -10,7 +10,7 @@ export default function LoadingSearchForm(props: { text?: string }) {
                 top={0}
                 zIndex={100}
                 variant='subtle'
-                bg='Background'
+                bg='white'
                 w='full'
             >
                 <InputGroup>
