@@ -1,26 +1,28 @@
-import supabase from "@/utils/supabase";
 import { cache } from "react";
 import RecentPostsCardTemplate from "./recentPostCard";
-import LoadingRecentPostsCard from "./loading";
+import { prisma } from "@/db/db";
 
 const fetchRecentCopipes = cache(async () => {
+    const copipes = await prisma.copipe.findMany({
+        select: {
+            id: true,
+            title: true
+        },
+        take: 100,
+        orderBy: { id: 'desc' }
+    })
     console.log('get recent copipes')
-    return await supabase
-        .from('copipe_with_tag')
-        .select('copipe_id, title')
-        .order('copipe_id', { ascending: false })
-        .range(0, 99);
+    return copipes
 })
 
 
 export default async function RecentPostsCard() {
-    const { data, error } = await fetchRecentCopipes()
-    if (data == null) return <LoadingRecentPostsCard />
+    const data = await fetchRecentCopipes()
 
     const copipes: { id: number, title: string }[] = data.map(value => {
         return {
-            id: value.copipe_id,
-            title: value.title
+            id: Number(value.id),
+            title: value.title!
         }
     })
 

@@ -13,9 +13,9 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
     args: {
         comment: {
-            id: 0,
+            id: BigInt(0),
             created_at: new Date(),
-            copipe_id: 0,
+            copipe_id: BigInt(0),
             body: 'test',
         }
     }
@@ -24,9 +24,9 @@ export const Default: Story = {
 export const LongText: Story = {
     args: {
         comment: {
-            id: 0,
+            id: BigInt(0),
             created_at: new Date(),
-            copipe_id: 0,
+            copipe_id: BigInt(0),
             body: '勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社',
         }
     }

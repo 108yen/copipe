@@ -1,17 +1,17 @@
-import { CopipeWithTag } from "@/models/copipeWithTag";
 import { Accordion } from "@yamada-ui/react";
 import TitleListItem from "./titleListItem";
+import { CopipeWithTagPayload } from "@/db/query";
 
 export default function TitleList(props: {
-    copipes: CopipeWithTag[],
-    openModal: (copipe: CopipeWithTag) => void
+    copipes: CopipeWithTagPayload[],
+    openModal: (copipe: CopipeWithTagPayload) => void
 }) {
     const { copipes, openModal } = props
 
     return (
         <Accordion iconHidden>
             {copipes.map(copipe => <TitleListItem
-                key={copipe.copipe_id}
+                key={copipe.id}
                 copipe={copipe}
                 openModal={openModal}
             />)}

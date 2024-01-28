@@ -22,12 +22,12 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
     args: {
         copipes: [0, 1, 2, 3, 4, 5, 6, 7, 8].map(value => ({
-            copipe_id: value,
+            id: BigInt(value),
             body: `test-body-${value}`,
             title: `test-title-${value}`,
-            tags: [
-                { tag_id: 0, tag_body: 'tag' }
-            ]
+            copipeToTag: [{
+                tag: { id: BigInt(0), body: 'test tag' }
+            }]
         })),
         openModal: () => { }
     }

@@ -1,20 +1,19 @@
 'use client'
 
-import { CopipeWithTag } from "@/models/copipeWithTag"
-import { Tag } from "@/models/tag";
 import { useState } from "react";
 import TitleList from "./titleList";
 import EditModal from "./editModal";
 import { updateTags } from "@/app/admin/serverActions";
+import { CopipeWithTagPayload, TagPayload } from "@/db/query";
 
 export default function AdminPageTemplate(props: {
-    copipes: CopipeWithTag[],
-    tags: Tag[]
+    copipes: CopipeWithTagPayload[],
+    tags: TagPayload[]
 }) {
     const { copipes, tags } = props;
 
     const [modalProps, setModalProps] = useState<{
-        open: boolean, copipe: CopipeWithTag | undefined
+        open: boolean, copipe: CopipeWithTagPayload | undefined
     }>({
         open: false, copipe: undefined
     })
@@ -23,7 +22,7 @@ export default function AdminPageTemplate(props: {
         setModalProps({ ...modalProps, open: false })
     }
 
-    function openModal(copipe: CopipeWithTag) {
+    function openModal(copipe: CopipeWithTagPayload) {
         setModalProps({
             open: true,
             copipe: copipe

@@ -25,9 +25,9 @@ export const Default: Story = {
     args: {
         comments: [0, 1, 2, 3].map(value => {
             return {
-                id: value,
+                id: BigInt(value),
                 created_at: new Date(),
-                copipe_id: 0,
+                copipe_id: BigInt(0),
                 body: `test-${value}`,
             }
         })
@@ -38,9 +38,9 @@ export const LongText: Story = {
     args: {
         comments: [
             {
-                id: 0,
+                id: BigInt(0),
                 created_at: new Date(),
-                copipe_id: 0,
+                copipe_id: BigInt(0),
                 body: '勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社',
             }
         ]
