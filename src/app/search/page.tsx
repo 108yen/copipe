@@ -27,11 +27,13 @@ export default async function page({
     const searchText = typeof searchParams.text === 'string' ? searchParams.text : ''
     const page = typeof searchParams.page === 'string' ? Number(searchParams.page) : 1
 
-    const searchQuery = {
-        body: {
-            search: searchText
+    const searchQuery = searchText == ''
+        ? {}
+        : {
+            body: {
+                search: searchText
+            }
         }
-    }
     const [copipes, count] = await prisma.$transaction([
         prisma.copipe.findMany({
             where: searchQuery,
