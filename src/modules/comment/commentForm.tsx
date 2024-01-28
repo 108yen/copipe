@@ -1,9 +1,9 @@
 'use client'
 
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
-import { CopipeComment } from "@/models/comment";
 import { event } from "@/analytics/gtag";
 import { Button, FormControl, Textarea, VStack, useNotice } from "@yamada-ui/react";
+import { CommentPayload } from "@/db/query";
 
 type Inputs = {
     body: string;
@@ -11,7 +11,7 @@ type Inputs = {
 
 export default function CommentForm(props: {
     copipe_id: number,
-    addOptimisticComment: (action: CopipeComment) => void,
+    addOptimisticComment: (action: CommentPayload) => void,
     postComment: (copipe_id: number, body: string) => Promise<{
         error: string;
     } | undefined>
@@ -40,9 +40,10 @@ export default function CommentForm(props: {
         })
 
         addOptimisticComment({
-            id: Math.random(),
+            id: BigInt(Math.random()),
             body: data.body,
-            created_at: new Date()
+            created_at: new Date(),
+            copipe_id: BigInt(copipe_id)
         })
 
         const result = await postComment(copipe_id, data.body)

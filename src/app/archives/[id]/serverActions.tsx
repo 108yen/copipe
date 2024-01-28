@@ -1,18 +1,20 @@
 'use server'
 
-import supabase from "@/utils/supabase";
+import { prisma } from "@/db/db";
 import { revalidatePath } from "next/cache";
 
 export async function postComment(copipe_id: number, body: string) {
-    try {        
-        await supabase
-            .from('comments')
-            .insert([
-                {
-                    body: body,
-                    copipe_id: copipe_id
-                },
-            ]);
+    try {
+        await prisma.comments.create({
+            data: {
+                body: body,
+                copipe: {
+                    connect: {
+                        id: copipe_id
+                    }
+                }
+            }
+        })
     } catch (error) {
         return { error: JSON.stringify(error) }
     } finally {

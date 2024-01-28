@@ -1,22 +1,23 @@
 'use client'
 
-import { CopipeWithTag } from "@/models/copipeWithTag";
 import Link from "next/link";
 import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Box, Divider, HStack, Heading, Icon, IconButton, Spacer, Tag, Text } from "@yamada-ui/react";
+import { CopipeWithTagPayload } from "@/db/query";
 
-async function handleClickCopy(copyText: string, id: number) {
+async function handleClickCopy(copyText: string | null, id: bigint) {
+    if (copyText == null) return
     await global.navigator.clipboard.writeText(copyText);
 }
 
-export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
+export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
     const { copipeItem } = props;
 
     return (
         <Box m={{ sm: 1, base: 2 }} paddingY={1} width='full'>
             <HStack>
                 <Link
-                    href={'/archives/' + copipeItem.copipe_id}
+                    href={'/archives/' + copipeItem.id}
                     style={{
                         textDecoration: 'none',
                         overflow: 'hidden'
@@ -39,23 +40,21 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTag }) {
                     aria-label="copy"
                     size="xs"
                     icon={<Icon as={ContentCopyIcon} size='xl' />}
-                    onClick={() => handleClickCopy(copipeItem.body, copipeItem.copipe_id)}
+                    onClick={() => handleClickCopy(copipeItem.body, copipeItem.id)}
                 />
             </HStack>
             <HStack justifyContent='flex-start' gap='xs'>
-                {copipeItem.tags.map(tag =>
-                    tag.tag_body == null
-                        ? null
-                        : <Link key={tag.tag_id} href={`/tag/${tag.tag_id}`}>
-                            <Tag
-                                key={tag.tag_id}
-                                variant="outline"
-                                color="secondary"
-                                boxShadow='inset 0 0 0px 1px'
-                                size="sm"
-                                rounded="full"
-                            >{tag.tag_body}</Tag>
-                        </Link>
+                {copipeItem.copipeToTag.map(tag =>
+                    <Link key={tag.tag.id} href={`/tag/${tag.tag.id}`}>
+                        <Tag
+                            key={tag.tag.id}
+                            variant="outline"
+                            color="secondary"
+                            boxShadow='inset 0 0 0px 1px'
+                            size="sm"
+                            rounded="full"
+                        >{tag.tag.body}</Tag>
+                    </Link>
                 )}
             </HStack>
             <Divider />

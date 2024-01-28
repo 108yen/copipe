@@ -1,10 +1,9 @@
-import { CopipeWithTag } from "@/models/copipeWithTag";
-import supabase from "@/utils/supabase"
-import { Tag } from "@/models/tag"
 import AdminPageTemplate from "@/modules/admin";
 import CopipePagination from "@/modules/copipePagination";
 import { notFound } from "next/navigation";
 import { VStack } from "@yamada-ui/react";
+import { prisma } from "@/db/db";
+import { copipeWithTag } from "@/db/query";
 
 export const revalidate = 3600
 
@@ -13,32 +12,17 @@ export default async function Page({ searchParams }: {
 }) {
     const page = typeof searchParams.page === 'string'
         ? Number(searchParams.page) : 1
-    const { data, error, status, count } = await supabase
-        .from('copipe_with_tag')
-        .select('*', { count: 'exact' })
-        .order('copipe_id', { ascending: false })
-        .range((page - 1) * 100, 100 * page - 1);
+    const [copipes, count, tags] = await prisma.$transaction([
+        prisma.copipe.findMany({
+            select: copipeWithTag,
+            take: 100,
+            skip: (page - 1) * 100,
+            orderBy: { id: 'desc' }
+        }),
+        prisma.copipe.count(),
+        prisma.tag.findMany()
+    ]).catch(error => notFound())
 
-    if (error) notFound()
-    const copipes: CopipeWithTag[] = data!.map(value => {
-        return {
-            copipe_id: value.copipe_id,
-            body: value.body,
-            title: value.title,
-            tags: value.tags
-        }
-    })
-
-    const fetchTags = await supabase
-        .from('tag')
-        .select('*');
-    const tags: Tag[] = fetchTags.data!.map(value => {
-        return {
-            id: value.id,
-            created_at: new Date(value.created_at),
-            body: value.body
-        }
-    })
     return (
         <VStack>
             <AdminPageTemplate copipes={copipes} tags={tags} />

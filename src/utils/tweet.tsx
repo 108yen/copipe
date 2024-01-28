@@ -23,7 +23,7 @@ function reductionText(text: string, url: string) {
     while (!checkTweetLength(`${text.slice(0, text.length - reductionCount)}...${url}`)) {
         reductionCount++
     }
-    return `${text.slice(0, text.length - reductionCount)}...`
+    return reductionCount == 0 ? `${text.slice(0, text.length - reductionCount)}` : `${text.slice(0, text.length - reductionCount)}...`
 }
 
 function countCharacters(text: string): { fullWidth: number; halfWidth: number } {

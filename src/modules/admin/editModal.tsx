@@ -1,7 +1,6 @@
 'use client'
 
-import { CopipeWithTag } from "@/models/copipeWithTag"
-import { Tag } from "@/models/tag"
+import { CopipeWithTagPayload, TagPayload } from "@/db/query";
 import { Text, Divider, Modal, MultiAutocomplete, useNotice, Button, ModalHeader, ModalBody, ModalFooter } from "@yamada-ui/react";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 
@@ -12,8 +11,8 @@ type Inputs = {
 export default function EditModal(props: {
     open: boolean,
     onClose: () => void,
-    copipe: CopipeWithTag | undefined,
-    tags: Tag[],
+    copipe: CopipeWithTagPayload | undefined,
+    tags: TagPayload[],
     updateTags: (copipe_id: number, tag_ids: number[]) => Promise<{
         error: string;
     } | undefined>
@@ -30,9 +29,9 @@ export default function EditModal(props: {
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
         const tagIds = data.tags.map(tag => {
-            return tags.find(value => value.body == tag)!.id
+            return Number(tags.find(value => value.body == tag)!.id)
         })
-        const result = await updateTags(copipe!.copipe_id, tagIds)
+        const result = await updateTags(Number(copipe!.id), tagIds)
 
         if (result?.error) {
             notice({

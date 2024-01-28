@@ -1,5 +1,6 @@
 'use server'
 
+import { prisma } from "@/db/db";
 import supabase from "@/utils/supabase";
 import { revalidatePath } from "next/cache";
 
@@ -10,29 +11,26 @@ export async function postNewCopipe(props: { title: string, body: string }) {
         return { message: '投稿済みのコピペ' }
     }
 
-    const { data, error } = await supabase
-        .from('copipe')
-        .insert([
-            {
-                title: title,
-                body: body,
-            },
-        ]);
-    if (error) return { error: JSON.stringify(error) };
-    else console.log('post copipe in postForm')
-    revalidatePath('/')
+    await prisma.copipe.create({
+        data: {
+            title: title,
+            body: body,
+        }
+    }).catch(error => {
+        return { error: JSON.stringify(error) };
+    }).then(() => {
+        console.log('post copipe in postForm')
+        revalidatePath('/')
+    })
 }
 
 async function checkDupulicate(body: string) {
-    const { data, error } = await supabase
-        .from('copipe')
-        .select()
-        .eq('body', body)
-        .maybeSingle();
-    if (error) {
-        //!文章が長いときにエラーになる
-        console.log('check dupulicate error', error);
-        return false;
-    }
-    return data != null;
+    const copipe = await prisma.copipe.findFirst({
+        where: {
+            body: {
+                contains: body
+            }
+        }
+    })
+    return copipe != null;
 }
