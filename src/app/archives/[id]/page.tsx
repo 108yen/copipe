@@ -1,31 +1,32 @@
-import supabase from "@/utils/supabase";
 import { notFound } from "next/navigation";
 import { cache } from "react";
-import { CopipeComment } from "@/models/comment";
 import React from "react";
 import ArchivesPagination from "./archivesPagination";
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
-import { CopipeWithTag } from "@/models/copipeWithTag";
 import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import Comment from "@/modules/comment"
 import { VStack } from "@yamada-ui/react";
+import { prisma } from "@/db/db";
+import { CopipeWithTagCommentPayload, copipeWithTagComment } from "@/db/query";
 
 const getCopipeIds = cache(async () => {
-    const { data, error } = await supabase
-        .from('copipe_with_tag')
-        .select('copipe_id')
-    if (error) console.log(`fetch copipe_id for pagination in archives/[id] error: ${error}`)
-    if (data == null) throw new Error("copipe_id[] is null");
-    else console.log(`fetch copipe_id for pagination in archives/[id]`)
+    const ids = await prisma.copipe.findMany({
+        select: {
+            id: true
+        }
+    }).catch(error => {
+        console.log(`fetch copipe_id for pagination in archives/[id] error: ${error}`)
+    })
+    console.log(`fetch copipe_id for pagination in archives/[id]`)
 
-    return data
+    return ids!
 })
 
 async function checkBeforeAndAfterPage(currendId: number) {
     const data = await getCopipeIds()
 
-    const copipeIds: number[] = data.map(value => value.copipe_id as number)
+    const copipeIds: number[] = data.map(value => Number(value.id))
     const currentIdIndex = copipeIds.findIndex(value => value == currendId)
     const beforeId = currentIdIndex == 0 ? -1 : copipeIds[currentIdIndex - 1];
     const afterId = currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1];
@@ -33,35 +34,18 @@ async function checkBeforeAndAfterPage(currendId: number) {
 }
 
 const getCopipe = cache(async (id: number) => {
-    const { data, error } = await supabase
-        .from('copipe_with_tag')
-        .select('*, comments(*)')
-        .eq("copipe_id", id)
-        .maybeSingle();
-    if (error) notFound();
-    else console.log(`fetch copipe in archives/${id}`)
-    if (data == null) notFound();
-
-    const copipe: CopipeWithTag = {
-        copipe_id: data.id,
-        body: data.body,
-        title: data.title,
-        tags: data.tags
-    };
-
-    const comments: CopipeComment[] = data.comments.map((comment: CopipeComment) => {
-        return {
-            id: comment.id,
-            created_at: new Date(comment.created_at!),
-            copipe_id: comment.copipe_id,
-            body: comment.body
-        } as CopipeComment
+    const copipe = await prisma.copipe.findUniqueOrThrow({
+        where: { id: id },
+        select: copipeWithTagComment
+    }).catch(error => {
+        notFound()
     })
+    console.log(`fetch copipe in archives/${id}`)
 
-    return { copipe, comments };
+    return copipe
 });
 
-function ArchiveBody(props: { copipe: CopipeWithTag }) {
+function ArchiveBody(props: { copipe: CopipeWithTagCommentPayload }) {
     const { copipe } = props;
 
     return (
@@ -73,7 +57,7 @@ function ArchiveBody(props: { copipe: CopipeWithTag }) {
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
     const { id } = params;
-    const { copipe, comments } = await getCopipe(Number(id))
+    const copipe = await getCopipe(Number(id))
 
     return {
         title: copipe.title
@@ -84,13 +68,13 @@ export const revalidate = 3600
 
 export default async function Page({ params }: { params: { id: string } }) {
     const id = Number(params.id);
-    const { copipe, comments } = await getCopipe(id)
+    const copipe = await getCopipe(id)
     const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
 
     return (
         <VStack>
             <ArchiveBody copipe={copipe} />
-            <Comment comments={comments} copipe_id={id} />
+            <Comment comments={copipe.comments} copipe_id={id} />
             <AdmaxUnderSwitch />
             <ArchivesPagination beforeId={beforeId} afterId={afterId} />
         </VStack>

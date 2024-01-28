@@ -1,8 +1,8 @@
-import { CopipeComment } from "@/models/comment";
+import { CommentPayload } from "@/db/query";
 import dayjs from "@/utils/dayjs";
-import { ListItem, VStack, Text } from "@yamada-ui/react";
+import { VStack, Text } from "@yamada-ui/react";
 
-export function CommentItem(props: { comment: CopipeComment }) {
+export function CommentItem(props: { comment: CommentPayload }) {
     const { comment } = props;
 
     return (

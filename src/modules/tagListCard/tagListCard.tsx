@@ -15,7 +15,7 @@ export default function TagListCardTemplate(props: { tags: TagModel[] }) {
                 <Divider />
                 <Box>
                     {tags.map(tag => (
-                        <Link key={`tag-${tag.id}`} href={`/tag/${tag.id}/1`}>
+                        <Link key={`tag-${tag.id}`} href={`/tag/${tag.id}`}>
                             <Tag
                                 key={tag.id}
                                 variant="outline"

@@ -28,7 +28,7 @@ export default function SearchForm() {
                 top={0}
                 zIndex={100}
                 variant='subtle'
-                bg='Background'
+                bg='white'
                 w='full'
             >
                 <form onSubmit={handleSubmit(onSubmit)}>

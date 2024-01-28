@@ -1,19 +1,19 @@
-import supabase from "@/utils/supabase"
+import { prisma } from "@/db/db"
 import { notFound } from "next/navigation"
 import { ReactNode } from "react"
 
 export async function generateMetadata({ params }: { params: { tagId: string } }) {
     const tagId = Number(params.tagId)
-    const { data, error } = await supabase
-        .from('tag')
-        .select('body')
-        .eq('id', tagId)
-        .single()
-    if (error) notFound()
-    if (data === null) notFound()
+
+    const tag = await prisma.tag.findUniqueOrThrow({
+        where: { id: tagId },
+        select: { body: true }
+    }).catch(e => {
+        notFound()
+    })
 
     return {
-        title: data.body
+        title: tag.body
     }
 }
 
