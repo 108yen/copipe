@@ -26,7 +26,7 @@ const getCopipeIds = cache(async () => {
 async function checkBeforeAndAfterPage(currendId: number) {
     const data = await getCopipeIds()
 
-    const copipeIds: number[] = data.map(value => Number(value.id))
+    const copipeIds: number[] = data.map(value => value.id)
     const currentIdIndex = copipeIds.findIndex(value => value == currendId)
     const beforeId = currentIdIndex == 0 ? -1 : copipeIds[currentIdIndex - 1];
     const afterId = currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1];

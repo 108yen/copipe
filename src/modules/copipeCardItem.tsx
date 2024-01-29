@@ -5,7 +5,7 @@ import ContentCopyIcon from '@mui/icons-material/ContentCopy';
 import { Box, Divider, HStack, Heading, Icon, IconButton, Spacer, Tag, Text } from "@yamada-ui/react";
 import { CopipeWithTagPayload } from "@/db/query";
 
-async function handleClickCopy(copyText: string | null, id: bigint) {
+async function handleClickCopy(copyText: string | null, id: number) {
     if (copyText == null) return
     await global.navigator.clipboard.writeText(copyText);
 }

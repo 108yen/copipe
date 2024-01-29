@@ -29,9 +29,9 @@ export default function EditModal(props: {
 
     const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
         const tagIds = data.tags.map(tag => {
-            return Number(tags.find(value => value.body == tag)!.id)
+            return tags.find(value => value.body == tag)!.id
         })
-        const result = await updateTags(Number(copipe!.id), tagIds)
+        const result = await updateTags(copipe!.id, tagIds)
 
         if (result?.error) {
             notice({
