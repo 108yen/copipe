@@ -3,7 +3,7 @@
 import { useState } from "react";
 import TitleList from "./titleList";
 import EditModal from "./editModal";
-import { updateTags } from "@/app/admin/serverActions";
+import { updateTags } from "@/app/(grid)/admin/serverActions";
 import { CopipeWithTagPayload, TagPayload } from "@/db/query";
 
 export default function AdminPageTemplate(props: {
