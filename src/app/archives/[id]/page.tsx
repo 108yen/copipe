@@ -9,6 +9,7 @@ import Comment from "@/modules/comment"
 import { VStack } from "@yamada-ui/react";
 import { prisma } from "@/db/db";
 import { CopipeWithTagCommentPayload, copipeWithTagComment } from "@/db/query";
+import { sleep } from "@/utils/sleep";
 
 const getCopipeIds = cache(async () => {
     const ids = await prisma.copipe.findMany({
