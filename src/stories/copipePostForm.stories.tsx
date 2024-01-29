@@ -2,6 +2,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import CopipePostForm from "@/modules/copipePostForm"
 import { screen, userEvent, waitFor, within } from '@storybook/testing-library';
 import { expect } from '@storybook/jest';
+import { sleep } from "@/utils/sleep";
 
 const meta = {
     title: 'yamadaui/CopipePostForm',
@@ -78,7 +79,6 @@ export const Message: Story = {
 export const Loading: Story = {
     args: {
         postNewCopipe: async () => {
-            const sleep = (second: number) => new Promise(resolve => setTimeout(resolve, second * 1000))
             await sleep(3)
 
             return undefined

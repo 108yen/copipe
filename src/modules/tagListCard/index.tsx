@@ -15,7 +15,7 @@ export default async function TagListCard() {
     const tags: Tag[] = data.map(
         tag => {
             return {
-                id: Number(tag.id),
+                id: tag.id,
                 created_at: new Date(tag.created_at),
                 body: tag.body
             }

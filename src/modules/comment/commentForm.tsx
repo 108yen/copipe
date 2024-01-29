@@ -40,10 +40,10 @@ export default function CommentForm(props: {
         })
 
         addOptimisticComment({
-            id: BigInt(Math.floor(Math.random()*10000)),
+            id: (Math.floor(Math.random()*10000)),
             body: data.body,
             created_at: new Date(),
-            copipe_id: BigInt(copipe_id)
+            copipe_id: copipe_id
         })
 
         const result = await postComment(copipe_id, data.body)

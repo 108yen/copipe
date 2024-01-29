@@ -17,14 +17,14 @@ export const Default: Story = {
         open: true,
         onClose: () => { },
         copipe: {
-            id: BigInt(0),
+            id: 0,
             body: 'test copipe',
             title: 'test copipe title',
             copipeToTag: [{
-                tag: { id: BigInt(0), body: 'test tag' }
+                tag: { id: 0, body: 'test tag' }
             }]
         },
-        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: BigInt(value), body: `test-${value}`, created_at: new Date() })),
+        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: value, body: `test-${value}`, created_at: new Date() })),
         updateTags: async (copipe_id: number, tag_ids: number[]) => { return undefined }
     }
 }
@@ -33,14 +33,14 @@ export const LongText: Story = {
         open: true,
         onClose: () => { },
         copipe: {
-            id: BigInt(0),
+            id: 0,
             body: '勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社',
             title: '勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社',
             copipeToTag: [{
-                tag: { id: BigInt(0), body: 'test tag' }
+                tag: { id: 0, body: 'test tag' }
             }]
         },
-        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: BigInt(value), body: `test-${value}`, created_at: new Date() })),
+        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: value, body: `test-${value}`, created_at: new Date() })),
         updateTags: async (copipe_id: number, tag_ids: number[]) => { return undefined }
     }
 }
@@ -50,14 +50,14 @@ export const Success: Story = {
         open: true,
         onClose: () => { },
         copipe: {
-            id: BigInt(0),
+            id: 0,
             body: 'test copipe',
             title: 'test copipe title',
             copipeToTag: [{
-                tag: { id: BigInt(0), body: 'test tag' }
+                tag: { id: 0, body: 'test tag' }
             }]
         },
-        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: BigInt(value), body: `test-${value}`, created_at: new Date() })),
+        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: value, body: `test-${value}`, created_at: new Date() })),
         updateTags: async (copipe_id: number, tag_ids: number[]) => { return undefined }
     },
     play: async ({ canvasElement }) => {
@@ -80,14 +80,14 @@ export const Error: Story = {
         open: true,
         onClose: () => { },
         copipe: {
-            id: BigInt(0),
+            id: 0,
             body: 'test copipe',
             title: 'test copipe title',
             copipeToTag: [{
-                tag: { id: BigInt(0), body: 'test tag' }
+                tag: { id: 0, body: 'test tag' }
             }]
         },
-        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: BigInt(value), body: `test-${value}`, created_at: new Date() })),
+        tags: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map(value => ({ id: value, body: `test-${value}`, created_at: new Date() })),
         updateTags: async (copipe_id: number, tag_ids: number[]) => { return { error: 'error' } }
     },
     play: async ({ canvasElement }) => {

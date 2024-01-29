@@ -21,7 +21,7 @@ export default async function RecentPostsCard() {
 
     const copipes: { id: number, title: string }[] = data.map(value => {
         return {
-            id: Number(value.id),
+            id: value.id,
             title: value.title!
         }
     })

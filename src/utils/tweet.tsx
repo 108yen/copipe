@@ -1,4 +1,3 @@
-import { CopipeWithTag } from "@/models/copipeWithTag";
 import supabase from "./supabase";
 
 export default async function getTweet() {
@@ -6,13 +5,11 @@ export default async function getTweet() {
         .rpc('get_random_copipe')
     if (error) console.log(`get random copipe error: ${error}`)
     else console.log('get random copipe')
-    const copipe: CopipeWithTag = {
-        copipe_id: data[0].copipe_id,
-        title: data[0].title,
+    const copipe: {id:number,body:string} = {
+        id: data[0].id,
         body: data[0].body,
-        tags: data[0].tags
     }
-    const url = `https://www.netcopipe.com/archives/${copipe.copipe_id}`
+    const url = `https://www.netcopipe.com/archives/${copipe.id}`
     const text = reductionText(copipe.body, url)
 
     return { text, url }

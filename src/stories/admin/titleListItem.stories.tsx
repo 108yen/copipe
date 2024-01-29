@@ -22,11 +22,11 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
     args: {
         copipe: {
-            id: BigInt(0),
+            id: 0,
             body: 'test copipe',
             title: 'test copipe title',
             copipeToTag: [{
-                tag: { id: BigInt(0), body: 'test tag' }
+                tag: { id: 0, body: 'test tag' }
             }]
         },
         openModal: () => { }
@@ -35,7 +35,7 @@ export const Default: Story = {
 export const NoTag: Story = {
     args: {
         copipe: {
-            id: BigInt(0),
+            id: 0,
             body: 'test copipe',
             title: 'test copipe title',
             copipeToTag: []
