@@ -2,13 +2,6 @@ import { ReactNode, Suspense } from "react";
 import { Metadata } from 'next'
 import GoogleAnalytics from "@/analytics/GoogleAnalytics";
 import { headers } from 'next/headers'
-import AdmaxPCSideVertical from "@/ad/admax/pcSideVertical";
-import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react";
-import AppBar from "@/modules/appBar";
-import LoadingRecentPostsCard from "@/modules/recentPostCard/loading";
-import LoadingTagListCard from "@/modules/tagListCard/loading";
-import RecentPostsCard from "@/modules/recentPostCard";
-import TagListCard from "@/modules/tagListCard";
 import Provider from "./provider";
 
 export const metadata: Metadata = {
@@ -52,23 +45,7 @@ export default async function RootLayout({
             </head>
             <body>
                 <Provider>
-                    <AppBar />
-                    <SimpleGrid columns={4} gap="lg" w='full' paddingX={{ base: 350, "2xl": 100, xl: 50, lg: 25, md: 0 }} marginY='lg'>
-                        <GridItem colSpan={{ base: 3, md: 4 }} w='full'>
-                            {children}
-                        </GridItem>
-                        <GridItem colSpan={{ base: 1, md: 0 }} w='full' display={{ base: 'block', md: 'none' }}>
-                            <VStack>
-                                <AdmaxPCSideVertical />
-                                <Suspense fallback={<LoadingTagListCard />}>
-                                    <TagListCard />
-                                </Suspense>
-                                <Suspense fallback={<LoadingRecentPostsCard />}>
-                                    <RecentPostsCard />
-                                </Suspense>
-                            </VStack>
-                        </GridItem>
-                    </SimpleGrid>
+                    {children}
                 </Provider>
             </body>
         </html>

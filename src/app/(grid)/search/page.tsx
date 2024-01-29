@@ -31,7 +31,7 @@ export default async function page({
         ? {}
         : {
             body: {
-                search: searchText
+                contains: searchText
             }
         }
     const [copipes, count] = await prisma.$transaction([
@@ -52,7 +52,7 @@ export default async function page({
             <SearchForm />
             <CopipeCard>
                 {copipes.length == 0
-                    ? <NotHit />
+                    ? <NotHit key='not-hit' />
                     : copipes.map(copipe => <CopipeCardItem key={copipe.id} copipeItem={copipe} />)}
             </CopipeCard>
             <AdmaxUnderSwitch />
