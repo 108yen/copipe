@@ -107,7 +107,9 @@ export default function CopipePostForm(props: {
                             id="body"
                             placeholder="本文"
                             focusBorderColor='secondary'
-                            height={400}
+                            autosize
+                            minRows={4}
+                            maxRows={30}
                         />
                     </FormControl>
                 )}
