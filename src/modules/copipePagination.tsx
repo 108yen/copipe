@@ -22,7 +22,7 @@ export default function CopipePagination(props: {
         total={total}
         page={page}
         onChange={handleChange}
-        color='secondary'
+        colorScheme="gray"
         margin='auto'
     />
 }
