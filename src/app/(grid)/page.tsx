@@ -1,4 +1,3 @@
-import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { prisma } from "@/db/db";
 import { copipeWithTag } from "@/db/query";
 import CopipeCard from "@/modules/copipeCard";
@@ -14,28 +13,32 @@ const getHomePageCopipe = cache(async () => {
       select: copipeWithTag,
       take: 10,
       orderBy: {
-        id: "desc"
-      }
+        id: "desc",
+      },
     }),
-    prisma.copipe.count()
-  ])
+    prisma.copipe.count(),
+  ]);
 
-  return { copipes, count }
-})
+  return { copipes, count };
+});
 
 export const revalidate = 3600;
 
 export default async function Home() {
-  const { copipes, count } = await getHomePageCopipe()
+  const { copipes, count } = await getHomePageCopipe();
 
   return (
     <VStack>
       <SearchForm />
       <CopipeCard>
-        {copipes.map(copipe => <CopipeCardItem key={`copipe-card-item-${copipe.id}`} copipeItem={copipe} />)}
+        {copipes.map((copipe) => (
+          <CopipeCardItem
+            key={`copipe-card-item-${copipe.id}`}
+            copipeItem={copipe}
+          />
+        ))}
       </CopipeCard>
-      <AdmaxUnderSwitch />
       <CopipePagination url="/search" total={Math.ceil(count / 10)} page={1} />
     </VStack>
-  )
+  );
 }
