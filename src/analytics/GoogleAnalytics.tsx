@@ -1,24 +1,23 @@
-'use client'
+"use client";
 
-import Script from 'next/script'
+import Script from "next/script";
 
-import {  GA_MEASUREMENT_ID } from './gtag'
+import { GA_MEASUREMENT_ID } from "./gtag";
 
 export default function GoogleAnalytics({
     debugMode = false,
-    clientIp
+    clientIp = "none",
 }: {
-    debugMode: boolean
-    clientIp: string
+    debugMode: boolean;
+    clientIp?: string;
 }) {
-
     return (
         <>
             <Script
-                strategy='lazyOnload'
+                strategy="lazyOnload"
                 src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
             />
-            <Script id='gtag-init' strategy='afterInteractive'>
+            <Script id="gtag-init" strategy="afterInteractive">
                 {`
                         window.dataLayer = window.dataLayer || [];
                         function gtag(){dataLayer.push(arguments);}
@@ -31,5 +30,5 @@ export default function GoogleAnalytics({
                     `}
             </Script>
         </>
-    )
+    );
 }
