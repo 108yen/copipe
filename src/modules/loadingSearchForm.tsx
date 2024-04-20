@@ -13,14 +13,7 @@ export default function LoadingSearchForm(props: { text?: string }) {
 
   return (
     <VStack alignItems="flex-end" gap={0}>
-      <Card
-        position="sticky"
-        top={0}
-        zIndex={100}
-        variant="subtle"
-        bg="white"
-        w="full"
-      >
+      <Card variant="subtle" apply="searchFormStyle.card">
         <InputGroup>
           <InputLeftElement>
             <Loading variant="dots" color="secondary" />

@@ -31,14 +31,7 @@ export default function SearchForm() {
 
   return (
     <VStack alignItems="flex-end" gap={0}>
-      <Card
-        position="sticky"
-        top={0}
-        zIndex={100}
-        variant="subtle"
-        bg="white"
-        w="full"
-      >
+      <Card variant="subtle" apply="searchFormStyle.card">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Controller
             name="text"
