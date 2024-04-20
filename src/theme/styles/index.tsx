@@ -1,6 +1,13 @@
+import { buttonStyles } from "./button-styles"
 import { globalStyle } from "./global-style"
 import { gridStyle } from "./grid-style"
 import { searchFormStyle } from "./search-form-style"
 import { textStyles } from "./text-styles"
 
-export default { globalStyle, textStyles, searchFormStyle, gridStyle }
+export default {
+  globalStyle,
+  textStyles,
+  searchFormStyle,
+  gridStyle,
+  buttonStyles,
+}
