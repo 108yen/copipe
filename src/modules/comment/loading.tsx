@@ -1,13 +1,20 @@
-import { Button, Divider, SkeletonText, Text, Textarea, VStack } from "@yamada-ui/react";
-import CopipeCard from "../copipeCard";
+import {
+  Button,
+  Container,
+  Divider,
+  SkeletonText,
+  Text,
+  Textarea,
+  VStack,
+} from "@yamada-ui/react";
 
 export default function LoadingComment() {
   return (
-    <CopipeCard>
+    <Container>
       <VStack divider={<Divider />}>
         {[...Array(3)].map((value) => (
           <VStack key={`comments-skelton-${value}`}>
-            <Text fontSize='sm' color='gray'>
+            <Text fontSize="sm" color="gray">
               <SkeletonText lineClamp={1} width={120} />
             </Text>
             <Text>
@@ -16,26 +23,23 @@ export default function LoadingComment() {
           </VStack>
         ))}
       </VStack>
-      <VStack
-        alignItems='center'
-        w='full'
-      >
+      <VStack alignItems="center" w="full">
         <Textarea
           id="body"
           placeholder="コメント"
-          focusBorderColor='secondary'
+          focusBorderColor="secondary"
           disabled
         />
         <Button
-          variant='outline'
+          variant="outline"
           color="secondary"
-          borderColor='secondary'
-          w='fit-content'
+          borderColor="secondary"
+          w="fit-content"
           disabled
         >
           コメント
         </Button>
       </VStack>
-    </CopipeCard>
-  )
+    </Container>
+  );
 }

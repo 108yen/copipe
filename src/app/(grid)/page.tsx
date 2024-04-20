@@ -1,10 +1,9 @@
 import { prisma } from "@/db/db";
 import { copipeWithTag } from "@/db/query";
-import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipePagination from "@/modules/copipePagination";
 import SearchForm from "@/modules/searchForm";
-import { VStack } from "@yamada-ui/react";
+import { Container, VStack } from "@yamada-ui/react";
 import { cache } from "react";
 
 const getHomePageCopipe = cache(async () => {
@@ -30,14 +29,14 @@ export default async function Home() {
   return (
     <VStack>
       <SearchForm />
-      <CopipeCard>
+      <Container>
         {copipes.map((copipe) => (
           <CopipeCardItem
             key={`copipe-card-item-${copipe.id}`}
             copipeItem={copipe}
           />
         ))}
-      </CopipeCard>
+      </Container>
       <CopipePagination url="/search" total={Math.ceil(count / 10)} page={1} />
     </VStack>
   );

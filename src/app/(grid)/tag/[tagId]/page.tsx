@@ -1,10 +1,9 @@
 import AdmaxUnderSwitch from "@/ad/admax/underSwitch";
 import { prisma } from "@/db/db";
 import { copipeWithTag } from "@/db/query";
-import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipePagination from "@/modules/copipePagination";
-import { VStack } from "@yamada-ui/react";
+import { Container, VStack } from "@yamada-ui/react";
 
 export default async function page({
   params,
@@ -39,11 +38,11 @@ export default async function page({
 
   return (
     <VStack>
-      <CopipeCard>
+      <Container>
         {copipes.map((e) => (
           <CopipeCardItem key={e.id} copipeItem={e} />
         ))}
-      </CopipeCard>
+      </Container>
       <CopipePagination
         url={`/tag/${tagId}`}
         total={Math.ceil(count / 10)}

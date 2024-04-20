@@ -1,16 +1,16 @@
-import CopipeCard from "@/modules/copipeCard";
-import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton";
-import LoadingSearchForm from "@/modules/loadingSearchForm";
+import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
+import LoadingSearchForm from "@/modules/loadingSearchForm"
+import { Container } from "@yamada-ui/react"
 
 export default function loading() {
   return (
     <>
       <LoadingSearchForm />
-      <CopipeCard>
-        {[...Array(10)].map((value) => (
-          <CopipeCardItemSkelton key={value} />
+      <Container>
+        {[...Array(10)].map((_, index) => (
+          <CopipeCardItemSkelton key={`skelton-${index}`} />
         ))}
-      </CopipeCard>
+      </Container>
     </>
-  );
+  )
 }

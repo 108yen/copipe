@@ -1,13 +1,12 @@
-import { notFound } from "next/navigation";
-import { cache } from "react";
-import React from "react";
-import ArchivesPagination from "./archivesPagination";
-import CopipeCard from "@/modules/copipeCard";
-import { CopipeCardItem } from "@/modules/copipeCardItem";
-import Comment from "@/modules/comment";
-import { VStack } from "@yamada-ui/react";
-import { prisma } from "@/db/db";
-import { CopipeWithTagCommentPayload, copipeWithTagComment } from "@/db/query";
+import { notFound } from "next/navigation"
+import { cache } from "react"
+import React from "react"
+import ArchivesPagination from "./archivesPagination"
+import { CopipeCardItem } from "@/modules/copipeCardItem"
+import Comment from "@/modules/comment"
+import { Container, VStack } from "@yamada-ui/react"
+import { prisma } from "@/db/db"
+import { CopipeWithTagCommentPayload, copipeWithTagComment } from "@/db/query"
 
 const getCopipeIds = cache(async () => {
   const ids = await prisma.copipe
@@ -19,22 +18,22 @@ const getCopipeIds = cache(async () => {
     .catch((error) => {
       console.log(
         `fetch copipe_id for pagination in archives/[id] error: ${error}`,
-      );
-    });
-  console.log(`fetch copipe_id for pagination in archives/[id]`);
+      )
+    })
+  console.log(`fetch copipe_id for pagination in archives/[id]`)
 
-  return ids!;
-});
+  return ids!
+})
 
 async function checkBeforeAndAfterPage(currendId: number) {
-  const data = await getCopipeIds();
+  const data = await getCopipeIds()
 
-  const copipeIds: number[] = data.map((value) => value.id);
-  const currentIdIndex = copipeIds.findIndex((value) => value == currendId);
-  const beforeId = currentIdIndex == 0 ? -1 : copipeIds[currentIdIndex - 1];
+  const copipeIds: number[] = data.map((value) => value.id)
+  const currentIdIndex = copipeIds.findIndex((value) => value == currendId)
+  const beforeId = currentIdIndex == 0 ? -1 : copipeIds[currentIdIndex - 1]
   const afterId =
-    currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1];
-  return { beforeId, afterId };
+    currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1]
+  return { beforeId, afterId }
 }
 
 const getCopipe = cache(async (id: number) => {
@@ -44,38 +43,38 @@ const getCopipe = cache(async (id: number) => {
       select: copipeWithTagComment,
     })
     .catch((error) => {
-      notFound();
-    });
-  console.log(`fetch copipe in archives/${id}`);
+      notFound()
+    })
+  console.log(`fetch copipe in archives/${id}`)
 
-  return copipe;
-});
+  return copipe
+})
 
 function ArchiveBody(props: { copipe: CopipeWithTagCommentPayload }) {
-  const { copipe } = props;
+  const { copipe } = props
 
   return (
-    <CopipeCard>
+    <Container>
       <CopipeCardItem copipeItem={copipe} />
-    </CopipeCard>
-  );
+    </Container>
+  )
 }
 
 export async function generateMetadata({ params }: { params: { id: string } }) {
-  const { id } = params;
-  const copipe = await getCopipe(Number(id));
+  const { id } = params
+  const copipe = await getCopipe(Number(id))
 
   return {
     title: copipe.title,
-  };
+  }
 }
 
-export const revalidate = 3600;
+export const revalidate = 3600
 
 export default async function Page({ params }: { params: { id: string } }) {
-  const id = Number(params.id);
-  const copipe = await getCopipe(id);
-  const { beforeId, afterId } = await checkBeforeAndAfterPage(id);
+  const id = Number(params.id)
+  const copipe = await getCopipe(id)
+  const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
 
   return (
     <VStack>
@@ -83,5 +82,5 @@ export default async function Page({ params }: { params: { id: string } }) {
       <Comment comments={copipe.comments} copipe_id={id} />
       <ArchivesPagination beforeId={beforeId} afterId={afterId} />
     </VStack>
-  );
+  )
 }

@@ -1,6 +1,5 @@
-import { Text, VStack } from "@yamada-ui/react";
+import { Container, Text, VStack } from "@yamada-ui/react";
 import SearchForm from "@/modules/searchForm";
-import CopipeCard from "@/modules/copipeCard";
 import { CopipeCardItem } from "@/modules/copipeCardItem";
 import CopipePagination from "@/modules/copipePagination";
 import { prisma } from "@/db/db";
@@ -32,10 +31,10 @@ export default async function page({
     searchText == ""
       ? {}
       : {
-          body: {
-            contains: searchText,
-          },
-        };
+        body: {
+          contains: searchText,
+        },
+      };
   const [copipes, count] = await prisma.$transaction([
     prisma.copipe.findMany({
       where: searchQuery,
@@ -52,7 +51,7 @@ export default async function page({
   return (
     <VStack>
       <SearchForm />
-      <CopipeCard>
+      <Container>
         {copipes.length == 0 ? (
           <NotHit key="not-hit" />
         ) : (
@@ -60,7 +59,7 @@ export default async function page({
             <CopipeCardItem key={copipe.id} copipeItem={copipe} />
           ))
         )}
-      </CopipeCard>
+      </Container>
       <CopipePagination
         url="/search"
         params={{ name: "text", param: searchText }}
