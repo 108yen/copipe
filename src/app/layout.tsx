@@ -1,9 +1,9 @@
-import { ReactNode, Suspense } from "react";
-import { Metadata } from "next";
-import GoogleAnalytics from "@/analytics/GoogleAnalytics";
-import UIScript from "./ui-script";
-import { UIProvider } from "@yamada-ui/react";
-import theme, { config } from "@/theme";
+import { ReactNode, Suspense } from "react"
+import { Metadata } from "next"
+import GoogleAnalytics from "@/analytics/GoogleAnalytics"
+import UIScript from "./ui-script"
+import { UIProvider } from "@yamada-ui/react"
+import theme, { config } from "@/theme"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.netcopipe.com/"),
@@ -29,12 +29,12 @@ export const metadata: Metadata = {
   twitter: {
     card: `summary`,
   },
-};
+}
 
 export default async function RootLayout({
   children,
 }: {
-  children: ReactNode;
+  children: ReactNode
 }) {
   return (
     <html lang="ja">
@@ -50,5 +50,5 @@ export default async function RootLayout({
         </UIProvider>
       </body>
     </html>
-  );
+  )
 }
