@@ -5,20 +5,20 @@ import {
     Heading,
     ListItem,
     Text,
-} from "@yamada-ui/react";
-import Link from "next/link";
+} from "@yamada-ui/react"
+import Link from "next/link"
 
 export const metadata = {
     title: "このサイトについて",
-};
+}
 
 export default function page() {
     return (
         <Container>
-            <Heading variant="h3" pt={10} textAlign="center">
+            <Heading variant="h3" textStyle="aboutPageHeading" textAlign="center">
                 本サイトについて
             </Heading>
-            <Heading variant="h4" pt={10}>
+            <Heading variant="h4" textStyle="aboutPageHeading">
                 1. はじめに
             </Heading>
             <Divider />
@@ -26,7 +26,7 @@ export default function page() {
                 当サイトでは2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。コピペの検索、投稿、コメントが可能です。
             </Text>
 
-            <Heading variant="h4" pt={10}>
+            <Heading variant="h4" textStyle="aboutPageHeading">
                 2. 禁止事項
             </Heading>
             <Divider />
@@ -43,7 +43,7 @@ export default function page() {
                     (Webスクレイピング行為等)
                 </ListItem>
             </DiscList>
-            <Heading variant="h4" pt={10}>
+            <Heading variant="h4" textStyle="aboutPageHeading">
                 3. Google Analytics
             </Heading>
             <Divider sx={{ marginY: 1 }} />
@@ -94,5 +94,5 @@ export default function page() {
                 </ListItem>
             </DiscList>
         </Container>
-    );
+    )
 }
