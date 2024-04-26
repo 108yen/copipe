@@ -1,6 +1,7 @@
 import { cache } from "react"
 import { prisma } from "../db"
 import { Tag } from "@/models/tag"
+import { notFound } from "next/navigation"
 
 export const fetchTags = cache(async () => {
   const tags = await prisma.tag.findMany()
@@ -15,4 +16,16 @@ export const fetchTags = cache(async () => {
   })
 
   return result
+})
+
+export const fetchTag = cache(async (id: number) => {
+  const tag = await prisma.tag
+    .findUniqueOrThrow({
+      where: { id },
+      select: { body: true },
+    })
+    .catch(() => {
+      notFound()
+    })
+  return tag
 })
