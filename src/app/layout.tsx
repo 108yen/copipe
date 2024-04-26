@@ -1,9 +1,14 @@
 import { ReactNode, Suspense } from "react"
 import { Metadata } from "next"
 import GoogleAnalytics from "@/analytics/GoogleAnalytics"
-import UIScript from "./ui-script"
-import { UIProvider } from "@yamada-ui/react"
-import theme, { config } from "@/theme"
+import {
+  ColorModeScript,
+  ThemeSchemeScript,
+  UIProvider,
+  colorModeManager,
+  themeSchemeManager,
+} from "@yamada-ui/react"
+import { config, theme } from "@/theme"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.netcopipe.com/"),
@@ -31,6 +36,8 @@ export const metadata: Metadata = {
   },
 }
 
+const { initialColorMode, initialThemeScheme } = { ...config }
+
 export default async function RootLayout({
   children,
 }: {
@@ -44,8 +51,22 @@ export default async function RootLayout({
         </Suspense>
       </head>
       <body>
-        <UIScript />
-        <UIProvider theme={theme} config={config}>
+        <ColorModeScript
+          type="cookie"
+          nonce="copipe"
+          initialColorMode={initialColorMode}
+        />
+        <ThemeSchemeScript
+          type="cookie"
+          nonce="copipe"
+          initialThemeScheme={initialThemeScheme}
+        />
+        <UIProvider
+          theme={theme}
+          config={config}
+          colorModeManager={{ ...colorModeManager }.cookieStorage}
+          themeSchemeManager={{ ...themeSchemeManager }.cookieStorage}
+        >
           {children}
         </UIProvider>
       </body>
