@@ -2,15 +2,9 @@ import AppBar from "@/modules/appBar"
 import RecentPostsCard from "@/modules/recentPostCard"
 import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
 import { ReactNode } from "react"
-import { Tag as TagModel } from "@/models/tag"
 import TagListCard from "../tagListCard"
 
-export default function SideMenuLayout({
-  children,
-}: {
-  children: ReactNode
-  tags: TagModel[]
-}) {
+export default function SideMenuLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <AppBar />

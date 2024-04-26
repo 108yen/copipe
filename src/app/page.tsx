@@ -1,5 +1,4 @@
 import { getHomePageCopipe } from "@/db/server/copipes"
-import { fetchTags } from "@/db/server/tags"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import CopipePagination from "@/modules/copipePagination"
 import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
@@ -10,10 +9,9 @@ export const revalidate = 3600
 
 export default async function Home() {
   const { copipes, count } = await getHomePageCopipe()
-  const tags = await fetchTags()
 
   return (
-    <SideMenuLayout tags={tags}>
+    <SideMenuLayout>
       <VStack>
         <SearchForm />
         <Container>
