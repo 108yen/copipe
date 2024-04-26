@@ -1,6 +1,7 @@
 import { cache } from "react"
 import { prisma } from "../db"
-import { copipeWithTag } from "../query"
+import { copipeWithTag, copipeWithTagComment } from "../query"
+import { notFound } from "next/navigation"
 
 export const getHomePageCopipe = cache(async () => {
   const [copipes, count] = await prisma.$transaction([
@@ -92,3 +93,34 @@ export const fetchSearchCopipes = cache(
     return result
   },
 )
+
+export const fetchCopipe = cache(async (id: number) => {
+  const copipe = await prisma.copipe
+    .findUniqueOrThrow({
+      where: { id: id },
+      select: copipeWithTagComment,
+    })
+    .catch(() => {
+      notFound()
+    })
+  console.log(`get copipe in archives/${id}`)
+
+  return copipe
+})
+
+export const getCopipeIds = cache(async () => {
+  const ids = await prisma.copipe
+    .findMany({
+      select: {
+        id: true,
+      },
+    })
+    .catch((error) => {
+      console.log(
+        `fetch copipe_id for pagination in archives/[id] error: ${error}`,
+      )
+    })
+  console.log(`fetch copipe_id for pagination in archives/[id]`)
+
+  return ids!
+})
