@@ -1,16 +1,9 @@
-import { Tag as TagModel } from "@/models/tag";
-import {
-    Box,
-    Container,
-    Divider,
-    Heading,
-    Tag,
-    VStack,
-} from "@yamada-ui/react";
-import Link from "next/link";
+import { fetchTags } from "@/db/server/tags"
+import { Box, Container, Divider, Heading, Tag, VStack } from "@yamada-ui/react"
+import Link from "next/link"
 
-export default function TagListCardTemplate(props: { tags: TagModel[] }) {
-    const { tags } = props;
+export default async function TagListCard() {
+    const tags = await fetchTags()
 
     return (
         <Container>
@@ -37,5 +30,5 @@ export default function TagListCardTemplate(props: { tags: TagModel[] }) {
                 </Box>
             </VStack>
         </Container>
-    );
+    )
 }
