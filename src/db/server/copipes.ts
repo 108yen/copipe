@@ -63,3 +63,32 @@ export const fetchTagCopipes = cache(async (tagId: number, page: number) => {
 
   return result
 })
+
+export const fetchSearchCopipes = cache(
+  async (searchText: string, page: number) => {
+    const searchQuery =
+      searchText == ""
+        ? {}
+        : {
+            body: {
+              contains: searchText,
+            },
+          }
+
+    const result = await prisma.$transaction([
+      prisma.copipe.findMany({
+        where: searchQuery,
+        select: copipeWithTag,
+        take: 10,
+        skip: (page - 1) * 10,
+        orderBy: { id: "desc" },
+      }),
+      prisma.copipe.count({
+        where: searchQuery,
+      }),
+    ])
+    console.log(`get copipes search:${searchText} page:${page}`)
+
+    return result
+  },
+)
