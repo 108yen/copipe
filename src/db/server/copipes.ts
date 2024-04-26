@@ -124,3 +124,17 @@ export const getCopipeIds = cache(async () => {
 
   return ids!
 })
+
+export const fetchAdminCopipes = async (page: number) =>
+  await prisma
+    .$transaction([
+      prisma.copipe.findMany({
+        select: copipeWithTag,
+        take: 100,
+        skip: (page - 1) * 100,
+        orderBy: { id: "desc" },
+      }),
+      prisma.copipe.count(),
+      prisma.tag.findMany(),
+    ])
+    .catch(() => notFound())
