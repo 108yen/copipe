@@ -2,6 +2,7 @@ import { cache } from "react"
 import { prisma } from "../db"
 import { copipeWithTag, copipeWithTagComment } from "../query"
 import { notFound } from "next/navigation"
+import { unstable_cache } from "next/cache"
 
 export const getHomePageCopipe = cache(async () => {
   const [copipes, count] = await prisma.$transaction([
@@ -18,26 +19,52 @@ export const getHomePageCopipe = cache(async () => {
   return { copipes, count }
 })
 
-export const fetchRecentCopipes = cache(async () => {
-  const copipes = await prisma.copipe.findMany({
-    select: {
-      id: true,
-      title: true,
-    },
-    take: 100,
-    orderBy: { id: "desc" },
-  })
-  console.log("get recent copipes")
+//NOTE: recent copipe is not important. No problem if `unstable_cache` is broken.
+//
+// export const fetchRecentCopipes = cache(async () => {
+//   const copipes = await prisma.copipe.findMany({
+//     select: {
+//       id: true,
+//       title: true,
+//     },
+//     take: 100,
+//     orderBy: { id: "desc" },
+//   })
+//   console.log("get recent copipes")
+//
+//   const result: { id: number; title: string }[] = copipes.map((value) => {
+//     return {
+//       id: value.id,
+//       title: value.title!,
+//     }
+//   })
+//
+//   return result
+// })
+export const fetchRecentCopipes = unstable_cache(
+  async function () {
+    const copipes = await prisma.copipe.findMany({
+      select: {
+        id: true,
+        title: true,
+      },
+      take: 100,
+      orderBy: { id: "desc" },
+    })
+    console.log("get recent copipes")
 
-  const result: { id: number; title: string }[] = copipes.map((value) => {
-    return {
-      id: value.id,
-      title: value.title!,
-    }
-  })
+    const result: { id: number; title: string }[] = copipes.map((value) => {
+      return {
+        id: value.id,
+        title: value.title!,
+      }
+    })
 
-  return result
-})
+    return result
+  },
+  ["recent_copipes"],
+  { revalidate: 3600 },
+)
 
 export const fetchTagCopipes = cache(async (tagId: number, page: number) => {
   const tagQuery = {
