@@ -1,13 +1,13 @@
 import {
   ComponentStyle,
+  getMemoizedObject as get,
   getColor,
   isAccessible,
   isArray,
   isGray,
   mode,
   transparentizeColor,
-  getMemoizedObject as get,
-} from "@yamada-ui/react";
+} from "@yamada-ui/react"
 
 export const Button: ComponentStyle = {
   baseStyle: {
@@ -46,7 +46,7 @@ export const Button: ComponentStyle = {
     }) => {
       const errorBorderColor = isArray(ec)
         ? mode(getColor(ec[0], ec[0])(t, m), getColor(ec[1], ec[1])(t, m))(m)
-        : getColor(ec, ec)(t, m);
+        : getColor(ec, ec)(t, m)
 
       return {
         bg: isGray(c)
@@ -72,7 +72,7 @@ export const Button: ComponentStyle = {
           borderColor: "transparent",
           boxShadow: "outline",
         },
-      };
+      }
     },
     outline: ({
       theme: t,
@@ -82,7 +82,7 @@ export const Button: ComponentStyle = {
     }) => {
       const errorBorderColor = isArray(ec)
         ? mode(getColor(ec[0], ec[0])(t, m), getColor(ec[1], ec[1])(t, m))(m)
-        : getColor(ec, ec)(t, m);
+        : getColor(ec, ec)(t, m)
 
       return {
         border: "1px solid",
@@ -104,7 +104,7 @@ export const Button: ComponentStyle = {
             borderColor: "transparent",
           },
         },
-      };
+      }
     },
     link: ({ colorScheme: c = "gray" }) => ({
       padding: 0,
@@ -139,7 +139,7 @@ export const Button: ComponentStyle = {
     }) => {
       const errorBorderColor = isArray(ec)
         ? mode(getColor(ec[0], ec[0])(t, m), getColor(ec[1], ec[1])(t, m))(m)
-        : getColor(ec, ec)(t, m);
+        : getColor(ec, ec)(t, m)
 
       return {
         color: isGray(c)
@@ -158,7 +158,7 @@ export const Button: ComponentStyle = {
           borderColor: "transparent",
           boxShadow: "outline",
         },
-      };
+      }
     },
     unstyled: {
       bg: "none",
@@ -209,4 +209,4 @@ export const Button: ComponentStyle = {
     size: "md",
     colorScheme: "gray",
   },
-};
+}

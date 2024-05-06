@@ -1,4 +1,4 @@
-import { withAuth } from "next-auth/middleware";
+import { withAuth } from "next-auth/middleware"
 
 export default withAuth(
   // function middleware(req) {
@@ -8,12 +8,12 @@ export default withAuth(
   {
     callbacks: {
       authorized: ({ req, token }) => {
-        return token?.email === 'kazuking.1911@gmail.com'
+        return token?.email === "kazuking.1911@gmail.com"
       },
     },
-  }
-);
+  },
+)
 
 export const config = {
   matcher: ["/admin/:path*"],
-};
+}

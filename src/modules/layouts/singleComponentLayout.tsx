@@ -1,6 +1,6 @@
 import { GridItem, SimpleGrid } from "@yamada-ui/react"
-import AppBar from "../appBar"
 import { ReactNode } from "react"
+import AppBar from "../appBar"
 
 export default function SingleComponentLayout({
   children,

@@ -6,7 +6,7 @@ import {
   Text,
   Textarea,
   VStack,
-} from "@yamada-ui/react";
+} from "@yamada-ui/react"
 
 export default function LoadingComment() {
   return (
@@ -41,5 +41,5 @@ export default function LoadingComment() {
         </Button>
       </VStack>
     </Container>
-  );
+  )
 }

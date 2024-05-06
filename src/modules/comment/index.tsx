@@ -1,11 +1,11 @@
 "use client"
 
-import { useOptimistic } from "react"
-import { CommentList } from "./commentList"
-import CommentForm from "./commentForm"
+import { postComment } from "@/app/archives/[id]/serverActions"
 import { CommentPayload, CommentsPayload } from "@/db/query"
 import { Container } from "@yamada-ui/react"
-import { postComment } from "@/app/archives/[id]/serverActions"
+import { useOptimistic } from "react"
+import CommentForm from "./commentForm"
+import { CommentList } from "./commentList"
 
 export default function Comment(props: {
   comments: CommentsPayload

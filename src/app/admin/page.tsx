@@ -1,7 +1,7 @@
+import { fetchAdminCopipes } from "@/db/server/copipes"
 import AdminPageTemplate from "@/modules/admin"
 import CopipePagination from "@/modules/copipePagination"
 import { VStack } from "@yamada-ui/react"
-import { fetchAdminCopipes } from "@/db/server/copipes"
 
 export const revalidate = 3600
 

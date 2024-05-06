@@ -1,8 +1,8 @@
 "use client"
-import { useRouter } from "next/navigation"
 import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
 import { Box, Button, ButtonGroup, Icon } from "@yamada-ui/react"
+import { useRouter } from "next/navigation"
 
 export default function ArchivesPagination(props: {
   beforeId: number

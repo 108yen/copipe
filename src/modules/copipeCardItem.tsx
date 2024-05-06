@@ -1,6 +1,6 @@
 "use client"
 
-import Link from "next/link"
+import { CopipeWithTagPayload } from "@/db/query"
 import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 import {
   Box,
@@ -13,7 +13,7 @@ import {
   Tag,
   Text,
 } from "@yamada-ui/react"
-import { CopipeWithTagPayload } from "@/db/query"
+import Link from "next/link"
 
 async function handleClickCopy(copyText: string | null, id: number) {
   if (copyText == null) return
