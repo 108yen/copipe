@@ -1,6 +1,6 @@
+import CopipePagination from "@/modules/copipePagination"
 import { Meta, StoryObj } from "@storybook/react"
 import { userEvent, within } from "@storybook/testing-library"
-import CopipePagination from "@/modules/copipePagination"
 
 const meta = {
   title: "yamadaui/CopipePagination",

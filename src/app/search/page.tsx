@@ -1,8 +1,8 @@
-import { Container, Text, VStack } from "@yamada-ui/react"
-import SearchForm from "@/modules/searchForm"
+import { fetchSearchCopipes } from "@/db/server/copipes"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import CopipePagination from "@/modules/copipePagination"
-import { fetchSearchCopipes } from "@/db/server/copipes"
+import SearchForm from "@/modules/searchForm"
+import { Container, Text, VStack } from "@yamada-ui/react"
 
 export default async function page({
   searchParams,

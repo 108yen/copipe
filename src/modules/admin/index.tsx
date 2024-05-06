@@ -1,10 +1,10 @@
 "use client"
 
-import { useState } from "react"
-import TitleList from "./titleList"
-import EditModal from "./editModal"
-import { CopipeWithTagPayload, TagPayload } from "@/db/query"
 import { updateTags } from "@/app/admin/serverActions"
+import { CopipeWithTagPayload, TagPayload } from "@/db/query"
+import { useState } from "react"
+import EditModal from "./editModal"
+import TitleList from "./titleList"
 
 export default function AdminPageTemplate(props: {
   copipes: CopipeWithTagPayload[]

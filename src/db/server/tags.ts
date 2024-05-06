@@ -1,7 +1,7 @@
-import { prisma } from "../db"
 import { Tag } from "@/models/tag"
-import { notFound } from "next/navigation"
 import { unstable_cache } from "next/cache"
+import { notFound } from "next/navigation"
+import { prisma } from "../db"
 
 //NOTE: Tag data will not change. No problem if `unstable_cache` is broken.
 //

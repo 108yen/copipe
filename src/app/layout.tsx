@@ -1,6 +1,5 @@
-import { ReactNode, Suspense } from "react"
-import { Metadata } from "next"
 import GoogleAnalytics from "@/analytics/GoogleAnalytics"
+import { config, theme } from "@/theme"
 import {
   ColorModeScript,
   ThemeSchemeScript,
@@ -8,7 +7,8 @@ import {
   colorModeManager,
   themeSchemeManager,
 } from "@yamada-ui/react"
-import { config, theme } from "@/theme"
+import { Metadata } from "next"
+import { ReactNode, Suspense } from "react"
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.netcopipe.com/"),

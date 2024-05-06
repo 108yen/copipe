@@ -1,8 +1,8 @@
-import ArchivesPagination from "./archivesPagination"
-import { CopipeCardItem } from "@/modules/copipeCardItem"
-import Comment from "@/modules/comment"
-import { Container, VStack } from "@yamada-ui/react"
 import { fetchCopipe } from "@/db/server/copipes"
+import Comment from "@/modules/comment"
+import { CopipeCardItem } from "@/modules/copipeCardItem"
+import { Container, VStack } from "@yamada-ui/react"
+import ArchivesPagination from "./archivesPagination"
 import { checkBeforeAndAfterPage } from "./utils"
 
 export const revalidate = 3600

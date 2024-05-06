@@ -1,4 +1,4 @@
-import { ComponentStyle } from "@yamada-ui/react";
+import { ComponentStyle } from "@yamada-ui/react"
 
 export const Container: ComponentStyle = {
   baseStyle: {
@@ -10,4 +10,4 @@ export const Container: ComponentStyle = {
     p: { base: "lg", sm: "md" },
     rounded: "xl",
   },
-};
+}

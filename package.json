@@ -7,10 +7,16 @@
     "build": "prisma generate && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "next lint",
+    "format": "biome format ./src",
+    "lint": "biome lint ./src",
+    "check": "biome check --apply ./src",
     "postinstall": "prisma generate",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": "biome check --apply-unsafe --no-errors-on-unmatched"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -38,6 +44,7 @@
     "typescript": "^5.3.3"
   },
   "devDependencies": {
+    "@biomejs/biome": "1.7.2",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
@@ -56,6 +63,8 @@
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-storybook": "^0.6.15",
     "eslint-plugin-unused-imports": "^3.1.0",
+    "husky": "^9.0.11",
+    "lint-staged": "^15.2.2",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.1.1",
     "storybook": "^7.6.10",

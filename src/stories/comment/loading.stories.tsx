@@ -1,12 +1,12 @@
-import { UIProvider } from "@yamada-ui/react"
-import { Meta, StoryObj } from '@storybook/react'
-import { theme } from "@/theme"
 import LoadingComment from "@/modules/comment/loading"
+import { theme } from "@/theme"
+import { Meta, StoryObj } from "@storybook/react"
+import { UIProvider } from "@yamada-ui/react"
 
 const meta = {
-  title: 'yamadaui/LoadingComment',
+  title: "yamadaui/LoadingComment",
   component: LoadingComment,
-  tags: ['autodocs'],
+  tags: ["autodocs"],
   decorators: [
     (Story) => {
       return (
@@ -15,7 +15,7 @@ const meta = {
         </UIProvider>
       )
     },
-  ]
+  ],
 } satisfies Meta<typeof LoadingComment>
 
 export default meta

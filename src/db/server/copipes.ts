@@ -1,8 +1,8 @@
+import { unstable_cache } from "next/cache"
+import { notFound } from "next/navigation"
 import { cache } from "react"
 import { prisma } from "../db"
 import { copipeWithTag, copipeWithTagComment } from "../query"
-import { notFound } from "next/navigation"
-import { unstable_cache } from "next/cache"
 
 export const getHomePageCopipe = cache(async () => {
   const [copipes, count] = await prisma.$transaction([

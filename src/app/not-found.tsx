@@ -1,11 +1,11 @@
-import { Center, Heading, Text } from "@yamada-ui/react";
+import { Center, Heading, Text } from "@yamada-ui/react"
 
 export const metadata = {
-    title: 'NotFound'
+  title: "NotFound",
 }
 
 export default function NotFound() {
-    const copipe = `男「妹が404エラー吐いてるんだけど」　妹「404 NOT FOUND」ｹﾞﾛｹﾞﾛ
+  const copipe = `男「妹が404エラー吐いてるんだけど」　妹「404 NOT FOUND」ｹﾞﾛｹﾞﾛ
 
 1 ：以下、名無しにかわりましてVIPがお送りします：2013/11/11(月) 15:47:03.47 ID:jAgHYzwz0
 幼馴染「あー…妹ちゃんファイル消しちゃったんじゃない？」
@@ -321,30 +321,27 @@ export default function NotFound() {
 早まった行動をする前に問い合わせフォームを活用しよう！
 ～　おわり　～`
 
-    return (
-        <>
-            <Heading
-                variant='h1'
-                fontSize="9xl"
-                color='blackAlpha.300'
-                zIndex={-1}
-                sx={{
-                    position: "fixed",
-                    top: "50%",
-                    left: "50%",
-                    transform: "translate(-50%, -50%)",
-                }}
-            >
-                404: Not Found
-            </Heading>
-            <Center>
-                <Text
-                    variant="body1"
-                    whiteSpace='pre-line'
-                >
-                    {copipe}
-                </Text>
-            </Center>
-        </>
-    );
+  return (
+    <>
+      <Heading
+        variant="h1"
+        fontSize="9xl"
+        color="blackAlpha.300"
+        zIndex={-1}
+        sx={{
+          position: "fixed",
+          top: "50%",
+          left: "50%",
+          transform: "translate(-50%, -50%)",
+        }}
+      >
+        404: Not Found
+      </Heading>
+      <Center>
+        <Text variant="body1" whiteSpace="pre-line">
+          {copipe}
+        </Text>
+      </Center>
+    </>
+  )
 }

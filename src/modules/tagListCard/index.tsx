@@ -1,6 +1,6 @@
 import { Suspense } from "react"
-import TagListCard from "./tagListCard"
 import LoadingTagListCard from "./loading"
+import TagListCard from "./tagListCard"
 
 export default function SuspensedTagListCard() {
   return (

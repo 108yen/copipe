@@ -1,9 +1,9 @@
-import getTweet from '@/utils/tweet';
-import { NextResponse } from 'next/server';
+import getTweet from "@/utils/tweet"
+import { NextResponse } from "next/server"
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic"
 
 export async function GET() {
-    const result = await getTweet()
-    return NextResponse.json(result);
+  const result = await getTweet()
+  return NextResponse.json(result)
 }
