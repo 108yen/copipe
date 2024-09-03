@@ -6,6 +6,7 @@ module.exports = {
             { userAgent: '*', allow: '/' },
             { userAgent: '*', disallow: '/postForm' },
             { userAgent: '*', disallow: '/admin' },
+            { userAgent: '*', disallow: '/archives' },
         ],
     },
 };

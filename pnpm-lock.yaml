@@ -13,16 +13,16 @@ importers:
         version: 11.11.4(@types/react@18.3.0)(react@18.3.0)
       '@emotion/server':
         specifier: ^11.11.0
-        version: 11.11.0
+        version: 11.11.0(@emotion/css@11.11.2)
       '@emotion/styled':
         specifier: ^11.11.0
-        version: 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
+        version: 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
       '@mui/icons-material':
         specifier: ^5.15.3
-        version: 5.15.15(@mui/material@5.15.15)(@types/react@18.3.0)(react@18.3.0)
+        version: 5.15.15(@mui/material@5.15.15(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
       '@next/third-parties':
         specifier: ^14.0.5-canary.43
-        version: 14.2.3(next@14.2.3)(react@18.3.0)
+        version: 14.2.3(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react@18.3.0)
       '@prisma/client':
         specifier: ^5.8.1
         version: 5.13.0(prisma@5.13.0)
@@ -37,10 +37,10 @@ importers:
         version: 18.3.0
       '@vercel/analytics':
         specifier: ^1.1.1
-        version: 1.2.2(next@14.2.3)(react@18.3.0)
+        version: 1.2.2(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react@18.3.0)
       '@yamada-ui/react':
-        specifier: ^1.3.5
-        version: 1.3.7(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(framer-motion@11.1.7)(react-dom@18.3.0)(react@18.3.0)
+        specifier: ^1.3.7
+        version: 1.3.7(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(framer-motion@11.1.7(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       axios:
         specifier: ^1.6.5
         version: 1.6.8
@@ -57,11 +57,11 @@ importers:
         specifier: ^2.6.1
         version: 2.8.0(@types/react@18.3.0)(react@18.3.0)
       next:
-        specifier: ^14.2.1
-        version: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0)
+        specifier: ^14.2.3
+        version: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       next-auth:
         specifier: ^4.24.5
-        version: 4.24.7(next@14.2.3)(react-dom@18.3.0)(react@18.3.0)
+        version: 4.24.7(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       prisma:
         specifier: ^5.8.1
         version: 5.13.0
@@ -83,7 +83,7 @@ importers:
         version: 1.7.2
       '@storybook/addon-essentials':
         specifier: ^7.6.10
-        version: 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+        version: 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/addon-interactions':
         specifier: ^7.6.10
         version: 7.6.18
@@ -92,28 +92,28 @@ importers:
         version: 7.6.18(react@18.3.0)
       '@storybook/addon-onboarding':
         specifier: ^1.0.10
-        version: 1.0.11(react-dom@18.3.0)(react@18.3.0)
+        version: 1.0.11(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/blocks':
         specifier: ^7.6.10
-        version: 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+        version: 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/jest':
         specifier: ^0.2.3
         version: 0.2.3
       '@storybook/nextjs':
         specifier: ^7.6.10
-        version: 7.6.18(@swc/core@1.5.0)(esbuild@0.18.20)(next@14.2.3)(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)(webpack@5.91.0)
+        version: 7.6.18(@swc/core@1.5.0(@swc/helpers@0.5.5))(@swc/helpers@0.5.5)(esbuild@0.18.20)(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(type-fest@2.19.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       '@storybook/react':
         specifier: ^7.6.10
-        version: 7.6.18(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)
+        version: 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(typescript@5.4.5)
       '@storybook/test':
         specifier: ^7.6.10
-        version: 7.6.18
+        version: 7.6.18(@types/jest@28.1.3)
       '@storybook/testing-library':
         specifier: ^0.2.2
         version: 0.2.2
       '@storybook/theming':
         specifier: ^7.6.10
-        version: 7.6.18(react-dom@18.3.0)(react@18.3.0)
+        version: 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@types/gtag.js':
         specifier: ^0.0.18
         version: 0.0.18
@@ -122,7 +122,7 @@ importers:
         version: 20.12.7
       '@typescript-eslint/eslint-plugin':
         specifier: ^6.18.0
-        version: 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.5)
+        version: 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
       '@typescript-eslint/parser':
         specifier: ^6.18.0
         version: 6.21.0(eslint@8.57.0)(typescript@5.4.5)
@@ -134,7 +134,7 @@ importers:
         version: 0.6.15(eslint@8.57.0)(typescript@5.4.5)
       eslint-plugin-unused-imports:
         specifier: ^3.1.0
-        version: 3.1.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0)
+        version: 3.1.0(@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -143,7 +143,7 @@ importers:
         version: 15.2.2
       next-sitemap:
         specifier: ^4.2.3
-        version: 4.2.3(next@14.2.3)
+        version: 4.2.3(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))
       prettier:
         specifier: ^3.1.1
         version: 3.2.5
@@ -152,7 +152,7 @@ importers:
         version: 7.6.18
       storybook-dark-mode:
         specifier: ^3.0.3
-        version: 3.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+        version: 3.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
 
 packages:
 
@@ -1910,6 +1910,7 @@ packages:
 
   '@storybook/expect@28.1.3-5':
     resolution: {integrity: sha512-lS1oJnY1qTAxnH87C765NdfvGhksA6hBcbUVI5CHiSbNsEtr456wtg/z+dT9XlPriq1D5t2SgfNL9dBAoIGyIA==}
+    deprecated: In Storybook 8, this package functionality has been integrated to a new package called @storybook/test, which uses Vitest APIs for an improved experience. When upgrading to Storybook 8 with 'npx storybook@latest upgrade', you will get prompted and will get an automigration for the new package. Please migrate when you can.
 
   '@storybook/global@5.0.0':
     resolution: {integrity: sha512-FcOqPAXACP0I3oJ/ws6/rrPT9WGhu915Cg8D02a9YxLo0DE9zI+a9A5gRGvmQ09fiWPukqI8ZAEoQEdWUKMQdQ==}
@@ -7905,9 +7906,10 @@ snapshots:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.3.0)
       '@emotion/utils': 1.2.1
       '@emotion/weak-memoize': 0.3.1
-      '@types/react': 18.3.0
       hoist-non-react-statics: 3.3.2
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@emotion/serialize@1.1.4':
     dependencies:
@@ -7917,16 +7919,18 @@ snapshots:
       '@emotion/utils': 1.2.1
       csstype: 3.1.3
 
-  '@emotion/server@11.11.0':
+  '@emotion/server@11.11.0(@emotion/css@11.11.2)':
     dependencies:
       '@emotion/utils': 1.2.1
       html-tokenize: 2.0.1
       multipipe: 1.0.2
       through: 2.3.8
+    optionalDependencies:
+      '@emotion/css': 11.11.2
 
   '@emotion/sheet@1.2.2': {}
 
-  '@emotion/styled@11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)':
+  '@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@emotion/babel-plugin': 11.11.0
@@ -7935,8 +7939,9 @@ snapshots:
       '@emotion/serialize': 1.1.4
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.3.0)
       '@emotion/utils': 1.2.1
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@emotion/unitless@0.8.1': {}
 
@@ -8048,7 +8053,7 @@ snapshots:
       '@floating-ui/core': 1.6.0
       '@floating-ui/utils': 0.2.1
 
-  '@floating-ui/react-dom@2.0.8(react-dom@18.3.0)(react@18.3.0)':
+  '@floating-ui/react-dom@2.0.8(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@floating-ui/dom': 1.6.3
       react: 18.3.0
@@ -8162,39 +8167,38 @@ snapshots:
       '@types/react': 18.3.0
       react: 18.3.0
 
-  '@mui/base@5.0.0-beta.40(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@mui/base@5.0.0-beta.40(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@floating-ui/react-dom': 2.0.8(react-dom@18.3.0)(react@18.3.0)
+      '@floating-ui/react-dom': 2.0.8(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@mui/types': 7.2.14(@types/react@18.3.0)
       '@mui/utils': 5.15.14(@types/react@18.3.0)(react@18.3.0)
       '@popperjs/core': 2.11.8
-      '@types/react': 18.3.0
       clsx: 2.1.1
       prop-types: 15.8.1
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@mui/core-downloads-tracker@5.15.15': {}
 
-  '@mui/icons-material@5.15.15(@mui/material@5.15.15)(@types/react@18.3.0)(react@18.3.0)':
+  '@mui/icons-material@5.15.15(@mui/material@5.15.15(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@mui/material': 5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
+      '@mui/material': 5.15.15(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@mui/material@5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@mui/material@5.15.15(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
-      '@emotion/styled': 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
-      '@mui/base': 5.0.0-beta.40(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@mui/base': 5.0.0-beta.40(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@mui/core-downloads-tracker': 5.15.15
-      '@mui/system': 5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react@18.3.0)
+      '@mui/system': 5.15.15(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
       '@mui/types': 7.2.14(@types/react@18.3.0)
       '@mui/utils': 5.15.14(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       '@types/react-transition-group': 4.4.10
       clsx: 2.1.1
       csstype: 3.1.3
@@ -8202,53 +8206,61 @@ snapshots:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
       react-is: 18.3.0
-      react-transition-group: 4.4.5(react-dom@18.3.0)(react@18.3.0)
+      react-transition-group: 4.4.5(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+    optionalDependencies:
+      '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
+      '@types/react': 18.3.0
 
   '@mui/private-theming@5.15.14(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@mui/utils': 5.15.14(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       prop-types: 15.8.1
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@mui/styled-engine@5.15.14(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(react@18.3.0)':
+  '@mui/styled-engine@5.15.14(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@emotion/cache': 11.11.0
-      '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
-      '@emotion/styled': 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
       csstype: 3.1.3
       prop-types: 15.8.1
       react: 18.3.0
+    optionalDependencies:
+      '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
 
-  '@mui/system@5.15.15(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react@18.3.0)':
+  '@mui/system@5.15.15(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
-      '@emotion/styled': 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
       '@mui/private-theming': 5.15.14(@types/react@18.3.0)(react@18.3.0)
-      '@mui/styled-engine': 5.15.14(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(react@18.3.0)
+      '@mui/styled-engine': 5.15.14(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(react@18.3.0)
       '@mui/types': 7.2.14(@types/react@18.3.0)
       '@mui/utils': 5.15.14(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       clsx: 2.1.1
       csstype: 3.1.3
       prop-types: 15.8.1
       react: 18.3.0
+    optionalDependencies:
+      '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
+      '@types/react': 18.3.0
 
   '@mui/types@7.2.14(@types/react@18.3.0)':
-    dependencies:
+    optionalDependencies:
       '@types/react': 18.3.0
 
   '@mui/utils@5.15.14(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@types/prop-types': 15.7.12
-      '@types/react': 18.3.0
       prop-types: 15.8.1
       react: 18.3.0
       react-is: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@ndelangen/get-tarball@3.0.9':
     dependencies:
@@ -8291,9 +8303,9 @@ snapshots:
   '@next/swc-win32-x64-msvc@14.2.3':
     optional: true
 
-  '@next/third-parties@14.2.3(next@14.2.3)(react@18.3.0)':
+  '@next/third-parties@14.2.3(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react@18.3.0)':
     dependencies:
-      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0)
+      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       third-party-capital: 1.0.20
 
@@ -8314,7 +8326,7 @@ snapshots:
   '@pkgjs/parseargs@0.11.0':
     optional: true
 
-  '@pmmmwh/react-refresh-webpack-plugin@0.5.11(react-refresh@0.14.1)(webpack@5.91.0)':
+  '@pmmmwh/react-refresh-webpack-plugin@0.5.11(react-refresh@0.14.1)(type-fest@2.19.0)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))':
     dependencies:
       ansi-html-community: 0.0.8
       common-path-prefix: 3.0.0
@@ -8326,12 +8338,15 @@ snapshots:
       react-refresh: 0.14.1
       schema-utils: 3.3.0
       source-map: 0.7.4
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
+    optionalDependencies:
+      type-fest: 2.19.0
+      webpack-hot-middleware: 2.26.1
 
   '@popperjs/core@2.11.8': {}
 
   '@prisma/client@5.13.0(prisma@5.13.0)':
-    dependencies:
+    optionalDependencies:
       prisma: 5.13.0
 
   '@prisma/debug@5.13.0': {}
@@ -8363,275 +8378,302 @@ snapshots:
     dependencies:
       '@babel/runtime': 7.24.4
 
-  '@radix-ui/react-arrow@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-arrow@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-collection@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-collection@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-slot': 1.0.2(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-context@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-direction@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@radix-ui/react-dismissable-layer@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-dismissable-layer@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-escape-keydown': 1.0.3(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
   '@radix-ui/react-focus-guards@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@radix-ui/react-focus-scope@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-focus-scope@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
   '@radix-ui/react-id@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@radix-ui/react-popper@1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-popper@1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@floating-ui/react-dom': 2.0.8(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-arrow': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@floating-ui/react-dom': 2.0.8(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-arrow': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-rect': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-size': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/rect': 1.0.1
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-portal@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-portal@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-primitive@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-primitive@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-slot': 1.0.2(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-roving-focus@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-roving-focus@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/primitive': 1.0.1
-      '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-direction': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-id': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-select@1.2.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-select@1.2.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/number': 1.0.1
       '@radix-ui/primitive': 1.0.1
-      '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-collection': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-direction': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-dismissable-layer': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-dismissable-layer': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-focus-guards': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-focus-scope': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-focus-scope': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-id': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-popper': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-portal': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-popper': 1.1.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-portal': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-slot': 1.0.2(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-use-previous': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-visually-hidden': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
+      '@radix-ui/react-visually-hidden': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       aria-hidden: 1.2.4
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
       react-remove-scroll: 2.5.5(@types/react@18.3.0)(react@18.3.0)
-
-  '@radix-ui/react-separator@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
-    dependencies:
-      '@babel/runtime': 7.24.4
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+    optionalDependencies:
       '@types/react': 18.3.0
       '@types/react-dom': 18.3.0
+
+  '@radix-ui/react-separator@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
+    dependencies:
+      '@babel/runtime': 7.24.4
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
   '@radix-ui/react-slot@1.0.2(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@radix-ui/react-toggle-group@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-toggle-group@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-direction': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-roving-focus': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-toggle': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-roving-focus': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-toggle': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-toggle@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-toggle@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/primitive': 1.0.1
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@radix-ui/react-use-controllable-state': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
-  '@radix-ui/react-toolbar@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-toolbar@1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/primitive': 1.0.1
       '@radix-ui/react-context': 1.0.1(@types/react@18.3.0)(react@18.3.0)
       '@radix-ui/react-direction': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-roving-focus': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-separator': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-toggle-group': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-roving-focus': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-separator': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-toggle-group': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
   '@radix-ui/react-use-callback-ref@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-use-controllable-state@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-use-escape-keydown@1.0.3(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-use-callback-ref': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-use-layout-effect@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-use-previous@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-use-rect@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/rect': 1.0.1
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   '@radix-ui/react-use-size@1.0.1(@types/react@18.3.0)(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
       '@radix-ui/react-use-layout-effect': 1.0.1(@types/react@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
       react: 18.3.0
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  '@radix-ui/react-visually-hidden@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@radix-ui/react-visually-hidden@1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@babel/runtime': 7.24.4
-      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@types/react': 18.3.0
-      '@types/react-dom': 18.3.0
+      '@radix-ui/react-primitive': 1.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
+      '@types/react-dom': 18.3.0
 
   '@radix-ui/rect@1.0.1':
     dependencies:
@@ -8658,9 +8700,9 @@ snapshots:
       memoizerific: 1.11.3
       ts-dedent: 2.2.0
 
-  '@storybook/addon-controls@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/addon-controls@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@storybook/blocks': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/blocks': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       lodash: 4.17.21
       ts-dedent: 2.2.0
     transitivePeerDependencies:
@@ -8671,13 +8713,13 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@storybook/addon-docs@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/addon-docs@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@jest/transform': 29.7.0
       '@mdx-js/react': 2.3.0(react@18.3.0)
-      '@storybook/blocks': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/blocks': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/client-logger': 7.6.18
-      '@storybook/components': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/components': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/csf-plugin': 7.6.18
       '@storybook/csf-tools': 7.6.18
       '@storybook/global': 5.0.0
@@ -8685,8 +8727,8 @@ snapshots:
       '@storybook/node-logger': 7.6.18
       '@storybook/postinstall': 7.6.18
       '@storybook/preview-api': 7.6.18
-      '@storybook/react-dom-shim': 7.6.18(react-dom@18.3.0)(react@18.3.0)
-      '@storybook/theming': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/react-dom-shim': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@storybook/theming': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/types': 7.6.18
       fs-extra: 11.2.0
       react: 18.3.0
@@ -8700,19 +8742,19 @@ snapshots:
       - encoding
       - supports-color
 
-  '@storybook/addon-essentials@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/addon-essentials@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@storybook/addon-actions': 7.6.18
       '@storybook/addon-backgrounds': 7.6.18
-      '@storybook/addon-controls': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@storybook/addon-docs': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/addon-controls': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@storybook/addon-docs': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/addon-highlight': 7.6.18
       '@storybook/addon-measure': 7.6.18
       '@storybook/addon-outline': 7.6.18
       '@storybook/addon-toolbars': 7.6.18
       '@storybook/addon-viewport': 7.6.18
       '@storybook/core-common': 7.6.18
-      '@storybook/manager-api': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/manager-api': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/node-logger': 7.6.18
       '@storybook/preview-api': 7.6.18
       react: 18.3.0
@@ -8740,15 +8782,16 @@ snapshots:
     dependencies:
       '@storybook/csf': 0.1.5
       '@storybook/global': 5.0.0
-      react: 18.3.0
       ts-dedent: 2.2.0
+    optionalDependencies:
+      react: 18.3.0
 
   '@storybook/addon-measure@7.6.18':
     dependencies:
       '@storybook/global': 5.0.0
       tiny-invariant: 1.3.3
 
-  '@storybook/addon-onboarding@1.0.11(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/addon-onboarding@1.0.11(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@storybook/telemetry': 7.6.18
       react: 18.3.0
@@ -8769,27 +8812,27 @@ snapshots:
     dependencies:
       memoizerific: 1.11.3
 
-  '@storybook/addons@7.6.17(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/addons@7.6.17(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@storybook/manager-api': 7.6.17(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/manager-api': 7.6.17(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/preview-api': 7.6.17
       '@storybook/types': 7.6.17
     transitivePeerDependencies:
       - react
       - react-dom
 
-  '@storybook/blocks@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/blocks@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@storybook/channels': 7.6.18
       '@storybook/client-logger': 7.6.18
-      '@storybook/components': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/components': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/core-events': 7.6.18
       '@storybook/csf': 0.1.5
       '@storybook/docs-tools': 7.6.18
       '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/manager-api': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/preview-api': 7.6.18
-      '@storybook/theming': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/theming': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/types': 7.6.18
       '@types/lodash': 4.17.0
       color-convert: 2.0.1
@@ -8799,7 +8842,7 @@ snapshots:
       memoizerific: 1.11.3
       polished: 4.3.1
       react: 18.3.0
-      react-colorful: 5.6.1(react-dom@18.3.0)(react@18.3.0)
+      react-colorful: 5.6.1(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react-dom: 18.3.0(react@18.3.0)
       telejson: 7.2.0
       tocbot: 4.27.13
@@ -8833,7 +8876,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@storybook/builder-webpack5@7.6.18(esbuild@0.18.20)(typescript@5.4.5)':
+  '@storybook/builder-webpack5@7.6.18(@swc/helpers@0.5.5)(esbuild@0.18.20)(typescript@5.4.5)':
     dependencies:
       '@babel/core': 7.24.4
       '@storybook/channels': 7.6.18
@@ -8844,36 +8887,37 @@ snapshots:
       '@storybook/node-logger': 7.6.18
       '@storybook/preview': 7.6.18
       '@storybook/preview-api': 7.6.18
-      '@swc/core': 1.5.0
+      '@swc/core': 1.5.0(@swc/helpers@0.5.5)
       '@types/node': 18.19.31
       '@types/semver': 7.5.8
-      babel-loader: 9.1.3(@babel/core@7.24.4)(webpack@5.91.0)
+      babel-loader: 9.1.3(@babel/core@7.24.4)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       browser-assert: 1.2.1
       case-sensitive-paths-webpack-plugin: 2.4.0
       cjs-module-lexer: 1.2.3
       constants-browserify: 1.0.0
-      css-loader: 6.11.0(webpack@5.91.0)
+      css-loader: 6.11.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       es-module-lexer: 1.5.0
       express: 4.19.2
-      fork-ts-checker-webpack-plugin: 8.0.0(typescript@5.4.5)(webpack@5.91.0)
+      fork-ts-checker-webpack-plugin: 8.0.0(typescript@5.4.5)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       fs-extra: 11.2.0
-      html-webpack-plugin: 5.6.0(webpack@5.91.0)
+      html-webpack-plugin: 5.6.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       magic-string: 0.30.10
       path-browserify: 1.0.1
       process: 0.11.10
       semver: 7.6.0
-      style-loader: 3.3.4(webpack@5.91.0)
-      swc-loader: 0.2.6(@swc/core@1.5.0)(webpack@5.91.0)
-      terser-webpack-plugin: 5.3.10(@swc/core@1.5.0)(esbuild@0.18.20)(webpack@5.91.0)
+      style-loader: 3.3.4(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
+      swc-loader: 0.2.6(@swc/core@1.5.0(@swc/helpers@0.5.5))(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
+      terser-webpack-plugin: 5.3.10(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       ts-dedent: 2.2.0
-      typescript: 5.4.5
       url: 0.11.3
       util: 0.12.5
       util-deprecate: 1.0.2
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
-      webpack-dev-middleware: 6.1.3(webpack@5.91.0)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
+      webpack-dev-middleware: 6.1.3(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       webpack-hot-middleware: 2.26.1
       webpack-virtual-modules: 0.5.0
+    optionalDependencies:
+      typescript: 5.4.5
     transitivePeerDependencies:
       - '@rspack/core'
       - '@swc/helpers'
@@ -8931,7 +8975,7 @@ snapshots:
       get-port: 5.1.1
       giget: 1.2.3
       globby: 11.1.0
-      jscodeshift: 0.15.2(@babel/preset-env@7.24.4)
+      jscodeshift: 0.15.2(@babel/preset-env@7.24.4(@babel/core@7.24.4))
       leven: 3.1.0
       ora: 5.4.1
       prettier: 2.8.8
@@ -8969,26 +9013,26 @@ snapshots:
       '@types/cross-spawn': 6.0.6
       cross-spawn: 7.0.3
       globby: 11.1.0
-      jscodeshift: 0.15.2(@babel/preset-env@7.24.4)
+      jscodeshift: 0.15.2(@babel/preset-env@7.24.4(@babel/core@7.24.4))
       lodash: 4.17.21
       prettier: 2.8.8
       recast: 0.23.6
     transitivePeerDependencies:
       - supports-color
 
-  '@storybook/components@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/components@7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@radix-ui/react-select': 1.2.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@radix-ui/react-toolbar': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@radix-ui/react-select': 1.2.2(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@radix-ui/react-toolbar': 1.0.4(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/client-logger': 7.6.18
       '@storybook/csf': 0.1.5
       '@storybook/global': 5.0.0
-      '@storybook/theming': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/theming': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/types': 7.6.18
       memoizerific: 1.11.3
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
-      use-resize-observer: 9.1.0(react-dom@18.3.0)(react@18.3.0)
+      use-resize-observer: 9.1.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       util-deprecate: 1.0.2
     transitivePeerDependencies:
       - '@types/react'
@@ -9168,7 +9212,7 @@ snapshots:
       - jest
       - vitest
 
-  '@storybook/manager-api@7.6.17(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/manager-api@7.6.17(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@storybook/channels': 7.6.17
       '@storybook/client-logger': 7.6.17
@@ -9176,7 +9220,7 @@ snapshots:
       '@storybook/csf': 0.1.5
       '@storybook/global': 5.0.0
       '@storybook/router': 7.6.17
-      '@storybook/theming': 7.6.17(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/theming': 7.6.17(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/types': 7.6.17
       dequal: 2.0.3
       lodash: 4.17.21
@@ -9188,7 +9232,7 @@ snapshots:
       - react
       - react-dom
 
-  '@storybook/manager-api@7.6.18(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/manager-api@7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@storybook/channels': 7.6.18
       '@storybook/client-logger': 7.6.18
@@ -9196,7 +9240,7 @@ snapshots:
       '@storybook/csf': 0.1.5
       '@storybook/global': 5.0.0
       '@storybook/router': 7.6.18
-      '@storybook/theming': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/theming': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/types': 7.6.18
       dequal: 2.0.3
       lodash: 4.17.21
@@ -9212,7 +9256,7 @@ snapshots:
 
   '@storybook/mdx2-csf@1.1.0': {}
 
-  '@storybook/nextjs@7.6.18(@swc/core@1.5.0)(esbuild@0.18.20)(next@14.2.3)(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)(webpack@5.91.0)':
+  '@storybook/nextjs@7.6.18(@swc/core@1.5.0(@swc/helpers@0.5.5))(@swc/helpers@0.5.5)(esbuild@0.18.20)(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(type-fest@2.19.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))':
     dependencies:
       '@babel/core': 7.24.4
       '@babel/plugin-syntax-bigint': 7.8.3(@babel/core@7.24.4)
@@ -9228,38 +9272,39 @@ snapshots:
       '@babel/preset-typescript': 7.24.1(@babel/core@7.24.4)
       '@babel/runtime': 7.24.4
       '@storybook/addon-actions': 7.6.18
-      '@storybook/builder-webpack5': 7.6.18(esbuild@0.18.20)(typescript@5.4.5)
+      '@storybook/builder-webpack5': 7.6.18(@swc/helpers@0.5.5)(esbuild@0.18.20)(typescript@5.4.5)
       '@storybook/core-common': 7.6.18
       '@storybook/core-events': 7.6.18
       '@storybook/node-logger': 7.6.18
-      '@storybook/preset-react-webpack': 7.6.18(@babel/core@7.24.4)(@swc/core@1.5.0)(esbuild@0.18.20)(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)
+      '@storybook/preset-react-webpack': 7.6.18(@babel/core@7.24.4)(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(type-fest@2.19.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)
       '@storybook/preview-api': 7.6.18
-      '@storybook/react': 7.6.18(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)
+      '@storybook/react': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(typescript@5.4.5)
       '@types/node': 18.19.31
       '@types/semver': 7.5.8
-      css-loader: 6.11.0(webpack@5.91.0)
+      css-loader: 6.11.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       find-up: 5.0.0
       fs-extra: 11.2.0
       image-size: 1.1.1
       loader-utils: 3.2.1
-      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0)
-      node-polyfill-webpack-plugin: 2.0.1(webpack@5.91.0)
+      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      node-polyfill-webpack-plugin: 2.0.1(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       pnp-webpack-plugin: 1.7.0(typescript@5.4.5)
       postcss: 8.4.38
-      postcss-loader: 7.3.4(postcss@8.4.38)(typescript@5.4.5)(webpack@5.91.0)
+      postcss-loader: 7.3.4(postcss@8.4.38)(typescript@5.4.5)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
       resolve-url-loader: 5.0.0
-      sass-loader: 12.6.0(webpack@5.91.0)
+      sass-loader: 12.6.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       semver: 7.6.0
       sharp: 0.32.6
-      style-loader: 3.3.4(webpack@5.91.0)
+      style-loader: 3.3.4(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       styled-jsx: 5.1.1(@babel/core@7.24.4)(react@18.3.0)
       ts-dedent: 2.2.0
       tsconfig-paths: 4.2.0
       tsconfig-paths-webpack-plugin: 4.1.0
+    optionalDependencies:
       typescript: 5.4.5
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@swc/core'
@@ -9285,17 +9330,16 @@ snapshots:
 
   '@storybook/postinstall@7.6.18': {}
 
-  '@storybook/preset-react-webpack@7.6.18(@babel/core@7.24.4)(@swc/core@1.5.0)(esbuild@0.18.20)(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)':
+  '@storybook/preset-react-webpack@7.6.18(@babel/core@7.24.4)(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(type-fest@2.19.0)(typescript@5.4.5)(webpack-hot-middleware@2.26.1)':
     dependencies:
-      '@babel/core': 7.24.4
       '@babel/preset-flow': 7.24.1(@babel/core@7.24.4)
       '@babel/preset-react': 7.24.1(@babel/core@7.24.4)
-      '@pmmmwh/react-refresh-webpack-plugin': 0.5.11(react-refresh@0.14.1)(webpack@5.91.0)
+      '@pmmmwh/react-refresh-webpack-plugin': 0.5.11(react-refresh@0.14.1)(type-fest@2.19.0)(webpack-hot-middleware@2.26.1)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       '@storybook/core-webpack': 7.6.18
       '@storybook/docs-tools': 7.6.18
       '@storybook/node-logger': 7.6.18
-      '@storybook/react': 7.6.18(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)
-      '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@5.4.5)(webpack@5.91.0)
+      '@storybook/react': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(typescript@5.4.5)
+      '@storybook/react-docgen-typescript-plugin': 1.0.6--canary.9.0c3f3b7.0(typescript@5.4.5)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       '@types/node': 18.19.31
       '@types/semver': 7.5.8
       babel-plugin-add-react-displayname: 0.0.5
@@ -9306,8 +9350,10 @@ snapshots:
       react-dom: 18.3.0(react@18.3.0)
       react-refresh: 0.14.1
       semver: 7.6.0
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
+    optionalDependencies:
+      '@babel/core': 7.24.4
       typescript: 5.4.5
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
     transitivePeerDependencies:
       - '@swc/core'
       - '@types/webpack'
@@ -9358,7 +9404,7 @@ snapshots:
 
   '@storybook/preview@7.6.18': {}
 
-  '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.4.5)(webpack@5.91.0)':
+  '@storybook/react-docgen-typescript-plugin@1.0.6--canary.9.0c3f3b7.0(typescript@5.4.5)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))':
     dependencies:
       debug: 4.3.4
       endent: 2.1.0
@@ -9368,23 +9414,23 @@ snapshots:
       react-docgen-typescript: 2.2.2(typescript@5.4.5)
       tslib: 2.6.2
       typescript: 5.4.5
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
     transitivePeerDependencies:
       - supports-color
 
-  '@storybook/react-dom-shim@7.6.18(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/react-dom-shim@7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
 
-  '@storybook/react@7.6.18(react-dom@18.3.0)(react@18.3.0)(typescript@5.4.5)':
+  '@storybook/react@7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)(typescript@5.4.5)':
     dependencies:
       '@storybook/client-logger': 7.6.18
       '@storybook/core-client': 7.6.18
       '@storybook/docs-tools': 7.6.18
       '@storybook/global': 5.0.0
       '@storybook/preview-api': 7.6.18
-      '@storybook/react-dom-shim': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/react-dom-shim': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/types': 7.6.18
       '@types/escodegen': 0.0.6
       '@types/estree': 0.0.51
@@ -9398,11 +9444,12 @@ snapshots:
       prop-types: 15.8.1
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
-      react-element-to-jsx-string: 15.0.0(react-dom@18.3.0)(react@18.3.0)
+      react-element-to-jsx-string: 15.0.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       ts-dedent: 2.2.0
       type-fest: 2.19.0
-      typescript: 5.4.5
       util-deprecate: 1.0.2
+    optionalDependencies:
+      typescript: 5.4.5
     transitivePeerDependencies:
       - encoding
       - supports-color
@@ -9433,7 +9480,7 @@ snapshots:
       - encoding
       - supports-color
 
-  '@storybook/test@7.6.18':
+  '@storybook/test@7.6.18(@types/jest@28.1.3)':
     dependencies:
       '@storybook/client-logger': 7.6.18
       '@storybook/core-events': 7.6.18
@@ -9460,7 +9507,7 @@ snapshots:
       '@testing-library/user-event': 14.5.2(@testing-library/dom@9.3.4)
       ts-dedent: 2.2.0
 
-  '@storybook/theming@7.6.17(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/theming@7.6.17(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.3.0)
       '@storybook/client-logger': 7.6.17
@@ -9469,7 +9516,7 @@ snapshots:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
 
-  '@storybook/theming@7.6.18(react-dom@18.3.0)(react@18.3.0)':
+  '@storybook/theming@7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@emotion/use-insertion-effect-with-fallbacks': 1.0.1(react@18.3.0)
       '@storybook/client-logger': 7.6.18
@@ -9564,7 +9611,7 @@ snapshots:
   '@swc/core-win32-x64-msvc@1.5.0':
     optional: true
 
-  '@swc/core@1.5.0':
+  '@swc/core@1.5.0(@swc/helpers@0.5.5)':
     dependencies:
       '@swc/counter': 0.1.3
       '@swc/types': 0.1.6
@@ -9579,6 +9626,7 @@ snapshots:
       '@swc/core-win32-arm64-msvc': 1.5.0
       '@swc/core-win32-ia32-msvc': 1.5.0
       '@swc/core-win32-x64-msvc': 1.5.0
+      '@swc/helpers': 0.5.5
 
   '@swc/counter@0.1.3': {}
 
@@ -9606,13 +9654,14 @@ snapshots:
     dependencies:
       '@adobe/css-tools': 4.3.3
       '@babel/runtime': 7.24.4
-      '@types/jest': 28.1.3
       aria-query: 5.3.0
       chalk: 3.0.0
       css.escape: 1.5.1
       dom-accessibility-api: 0.6.3
       lodash: 4.17.21
       redent: 3.0.0
+    optionalDependencies:
+      '@types/jest': 28.1.3
 
   '@testing-library/user-event@14.3.0(@testing-library/dom@9.3.4)':
     dependencies:
@@ -9812,7 +9861,7 @@ snapshots:
     dependencies:
       '@types/yargs-parser': 21.0.3
 
-  '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.5)':
+  '@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)':
     dependencies:
       '@eslint-community/regexpp': 4.10.0
       '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
@@ -9827,6 +9876,7 @@ snapshots:
       natural-compare: 1.4.0
       semver: 7.6.0
       ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -9839,6 +9889,7 @@ snapshots:
       '@typescript-eslint/visitor-keys': 6.21.0
       debug: 4.3.4
       eslint: 8.57.0
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -9860,6 +9911,7 @@ snapshots:
       debug: 4.3.4
       eslint: 8.57.0
       ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -9877,6 +9929,7 @@ snapshots:
       is-glob: 4.0.3
       semver: 7.6.0
       tsutils: 3.21.0(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -9891,6 +9944,7 @@ snapshots:
       minimatch: 9.0.3
       semver: 7.6.0
       ts-api-utils: 1.3.0(typescript@5.4.5)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - supports-color
@@ -9936,11 +9990,12 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/analytics@1.2.2(next@14.2.3)(react@18.3.0)':
+  '@vercel/analytics@1.2.2(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react@18.3.0)':
     dependencies:
-      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0)
-      react: 18.3.0
       server-only: 0.0.1
+    optionalDependencies:
+      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      react: 18.3.0
 
   '@vitest/expect@0.34.7':
     dependencies:
@@ -10038,12 +10093,12 @@ snapshots:
 
   '@xtuc/long@4.2.2': {}
 
-  '@yamada-ui/accordion@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/accordion@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10052,25 +10107,25 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/alert@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/alert@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/autocomplete@1.1.10(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/autocomplete@1.1.10(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-clickable': 1.2.0(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
@@ -10082,62 +10137,62 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/avatar@1.1.22(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/avatar@1.1.22(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/image': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/image': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/badge@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/badge@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/breadcrumb@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/breadcrumb@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/button@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/button@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/card@1.0.25(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/card@1.0.25(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/checkbox@1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/checkbox@1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/layouts': 1.1.20(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/layouts': 1.1.20(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-focus-visible': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10146,26 +10201,26 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/close-button@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/close-button@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/color-picker@1.2.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/color-picker@1.2.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-disclosure': 1.0.12(react@18.3.0)
       '@yamada-ui/use-eye-dropper': 1.0.9(react@18.3.0)
@@ -10179,13 +10234,13 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/core@1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/core@1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@emotion/css': 11.11.2
       '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
       '@emotion/sheet': 1.2.2
-      '@emotion/styled': 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       csstype: 3.1.3
       react: 18.3.0
@@ -10194,10 +10249,10 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/editable@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/editable@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-focus': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10206,21 +10261,21 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/file-button@1.0.28(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/file-button@1.0.28(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/file-input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/file-input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10236,58 +10291,58 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
-  '@yamada-ui/form-control@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/form-control@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/highlight@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/highlight@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/typography': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/typography': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/icon@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/icon@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/image@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/image@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/indicator@1.1.22(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/indicator@1.1.22(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/infinite-scroll-area@1.0.7(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/infinite-scroll-area@1.0.7(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-infinite-scroll': 1.0.5(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10295,61 +10350,61 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/file-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/file-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/kbd@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/kbd@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/layouts@1.1.20(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/layouts@1.1.20(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/link@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/link@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/list@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/list@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/loading@1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/loading@1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-timeout': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10358,13 +10413,13 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/menu@1.1.1(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/menu@1.1.1(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-clickable': 1.2.0(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
@@ -10375,16 +10430,16 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/modal@1.2.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/modal@1.2.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/focus-lock': 1.0.13(@types/react@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
       react-remove-scroll: 2.5.9(@types/react@18.3.0)(react@18.3.0)
@@ -10392,43 +10447,43 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/motion@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/motion@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
-      framer-motion: 9.1.7(react-dom@18.3.0)(react@18.3.0)
+      framer-motion: 9.1.7(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/native-select@1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/native-select@1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/utils': 1.1.3(react@18.3.0)
-      react: 18.3.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-
-  '@yamada-ui/native-table@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
-    dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/notice@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/native-table@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/alert': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/utils': 1.1.3(react@18.3.0)
+      react: 18.3.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+
+  '@yamada-ui/notice@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
+    dependencies:
+      '@yamada-ui/alert': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-timeout': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10436,11 +10491,11 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/number-input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/number-input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-counter': 1.0.12(react@18.3.0)
       '@yamada-ui/use-event-listener': 1.0.12(react@18.3.0)
       '@yamada-ui/use-interval': 1.0.12(react@18.3.0)
@@ -10450,23 +10505,23 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/pagination@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/pagination@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/pin-input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/pin-input@1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10475,60 +10530,60 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/popover@1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/popover@1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-disclosure': 1.0.12(react@18.3.0)
       '@yamada-ui/use-focus': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-popper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-popper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/portal@1.0.13(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/portal@1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
 
-  '@yamada-ui/progress@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/progress@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/providers@1.0.29(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/providers@1.0.29(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
-      '@emotion/styled': 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/notice': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/theme': 1.6.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/notice': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/theme': 1.6.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@yamada-ui/radio@1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/radio@1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/layouts': 1.1.20(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/layouts': 1.1.20(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-focus-visible': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10537,12 +10592,12 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/rating@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/rating@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-focus-visible': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10551,77 +10606,77 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/react@1.3.7(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(framer-motion@11.1.7)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/react@1.3.7(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(framer-motion@11.1.7(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@emotion/react': 11.11.4(@types/react@18.3.0)(react@18.3.0)
-      '@emotion/styled': 11.11.5(@emotion/react@11.11.4)(@types/react@18.3.0)(react@18.3.0)
-      '@yamada-ui/accordion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/alert': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/autocomplete': 1.1.10(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/avatar': 1.1.22(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/badge': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/breadcrumb': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/card': 1.0.25(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/checkbox': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/color-picker': 1.2.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/editable': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/file-button': 1.0.28(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/file-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@emotion/styled': 11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0)
+      '@yamada-ui/accordion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/alert': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/autocomplete': 1.1.10(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/avatar': 1.1.22(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/badge': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/breadcrumb': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/button': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/card': 1.0.25(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/checkbox': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/color-picker': 1.2.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/editable': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/file-button': 1.0.28(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/file-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/focus-lock': 1.0.13(@types/react@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/highlight': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/image': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/indicator': 1.1.22(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/infinite-scroll-area': 1.0.7(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/kbd': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/layouts': 1.1.20(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/link': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/list': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/menu': 1.1.1(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/modal': 1.2.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/native-select': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/native-table': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/notice': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/number-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/pagination': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/pin-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/progress': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/providers': 1.0.29(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/radio': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/rating': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/reorder': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/resizable': 1.0.16(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/scroll-area': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/segmented-control': 1.0.25(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/select': 1.2.9(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/skeleton': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/slider': 1.0.28(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/snacks': 1.0.16(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/stat': 1.0.21(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/stepper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/switch': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/tabs': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/tag': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/textarea': 1.1.13(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/theme': 1.6.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/theme-tools': 1.0.28(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/toggle': 1.0.7(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/tooltip': 1.0.25(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/typography': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/highlight': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/image': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/indicator': 1.1.22(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/infinite-scroll-area': 1.0.7(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/kbd': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/layouts': 1.1.20(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/link': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/list': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/loading': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/menu': 1.1.1(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/modal': 1.2.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/native-select': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/native-table': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/notice': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/number-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/pagination': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/pin-input': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/progress': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/providers': 1.0.29(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/radio': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/rating': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/reorder': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/resizable': 1.0.16(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/scroll-area': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/segmented-control': 1.0.25(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/select': 1.2.9(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/skeleton': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/slider': 1.0.28(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/snacks': 1.0.16(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/stat': 1.0.21(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/stepper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/switch': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/tabs': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/tag': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/textarea': 1.1.13(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/theme': 1.6.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/theme-tools': 1.0.28(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/toggle': 1.0.7(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/tooltip': 1.0.25(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/typography': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-boolean': 1.0.1(react@18.3.0)
-      '@yamada-ui/use-breakpoint': 1.2.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-breakpoint': 1.2.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-clickable': 1.2.0(react@18.3.0)
       '@yamada-ui/use-clipboard': 1.0.12(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
@@ -10638,70 +10693,70 @@ snapshots:
       '@yamada-ui/use-interval': 1.0.12(react@18.3.0)
       '@yamada-ui/use-latest-ref': 1.0.1(react@18.3.0)
       '@yamada-ui/use-local-storage': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-media-query': 1.0.29(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-media-query': 1.0.29(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-os': 1.0.12(react@18.3.0)
       '@yamada-ui/use-outside-click': 1.0.12(react@18.3.0)
       '@yamada-ui/use-pan-event': 1.0.13(react@18.3.0)
-      '@yamada-ui/use-popper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-popper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-previous': 1.0.12(react@18.3.0)
       '@yamada-ui/use-resize-observer': 1.0.12(react@18.3.0)
       '@yamada-ui/use-size': 1.0.12(react@18.3.0)
       '@yamada-ui/use-timeout': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-window-event': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
-      framer-motion: 11.1.7(react-dom@18.3.0)(react@18.3.0)
+      framer-motion: 11.1.7(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@yamada-ui/reorder@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/reorder@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/resizable@1.0.16(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/resizable@1.0.16(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
-      react-resizable-panels: 2.0.18(react-dom@18.3.0)(react@18.3.0)
+      react-resizable-panels: 2.0.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/ripple@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/ripple@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/utils': 1.1.3(react@18.3.0)
-      react: 18.3.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-
-  '@yamada-ui/scroll-area@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
-    dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/segmented-control@1.0.25(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/scroll-area@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/utils': 1.1.3(react@18.3.0)
+      react: 18.3.0
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+
+  '@yamada-ui/segmented-control@1.0.25(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
+    dependencies:
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
       '@yamada-ui/use-focus-visible': 1.0.12(react@18.3.0)
@@ -10711,14 +10766,14 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/select@1.2.9(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/select@1.2.9(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/popover': 1.1.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-clickable': 1.2.0(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
@@ -10730,22 +10785,22 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/skeleton@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/skeleton@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-animation': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-previous': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/slider@1.0.28(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/slider@1.0.28(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-latest-ref': 1.0.1(react@18.3.0)
       '@yamada-ui/use-pan-event': 1.0.13(react@18.3.0)
@@ -10756,35 +10811,35 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/snacks@1.0.16(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/snacks@1.0.16(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/alert': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/alert': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/close-button': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-timeout': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-token': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/stat@1.0.21(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/stat@1.0.21(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/stepper@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/stepper@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10792,21 +10847,21 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/switch@1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/switch@1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/checkbox': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/checkbox': 1.0.27(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/tabs@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/tabs@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-clickable': 1.2.0(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/use-descendant': 1.0.12(react@18.3.0)
@@ -10817,10 +10872,10 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/tag@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/tag@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/icon': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-clickable': 1.2.0(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10828,39 +10883,39 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/textarea@1.1.13(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/textarea@1.1.13(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/form-control': 1.0.26(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/theme-tools@1.0.28(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/theme-tools@1.0.28(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/theme': 1.6.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/theme': 1.6.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
     transitivePeerDependencies:
       - '@types/react'
       - react
       - react-dom
 
-  '@yamada-ui/theme@1.6.0(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/theme@1.6.0(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
     transitivePeerDependencies:
       - '@types/react'
       - react
       - react-dom
 
-  '@yamada-ui/toggle@1.0.7(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/toggle@1.0.7(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/ripple': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-controllable-state': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
@@ -10868,44 +10923,44 @@ snapshots:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/tooltip@1.0.25(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/tooltip@1.0.25(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/portal': 1.0.13(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/transitions': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-disclosure': 1.0.12(react@18.3.0)
       '@yamada-ui/use-event-listener': 1.0.12(react@18.3.0)
-      '@yamada-ui/use-popper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/use-popper': 1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/transitions@1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/transitions@1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/motion': 1.0.24(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/typography@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/typography@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/use-animation@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/use-animation@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/use-boolean': 1.0.1(react@18.3.0)
       '@yamada-ui/use-event-listener': 1.0.12(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
@@ -10919,9 +10974,9 @@ snapshots:
     dependencies:
       react: 18.3.0
 
-  '@yamada-ui/use-breakpoint@1.2.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/use-breakpoint@1.2.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
@@ -11011,9 +11066,9 @@ snapshots:
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
 
-  '@yamada-ui/use-media-query@1.0.29(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/use-media-query@1.0.29(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/providers': 1.0.29(@emotion/react@11.11.4)(@emotion/styled@11.11.5)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/providers': 1.0.29(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@emotion/styled@11.11.5(@emotion/react@11.11.4(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react@18.3.0))(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
@@ -11039,11 +11094,11 @@ snapshots:
       framesync: 6.1.2
       react: 18.3.0
 
-  '@yamada-ui/use-popper@1.0.23(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/use-popper@1.0.23(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
       '@popperjs/core': 2.11.8
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-value': 1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
@@ -11070,19 +11125,19 @@ snapshots:
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
 
-  '@yamada-ui/use-token@1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/use-token@1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
 
-  '@yamada-ui/use-value@1.1.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)':
+  '@yamada-ui/use-value@1.1.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)':
     dependencies:
-      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
-      '@yamada-ui/use-breakpoint': 1.2.11(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@yamada-ui/core': 1.6.5(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@yamada-ui/use-breakpoint': 1.2.11(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@yamada-ui/utils': 1.1.3(react@18.3.0)
       react: 18.3.0
     transitivePeerDependencies:
@@ -11156,7 +11211,7 @@ snapshots:
       indent-string: 4.0.0
 
   ajv-formats@2.1.1(ajv@8.12.0):
-    dependencies:
+    optionalDependencies:
       ajv: 8.12.0
 
   ajv-keywords@3.5.2(ajv@6.12.6):
@@ -11355,12 +11410,12 @@ snapshots:
     dependencies:
       '@babel/core': 7.24.4
 
-  babel-loader@9.1.3(@babel/core@7.24.4)(webpack@5.91.0):
+  babel-loader@9.1.3(@babel/core@7.24.4)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       '@babel/core': 7.24.4
       find-cache-dir: 4.0.0
       schema-utils: 4.2.0
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   babel-plugin-add-react-displayname@0.0.5: {}
 
@@ -11816,6 +11871,7 @@ snapshots:
       js-yaml: 4.1.0
       parse-json: 5.2.0
       path-type: 4.0.0
+    optionalDependencies:
       typescript: 5.4.5
 
   create-ecdh@4.0.4:
@@ -11862,7 +11918,7 @@ snapshots:
 
   crypto-random-string@2.0.0: {}
 
-  css-loader@6.11.0(webpack@5.91.0):
+  css-loader@6.11.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       icss-utils: 5.1.0(postcss@8.4.38)
       postcss: 8.4.38
@@ -11872,7 +11928,8 @@ snapshots:
       postcss-modules-values: 4.0.0(postcss@8.4.38)
       postcss-value-parser: 4.2.0
       semver: 7.6.0
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+    optionalDependencies:
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   css-select@4.3.0:
     dependencies:
@@ -12322,11 +12379,12 @@ snapshots:
       '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       eslint-plugin-jsx-a11y: 6.8.0(eslint@8.57.0)
       eslint-plugin-react: 7.34.1(eslint@8.57.0)
       eslint-plugin-react-hooks: 4.6.1(eslint@8.57.0)
+    optionalDependencies:
       typescript: 5.4.5
     transitivePeerDependencies:
       - eslint-import-resolver-webpack
@@ -12344,13 +12402,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
+  eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0):
     dependencies:
       debug: 4.3.4
       enhanced-resolve: 5.16.0
       eslint: 8.57.0
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
-      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
+      eslint-plugin-import: 2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
       fast-glob: 3.3.2
       get-tsconfig: 4.7.3
       is-core-module: 2.13.1
@@ -12361,19 +12419,19 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-module-utils@2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0):
     dependencies:
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       debug: 3.2.7
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
+      eslint-import-resolver-typescript: 3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0)
     transitivePeerDependencies:
       - supports-color
 
-  eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
+  eslint-plugin-import@2.29.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0):
     dependencies:
-      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
       array-includes: 3.1.8
       array.prototype.findlastindex: 1.2.5
       array.prototype.flat: 1.3.2
@@ -12382,7 +12440,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.0
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0)(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1)(eslint@8.57.0)
+      eslint-module-utils: 2.8.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.1(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.29.1)(eslint@8.57.0))(eslint@8.57.0)
       hasown: 2.0.2
       is-core-module: 2.13.1
       is-glob: 4.0.3
@@ -12392,6 +12450,8 @@ snapshots:
       object.values: 1.2.0
       semver: 6.3.1
       tsconfig-paths: 3.15.0
+    optionalDependencies:
+      '@typescript-eslint/parser': 6.21.0(eslint@8.57.0)(typescript@5.4.5)
     transitivePeerDependencies:
       - eslint-import-resolver-typescript
       - eslint-import-resolver-webpack
@@ -12454,11 +12514,12 @@ snapshots:
       - supports-color
       - typescript
 
-  eslint-plugin-unused-imports@3.1.0(@typescript-eslint/eslint-plugin@6.21.0)(eslint@8.57.0):
+  eslint-plugin-unused-imports@3.1.0(@typescript-eslint/eslint-plugin@6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0):
     dependencies:
-      '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0)(eslint@8.57.0)(typescript@5.4.5)
       eslint: 8.57.0
       eslint-rule-composer: 0.3.0
+    optionalDependencies:
+      '@typescript-eslint/eslint-plugin': 6.21.0(@typescript-eslint/parser@6.21.0(eslint@8.57.0)(typescript@5.4.5))(eslint@8.57.0)(typescript@5.4.5)
 
   eslint-rule-composer@0.3.0: {}
 
@@ -12751,7 +12812,7 @@ snapshots:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
 
-  fork-ts-checker-webpack-plugin@8.0.0(typescript@5.4.5)(webpack@5.91.0):
+  fork-ts-checker-webpack-plugin@8.0.0(typescript@5.4.5)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       '@babel/code-frame': 7.24.2
       chalk: 4.1.2
@@ -12766,7 +12827,7 @@ snapshots:
       semver: 7.6.0
       tapable: 2.2.1
       typescript: 5.4.5
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   form-data@4.0.0:
     dependencies:
@@ -12776,13 +12837,15 @@ snapshots:
 
   forwarded@0.2.0: {}
 
-  framer-motion@11.1.7(react-dom@18.3.0)(react@18.3.0):
+  framer-motion@11.1.7(@emotion/is-prop-valid@1.2.2)(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
+      tslib: 2.6.2
+    optionalDependencies:
+      '@emotion/is-prop-valid': 1.2.2
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
-      tslib: 2.6.2
 
-  framer-motion@9.1.7(react-dom@18.3.0)(react@18.3.0):
+  framer-motion@9.1.7(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
@@ -13043,14 +13106,15 @@ snapshots:
       readable-stream: 1.0.34
       through2: 0.4.2
 
-  html-webpack-plugin@5.6.0(webpack@5.91.0):
+  html-webpack-plugin@5.6.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       '@types/html-minifier-terser': 6.1.0
       html-minifier-terser: 6.1.0
       lodash: 4.17.21
       pretty-error: 4.0.0
       tapable: 2.2.1
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+    optionalDependencies:
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   htmlparser2@6.1.0:
     dependencies:
@@ -13385,7 +13449,7 @@ snapshots:
   jose@4.15.5: {}
 
   jotai@2.8.0(@types/react@18.3.0)(react@18.3.0):
-    dependencies:
+    optionalDependencies:
       '@types/react': 18.3.0
       react: 18.3.0
 
@@ -13400,7 +13464,7 @@ snapshots:
     dependencies:
       argparse: 2.0.1
 
-  jscodeshift@0.15.2(@babel/preset-env@7.24.4):
+  jscodeshift@0.15.2(@babel/preset-env@7.24.4(@babel/core@7.24.4)):
     dependencies:
       '@babel/core': 7.24.4
       '@babel/parser': 7.24.4
@@ -13409,7 +13473,6 @@ snapshots:
       '@babel/plugin-transform-nullish-coalescing-operator': 7.24.1(@babel/core@7.24.4)
       '@babel/plugin-transform-optional-chaining': 7.24.1(@babel/core@7.24.4)
       '@babel/plugin-transform-private-methods': 7.24.1(@babel/core@7.24.4)
-      '@babel/preset-env': 7.24.4(@babel/core@7.24.4)
       '@babel/preset-flow': 7.24.1(@babel/core@7.24.4)
       '@babel/preset-typescript': 7.24.1(@babel/core@7.24.4)
       '@babel/register': 7.23.7(@babel/core@7.24.4)
@@ -13423,6 +13486,8 @@ snapshots:
       recast: 0.23.6
       temp: 0.8.4
       write-file-atomic: 2.4.3
+    optionalDependencies:
+      '@babel/preset-env': 7.24.4(@babel/core@7.24.4)
     transitivePeerDependencies:
       - supports-color
 
@@ -13731,13 +13796,13 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-auth@4.24.7(next@14.2.3)(react-dom@18.3.0)(react@18.3.0):
+  next-auth@4.24.7(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0))(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       '@babel/runtime': 7.24.4
       '@panva/hkdf': 1.1.1
       cookie: 0.5.0
       jose: 4.15.5
-      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0)
+      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       oauth: 0.9.15
       openid-client: 5.6.5
       preact: 10.20.2
@@ -13746,15 +13811,15 @@ snapshots:
       react-dom: 18.3.0(react@18.3.0)
       uuid: 8.3.2
 
-  next-sitemap@4.2.3(next@14.2.3):
+  next-sitemap@4.2.3(next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)):
     dependencies:
       '@corex/deepmerge': 4.0.43
       '@next/env': 13.5.6
       fast-glob: 3.3.2
       minimist: 1.2.8
-      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0)
+      next: 14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
 
-  next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0)(react@18.3.0):
+  next@14.2.3(@babel/core@7.24.4)(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       '@next/env': 14.2.3
       '@swc/helpers': 0.5.5
@@ -13804,7 +13869,7 @@ snapshots:
 
   node-int64@0.4.0: {}
 
-  node-polyfill-webpack-plugin@2.0.1(webpack@5.91.0):
+  node-polyfill-webpack-plugin@2.0.1(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       assert: 2.1.0
       browserify-zlib: 0.2.0
@@ -13831,7 +13896,7 @@ snapshots:
       url: 0.11.3
       util: 0.12.5
       vm-browserify: 1.1.2
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   node-releases@2.0.14: {}
 
@@ -14132,13 +14197,13 @@ snapshots:
 
   possible-typed-array-names@1.0.0: {}
 
-  postcss-loader@7.3.4(postcss@8.4.38)(typescript@5.4.5)(webpack@5.91.0):
+  postcss-loader@7.3.4(postcss@8.4.38)(typescript@5.4.5)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       cosmiconfig: 8.3.6(typescript@5.4.5)
       jiti: 1.21.0
       postcss: 8.4.38
       semver: 7.6.0
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
     transitivePeerDependencies:
       - typescript
 
@@ -14362,7 +14427,7 @@ snapshots:
       '@babel/runtime': 7.24.4
       react: 18.3.0
 
-  react-colorful@5.6.1(react-dom@18.3.0)(react@18.3.0):
+  react-colorful@5.6.1(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
@@ -14397,7 +14462,7 @@ snapshots:
       react: 18.3.0
       scheduler: 0.23.1
 
-  react-element-to-jsx-string@15.0.0(react-dom@18.3.0)(react@18.3.0):
+  react-element-to-jsx-string@15.0.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       '@base2/pretty-print-object': 1.0.1
       is-plain-object: 5.0.0
@@ -14410,13 +14475,14 @@ snapshots:
   react-focus-lock@2.12.1(@types/react@18.3.0)(react@18.3.0):
     dependencies:
       '@babel/runtime': 7.24.4
-      '@types/react': 18.3.0
       focus-lock: 1.3.5
       prop-types: 15.8.1
       react: 18.3.0
       react-clientside-effect: 1.2.6(react@18.3.0)
       use-callback-ref: 1.3.2(@types/react@18.3.0)(react@18.3.0)
       use-sidecar: 1.1.2(@types/react@18.3.0)(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   react-hook-form@7.51.3(react@18.3.0):
     dependencies:
@@ -14434,45 +14500,49 @@ snapshots:
 
   react-remove-scroll-bar@2.3.6(@types/react@18.3.0)(react@18.3.0):
     dependencies:
-      '@types/react': 18.3.0
       react: 18.3.0
       react-style-singleton: 2.2.1(@types/react@18.3.0)(react@18.3.0)
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   react-remove-scroll@2.5.5(@types/react@18.3.0)(react@18.3.0):
     dependencies:
-      '@types/react': 18.3.0
       react: 18.3.0
       react-remove-scroll-bar: 2.3.6(@types/react@18.3.0)(react@18.3.0)
       react-style-singleton: 2.2.1(@types/react@18.3.0)(react@18.3.0)
       tslib: 2.6.2
       use-callback-ref: 1.3.2(@types/react@18.3.0)(react@18.3.0)
       use-sidecar: 1.1.2(@types/react@18.3.0)(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   react-remove-scroll@2.5.9(@types/react@18.3.0)(react@18.3.0):
     dependencies:
-      '@types/react': 18.3.0
       react: 18.3.0
       react-remove-scroll-bar: 2.3.6(@types/react@18.3.0)(react@18.3.0)
       react-style-singleton: 2.2.1(@types/react@18.3.0)(react@18.3.0)
       tslib: 2.6.2
       use-callback-ref: 1.3.2(@types/react@18.3.0)(react@18.3.0)
       use-sidecar: 1.1.2(@types/react@18.3.0)(react@18.3.0)
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  react-resizable-panels@2.0.18(react-dom@18.3.0)(react@18.3.0):
+  react-resizable-panels@2.0.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
 
   react-style-singleton@2.2.1(@types/react@18.3.0)(react@18.3.0):
     dependencies:
-      '@types/react': 18.3.0
       get-nonce: 1.0.1
       invariant: 2.2.4
       react: 18.3.0
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  react-transition-group@4.4.5(react-dom@18.3.0)(react@18.3.0):
+  react-transition-group@4.4.5(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       '@babel/runtime': 7.24.4
       dom-helpers: 5.2.1
@@ -14698,11 +14768,11 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass-loader@12.6.0(webpack@5.91.0):
+  sass-loader@12.6.0(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       klona: 2.0.6
       neo-async: 2.6.2
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   scheduler@0.23.1:
     dependencies:
@@ -14886,16 +14956,17 @@ snapshots:
 
   store2@2.14.3: {}
 
-  storybook-dark-mode@3.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0):
+  storybook-dark-mode@3.0.3(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
-      '@storybook/addons': 7.6.17(react-dom@18.3.0)(react@18.3.0)
-      '@storybook/components': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/addons': 7.6.17(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@storybook/components': 7.6.18(@types/react-dom@18.3.0)(@types/react@18.3.0)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       '@storybook/core-events': 7.6.18
       '@storybook/global': 5.0.0
-      '@storybook/manager-api': 7.6.18(react-dom@18.3.0)(react@18.3.0)
-      '@storybook/theming': 7.6.18(react-dom@18.3.0)(react@18.3.0)
+      '@storybook/manager-api': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
+      '@storybook/theming': 7.6.18(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
       fast-deep-equal: 3.1.3
       memoizerific: 1.11.3
+    optionalDependencies:
       react: 18.3.0
       react-dom: 18.3.0(react@18.3.0)
     transitivePeerDependencies:
@@ -15024,15 +15095,16 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  style-loader@3.3.4(webpack@5.91.0):
+  style-loader@3.3.4(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   styled-jsx@5.1.1(@babel/core@7.24.4)(react@18.3.0):
     dependencies:
-      '@babel/core': 7.24.4
       client-only: 0.0.1
       react: 18.3.0
+    optionalDependencies:
+      '@babel/core': 7.24.4
 
   stylis@4.2.0: {}
 
@@ -15050,11 +15122,11 @@ snapshots:
 
   supports-preserve-symlinks-flag@1.0.0: {}
 
-  swc-loader@0.2.6(@swc/core@1.5.0)(webpack@5.91.0):
+  swc-loader@0.2.6(@swc/core@1.5.0(@swc/helpers@0.5.5))(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
-      '@swc/core': 1.5.0
+      '@swc/core': 1.5.0(@swc/helpers@0.5.5)
       '@swc/counter': 0.1.3
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   synchronous-promise@2.0.17: {}
 
@@ -15116,16 +15188,17 @@ snapshots:
       type-fest: 0.16.0
       unique-string: 2.0.0
 
-  terser-webpack-plugin@5.3.10(@swc/core@1.5.0)(esbuild@0.18.20)(webpack@5.91.0):
+  terser-webpack-plugin@5.3.10(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.25
-      '@swc/core': 1.5.0
-      esbuild: 0.18.20
       jest-worker: 27.5.1
       schema-utils: 3.3.0
       serialize-javascript: 6.0.2
       terser: 5.30.4
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
+    optionalDependencies:
+      '@swc/core': 1.5.0(@swc/helpers@0.5.5)
+      esbuild: 0.18.20
 
   terser@5.30.4:
     dependencies:
@@ -15187,7 +15260,7 @@ snapshots:
   ts-dedent@2.2.0: {}
 
   ts-pnp@1.2.0(typescript@5.4.5):
-    dependencies:
+    optionalDependencies:
       typescript: 5.4.5
 
   tsconfig-paths-webpack-plugin@4.1.0:
@@ -15357,11 +15430,12 @@ snapshots:
 
   use-callback-ref@1.3.2(@types/react@18.3.0)(react@18.3.0):
     dependencies:
-      '@types/react': 18.3.0
       react: 18.3.0
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.3.0
 
-  use-resize-observer@9.1.0(react-dom@18.3.0)(react@18.3.0):
+  use-resize-observer@9.1.0(react-dom@18.3.0(react@18.3.0))(react@18.3.0):
     dependencies:
       '@juggle/resize-observer': 3.4.0
       react: 18.3.0
@@ -15369,10 +15443,11 @@ snapshots:
 
   use-sidecar@1.1.2(@types/react@18.3.0)(react@18.3.0):
     dependencies:
-      '@types/react': 18.3.0
       detect-node-es: 1.1.0
       react: 18.3.0
       tslib: 2.6.2
+    optionalDependencies:
+      '@types/react': 18.3.0
 
   util-deprecate@1.0.2: {}
 
@@ -15416,14 +15491,15 @@ snapshots:
 
   webidl-conversions@3.0.1: {}
 
-  webpack-dev-middleware@6.1.3(webpack@5.91.0):
+  webpack-dev-middleware@6.1.3(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)):
     dependencies:
       colorette: 2.0.20
       memfs: 3.5.3
       mime-types: 2.1.35
       range-parser: 1.2.1
       schema-utils: 4.2.0
-      webpack: 5.91.0(@swc/core@1.5.0)(esbuild@0.18.20)
+    optionalDependencies:
+      webpack: 5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)
 
   webpack-hot-middleware@2.26.1:
     dependencies:
@@ -15437,7 +15513,7 @@ snapshots:
 
   webpack-virtual-modules@0.6.1: {}
 
-  webpack@5.91.0(@swc/core@1.5.0)(esbuild@0.18.20):
+  webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20):
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.5
@@ -15460,7 +15536,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 3.3.0
       tapable: 2.2.1
-      terser-webpack-plugin: 5.3.10(@swc/core@1.5.0)(esbuild@0.18.20)(webpack@5.91.0)
+      terser-webpack-plugin: 5.3.10(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20)(webpack@5.91.0(@swc/core@1.5.0(@swc/helpers@0.5.5))(esbuild@0.18.20))
       watchpack: 2.4.1
       webpack-sources: 3.2.3
     transitivePeerDependencies:
