@@ -13,6 +13,7 @@
     "postinstall": "prisma generate",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky"
   },
   "lint-staged": {
@@ -24,7 +25,7 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.15.3",
     "@next/third-parties": "15.0.3",
-    "@prisma/client": "^5.8.1",
+    "@prisma/client": "^5.22.0",
     "@supabase/supabase-js": "^2.39.2",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0-rc.1",
@@ -37,7 +38,7 @@
     "jotai": "^2.6.1",
     "next": "15.0.4-canary.8",
     "next-auth": "^4.24.5",
-    "prisma": "^5.8.1",
+    "prisma": "^5.22.0",
     "react": "19.0.0-rc-66855b96-20241106",
     "react-dom": "19.0.0-rc-66855b96-20241106",
     "react-hook-form": "^7.49.2",
