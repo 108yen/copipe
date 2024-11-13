@@ -3,7 +3,7 @@ import AdminPageTemplate from "@/modules/admin"
 import CopipePagination from "@/modules/copipePagination"
 import { VStack } from "@yamada-ui/react"
 
-export const revalidate = 3600
+export const dynamic = "force-dynamic"
 
 export default async function Page(props: {
   searchParams: Promise<{ [key: string]: string | string[] | undefined }>
