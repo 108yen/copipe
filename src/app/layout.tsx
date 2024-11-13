@@ -44,13 +44,13 @@ export default async function RootLayout({
   children: ReactNode
 }) {
   return (
-    <html lang="ja">
+    <html lang="ja" suppressHydrationWarning>
       <head>
         <Suspense>
           <GoogleAnalytics debugMode={process.env.NODE_ENV !== "production"} />
         </Suspense>
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <ColorModeScript
           type="cookie"
           nonce="copipe"
