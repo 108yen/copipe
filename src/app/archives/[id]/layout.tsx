@@ -1,7 +1,10 @@
 import { fetchCopipe } from "@/db/server/copipes"
 import { ReactNode } from "react"
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
+export async function generateMetadata(props: {
+  params: Promise<{ id: string }>
+}) {
+  const params = await props.params
   const { id } = params
   const copipe = await fetchCopipe(Number(id))
 

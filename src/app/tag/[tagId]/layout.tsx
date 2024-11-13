@@ -2,11 +2,10 @@ import { fetchTag } from "@/db/server/tags"
 import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { ReactNode } from "react"
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { tagId: string }
+export async function generateMetadata(props: {
+  params: Promise<{ tagId: string }>
 }) {
+  const params = await props.params
   const tagId = Number(params.tagId)
 
   const tag = await fetchTag(tagId)

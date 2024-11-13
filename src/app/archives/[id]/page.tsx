@@ -9,7 +9,8 @@ import {
 
 export const experimental_ppr = true
 
-export default async function page({ params }: { params: { id: string } }) {
+export default async function page(props: { params: Promise<{ id: string }> }) {
+  const params = await props.params
   return (
     <VStack>
       <Container>

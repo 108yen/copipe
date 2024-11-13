@@ -5,11 +5,10 @@ import { VStack } from "@yamada-ui/react"
 
 export const revalidate = 3600
 
-export default async function Page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined }
+export default async function Page(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
+  const searchParams = await props.searchParams
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1
   const [copipes, count, tags] = await fetchAdminCopipes(page)
