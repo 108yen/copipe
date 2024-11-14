@@ -1,13 +1,8 @@
-import { fetchCopipe } from "@/db/server/copipes"
+import { Metadata } from "next"
 import { ReactNode } from "react"
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const { id } = params
-  const copipe = await fetchCopipe(Number(id))
-
-  return {
-    title: copipe.title,
-  }
+export const metadata: Metadata = {
+  title: "アーカイブ",
 }
 
 export default async function layout({ children }: { children: ReactNode }) {

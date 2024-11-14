@@ -14,11 +14,7 @@ export default async function TagListCard() {
         <Divider />
         <Box>
           {tags.map((tag) => (
-            <Link
-              prefetch={false}
-              key={`tag-${tag.id}`}
-              href={`/tag/${tag.id}`}
-            >
+            <Link key={`tag-${tag.id}`} href={`/tag/${tag.id}`}>
               <Tag
                 key={tag.id}
                 variant="outline"

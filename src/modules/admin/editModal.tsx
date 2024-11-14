@@ -62,37 +62,37 @@ export default function EditModal(props: {
       reset()
     }
   }
-
   return (
-    <Modal isOpen={open} onClose={() => onClose()} size="5xl" p={4} gap={2}>
-      <ModalHeader>{copipe?.title}</ModalHeader>
-      <Controller
-        control={control}
-        name="tags"
-        render={({ field }) => (
-          <MultiAutocomplete
-            {...field}
-            omitSelectedValues
-            items={tags.map((tag) => ({ label: tag.body, value: tag.body }))}
-          />
-        )}
-      />
-      <Divider />
-      <ModalBody>
-        <Text>{copipe?.body}</Text>
-      </ModalBody>
-      <ModalFooter>
-        <Button
-          variant="outline"
-          color="secondary"
-          borderColor="secondary"
-          w="fit-content"
-          isLoading={formState.isSubmitting}
-          onClick={handleSubmit(onSubmit)}
-        >
-          更新
-        </Button>
-      </ModalFooter>
-    </Modal>
+    <></>
+    // <Modal isOpen={open} onClose={onClose} size="5xl" p={4} gap={2}>
+    //   <ModalHeader>{copipe?.title}</ModalHeader>
+    //   <Controller
+    //     control={control}
+    //     name="tags"
+    //     render={({ field }) => (
+    //       <MultiAutocomplete
+    //         {...field}
+    //         omitSelectedValues
+    //         items={tags.map((tag) => ({ label: tag.body, value: tag.body }))}
+    //       />
+    //     )}
+    //   />
+    //   <Divider />
+    //   <ModalBody>
+    //     <Text>{copipe?.body}</Text>
+    //   </ModalBody>
+    //   <ModalFooter>
+    //     <Button
+    //       variant="outline"
+    //       color="secondary"
+    //       borderColor="secondary"
+    //       w="fit-content"
+    //       isLoading={formState.isSubmitting}
+    //       onClick={handleSubmit(onSubmit)}
+    //     >
+    //       更新
+    //     </Button>
+    //   </ModalFooter>
+    // </Modal>
   )
 }

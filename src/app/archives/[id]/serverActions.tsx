@@ -1,7 +1,7 @@
 "use server"
 
 import { prisma } from "@/db/db"
-import { revalidatePath } from "next/cache"
+import { expirePath } from "next/cache"
 
 export async function postComment(copipe_id: number, body: string) {
   try {
@@ -18,6 +18,6 @@ export async function postComment(copipe_id: number, body: string) {
   } catch (error) {
     return { error: JSON.stringify(error) }
   } finally {
-    revalidatePath("/archives/[id]", "page")
+    expirePath("/archives/[id]", "page")
   }
 }

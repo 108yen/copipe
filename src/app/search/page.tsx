@@ -4,11 +4,10 @@ import CopipePagination from "@/modules/copipePagination"
 import SearchForm from "@/modules/searchForm"
 import { Container, Text, VStack } from "@yamada-ui/react"
 
-export default async function page({
-  searchParams,
-}: {
-  searchParams: { [key: string]: string | string[] | undefined }
+export default async function page(props: {
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
+  const searchParams = await props.searchParams
   const searchText =
     typeof searchParams.text === "string" ? searchParams.text : ""
   const page =

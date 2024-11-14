@@ -1,19 +1,9 @@
-import { fetchTag } from "@/db/server/tags"
 import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
+import { Metadata } from "next"
 import { ReactNode } from "react"
 
-export async function generateMetadata({
-  params,
-}: {
-  params: { tagId: string }
-}) {
-  const tagId = Number(params.tagId)
-
-  const tag = await fetchTag(tagId)
-
-  return {
-    title: tag.body,
-  }
+export const metadata: Metadata = {
+  title: "タグ",
 }
 
 export default async function layout({ children }: { children: ReactNode }) {

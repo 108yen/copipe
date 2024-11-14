@@ -5,8 +5,6 @@ import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import SearchForm from "@/modules/searchForm"
 import { Container, VStack } from "@yamada-ui/react"
 
-export const revalidate = 3600
-
 export default async function Home() {
   const { copipes, count } = await getHomePageCopipe()
 

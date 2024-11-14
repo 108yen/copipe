@@ -27,7 +27,6 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
     <Box m={{ sm: 1, base: 2 }} paddingY={1} width="full">
       <HStack>
         <Link
-          prefetch={false}
           href={"/archives/" + copipeItem.id}
           style={{
             textDecoration: "none",
@@ -56,7 +55,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
       </HStack>
       <HStack justifyContent="flex-start" gap="xs">
         {copipeItem.copipeToTag.map((tag) => (
-          <Link prefetch={false} key={tag.tag.id} href={`/tag/${tag.tag.id}`}>
+          <Link key={tag.tag.id} href={`/tag/${tag.tag.id}`}>
             <Tag
               key={tag.tag.id}
               variant="outline"

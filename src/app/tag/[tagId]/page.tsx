@@ -3,13 +3,12 @@ import { CopipeCardItem } from "@/modules/copipeCardItem"
 import CopipePagination from "@/modules/copipePagination"
 import { Container, VStack } from "@yamada-ui/react"
 
-export default async function page({
-  params,
-  searchParams,
-}: {
-  params: { tagId: string }
-  searchParams: { [key: string]: string | string[] | undefined }
+export default async function page(props: {
+  params: Promise<{ tagId: string }>
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
 }) {
+  const searchParams = await props.searchParams
+  const params = await props.params
   const tagId = Number(params.tagId)
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1
