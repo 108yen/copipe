@@ -2,7 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   experimental: {
-    ppr:"incremental"
+    ppr: "incremental",
+    dynamicIO: true,
   }
 }
 

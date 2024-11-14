@@ -1,5 +1,5 @@
 import { Tag } from "@/models/tag"
-import { unstable_cache } from "next/cache"
+import { unstable_cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
 import { prisma } from "../db"
 
@@ -19,26 +19,23 @@ import { prisma } from "../db"
 //
 //   return result
 // })
-export const fetchTags = unstable_cache(
-  async function () {
-    const tags = await prisma.tag.findMany()
-    console.log("get tag list")
+export const fetchTags = async function () {
+  "use cache"
+  unstable_cacheTag("tag_list")
 
-    const result: Tag[] = tags.map((tag) => {
-      return {
-        id: tag.id,
-        created_at: new Date(tag.created_at),
-        body: tag.body,
-      }
-    })
+  const tags = await prisma.tag.findMany()
+  console.log("get tag list")
 
-    return result
-  },
-  ["tag_list"],
-  {
-    revalidate: 3600,
-  },
-)
+  const result: Tag[] = tags.map((tag) => {
+    return {
+      id: tag.id,
+      created_at: new Date(tag.created_at),
+      body: tag.body,
+    }
+  })
+
+  return result
+}
 
 // export const fetchTag = cache(async (id: number) => {
 //   const tag = await prisma.tag
@@ -51,18 +48,17 @@ export const fetchTags = unstable_cache(
 //     })
 //   return tag
 // })
-export const fetchTag = unstable_cache(
-  async function (id: number) {
-    const tag = await prisma.tag
-      .findUniqueOrThrow({
-        where: { id },
-        select: { body: true },
-      })
-      .catch(() => {
-        notFound()
-      })
-    return tag
-  },
-  ["tag_name"],
-  { revalidate: 3600 },
-)
+export const fetchTag = async function (id: number) {
+  "use cache"
+  unstable_cacheTag("tag_name")
+
+  const tag = await prisma.tag
+    .findUniqueOrThrow({
+      where: { id },
+      select: { body: true },
+    })
+    .catch(() => {
+      notFound()
+    })
+  return tag
+}
