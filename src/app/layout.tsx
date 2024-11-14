@@ -1,12 +1,7 @@
 import GoogleAnalytics from "@/analytics/GoogleAnalytics"
 import { config, theme } from "@/theme"
-import {
-  ColorModeScript,
-  ThemeSchemeScript,
-  UIProvider,
-  colorModeManager,
-  themeSchemeManager,
-} from "@yamada-ui/react"
+import { YamadaUIScript } from "@/utils/yamada-ui-script"
+import { UIProvider } from "@yamada-ui/react"
 import { Metadata } from "next"
 import { ReactNode, Suspense } from "react"
 
@@ -36,8 +31,6 @@ export const metadata: Metadata = {
   },
 }
 
-const { initialColorMode, initialThemeScheme } = { ...config }
-
 export default async function RootLayout({
   children,
 }: {
@@ -51,22 +44,9 @@ export default async function RootLayout({
         </Suspense>
       </head>
       <body suppressHydrationWarning>
-        <ColorModeScript
-          type="cookie"
-          nonce="copipe"
-          initialColorMode={initialColorMode}
-        />
-        <ThemeSchemeScript
-          type="cookie"
-          nonce="copipe"
-          initialThemeScheme={initialThemeScheme}
-        />
-        <UIProvider
-          theme={theme}
-          config={config}
-          colorModeManager={{ ...colorModeManager }.cookieStorage}
-          themeSchemeManager={{ ...themeSchemeManager }.cookieStorage}
-        >
+        <YamadaUIScript />
+
+        <UIProvider theme={theme} config={config}>
           {children}
         </UIProvider>
       </body>
