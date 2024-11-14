@@ -1,0 +1,54 @@
+name: Release
+
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - release
+
+permissions: {}
+
+defaults:
+  run:
+    shell: bash
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  release:
+    name: release
+
+    if: github.event.pull_request.merged == true && startsWith(github.head_ref, 'changeset-release')
+
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git user
+        run: |
+          git config --global user.email "kazuking.1911@gmail.com"
+          git config --global user.name "108yen"
+
+      - name: Create GitHub Release
+        uses: 108yen/changeset-release@v1
+        with:
+          target: release
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge branch
+        run: |
+          set -x
+          git switch main
+          git merge release
+          git push
