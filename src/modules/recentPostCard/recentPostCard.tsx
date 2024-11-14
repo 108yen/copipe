@@ -16,7 +16,6 @@ export default async function RecentPostsCard() {
         <VStack gap={0}>
           {copipes.map((copipe) => (
             <Link
-              prefetch={false}
               key={`recent-copipe-${copipe.id}`}
               href={`/archives/${copipe.id}`}
               style={{

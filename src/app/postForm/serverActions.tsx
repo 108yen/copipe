@@ -1,7 +1,7 @@
 "use server"
 
 import { prisma } from "@/db/db"
-import { revalidatePath } from "next/cache"
+import { expirePath } from "next/cache"
 
 export async function postNewCopipe(props: { title: string; body: string }) {
   const { title, body } = props
@@ -22,7 +22,7 @@ export async function postNewCopipe(props: { title: string; body: string }) {
     })
     .then(() => {
       console.log("post copipe in postForm")
-      revalidatePath("/")
+      expirePath("/")
     })
 }
 

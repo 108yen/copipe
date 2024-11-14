@@ -1,30 +1,28 @@
-import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
+import { fetchCopipe } from "@/db/server/copipes"
+import Comment from "@/modules/comment"
+import { CopipeCardItem } from "@/modules/copipeCardItem"
 import { Container, VStack } from "@yamada-ui/react"
-import { Suspense } from "react"
-import {
-  PPRArchivesPagination,
-  PPRComment,
-  PPRCopipeCardItem,
-} from "./ppr-wrap"
-
-export const experimental_ppr = true
+import ArchivesPagination from "./archivesPagination"
+import { checkBeforeAndAfterPage } from "./utils"
 
 export default async function page({
   params,
 }: {
   params: Promise<{ id: string }>
 }) {
+  const id = Number((await params).id)
+  const copipe = await fetchCopipe(id)
+  const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
+
   return (
     <VStack>
       <Container>
-        <Suspense fallback={<CopipeCardItemSkelton />}>
-          <PPRCopipeCardItem params={params} />
-        </Suspense>
+        <CopipeCardItem copipeItem={copipe} />
       </Container>
-      <Suspense>
-        <PPRComment params={params} />
-      </Suspense>
-      <PPRArchivesPagination params={params} />
+
+      <Comment comments={copipe.comments} copipe_id={id} />
+
+      <ArchivesPagination beforeId={beforeId} afterId={afterId} />
     </VStack>
   )
 }
