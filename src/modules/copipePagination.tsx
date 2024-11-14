@@ -20,12 +20,14 @@ export default function CopipePagination(props: {
 
   return (
     <Pagination
+      justifyContent="center"
+      size="md"
       variant="ghost"
       total={total}
       page={page}
       onChange={handleChange}
       colorScheme="gray"
-      margin="auto"
+      w="full"
     />
   )
 }
