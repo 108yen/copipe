@@ -45,10 +45,3 @@ jobs:
           target: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Merge branch
-        run: |
-          set -x
-          git switch main
-          git merge release
-          git push
