@@ -1,7 +1,8 @@
 {
   "name": "copipe",
-  "version": "0.1.0",
+  "version": "1.4.1",
   "private": true,
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "prisma generate && next build",
@@ -46,6 +47,8 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.7.2",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.9",
     "@storybook/addon-essentials": "^7.6.10",
     "@storybook/addon-interactions": "^7.6.10",
     "@storybook/addon-links": "^7.6.10",
