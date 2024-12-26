@@ -1,5 +1,11 @@
 # copipe
 
+## 1.4.2
+
+### Patch Changes
+
+- [`0bca164`](https://github.com/108yen/copipe/commit/0bca164f17a9f03e59d2e46598cd72945dd42f1b) Thanks [@108yen](https://github.com/108yen)! - Fixed modal type bug.
+
 ## 1.4.1
 
 ### Patch Changes
