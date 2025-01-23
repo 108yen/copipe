@@ -1,6 +1,6 @@
 "use server"
 import { prisma } from "@/db/db"
-import { expirePath } from "next/cache"
+import { revalidatePath } from "next/cache"
 
 async function insertTags(copipe_id: number, tag_ids: number[]) {
   const query = tag_ids.map((tag_id) =>
@@ -40,5 +40,5 @@ export async function updateTags(copipe_id: number, tag_ids: number[]) {
   } catch (error) {
     return { error: JSON.stringify(error) }
   }
-  expirePath("/admin/[page]", "page")
+  revalidatePath("/admin/[page]", "page")
 }
