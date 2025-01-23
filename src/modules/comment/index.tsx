@@ -1,6 +1,6 @@
 "use client"
 
-import { postComment } from "@/app/archives/[id]/serverActions"
+import { postComment } from "@/app/(side-menu-layout)/archives/[id]/serverActions"
 import { CommentPayload, CommentsPayload } from "@/db/query"
 import { Container } from "@yamada-ui/react"
 import { useOptimistic } from "react"
