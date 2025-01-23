@@ -1,4 +1,3 @@
-import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { Metadata } from "next"
 import { ReactNode } from "react"
 
@@ -7,5 +6,5 @@ export const metadata: Metadata = {
 }
 
 export default async function layout({ children }: { children: ReactNode }) {
-  return <SideMenuLayout>{children}</SideMenuLayout>
+  return <section>{children}</section>
 }
