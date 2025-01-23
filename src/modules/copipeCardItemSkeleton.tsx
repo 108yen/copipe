@@ -12,21 +12,21 @@ import {
 
 export function CopipeCardItemSkelton() {
   return (
-    <Box m={{ sm: 1, base: 2 }} paddingY={1} width="full" gap="md">
+    <Box gap="md" m={{ base: 2, sm: 1 }} paddingY={1} width="full">
       <HStack>
         <Skeleton h={10} marginY={1} />
         <Spacer />
         <IconButton
-          color="secondary"
-          variant="ghost"
           aria-label="copy"
-          size="xs"
+          color="secondary"
           icon={<Icon as={ContentCopyIcon} size="xl" />}
+          size="xs"
+          variant="ghost"
         />
       </HStack>
-      <Skeleton w={100} marginY={1} />
+      <Skeleton marginY={1} w={100} />
       <Divider />
-      <SkeletonText marginY={3} lineClamp={5} textHeight={5} />
+      <SkeletonText lineClamp={5} marginY={3} textHeight={5} />
     </Box>
   )
 }

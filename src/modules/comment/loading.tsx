@@ -14,7 +14,7 @@ export default function LoadingComment() {
       <VStack divider={<Divider />}>
         {[...Array(3)].map((value) => (
           <VStack key={`comments-skelton-${value}`}>
-            <Text fontSize="sm" color="gray">
+            <Text color="gray" fontSize="sm">
               <SkeletonText lineClamp={1} width={120} />
             </Text>
             <Text>
@@ -25,17 +25,17 @@ export default function LoadingComment() {
       </VStack>
       <VStack alignItems="center" w="full">
         <Textarea
+          disabled
+          focusBorderColor="secondary"
           id="body"
           placeholder="コメント"
-          focusBorderColor="secondary"
-          disabled
         />
         <Button
-          variant="outline"
-          color="secondary"
           borderColor="secondary"
-          w="fit-content"
+          color="secondary"
           disabled
+          variant="outline"
+          w="fit-content"
         >
           コメント
         </Button>

@@ -1,19 +1,19 @@
 import { Prisma } from "@prisma/client"
 
 export const copipeWithTag = {
-  id: true,
-  title: true,
   body: true,
   copipeToTag: {
     select: {
       tag: {
         select: {
-          id: true,
           body: true,
+          id: true,
         },
       },
     },
   },
+  id: true,
+  title: true,
 } satisfies Prisma.copipeSelect
 
 export type CopipeWithTagPayload = Prisma.copipeGetPayload<{
@@ -25,12 +25,12 @@ export const copipeWithTagComment = {
   comments: true,
 } satisfies Prisma.copipeSelect
 
-export type CopipeWithTagCommentPayload = Prisma.copipeGetPayload<{
-  select: typeof copipeWithTagComment
-}>
+export type CommentPayload = CommentsPayload[number]
 
 export type CommentsPayload = CopipeWithTagCommentPayload["comments"]
 
-export type CommentPayload = CommentsPayload[number]
+export type CopipeWithTagCommentPayload = Prisma.copipeGetPayload<{
+  select: typeof copipeWithTagComment
+}>
 
 export type TagPayload = Prisma.tagGetPayload<{}>

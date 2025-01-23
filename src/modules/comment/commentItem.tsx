@@ -7,7 +7,7 @@ export function CommentItem(props: { comment: CommentPayload }) {
 
   return (
     <VStack>
-      <Text fontSize="sm" color="gray">
+      <Text color="gray" fontSize="sm">
         {`${dayjs(comment.created_at!).format("YYYY/MM/DD HH:mm:ss")}`}
       </Text>
       <Text>{comment.body}</Text>

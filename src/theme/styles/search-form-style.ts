@@ -1,17 +1,17 @@
 import { CSSUIObject } from "@yamada-ui/react"
 
 export const searchFormStyle: Record<string, CSSUIObject> = {
-  card: {
-    position: "sticky",
-    top: 0,
-    zIndex: 100,
-    bg: "white",
-    w: "full",
-  },
   button: {
-    fontWeight: "normal",
     color: "gray",
+    fontWeight: "normal",
     size: "xs",
     w: "fit-content",
+  },
+  card: {
+    bg: "white",
+    position: "sticky",
+    top: 0,
+    w: "full",
+    zIndex: 100,
   },
 }

@@ -1,20 +1,20 @@
 "use server"
 
 import { prisma } from "@/db/db"
-import { expirePath } from "next/cache"
+import { revalidatePath } from "next/cache"
 
-export async function postNewCopipe(props: { title: string; body: string }) {
-  const { title, body } = props
+export async function postNewCopipe(props: { body: string; title: string; }) {
+  const { body, title } = props
 
-  if (await checkDupulicate(body)) {
+  if (await checkDuplicate(body)) {
     return { message: "投稿済みのコピペ" }
   }
 
   await prisma.copipe
     .create({
       data: {
-        title: title,
         body: body,
+        title: title,
       },
     })
     .catch((error) => {
@@ -22,11 +22,11 @@ export async function postNewCopipe(props: { title: string; body: string }) {
     })
     .then(() => {
       console.log("post copipe in postForm")
-      expirePath("/")
+      revalidatePath("/")
     })
 }
 
-async function checkDupulicate(body: string) {
+async function checkDuplicate(body: string) {
   const copipe = await prisma.copipe.findFirst({
     where: {
       body: {

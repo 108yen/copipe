@@ -7,7 +7,7 @@ export default withAuth(
   // },
   {
     callbacks: {
-      authorized: ({ req, token }) => {
+      authorized: ({ token }) => {
         return token?.email === "kazuking.1911@gmail.com"
       },
     },

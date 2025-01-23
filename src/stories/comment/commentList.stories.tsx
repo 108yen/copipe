@@ -4,9 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { UIProvider } from "@yamada-ui/react"
 
 const meta = {
-  title: "yamadaui/CommentList",
   component: CommentList,
-  tags: ["autodocs"],
   decorators: [
     (Story) => {
       return (
@@ -16,6 +14,8 @@ const meta = {
       )
     },
   ],
+  tags: ["autodocs"],
+  title: "yamada-ui/CommentList",
 } satisfies Meta<typeof CommentList>
 
 export default meta
@@ -25,10 +25,10 @@ export const Default: Story = {
   args: {
     comments: [0, 1, 2, 3].map((value) => {
       return {
-        id: value,
-        created_at: new Date(),
-        copipe_id: 0,
         body: `test-${value}`,
+        copipe_id: 0,
+        created_at: new Date(),
+        id: value,
       }
     }),
   },
@@ -38,10 +38,10 @@ export const LongText: Story = {
   args: {
     comments: [
       {
-        id: 0,
-        created_at: new Date(),
-        copipe_id: 0,
         body: "勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社勤務中、１回までなら自費で会社にデリヘル呼んでいい会社",
+        copipe_id: 0,
+        created_at: new Date(),
+        id: 0,
       },
     ],
   },

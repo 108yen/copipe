@@ -8,6 +8,7 @@ export default function loading() {
       <Container>
         <CopipeCardItemSkelton />
       </Container>
+
       <LoadingComment />
     </VStack>
   )

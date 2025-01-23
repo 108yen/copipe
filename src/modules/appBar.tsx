@@ -1,29 +1,29 @@
 import ContentCopyIcon from "@mui/icons-material/ContentCopy"
-import { Box, HStack, Heading, Icon, Text } from "@yamada-ui/react"
+import { Box, Heading, HStack, Icon, Text } from "@yamada-ui/react"
 import Link from "next/link"
 
 export default function AppBar() {
   return (
     <Box
       as="header"
-      w="full"
       bg="white"
-      height={65}
-      display="flex"
-      paddingX={5}
       borderBottom="solid 0.1px gray"
+      display="flex"
+      height={65}
+      paddingX={5}
+      w="full"
     >
-      <HStack justifyContent="space-between" alignItems="center" w="full">
+      <HStack alignItems="center" justifyContent="space-between" w="full">
         <Link
           href="/"
           style={{
-            textDecoration: "none",
             overflow: "hidden",
+            textDecoration: "none",
           }}
         >
           <HStack alignItems="center">
             <Icon as={ContentCopyIcon} />
-            <Heading variant="h1" fontSize="25px" fontFamily="san-serif">
+            <Heading fontFamily="san-serif" fontSize="25px" variant="h1">
               copipe
             </Heading>
           </HStack>
@@ -31,11 +31,11 @@ export default function AppBar() {
         <Link
           href="/about"
           style={{
-            textDecoration: "none",
             overflow: "hidden",
+            textDecoration: "none",
           }}
         >
-          <Text fontSize="sm" color="gray">
+          <Text color="gray" fontSize="sm">
             このサイトについて
           </Text>
         </Link>

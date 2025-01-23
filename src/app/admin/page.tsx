@@ -4,7 +4,7 @@ import CopipePagination from "@/modules/copipePagination"
 import { VStack } from "@yamada-ui/react"
 
 export default async function Page(props: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
   const searchParams = await props.searchParams
   const page =
@@ -15,9 +15,9 @@ export default async function Page(props: {
     <VStack>
       <AdminPageTemplate copipes={copipes} tags={tags} />
       <CopipePagination
-        url="/admin"
-        total={count ? Math.ceil(count / 100) : 0}
         page={page}
+        total={count ? Math.ceil(count / 100) : 0}
+        url="/admin"
       />
     </VStack>
   )

@@ -6,8 +6,8 @@ import {
   Button,
   FormControl,
   Textarea,
-  VStack,
   useNotice,
+  VStack,
 } from "@yamada-ui/react"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
 
@@ -16,21 +16,21 @@ type Inputs = {
 }
 
 export default function CommentForm(props: {
-  copipe_id: number
   addOptimisticComment: (action: CommentPayload) => void
+  copipe_id: number
   postComment: (
     copipe_id: number,
     body: string,
   ) => Promise<
+    | undefined
     | {
         error: string
       }
-    | undefined
   >
 }) {
-  const { copipe_id, addOptimisticComment, postComment } = props
+  const { addOptimisticComment, copipe_id, postComment } = props
 
-  const { control, handleSubmit, reset, formState } = useForm<Inputs>({
+  const { control, formState, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
       body: "",
     },
@@ -40,8 +40,8 @@ export default function CommentForm(props: {
 
   const validationRules = {
     body: {
+      minLength: { message: "コメントを入力して下さい", value: 1 },
       required: "コメントを入力して下さい",
-      minLength: { value: 1, message: "コメントを入力して下さい" },
     },
   }
 
@@ -51,55 +51,55 @@ export default function CommentForm(props: {
     })
 
     addOptimisticComment({
-      id: Math.floor(Math.random() * 10000),
       body: data.body,
-      created_at: new Date(),
       copipe_id: copipe_id,
+      created_at: new Date(),
+      id: Math.floor(Math.random() * 10000),
     })
 
     const result = await postComment(copipe_id, data.body)
 
     if (result?.error) {
       notice({
-        title: "投稿失敗",
         status: "error",
+        title: "投稿失敗",
       })
     } else {
       notice({
-        title: "投稿完了",
         status: "success",
+        title: "投稿完了",
       })
       reset()
     }
   }
 
   return (
-    <VStack as="form" alignItems="center" w="full">
+    <VStack alignItems="center" as="form" w="full">
       <Controller
-        name="body"
         control={control}
-        rules={validationRules.body}
+        name="body"
         render={({ field, fieldState }) => (
           <FormControl
-            isInvalid={fieldState.invalid}
             errorMessage={fieldState.error?.message}
+            isInvalid={fieldState.invalid}
           >
             <Textarea
               {...field}
+              focusBorderColor="secondary"
               id="body"
               placeholder="コメント"
-              focusBorderColor="secondary"
             />
           </FormControl>
         )}
+        rules={validationRules.body}
       />
       <Button
-        variant="outline"
-        color="secondary"
         borderColor="secondary"
-        w="fit-content"
+        color="secondary"
         isLoading={formState.isSubmitting}
         onClick={handleSubmit(onSubmit)}
+        variant="outline"
+        w="fit-content"
       >
         コメント
       </Button>

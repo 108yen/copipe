@@ -13,10 +13,10 @@ export default function LoadingSearchForm(props: { text?: string }) {
 
   return (
     <VStack alignItems="flex-end" gap={0}>
-      <Card variant="subtle" apply="searchFormStyle.card">
+      <Card apply="searchFormStyle.card" variant="subtle">
         <InputGroup>
           <InputLeftElement>
-            <Loading variant="dots" color="secondary" />
+            <Loading color="secondary" variant="dots" />
           </InputLeftElement>
           <Input
             focusBorderColor="secondary"
@@ -26,7 +26,7 @@ export default function LoadingSearchForm(props: { text?: string }) {
           />
         </InputGroup>
       </Card>
-      <Button apply="searchFormStyle.button" variant="link" disabled>
+      <Button apply="searchFormStyle.button" disabled variant="link">
         追加はこちらから
       </Button>
     </VStack>

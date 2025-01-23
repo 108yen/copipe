@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import { Center, Heading, Text } from "@yamada-ui/react"
 
 export const metadata = {
@@ -324,16 +325,16 @@ export default function NotFound() {
   return (
     <>
       <Heading
-        variant="h1"
-        fontSize="9xl"
         color="blackAlpha.300"
-        zIndex={-1}
+        fontSize="9xl"
         sx={{
+          left: "50%",
           position: "fixed",
           top: "50%",
-          left: "50%",
           transform: "translate(-50%, -50%)",
         }}
+        variant="h1"
+        zIndex={-1}
       >
         404: Not Found
       </Heading>

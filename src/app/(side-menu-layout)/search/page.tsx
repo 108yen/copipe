@@ -5,7 +5,7 @@ import SearchForm from "@/modules/searchForm"
 import { Container, Text, VStack } from "@yamada-ui/react"
 
 export default async function page(props: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
   const searchParams = await props.searchParams
   const searchText =
@@ -18,22 +18,24 @@ export default async function page(props: {
   return (
     <VStack>
       <SearchForm />
+
       <Container>
         {copipes.length == 0 ? (
-          <Text variant="body1" textStyle="noHit">
+          <Text textStyle="noHit" variant="body1">
             該当なし
           </Text>
         ) : (
           copipes.map((copipe) => (
-            <CopipeCardItem key={copipe.id} copipeItem={copipe} />
+            <CopipeCardItem copipeItem={copipe} key={copipe.id} />
           ))
         )}
       </Container>
+
       <CopipePagination
-        url="/search"
+        page={page}
         params={{ name: "text", param: searchText }}
         total={Math.ceil(count / 10)}
-        page={page}
+        url="/search"
       />
     </VStack>
   )

@@ -4,12 +4,12 @@ import { Pagination } from "@yamada-ui/react"
 import { useRouter } from "next/navigation"
 
 export default function CopipePagination(props: {
-  url: string
+  page: number
   params?: { name: string; param: string }
   total: number
-  page: number
+  url: string
 }) {
-  const { url, params, total, page } = props
+  const { page, params, total, url } = props
   const route = useRouter()
 
   function handleChange(value: number) {
@@ -20,13 +20,13 @@ export default function CopipePagination(props: {
 
   return (
     <Pagination
-      justifyContent="center"
-      size="md"
-      variant="ghost"
-      total={total}
-      page={page}
-      onChange={handleChange}
       colorScheme="gray"
+      justifyContent="center"
+      onChange={handleChange}
+      page={page}
+      size="md"
+      total={total}
+      variant="ghost"
       w="full"
     />
   )

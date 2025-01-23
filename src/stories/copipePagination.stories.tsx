@@ -3,9 +3,9 @@ import { Meta, StoryObj } from "@storybook/react"
 import { userEvent, within } from "@storybook/testing-library"
 
 const meta = {
-  title: "yamadaui/CopipePagination",
   component: CopipePagination,
   tags: ["autodocs"],
+  title: "yamada-ui/CopipePagination",
 } satisfies Meta<typeof CopipePagination>
 
 export default meta
@@ -13,9 +13,9 @@ type Story = StoryObj<typeof meta>
 
 export const Default: Story = {
   args: {
-    url: "/test",
-    total: 20,
     page: 1,
+    total: 20,
+    url: "/test",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)
@@ -25,9 +25,9 @@ export const Default: Story = {
 }
 export const Middle: Story = {
   args: {
-    url: "/test",
-    total: 20,
     page: 10,
+    total: 20,
+    url: "/test",
   },
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement)

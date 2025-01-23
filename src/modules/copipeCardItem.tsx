@@ -5,8 +5,8 @@ import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 import {
   Box,
   Divider,
-  HStack,
   Heading,
+  HStack,
   Icon,
   IconButton,
   Spacer,
@@ -15,7 +15,7 @@ import {
 } from "@yamada-ui/react"
 import Link from "next/link"
 
-async function handleClickCopy(copyText: string | null, id: number) {
+async function handleClickCopy(copyText: null | string) {
   if (copyText == null) return
   await global.navigator.clipboard.writeText(copyText)
 }
@@ -24,45 +24,45 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
   const { copipeItem } = props
 
   return (
-    <Box m={{ sm: 1, base: 2 }} paddingY={1} width="full">
+    <Box m={{ base: 2, sm: 1 }} paddingY={1} width="full">
       <HStack>
         <Link
           href={"/archives/" + copipeItem.id}
           style={{
-            textDecoration: "none",
             overflow: "hidden",
+            textDecoration: "none",
           }}
         >
           <Heading
-            variant="h5"
-            size="lg"
+            color="text.primary"
             fontWeight="normal"
             isTruncated
-            color="text.primary"
+            size="lg"
+            variant="h5"
           >
             {copipeItem.title}
           </Heading>
         </Link>
         <Spacer />
         <IconButton
-          color="secondary"
-          variant="ghost"
           aria-label="copy"
-          size="xs"
+          color="secondary"
           icon={<Icon as={ContentCopyIcon} size="xl" />}
-          onClick={() => handleClickCopy(copipeItem.body, copipeItem.id)}
+          onClick={() => handleClickCopy(copipeItem.body)}
+          size="xs"
+          variant="ghost"
         />
       </HStack>
-      <HStack justifyContent="flex-start" gap="xs">
+      <HStack gap="xs" justifyContent="flex-start">
         {copipeItem.copipeToTag.map((tag) => (
-          <Link key={tag.tag.id} href={`/tag/${tag.tag.id}`}>
+          <Link href={`/tag/${tag.tag.id}`} key={tag.tag.id}>
             <Tag
-              key={tag.tag.id}
-              variant="outline"
-              color="secondary"
               boxShadow="inset 0 0 0px 1px"
-              size="sm"
+              color="secondary"
+              key={tag.tag.id}
               rounded="full"
+              size="sm"
+              variant="outline"
             >
               {tag.tag.body}
             </Tag>

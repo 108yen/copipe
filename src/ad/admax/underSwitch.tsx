@@ -2,6 +2,7 @@
 import { Box } from "@yamada-ui/react"
 import { usePathname } from "next/navigation"
 import { useEffect } from "react"
+
 import { AdmaxAdType } from "./conf"
 
 export default function AdmaxUnderSwitch() {
@@ -37,10 +38,10 @@ export default function AdmaxUnderSwitch() {
 
   return (
     <Box
-      key={pathname}
       flexGrow={1}
+      key={pathname}
       m={1}
-      textAlign={{ md: "unset", base: "center" }}
+      textAlign={{ base: "center", md: "unset" }}
     >
       <div
         className="admax-switch"

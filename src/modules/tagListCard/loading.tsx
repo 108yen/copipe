@@ -10,7 +10,7 @@ export default function LoadingTagListCard() {
   return (
     <Container>
       <VStack>
-        <Heading variant="h5" fontSize="xl">
+        <Heading fontSize="xl" variant="h5">
           タグ一覧
         </Heading>
         <Divider />

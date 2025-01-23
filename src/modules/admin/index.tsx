@@ -3,6 +3,7 @@
 import { updateTags } from "@/app/admin/serverActions"
 import { CopipeWithTagPayload, TagPayload } from "@/db/query"
 import { useState } from "react"
+
 import EditModal from "./editModal"
 import TitleList from "./titleList"
 
@@ -13,11 +14,11 @@ export default function AdminPageTemplate(props: {
   const { copipes, tags } = props
 
   const [modalProps, setModalProps] = useState<{
-    open: boolean
     copipe: CopipeWithTagPayload | undefined
+    open: boolean
   }>({
-    open: false,
     copipe: undefined,
+    open: false,
   })
 
   function closeModal() {
@@ -26,8 +27,8 @@ export default function AdminPageTemplate(props: {
 
   function openModal(copipe: CopipeWithTagPayload) {
     setModalProps({
-      open: true,
       copipe: copipe,
+      open: true,
     })
   }
 
@@ -35,9 +36,9 @@ export default function AdminPageTemplate(props: {
     <>
       <TitleList copipes={copipes} openModal={openModal} />
       <EditModal
-        open={modalProps.open}
-        onClose={closeModal}
         copipe={modalProps.copipe}
+        onClose={closeModal}
+        open={modalProps.open}
         tags={tags}
         updateTags={updateTags}
       />
