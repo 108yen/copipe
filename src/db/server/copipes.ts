@@ -4,7 +4,7 @@ import { notFound } from "next/navigation"
 import { prisma } from "../db"
 import { copipeWithTag, copipeWithTagComment } from "../query"
 
-export const getHomePageCopipe = async () => {
+export async function getHomePageCopipe() {
   "use cache"
   const [copipes, count] = await prisma.$transaction([
     prisma.copipe.findMany({
@@ -42,7 +42,7 @@ export const getHomePageCopipe = async () => {
 //
 //   return result
 // })
-export const fetchRecentCopipes = async function () {
+export async function fetchRecentCopipes() {
   "use cache"
   unstable_cacheTag("recent_copipes")
 
@@ -66,7 +66,7 @@ export const fetchRecentCopipes = async function () {
   return result
 }
 
-export const fetchTagCopipes = async (tagId: number, page: number) => {
+export async function fetchTagCopipes(tagId: number, page: number) {
   "use cache"
   const tagQuery = {
     copipeToTag: {
@@ -93,7 +93,7 @@ export const fetchTagCopipes = async (tagId: number, page: number) => {
   return result
 }
 
-export const fetchSearchCopipes = async (searchText: string, page: number) => {
+export async function fetchSearchCopipes(searchText: string, page: number) {
   "use cache"
   const searchQuery =
     searchText == ""
@@ -122,7 +122,7 @@ export const fetchSearchCopipes = async (searchText: string, page: number) => {
   return result
 }
 
-export const fetchCopipe = async (id: number) => {
+export async function fetchCopipe(id: number) {
   "use cache"
   const copipe = await prisma.copipe
     .findUniqueOrThrow({
@@ -137,7 +137,7 @@ export const fetchCopipe = async (id: number) => {
   return copipe
 }
 
-export const getCopipeIds = async () => {
+export async function getCopipeIds() {
   "use cache"
   const ids = await prisma.copipe
     .findMany({
@@ -155,8 +155,8 @@ export const getCopipeIds = async () => {
   return ids!
 }
 
-export const fetchAdminCopipes = async (page: number) =>
-  await prisma
+export async function fetchAdminCopipes(page: number) {
+  return await prisma
     .$transaction([
       prisma.copipe.findMany({
         orderBy: { id: "desc" },
@@ -168,3 +168,4 @@ export const fetchAdminCopipes = async (page: number) =>
       prisma.tag.findMany(),
     ])
     .catch(() => notFound())
+}
