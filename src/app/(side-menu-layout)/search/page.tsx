@@ -18,6 +18,7 @@ export default async function page(props: {
   return (
     <VStack>
       <SearchForm />
+
       <Container>
         {copipes.length == 0 ? (
           <Text variant="body1" textStyle="noHit">
@@ -29,6 +30,7 @@ export default async function page(props: {
           ))
         )}
       </Container>
+
       <CopipePagination
         url="/search"
         params={{ name: "text", param: searchText }}

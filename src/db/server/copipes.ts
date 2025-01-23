@@ -115,6 +115,7 @@ export const fetchSearchCopipes = async (searchText: string, page: number) => {
       where: searchQuery,
     }),
   ])
+
   console.log(`get copipes search:${searchText} page:${page}`)
 
   return result
