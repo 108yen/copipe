@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import { Center, Heading, Text } from "@yamada-ui/react"
 
 export const metadata = {

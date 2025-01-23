@@ -38,7 +38,7 @@ const meta = {
     // layout: 'centered',
   },
   tags: ["autodocs"],
-  title: "yamadaui/CopipeCardItemSkelton",
+  title: "yamada-ui/CopipeCardItemSkelton",
 } satisfies Meta<typeof CopipeCardItemSkelton>
 
 export default meta

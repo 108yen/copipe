@@ -1,12 +1,12 @@
 import EditModal from "@/modules/admin/editModal"
 import { expect } from "@storybook/jest"
 import { Meta, StoryObj } from "@storybook/react"
-import { screen, userEvent, waitFor, within } from "@storybook/testing-library"
+import { screen, userEvent, waitFor } from "@storybook/testing-library"
 
 const meta = {
   component: EditModal,
   tags: ["autodocs"],
-  title: "yamadaui/EditModal",
+  title: "yamada-ui/EditModal",
 } satisfies Meta<typeof EditModal>
 
 export default meta
@@ -31,7 +31,7 @@ export const Default: Story = {
       created_at: new Date(),
       id: value,
     })),
-    updateTags: async (copipe_id: number, tag_ids: number[]) => {
+    updateTags: async () => {
       return undefined
     },
   },
@@ -56,7 +56,7 @@ export const LongText: Story = {
       created_at: new Date(),
       id: value,
     })),
-    updateTags: async (copipe_id: number, tag_ids: number[]) => {
+    updateTags: async () => {
       return undefined
     },
   },
@@ -81,13 +81,11 @@ export const Success: Story = {
       created_at: new Date(),
       id: value,
     })),
-    updateTags: async (copipe_id: number, tag_ids: number[]) => {
+    updateTags: async () => {
       return undefined
     },
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
+  play: async () => {
     await waitFor(() => expect(screen.queryByText("更新")).toBeInTheDocument())
     const submitButton = screen.getByText("更新")
     await userEvent.click(submitButton)
@@ -116,13 +114,11 @@ export const Error: Story = {
       created_at: new Date(),
       id: value,
     })),
-    updateTags: async (copipe_id: number, tag_ids: number[]) => {
+    updateTags: async () => {
       return { error: "error" }
     },
   },
-  play: async ({ canvasElement }) => {
-    const canvas = within(canvasElement)
-
+  play: async () => {
     await waitFor(() => expect(screen.queryByText("更新")).toBeInTheDocument())
     const submitButton = screen.getByText("更新")
     await userEvent.click(submitButton)

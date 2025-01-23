@@ -4,7 +4,7 @@ import GoogleProvider from "next-auth/providers/google"
 
 export const options: NextAuthOptions = {
   callbacks: {
-    jwt: async ({ account, token }) => {
+    jwt: async ({ token }) => {
       return token
     },
     session: async ({ session, token }) => {

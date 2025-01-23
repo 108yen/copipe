@@ -70,7 +70,7 @@ export default function page() {
         </ListItem>
         <ListItem>
           <Link
-            aria-label="google optout link"
+            aria-label="google opt out link"
             href="https://support.google.com/analytics/answer/181881?hl=ja"
             style={{
               textDecoration: `none`,

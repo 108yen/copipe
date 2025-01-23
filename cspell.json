@@ -1,3 +1,22 @@
 {
-  "words": ["automerge", "commitlint", "copipe", "copipes", "typecheck"]
+  "words": [
+    "Admax",
+    "admaxad",
+    "admaxads",
+    "autodocs",
+    "automerge",
+    "commitlint",
+    "copipe",
+    "copipes",
+    "CSSUI",
+    "multilines",
+    "NEXTAUTH",
+    "proptypes",
+    "supabase",
+    "TSES",
+    "typecheck"
+  ],
+  "ignorePaths": [
+    "src/app/not-found.tsx"
+  ]
 }

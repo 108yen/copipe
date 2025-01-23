@@ -15,7 +15,7 @@ import {
 } from "@yamada-ui/react"
 import Link from "next/link"
 
-async function handleClickCopy(copyText: null | string, id: number) {
+async function handleClickCopy(copyText: null | string) {
   if (copyText == null) return
   await global.navigator.clipboard.writeText(copyText)
 }
@@ -48,7 +48,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
           aria-label="copy"
           color="secondary"
           icon={<Icon as={ContentCopyIcon} size="xl" />}
-          onClick={() => handleClickCopy(copipeItem.body, copipeItem.id)}
+          onClick={() => handleClickCopy(copipeItem.body)}
           size="xs"
           variant="ghost"
         />

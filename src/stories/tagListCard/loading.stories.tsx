@@ -15,7 +15,7 @@ const meta = {
     },
   ],
   tags: ["autodocs"],
-  title: "yamadaui/LoadingTagListCard",
+  title: "yamada-ui/LoadingTagListCard",
 } satisfies Meta<typeof LoadingTagListCard>
 
 export default meta

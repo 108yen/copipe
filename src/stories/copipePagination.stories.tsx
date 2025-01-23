@@ -5,7 +5,7 @@ import { userEvent, within } from "@storybook/testing-library"
 const meta = {
   component: CopipePagination,
   tags: ["autodocs"],
-  title: "yamadaui/CopipePagination",
+  title: "yamada-ui/CopipePagination",
 } satisfies Meta<typeof CopipePagination>
 
 export default meta

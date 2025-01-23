@@ -15,8 +15,8 @@ export default function Comment(props: {
   const { comments, copipe_id } = props
   const [optimisticComments, addOptimisticComment] = useOptimistic(
     comments,
-    (state, newComent: CommentPayload) => {
-      return [...state, newComent]
+    (state, newComment: CommentPayload) => {
+      return [...state, newComment]
     },
   )
 

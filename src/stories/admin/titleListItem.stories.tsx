@@ -12,7 +12,7 @@ const meta = {
     ),
   ],
   tags: ["autodocs"],
-  title: "yamadaui/TitleListItem",
+  title: "yamada-ui/TitleListItem",
 } satisfies Meta<typeof TitleListItem>
 
 export default meta

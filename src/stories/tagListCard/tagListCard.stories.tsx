@@ -15,7 +15,7 @@ const meta = {
     },
   ],
   tags: ["autodocs"],
-  title: "yamadaui/TagListCard",
+  title: "yamada-ui/TagListCard",
 } satisfies Meta<typeof TagListCardTemplate>
 
 export default meta

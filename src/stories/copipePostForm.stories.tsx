@@ -7,7 +7,7 @@ import { screen, userEvent, waitFor, within } from "@storybook/testing-library"
 const meta = {
   component: CopipePostForm,
   tags: ["autodocs"],
-  title: "yamadaui/CopipePostForm",
+  title: "yamada-ui/CopipePostForm",
 } satisfies Meta<typeof CopipePostForm>
 
 export default meta

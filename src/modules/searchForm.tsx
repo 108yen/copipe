@@ -36,7 +36,7 @@ export default function SearchForm() {
           <Controller
             control={control}
             name="text"
-            render={({ field, fieldState }) => (
+            render={({ field }) => (
               <InputGroup>
                 <Input
                   {...field}

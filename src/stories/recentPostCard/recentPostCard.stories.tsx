@@ -20,7 +20,7 @@ const meta = {
     },
   },
   tags: ["autodocs"],
-  title: "yamadaui/RecentPostsCard",
+  title: "yamada-ui/RecentPostsCard",
 } satisfies Meta<typeof RecentPostsCardTemplate>
 
 export default meta

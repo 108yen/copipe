@@ -6,7 +6,7 @@ import { revalidatePath } from "next/cache"
 export async function postNewCopipe(props: { body: string; title: string; }) {
   const { body, title } = props
 
-  if (await checkDupulicate(body)) {
+  if (await checkDuplicate(body)) {
     return { message: "投稿済みのコピペ" }
   }
 
@@ -26,7 +26,7 @@ export async function postNewCopipe(props: { body: string; title: string; }) {
     })
 }
 
-async function checkDupulicate(body: string) {
+async function checkDuplicate(body: string) {
   const copipe = await prisma.copipe.findFirst({
     where: {
       body: {

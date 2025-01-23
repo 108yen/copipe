@@ -18,7 +18,7 @@ const meta = {
     // layout: 'centered',
   },
   tags: ["autodocs"],
-  title: "yamadaui/AppBar",
+  title: "yamada-ui/AppBar",
 } satisfies Meta<typeof AppBar>
 
 export default meta

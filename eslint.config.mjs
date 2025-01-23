@@ -38,7 +38,7 @@ const sourceFilePaths = {
 /** @type {Pick<TSESLintConfig, "name" | "ignores">} */
 const ignoreTSESConfig = {
   ignores: [".next/**", "node_modules/**", "**/pnpm-lock.yaml", ".eslintcache"],
-  name: "@twitch-clip/ignores/base",
+  name: "ignores/base",
 }
 
 /** @type {Pick<TSESLintConfig, "name" | "languageOptions">} */
@@ -58,7 +58,7 @@ const languageOptionTSESConfig = {
       sourceType: "module",
     },
   },
-  name: "@twitch-clip/language-options/base",
+  name: "language-options/base",
 }
 
 const allSourceFileExtensions = [
@@ -76,7 +76,7 @@ const allSourceFileExtensions = [
 /** @type {Pick<TSESLintConfig, "name" | "files" | "plugins" | "rules" | "settings">} */
 const importTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/import/base",
+  name: "import/base",
   plugins: {
     import: fixupPluginRules(pluginImport),
     "unused-imports": pluginUnusedImports,
@@ -109,7 +109,7 @@ const importTSESConfig = {
 /** @type {Pick<TSESLintConfig, "name" | "files" | "rules">} */
 const eslintTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/eslint/base",
+  name: "eslint/base",
   rules: {
     ...eslint.configs.recommended.rules,
     "no-empty": ["error", { allowEmptyCatch: true }],
@@ -120,7 +120,7 @@ const eslintTSESConfig = {
 const typescriptTSESConfigArray = [
   {
     files: sourceFilePaths.all,
-    name: "@twitch-clip/typescript/base",
+    name: "typescript/base",
     plugins: {
       "@typescript-eslint": tseslintPlugin,
     },
@@ -150,7 +150,7 @@ const typescriptTSESConfigArray = [
   // These rules existed in the `.eslintrc`.
   {
     files: sourceFilePaths.js,
-    name: "@twitch-clip/typescript/disabled-in-js",
+    name: "typescript/disabled-in-js",
     plugins: {
       "@typescript-eslint": tseslintPlugin,
     },
@@ -163,7 +163,7 @@ const typescriptTSESConfigArray = [
 /** @type {Pick<TSESLintConfig, "name" | "files" | "plugins" | "rules" | "settings">} */
 const reactTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/react/base",
+  name: "react/base",
   plugins: {
     react: pluginReact,
   },
@@ -190,7 +190,7 @@ const reactTSESConfig = {
 /** @type {Pick<TSESLintConfig, "name | "files" | "plugins" | "rules">} */
 const reactHooksTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/react-hooks/base",
+  name: "react-hooks/base",
   plugins: {
     "react-hooks": fixupPluginRules(pluginReactHooks),
   },
@@ -202,7 +202,7 @@ const reactHooksTSESConfig = {
 /** @type {Pick<TSESLintConfig, "name" | "files" | "plugins" | "rules">} */
 const nextTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/next/base",
+  name: "next/base",
   plugins: {
     "@next/next": fixupPluginRules(pluginNext),
   },
@@ -222,7 +222,7 @@ const nextTSESConfig = {
  */
 const jsxA11yTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/jsx-a11y/base",
+  name: "jsx-a11y/base",
   plugins: {
     "jsx-a11y": pluginJsxA11y,
   },
@@ -247,7 +247,7 @@ const jsxA11yTSESConfig = {
  */
 const prettierTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/prettier/base",
+  name: "prettier/base",
   plugins: {
     react: pluginReact,
   },
@@ -275,7 +275,7 @@ const prettierTSESConfig = {
 /** @type {Pick<TSESLintConfig, "name" | "files" | "plugins" | "rules" | "settings">} */
 const sortTSESConfig = {
   files: sourceFilePaths.all,
-  name: "@twitch-clip/sort/base",
+  name: "sort/base",
   plugins: {
     perfectionist,
   },
@@ -303,8 +303,8 @@ const sortTSESConfig = {
 /** @type {Pick<TSESLintConfig, "name" | "files" | "plugins" | "rules" | "settings">} */
 const cspellConfig = {
   files: sourceFilePaths.all,
-  ignores: ["src/constant/streamers.ts"],
-  name: "@twitch-clip-function/cspell/base",
+  ignores: ["src/app/not-found.tsx"],
+  name: "cspell/base",
   plugins: {
     "@cspell": cspellPlugin,
   },
@@ -312,7 +312,7 @@ const cspellConfig = {
     "@cspell/spellchecker": [
       "warn",
       {
-        configFile: "./cspell.json",
+        configFile: new URL('./cspell.json', import.meta.url).toString(),
       },
     ],
   },

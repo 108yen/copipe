@@ -4,7 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 const meta = {
   component: CommentForm,
   tags: ["autodocs"],
-  title: "yamadaui/CommentForm",
+  title: "yamada-ui/CommentForm",
 } satisfies Meta<typeof CommentForm>
 
 export default meta

@@ -4,7 +4,7 @@ import { gridStyle } from "./grid-style"
 import { searchFormStyle } from "./search-form-style"
 import { textStyles } from "./text-styles"
 
-export default {
+export const styles= {
   buttonStyles,
   globalStyle,
   gridStyle,

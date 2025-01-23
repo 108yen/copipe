@@ -18,7 +18,7 @@ const meta = {
     // layout: 'centered',
   },
   tags: ["autodocs"],
-  title: "yamadaui/SearchForm",
+  title: "yamada-ui/SearchForm",
 } satisfies Meta<typeof SearchForm>
 
 export default meta

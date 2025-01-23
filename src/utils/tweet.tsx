@@ -34,6 +34,7 @@ function countCharacters(text: string): {
   let halfWidth = 0
   for (const char of text) {
     // 全角文字かどうかを判定
+    // eslint-disable-next-line no-control-regex
     if (char.match(/[^\x01-\x7E\xA1-\xDF]/)) {
       fullWidth += 2
     } else {
