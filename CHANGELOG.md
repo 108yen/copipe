@@ -1,5 +1,11 @@
 # copipe
 
+## 1.5.1
+
+### Patch Changes
+
+- [`a6c85ed`](https://github.com/108yen/copipe/commit/a6c85ed69f9e9b46b37ea764992db76433915a8f) Thanks [@108yen](https://github.com/108yen)! - Fixed cache function.
+
 ## 1.5.0
 
 ### Minor Changes
