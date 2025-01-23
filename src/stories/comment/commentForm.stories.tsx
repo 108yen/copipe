@@ -2,9 +2,9 @@ import CommentForm from "@/modules/comment/commentForm"
 import { Meta, StoryObj } from "@storybook/react"
 
 const meta = {
-  title: "yamadaui/CommentForm",
   component: CommentForm,
   tags: ["autodocs"],
+  title: "yamadaui/CommentForm",
 } satisfies Meta<typeof CommentForm>
 
 export default meta
@@ -12,8 +12,8 @@ type Story = StoryObj<typeof meta>
 
 export const Success: Story = {
   args: {
-    copipe_id: 0,
     addOptimisticComment: () => {},
+    copipe_id: 0,
     postComment: async () => {
       return undefined
     },
@@ -22,8 +22,8 @@ export const Success: Story = {
 
 export const Error: Story = {
   args: {
-    copipe_id: 0,
     addOptimisticComment: () => {},
+    copipe_id: 0,
     postComment: async () => {
       return { error: "error" }
     },
@@ -32,8 +32,8 @@ export const Error: Story = {
 
 export const Loading: Story = {
   args: {
-    copipe_id: 0,
     addOptimisticComment: () => {},
+    copipe_id: 0,
     postComment: async () => {
       const sleep = (second: number) =>
         new Promise((resolve) => setTimeout(resolve, second * 1000))

@@ -3,6 +3,7 @@
 import { Box, VStack } from "@yamada-ui/react"
 import { usePathname } from "next/navigation"
 import { useEffect } from "react"
+
 import { AdmaxAdType } from "./conf"
 
 export default function AdmaxPCSideVertical() {
@@ -38,26 +39,26 @@ export default function AdmaxPCSideVertical() {
 
   return (
     <VStack
+      alignItems="center"
       flexGrow={1}
       justifyContent="flex-start"
-      alignItems="center"
       zIndex={10}
     >
       <Box position="relative">
         <Box
-          key={pathname}
           flexGrow={1}
-          width={200}
-          textAlign="center"
+          key={pathname}
           padding={2}
+          textAlign="center"
+          width={200}
         >
           <div
             className="admax-ads"
             data-admax-id={adMaxId}
             style={{
               display: `inline-block`,
-              width: 160,
               height: 600,
+              width: 160,
             }}
           ></div>
         </Box>

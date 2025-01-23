@@ -3,8 +3,8 @@
 import { prisma } from "@/db/db"
 import { revalidatePath } from "next/cache"
 
-export async function postNewCopipe(props: { title: string; body: string }) {
-  const { title, body } = props
+export async function postNewCopipe(props: { body: string; title: string; }) {
+  const { body, title } = props
 
   if (await checkDupulicate(body)) {
     return { message: "投稿済みのコピペ" }
@@ -13,8 +13,8 @@ export async function postNewCopipe(props: { title: string; body: string }) {
   await prisma.copipe
     .create({
       data: {
-        title: title,
         body: body,
+        title: title,
       },
     })
     .catch((error) => {

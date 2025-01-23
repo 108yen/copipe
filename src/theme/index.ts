@@ -1,5 +1,6 @@
 "use client"
-import { UsageTheme, extendConfig, extendTheme } from "@yamada-ui/react"
+import { extendConfig, extendTheme, UsageTheme } from "@yamada-ui/react"
+
 import components from "./components"
 import { customConfig } from "./config"
 import { semantics } from "./semantics"
@@ -7,9 +8,9 @@ import styles from "./styles"
 import tokens from "./tokens"
 
 const customTheme: UsageTheme = {
-  styles,
   components,
   semantics,
+  styles,
   ...tokens,
 }
 

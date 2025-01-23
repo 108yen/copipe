@@ -5,9 +5,9 @@ import { searchFormStyle } from "./search-form-style"
 import { textStyles } from "./text-styles"
 
 export default {
-  globalStyle,
-  textStyles,
-  searchFormStyle,
-  gridStyle,
   buttonStyles,
+  globalStyle,
+  gridStyle,
+  searchFormStyle,
+  textStyles,
 }

@@ -4,9 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { UIProvider } from "@yamada-ui/react"
 
 const meta = {
-  title: "yamadaui/TagListCard",
   component: TagListCardTemplate,
-  tags: ["autodocs"],
   decorators: [
     (Story) => {
       return (
@@ -16,6 +14,8 @@ const meta = {
       )
     },
   ],
+  tags: ["autodocs"],
+  title: "yamadaui/TagListCard",
 } satisfies Meta<typeof TagListCardTemplate>
 
 export default meta
@@ -27,9 +27,9 @@ export const Default: Story = {
       0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19,
     ].map((value) => {
       return {
-        id: value,
-        created_at: new Date(),
         body: `tag-${value}`,
+        created_at: new Date(),
+        id: value,
       }
     }),
   },

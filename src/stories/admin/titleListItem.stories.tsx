@@ -3,9 +3,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { Accordion } from "@yamada-ui/react"
 
 const meta = {
-  title: "yamadaui/TitleListItem",
   component: TitleListItem,
-  tags: ["autodocs"],
   decorators: [
     (Story) => (
       <Accordion iconHidden>
@@ -13,6 +11,8 @@ const meta = {
       </Accordion>
     ),
   ],
+  tags: ["autodocs"],
+  title: "yamadaui/TitleListItem",
 } satisfies Meta<typeof TitleListItem>
 
 export default meta
@@ -21,14 +21,14 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
   args: {
     copipe: {
-      id: 0,
       body: "test copipe",
-      title: "test copipe title",
       copipeToTag: [
         {
-          tag: { id: 0, body: "test tag" },
+          tag: { body: "test tag", id: 0 },
         },
       ],
+      id: 0,
+      title: "test copipe title",
     },
     openModal: () => {},
   },
@@ -36,10 +36,10 @@ export const Default: Story = {
 export const NoTag: Story = {
   args: {
     copipe: {
-      id: 0,
       body: "test copipe",
-      title: "test copipe title",
       copipeToTag: [],
+      id: 0,
+      title: "test copipe title",
     },
     openModal: () => {},
   },

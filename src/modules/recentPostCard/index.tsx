@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+
 import LoadingRecentPostsCard from "./loading"
 import RecentPostsCard from "./recentPostCard"
 

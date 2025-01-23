@@ -1,4 +1,5 @@
 import { Suspense } from "react"
+
 import LoadingTagListCard from "./loading"
 import TagListCard from "./tagListCard"
 

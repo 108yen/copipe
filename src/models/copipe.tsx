@@ -1,7 +1,7 @@
 export type Copipe = {
+  body: string
   id: number
   inserted_at: Date
-  updated_at: Date
-  body: string
   title: string
+  updated_at: Date
 }

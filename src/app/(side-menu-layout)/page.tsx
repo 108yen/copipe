@@ -14,13 +14,13 @@ export default async function Home() {
       <Container>
         {copipes.map((copipe) => (
           <CopipeCardItem
-            key={`copipe-card-item-${copipe.id}`}
             copipeItem={copipe}
+            key={`copipe-card-item-${copipe.id}`}
           />
         ))}
       </Container>
 
-      <CopipePagination url="/search" total={Math.ceil(count / 10)} page={1} />
+      <CopipePagination page={1} total={Math.ceil(count / 10)} url="/search" />
     </VStack>
   )
 }

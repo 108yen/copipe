@@ -21,15 +21,15 @@ export default function TitleListItem(props: {
   return (
     <AccordionItem>
       <AccordionLabel gap={1}>
-        {notSetTag ? <Icon color="warning" as={ErrorOutlineIcon} /> : null}
+        {notSetTag ? <Icon as={ErrorOutlineIcon} color="warning" /> : null}
         {copipe.title}
         <Spacer />
         <IconButton
-          variant="ghost"
           icon={<Icon as={EditIcon} />}
           onClick={() => {
             openModal(copipe)
           }}
+          variant="ghost"
         />
       </AccordionLabel>
       <AccordionPanel>{copipe.body}</AccordionPanel>

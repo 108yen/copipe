@@ -10,8 +10,8 @@
 // }
 
 export type CopipeComment = {
-  id: number
-  created_at?: Date
-  copipe_id?: number
   body: string
+  copipe_id?: number
+  created_at?: Date
+  id: number
 }

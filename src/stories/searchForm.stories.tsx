@@ -4,12 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { UIProvider } from "@yamada-ui/react"
 
 const meta = {
-  title: "yamadaui/SearchForm",
   component: SearchForm,
-  parameters: {
-    // layout: 'centered',
-  },
-  tags: ["autodocs"],
   decorators: [
     (Story) => {
       return (
@@ -19,6 +14,11 @@ const meta = {
       )
     },
   ],
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ["autodocs"],
+  title: "yamadaui/SearchForm",
 } satisfies Meta<typeof SearchForm>
 
 export default meta

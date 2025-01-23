@@ -5,16 +5,16 @@ import { revalidatePath } from "next/cache"
 async function insertTags(copipe_id: number, tag_ids: number[]) {
   const query = tag_ids.map((tag_id) =>
     prisma.copipeToTag.upsert({
+      create: {
+        copipe_id: copipe_id,
+        tag_id: tag_id,
+      },
+      update: {},
       where: {
         copipe_id_tag_id: {
           copipe_id: copipe_id,
           tag_id: tag_id,
         },
-      },
-      update: {},
-      create: {
-        copipe_id: copipe_id,
-        tag_id: tag_id,
       },
     }),
   )

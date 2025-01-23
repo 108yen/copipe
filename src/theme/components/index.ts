@@ -1,6 +1,6 @@
 import { Button } from "./button"
 import { Container } from "./container"
 
-const components = { Container, Button }
+const components = { Button, Container }
 
 export default components

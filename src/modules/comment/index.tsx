@@ -4,6 +4,7 @@ import { postComment } from "@/app/(side-menu-layout)/archives/[id]/serverAction
 import { CommentPayload, CommentsPayload } from "@/db/query"
 import { Container } from "@yamada-ui/react"
 import { useOptimistic } from "react"
+
 import CommentForm from "./commentForm"
 import { CommentList } from "./commentList"
 
@@ -23,8 +24,8 @@ export default function Comment(props: {
     <Container>
       <CommentList comments={optimisticComments} />
       <CommentForm
-        copipe_id={copipe_id}
         addOptimisticComment={addOptimisticComment}
+        copipe_id={copipe_id}
         postComment={postComment}
       />
     </Container>

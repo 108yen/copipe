@@ -19,23 +19,23 @@ type Inputs = {
 }
 
 export default function EditModal(props: {
-  open: boolean
-  onClose: () => void
   copipe: CopipeWithTagPayload | undefined
+  onClose: () => void
+  open: boolean
   tags: TagPayload[]
   updateTags: (
     copipe_id: number,
     tag_ids: number[],
   ) => Promise<
+    | undefined
     | {
         error: string
       }
-    | undefined
   >
 }) {
-  const { open, onClose, copipe, tags, updateTags } = props
+  const { copipe, onClose, open, tags, updateTags } = props
 
-  const { control, handleSubmit, formState, reset } = useForm<Inputs>({
+  const { control, formState, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
       tags: [],
     },
@@ -51,24 +51,24 @@ export default function EditModal(props: {
 
     if (result?.error) {
       notice({
-        title: "更新失敗",
         status: "error",
+        title: "更新失敗",
       })
     } else {
       notice({
-        title: "更新完了",
         status: "success",
+        title: "更新完了",
       })
       reset()
     }
   }
 
   const modalProps: any = {
+    gap: 2,
     isOpen: open,
     onClose,
-    size: "5xl",
     p: 4,
-    gap: 2,
+    size: "5xl",
   }
 
   return (
@@ -80,8 +80,8 @@ export default function EditModal(props: {
         render={({ field }) => (
           <MultiAutocomplete
             {...field}
-            omitSelectedValues
             items={tags.map((tag) => ({ label: tag.body, value: tag.body }))}
+            omitSelectedValues
           />
         )}
       />
@@ -91,12 +91,12 @@ export default function EditModal(props: {
       </ModalBody>
       <ModalFooter>
         <Button
-          variant="outline"
-          color="secondary"
           borderColor="secondary"
-          w="fit-content"
+          color="secondary"
           isLoading={formState.isSubmitting}
           onClick={handleSubmit(onSubmit)}
+          variant="outline"
+          w="fit-content"
         >
           更新
         </Button>

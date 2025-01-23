@@ -10,7 +10,7 @@ export default function LoadingRecentPostsCard() {
   return (
     <Container>
       <VStack>
-        <Heading variant="h5" fontSize="xl">
+        <Heading fontSize="xl" variant="h5">
           最近の投稿
         </Heading>
         <Divider />

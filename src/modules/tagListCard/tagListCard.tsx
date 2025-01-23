@@ -8,20 +8,20 @@ export default async function TagListCard() {
   return (
     <Container>
       <VStack>
-        <Heading variant="h5" fontSize="xl">
+        <Heading fontSize="xl" variant="h5">
           タグ一覧
         </Heading>
         <Divider />
         <Box>
           {tags.map((tag) => (
-            <Link key={`tag-${tag.id}`} href={`/tag/${tag.id}`}>
+            <Link href={`/tag/${tag.id}`} key={`tag-${tag.id}`}>
               <Tag
-                key={tag.id}
-                variant="outline"
-                color="secondary"
                 boxShadow="inset 0 0 0px 1px"
-                size="sm"
+                color="secondary"
+                key={tag.id}
                 rounded="full"
+                size="sm"
+                variant="outline"
               >
                 {tag.body}
               </Tag>

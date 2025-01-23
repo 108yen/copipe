@@ -9,5 +9,5 @@ export async function checkBeforeAndAfterPage(currendId: number) {
   const afterId =
     currentIdIndex == copipeIds.length - 1 ? -1 : copipeIds[currentIdIndex + 1]
 
-  return { beforeId, afterId }
+  return { afterId, beforeId }
 }

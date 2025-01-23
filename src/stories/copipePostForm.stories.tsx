@@ -5,9 +5,9 @@ import { Meta, StoryObj } from "@storybook/react"
 import { screen, userEvent, waitFor, within } from "@storybook/testing-library"
 
 const meta = {
-  title: "yamadaui/CopipePostForm",
   component: CopipePostForm,
   tags: ["autodocs"],
+  title: "yamadaui/CopipePostForm",
 } satisfies Meta<typeof CopipePostForm>
 
 export default meta

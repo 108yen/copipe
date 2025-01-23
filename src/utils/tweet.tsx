@@ -4,9 +4,9 @@ export default async function getTweet() {
   const { data, error } = await supabase.rpc("get_random_copipe")
   if (error) console.log(`get random copipe error: ${error}`)
   else console.log("get random copipe")
-  const copipe: { id: number; body: string } = {
-    id: data[0].id,
+  const copipe: { body: string; id: number; } = {
     body: data[0].body,
+    id: data[0].id,
   }
   const url = `https://www.netcopipe.com/archives/${copipe.id}`
   const text = reductionText(copipe.body, url)

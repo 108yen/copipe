@@ -4,21 +4,6 @@ import { Meta, StoryObj } from "@storybook/react"
 import { UIProvider } from "@yamada-ui/react"
 
 const meta = {
-  title: "yamadaui/CopipeCardItemSkelton",
-  component: CopipeCardItemSkelton,
-  parameters: {
-    // layout: 'centered',
-  },
-  tags: ["autodocs"],
-  decorators: [
-    (Story) => {
-      return (
-        <UIProvider theme={theme}>
-          <Story />
-        </UIProvider>
-      )
-    },
-  ],
   argTypes: {
     // color: {
     //     control: 'radio',
@@ -39,6 +24,21 @@ const meta = {
     //     ]
     // }
   },
+  component: CopipeCardItemSkelton,
+  decorators: [
+    (Story) => {
+      return (
+        <UIProvider theme={theme}>
+          <Story />
+        </UIProvider>
+      )
+    },
+  ],
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ["autodocs"],
+  title: "yamadaui/CopipeCardItemSkelton",
 } satisfies Meta<typeof CopipeCardItemSkelton>
 
 export default meta

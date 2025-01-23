@@ -11,10 +11,10 @@ import Link from "next/link"
 export default function page() {
   return (
     <Container>
-      <Heading variant="h3" textStyle="aboutPageHeading" textAlign="center">
+      <Heading textAlign="center" textStyle="aboutPageHeading" variant="h3">
         本サイトについて
       </Heading>
-      <Heading variant="h4" textStyle="aboutPageHeading">
+      <Heading textStyle="aboutPageHeading" variant="h4">
         1. はじめに
       </Heading>
       <Divider />
@@ -22,7 +22,7 @@ export default function page() {
         当サイトでは2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。コピペの検索、投稿、コメントが可能です。
       </Text>
 
-      <Heading variant="h4" textStyle="aboutPageHeading">
+      <Heading textStyle="aboutPageHeading" variant="h4">
         2. 禁止事項
       </Heading>
       <Divider />
@@ -39,7 +39,7 @@ export default function page() {
           (Webスクレイピング行為等)
         </ListItem>
       </DiscList>
-      <Heading variant="h4" textStyle="aboutPageHeading">
+      <Heading textStyle="aboutPageHeading" variant="h4">
         3. Google Analytics
       </Heading>
       <Divider sx={{ marginY: 1 }} />
@@ -50,12 +50,12 @@ export default function page() {
       <DiscList>
         <ListItem>
           <Link
-            href="https://policies.google.com/technologies/cookies?hl=ja"
             aria-label="google link"
-            target="_blank"
+            href="https://policies.google.com/technologies/cookies?hl=ja"
             style={{
               textDecoration: `none`,
             }}
+            target="_blank"
           >
             <Text
               sx={{
@@ -70,12 +70,12 @@ export default function page() {
         </ListItem>
         <ListItem>
           <Link
-            href="https://support.google.com/analytics/answer/181881?hl=ja"
             aria-label="google optout link"
-            target="_blank"
+            href="https://support.google.com/analytics/answer/181881?hl=ja"
             style={{
               textDecoration: `none`,
             }}
+            target="_blank"
           >
             <Text
               sx={{

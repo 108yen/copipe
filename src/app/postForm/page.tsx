@@ -1,5 +1,6 @@
 import CopipePostForm from "@/modules/copipePostForm"
 import { Container } from "@yamada-ui/react"
+
 import { postNewCopipe } from "./serverActions"
 
 export const metadata = {

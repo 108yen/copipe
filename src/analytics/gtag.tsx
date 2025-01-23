@@ -5,18 +5,18 @@ export const existsGaId = GA_MEASUREMENT_ID !== ``
 type EventOptions = Record<string, unknown> & {
   category?: string
   label?: string
-  value?: number
   nonInteraction?: boolean
   userId?: string
+  value?: number
 }
 export const event = (
   action: string,
   {
     category,
     label,
-    value,
     nonInteraction,
     userId,
+    value,
     ...otherOptions
   }: EventOptions,
 ) => {
