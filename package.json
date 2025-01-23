@@ -16,11 +16,7 @@
     "postinstall": "prisma generate",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "typecheck": "tsc --noEmit",
-    "prepare": "husky"
-  },
-  "lint-staged": {
-    "src/**/*.{ts,tsx}": "biome check --apply-unsafe --no-errors-on-unmatched"
+    "typecheck": "tsc --noEmit"
   },
   "dependencies": {
     "@emotion/react": "^11.11.3",
@@ -47,6 +43,8 @@
   "devDependencies": {
     "@changesets/changelog-github": "^0.5.0",
     "@changesets/cli": "^2.27.9",
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@cspell/eslint-plugin": "^8.17.2",
     "@eslint/compat": "^1.2.5",
     "@storybook/addon-essentials": "^8.0.0",
@@ -72,8 +70,7 @@
     "eslint-plugin-storybook": "^0.11.0",
     "eslint-plugin-unused-imports": "^4.0.0",
     "globals": "^15.14.0",
-    "husky": "^9.0.11",
-    "lint-staged": "^15.2.2",
+    "lefthook": "^1.10.10",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.1.1",
     "storybook": "^8.0.0",
