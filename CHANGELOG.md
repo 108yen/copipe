@@ -1,5 +1,11 @@
 # copipe
 
+## 1.5.0
+
+### Minor Changes
+
+- [#119](https://github.com/108yen/copipe/pull/119) [`47452f4`](https://github.com/108yen/copipe/commit/47452f42258f4c9b4a2322787ddd4a69998e34cc) Thanks [@108yen](https://github.com/108yen)! - Updated page structure.
+
 ## 1.4.2
 
 ### Patch Changes
