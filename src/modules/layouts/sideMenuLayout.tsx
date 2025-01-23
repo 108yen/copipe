@@ -9,7 +9,7 @@ export default function SideMenuLayout({ children }: { children: ReactNode }) {
     <>
       <AppBar />
 
-      <SimpleGrid apply="gridStyle.grid" columns={4}>
+      <SimpleGrid apply="gridStyle.grid" columns={4} as="main">
         <GridItem colSpan={{ base: 3, md: 4 }} apply="gridStyle.item">
           {children}
         </GridItem>
