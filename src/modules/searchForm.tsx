@@ -31,12 +31,12 @@ export default function SearchForm() {
 
   return (
     <VStack alignItems="flex-end" gap={0}>
-      <Card variant="subtle" apply="searchFormStyle.card">
+      <Card apply="searchFormStyle.card" variant="subtle">
         <form onSubmit={handleSubmit(onSubmit)}>
           <Controller
-            name="text"
             control={control}
-            render={({ field, fieldState }) => (
+            name="text"
+            render={({ field }) => (
               <InputGroup>
                 <Input
                   {...field}
@@ -56,10 +56,10 @@ export default function SearchForm() {
       </Card>
       <Button
         apply="searchFormStyle.button"
-        variant="link"
         onClick={() => {
           router.push("/postForm")
         }}
+        variant="link"
       >
         追加はこちらから
       </Button>

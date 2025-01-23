@@ -5,48 +5,48 @@ import {
   FormControl,
   Input,
   Textarea,
-  VStack,
   useNotice,
+  VStack,
 } from "@yamada-ui/react"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
 
 type Inputs = {
-  title: string
   body: string
+  title: string
 }
 
 export default function CopipePostForm(props: {
-  postNewCopipe: (props: { title: string; body: string }) => Promise<
-    | {
-        message: string
-        error?: undefined
-      }
+  postNewCopipe: (props: { body: string; title: string; }) => Promise<
+    | undefined
     | {
         error: string
         message?: undefined
       }
-    | undefined
+    | {
+        error?: undefined
+        message: string
+      }
   >
 }) {
   const { postNewCopipe } = props
 
-  const { control, handleSubmit, reset, formState } = useForm<Inputs>({
+  const { control, formState, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
-      title: "",
       body: "",
+      title: "",
     },
   })
 
   const notice = useNotice({ placement: "bottom-left", variant: "solid" })
 
   const validationRules = {
-    title: {
-      required: "タイトルを入力して下さい",
-      minLength: { value: 1, message: "タイトルを入力して下さい" },
-    },
     body: {
+      minLength: { message: "本文を入力して下さい", value: 1 },
       required: "本文を入力して下さい",
-      minLength: { value: 1, message: "本文を入力して下さい" },
+    },
+    title: {
+      minLength: { message: "タイトルを入力して下さい", value: 1 },
+      required: "タイトルを入力して下さい",
     },
   }
   const onSubmit: SubmitHandler<Inputs> = async (data: Inputs) => {
@@ -58,72 +58,72 @@ export default function CopipePostForm(props: {
 
     if (result?.error) {
       notice({
-        title: "投稿失敗",
         status: "error",
+        title: "投稿失敗",
       })
     } else if (result?.message) {
       notice({
-        title: "投稿失敗",
-        status: "warning",
         description: result.message,
+        status: "warning",
+        title: "投稿失敗",
       })
       reset()
     } else {
       notice({
-        title: "投稿完了",
         status: "success",
+        title: "投稿完了",
       })
       reset()
     }
   }
 
   return (
-    <VStack as="form" alignItems="center" w="full">
+    <VStack alignItems="center" as="form" w="full">
       <Controller
-        name="title"
         control={control}
-        rules={validationRules.title}
+        name="title"
         render={({ field, fieldState }) => (
           <FormControl
-            isInvalid={fieldState.invalid}
             errorMessage={fieldState.error?.message}
+            isInvalid={fieldState.invalid}
           >
             <Input
               {...field}
+              focusBorderColor="secondary"
               id="title"
               placeholder="タイトル"
-              focusBorderColor="secondary"
             />
           </FormControl>
         )}
+        rules={validationRules.title}
       />
       <Controller
-        name="body"
         control={control}
-        rules={validationRules.body}
+        name="body"
         render={({ field, fieldState }) => (
           <FormControl
-            isInvalid={fieldState.invalid}
             errorMessage={fieldState.error?.message}
+            isInvalid={fieldState.invalid}
           >
             <Textarea
               {...field}
-              id="body"
-              placeholder="本文"
-              focusBorderColor="secondary"
               autosize
-              minRows={4}
+              focusBorderColor="secondary"
+              id="body"
               maxRows={30}
+              minRows={4}
+              placeholder="本文"
             />
           </FormControl>
         )}
+        rules={validationRules.body}
       />
       <Button
-        variant="outline"
-        colorScheme="secondary"
         apply="buttonStyles.default"
+        colorScheme="secondary"
         isLoading={formState.isSubmitting}
         onClick={handleSubmit(onSubmit)}
+        variant="outline"
       >
         投稿
       </Button>

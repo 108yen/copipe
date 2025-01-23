@@ -9,18 +9,18 @@ export default async function RecentPostsCard() {
   return (
     <Container>
       <VStack>
-        <Heading variant="h5" fontSize="xl">
+        <Heading fontSize="xl" variant="h5">
           最近の投稿
         </Heading>
         <Divider />
         <VStack gap={0}>
           {copipes.map((copipe) => (
             <Link
-              key={`recent-copipe-${copipe.id}`}
               href={`/archives/${copipe.id}`}
+              key={`recent-copipe-${copipe.id}`}
               style={{
-                textDecoration: "none",
                 overflow: "hidden",
+                textDecoration: "none",
               }}
             >
               <Text

@@ -1,6 +1,7 @@
 import { Tag } from "@/models/tag"
 import { unstable_cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
+
 import { prisma } from "../db"
 
 //NOTE: Tag data will not change. No problem if `unstable_cache` is broken.
@@ -28,9 +29,9 @@ export const fetchTags = async function () {
 
   const result: Tag[] = tags.map((tag) => {
     return {
-      id: tag.id,
-      created_at: new Date(tag.created_at),
       body: tag.body,
+      created_at: new Date(tag.created_at),
+      id: tag.id,
     }
   })
 
@@ -54,8 +55,8 @@ export const fetchTag = async function (id: number) {
 
   const tag = await prisma.tag
     .findUniqueOrThrow({
-      where: { id },
       select: { body: true },
+      where: { id },
     })
     .catch(() => {
       notFound()

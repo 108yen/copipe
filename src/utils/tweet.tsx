@@ -4,9 +4,9 @@ export default async function getTweet() {
   const { data, error } = await supabase.rpc("get_random_copipe")
   if (error) console.log(`get random copipe error: ${error}`)
   else console.log("get random copipe")
-  const copipe: { id: number; body: string } = {
-    id: data[0].id,
+  const copipe: { body: string; id: number; } = {
     body: data[0].body,
+    id: data[0].id,
   }
   const url = `https://www.netcopipe.com/archives/${copipe.id}`
   const text = reductionText(copipe.body, url)
@@ -34,6 +34,7 @@ function countCharacters(text: string): {
   let halfWidth = 0
   for (const char of text) {
     // 全角文字かどうかを判定
+    // eslint-disable-next-line no-control-regex
     if (char.match(/[^\x01-\x7E\xA1-\xDF]/)) {
       fullWidth += 2
     } else {

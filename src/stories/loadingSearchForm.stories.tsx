@@ -4,12 +4,7 @@ import { Meta, StoryObj } from "@storybook/react"
 import { UIProvider } from "@yamada-ui/react"
 
 const meta = {
-  title: "yamadaui/LoadingSearchForm",
   component: LoadingSearchForm,
-  parameters: {
-    // layout: 'centered',
-  },
-  tags: ["autodocs"],
   decorators: [
     (Story) => {
       return (
@@ -19,6 +14,11 @@ const meta = {
       )
     },
   ],
+  parameters: {
+    // layout: 'centered',
+  },
+  tags: ["autodocs"],
+  title: "yamada-ui/LoadingSearchForm",
 } satisfies Meta<typeof LoadingSearchForm>
 
 export default meta
@@ -32,12 +32,12 @@ export const Default: Story = {
   },
 }
 export const Text: Story = {
+  args: {
+    text: "test",
+  },
   parameters: {
     nextjs: {
       appDirectory: true,
     },
-  },
-  args: {
-    text: "test",
   },
 }

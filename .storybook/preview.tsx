@@ -1,17 +1,22 @@
 import type { Preview } from "@storybook/react";
+
 import { themes } from '@storybook/theming'
-import { DocsContainer, StoryProvider } from "./component";
 import React from "react";
 
+import { DocsContainer, StoryProvider } from "./component";
+
 const preview: Preview = {
+  decorators: [
+    (Story) => {
+      return (
+        <StoryProvider>
+          <Story />
+        </StoryProvider>
+      )
+    },
+  ],
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-    },
     backgrounds: {
       default: "default",
       values: [
@@ -21,26 +26,23 @@ const preview: Preview = {
         },
       ],
     },
+    controls: {
+      matchers: {
+        color: /(background|color)$/i,
+        date: /Date$/i,
+      },
+    },
     darkMode: {
       // Override the default dark theme
       dark: { ...themes.dark, appBg: 'black' },
       // Override the default light theme
       light: { ...themes.normal, appBg: 'white' }
     },
+    docs: { container: DocsContainer },
     nextjs: {
       appDirectory: true,
     },
-    docs: { container: DocsContainer },
-  },
-  decorators: [
-    (Story) => {
-      return (
-        <StoryProvider>
-          <Story />
-        </StoryProvider>
-      )
-    },
-  ]
+  }
 };
 
 export default preview;

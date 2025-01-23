@@ -2,6 +2,7 @@ import { fetchCopipe } from "@/db/server/copipes"
 import Comment from "@/modules/comment"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import { Container, VStack } from "@yamada-ui/react"
+
 import ArchivesPagination from "./archivesPagination"
 import { checkBeforeAndAfterPage } from "./utils"
 
@@ -12,7 +13,7 @@ export default async function page({
 }) {
   const id = Number((await params).id)
   const copipe = await fetchCopipe(id)
-  const { beforeId, afterId } = await checkBeforeAndAfterPage(id)
+  const { afterId, beforeId } = await checkBeforeAndAfterPage(id)
 
   return (
     <VStack>
@@ -22,7 +23,7 @@ export default async function page({
 
       <Comment comments={copipe.comments} copipe_id={id} />
 
-      <ArchivesPagination beforeId={beforeId} afterId={afterId} />
+      <ArchivesPagination afterId={afterId} beforeId={beforeId} />
     </VStack>
   )
 }

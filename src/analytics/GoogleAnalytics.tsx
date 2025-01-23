@@ -5,17 +5,17 @@ import Script from "next/script"
 import { GA_MEASUREMENT_ID } from "./gtag"
 
 export default function GoogleAnalytics({
-  debugMode = false,
   clientIp = "none",
+  debugMode = false,
 }: {
-  debugMode: boolean
   clientIp?: string
+  debugMode: boolean
 }) {
   return (
     <>
       <Script
-        strategy="lazyOnload"
         src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
+        strategy="lazyOnload"
       />
       <Script id="gtag-init" strategy="afterInteractive">
         {`

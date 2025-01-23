@@ -5,7 +5,7 @@ import { Container, VStack } from "@yamada-ui/react"
 
 export default async function page(props: {
   params: Promise<{ tagId: string }>
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
   const searchParams = await props.searchParams
   const params = await props.params
@@ -19,13 +19,13 @@ export default async function page(props: {
     <VStack>
       <Container>
         {copipes.map((e) => (
-          <CopipeCardItem key={e.id} copipeItem={e} />
+          <CopipeCardItem copipeItem={e} key={e.id} />
         ))}
       </Container>
       <CopipePagination
-        url={`/tag/${tagId}`}
-        total={Math.ceil(count / 10)}
         page={page}
+        total={Math.ceil(count / 10)}
+        url={`/tag/${tagId}`}
       />
     </VStack>
   )

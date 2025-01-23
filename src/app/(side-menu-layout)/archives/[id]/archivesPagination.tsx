@@ -5,19 +5,19 @@ import { Box, Button, ButtonGroup, Icon } from "@yamada-ui/react"
 import { useRouter } from "next/navigation"
 
 export default function ArchivesPagination(props: {
-  beforeId: number
   afterId: number
+  beforeId: number
 }) {
-  const { beforeId, afterId } = props
+  const { afterId, beforeId } = props
 
   const router = useRouter()
 
   return (
-    <Box textAlign="center" flexGrow={1}>
-      <ButtonGroup isAttached variant="outline" bg="white">
+    <Box flexGrow={1} textAlign="center">
+      <ButtonGroup bg="white" isAttached variant="outline">
         <Button
-          leftIcon={<Icon as={ArrowBackIosIcon} />}
           disabled={beforeId == -1}
+          leftIcon={<Icon as={ArrowBackIosIcon} />}
           onClick={() => {
             router.push(`/archives/${beforeId}`)
           }}
@@ -25,11 +25,11 @@ export default function ArchivesPagination(props: {
           前のコピペ
         </Button>
         <Button
-          rightIcon={<Icon as={ArrowForwardIosIcon} />}
           disabled={afterId == -1}
           onClick={() => {
             router.push(`/archives/${afterId}`)
           }}
+          rightIcon={<Icon as={ArrowForwardIosIcon} />}
         >
           次のコピペ
         </Button>

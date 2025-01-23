@@ -1,5 +1,6 @@
 import { CommentsPayload } from "@/db/query"
 import { Divider, VStack } from "@yamada-ui/react"
+
 import { CommentItem } from "./commentItem"
 
 export function CommentList(props: { comments: CommentsPayload }) {
@@ -8,7 +9,7 @@ export function CommentList(props: { comments: CommentsPayload }) {
   return (
     <VStack divider={<Divider />}>
       {comments.map((comment) => (
-        <CommentItem key={comment.id} comment={comment} />
+        <CommentItem comment={comment} key={comment.id} />
       ))}
     </VStack>
   )
