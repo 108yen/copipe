@@ -1,9 +1,8 @@
 import AppBar from "@/modules/appBar"
-import RecentPostsCard from "@/modules/recentPostCard"
+import RecentPostsCard from "@/modules/recentPostCard/recentPostCard"
+import TagListCard from "@/modules/tagListCard/tagListCard"
 import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
 import { ReactNode } from "react"
-
-import TagListCard from "../tagListCard"
 
 export default function SideMenuLayout({ children }: { children: ReactNode }) {
   return (
