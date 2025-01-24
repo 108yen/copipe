@@ -3,7 +3,6 @@ import { Container, Divider, Heading, Text, VStack } from "@yamada-ui/react"
 import Link from "next/link"
 
 export default async function RecentPostsCard() {
-  // await new Promise((resolve) => setTimeout(resolve, 5000))
   const copipes = await fetchRecentCopipes()
 
   return (
