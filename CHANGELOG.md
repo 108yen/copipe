@@ -1,5 +1,11 @@
 # copipe
 
+## 1.5.2
+
+### Patch Changes
+
+- [`e8031f4`](https://github.com/108yen/copipe/commit/e8031f4a19dd7b493d54e07c36dfbc9687fe9896) Thanks [@108yen](https://github.com/108yen)! - Fixed dynamicIO components.
+
 ## 1.5.1
 
 ### Patch Changes
