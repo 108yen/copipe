@@ -1,5 +1,0 @@
----
-"copipe": patch
----
-
-Updated `cacheLife`.
