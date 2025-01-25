@@ -5,10 +5,8 @@ import { notFound } from "next/navigation"
 import { prisma } from "../db"
 
 export async function fetchTags() {
-  "use cache"
-  cacheLife("max")
-
   const tags = await prisma.tag.findMany()
+
   console.log("get tag list")
 
   const result: Tag[] = tags.map((tag) => {
