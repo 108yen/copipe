@@ -1,4 +1,3 @@
-"use cache"
 import GoogleAnalytics from "@/analytics/GoogleAnalytics"
 import { config, theme } from "@/theme"
 import { YamadaUIScript } from "@/utils/yamada-ui-script"

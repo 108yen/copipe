@@ -1,4 +1,3 @@
-"use cache"
 import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { ReactNode } from "react"
 

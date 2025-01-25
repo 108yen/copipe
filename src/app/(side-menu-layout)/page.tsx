@@ -3,8 +3,12 @@ import { CopipeCardItem } from "@/modules/copipeCardItem"
 import CopipePagination from "@/modules/copipePagination"
 import SearchForm from "@/modules/searchForm"
 import { Container, VStack } from "@yamada-ui/react"
+import { unstable_cacheLife as cacheLife } from "next/cache"
 
 export default async function Home() {
+  "use cache"
+  cacheLife("max")
+
   const { copipes, count } = await getHomePageCopipe()
 
   return (
