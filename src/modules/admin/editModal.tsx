@@ -3,12 +3,12 @@
 import { CopipeWithTagPayload, TagPayload } from "@/db/query"
 import {
   Button,
-  Divider,
   Modal,
   ModalBody,
   ModalFooter,
   ModalHeader,
   MultiAutocomplete,
+  Separator,
   Text,
   useNotice,
 } from "@yamada-ui/react"
@@ -63,16 +63,8 @@ export default function EditModal(props: {
     }
   }
 
-  const modalProps: any = {
-    gap: 2,
-    isOpen: open,
-    onClose,
-    p: 4,
-    size: "5xl",
-  }
-
   return (
-    <Modal {...modalProps}>
+    <Modal gap="2" onClose={onClose} open={open} p="4" size="5xl">
       <ModalHeader>{copipe?.title}</ModalHeader>
       <Controller
         control={control}
@@ -85,7 +77,7 @@ export default function EditModal(props: {
           />
         )}
       />
-      <Divider />
+      <Separator />
       <ModalBody>
         <Text>{copipe?.body}</Text>
       </ModalBody>
@@ -93,7 +85,7 @@ export default function EditModal(props: {
         <Button
           borderColor="secondary"
           color="secondary"
-          isLoading={formState.isSubmitting}
+          loading={formState.isSubmitting}
           onClick={handleSubmit(onSubmit)}
           variant="outline"
           w="fit-content"
