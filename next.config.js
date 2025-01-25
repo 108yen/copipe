@@ -2,8 +2,9 @@
 const nextConfig = {
   experimental: {
     dynamicIO: true,
+    useCache: true,
   },
-  reactStrictMode: true
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig
