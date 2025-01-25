@@ -1,5 +1,11 @@
 # copipe
 
+## 1.5.3
+
+### Patch Changes
+
+- [`fadb77c`](https://github.com/108yen/copipe/commit/fadb77c04dd1813c3eeca3a3baee9ef58a5f623d) Thanks [@108yen](https://github.com/108yen)! - Updated `cacheLife`.
+
 ## 1.5.2
 
 ### Patch Changes

@@ -1,9 +1,10 @@
 {
   "name": "copipe",
-  "version": "1.5.2",
+  "version": "1.5.3",
   "private": true,
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "scripts": {
+    "prepare": "lefthook install",
     "dev": "next dev --turbopack",
     "build": "prisma generate && next build",
     "postbuild": "next-sitemap",
@@ -19,16 +20,13 @@
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "@emotion/react": "^11.11.3",
-    "@emotion/server": "^11.11.0",
-    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^6.0.0",
     "@next/third-parties": "15.1.6",
     "@prisma/client": "^6.0.0",
     "@supabase/supabase-js": "^2.39.2",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
-    "@yamada-ui/react": "^1.6.3",
+    "@yamada-ui/react": "^1.7.4",
     "axios": "^1.6.5",
     "dayjs": "^1.11.10",
     "jotai": "^2.6.1",
@@ -63,7 +61,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "15.1.5",
+    "eslint-config-next": "15.1.6",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-perfectionist": "^4.7.0",

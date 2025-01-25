@@ -1,4 +1,4 @@
-import { unstable_cacheTag } from "next/cache"
+import { unstable_cacheLife as cacheLife } from "next/cache"
 import { notFound } from "next/navigation"
 
 import { prisma } from "../db"
@@ -6,6 +6,8 @@ import { copipeWithTag, copipeWithTagComment } from "../query"
 
 export async function getHomePageCopipe() {
   "use cache"
+  cacheLife("max")
+
   const [copipes, count] = await prisma.$transaction([
     prisma.copipe.findMany({
       orderBy: {
@@ -44,7 +46,7 @@ export async function getHomePageCopipe() {
 // })
 export async function fetchRecentCopipes() {
   "use cache"
-  unstable_cacheTag("recent_copipes")
+  cacheLife("max")
 
   const copipes = await prisma.copipe.findMany({
     orderBy: { id: "desc" },
@@ -68,6 +70,8 @@ export async function fetchRecentCopipes() {
 
 export async function fetchTagCopipes(tagId: number, page: number) {
   "use cache"
+  cacheLife("max")
+
   const tagQuery = {
     copipeToTag: {
       some: {
@@ -95,6 +99,8 @@ export async function fetchTagCopipes(tagId: number, page: number) {
 
 export async function fetchSearchCopipes(searchText: string, page: number) {
   "use cache"
+  cacheLife("max")
+
   const searchQuery =
     searchText == ""
       ? {}
@@ -124,6 +130,8 @@ export async function fetchSearchCopipes(searchText: string, page: number) {
 
 export async function fetchCopipe(id: number) {
   "use cache"
+  cacheLife("max")
+
   const copipe = await prisma.copipe
     .findUniqueOrThrow({
       select: copipeWithTagComment,
@@ -139,6 +147,8 @@ export async function fetchCopipe(id: number) {
 
 export async function getCopipeIds() {
   "use cache"
+  cacheLife("max")
+
   const ids = await prisma.copipe
     .findMany({
       select: {
