@@ -1,6 +1,7 @@
 import { fetchTagCopipes } from "@/db/server/copipes"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import CopipePagination from "@/modules/copipePagination"
+import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { Container, VStack } from "@yamada-ui/react"
 
 export default async function page(props: {
@@ -16,7 +17,7 @@ export default async function page(props: {
   const [copipes, count] = await fetchTagCopipes(tagId, page)
 
   return (
-    <>
+    <SideMenuLayout>
       <VStack>
         <Container>
           {copipes.map((e) => (
@@ -29,6 +30,6 @@ export default async function page(props: {
           url={`/tag/${tagId}`}
         />
       </VStack>
-    </>
+    </SideMenuLayout>
   )
 }
