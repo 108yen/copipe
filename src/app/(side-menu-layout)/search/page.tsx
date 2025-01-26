@@ -1,7 +1,6 @@
 import { fetchSearchCopipes } from "@/db/server/copipes"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
 import CopipePagination from "@/modules/copipePagination"
-import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import SearchForm from "@/modules/searchForm"
 import { Container, Text, VStack } from "@yamada-ui/react"
 
@@ -17,29 +16,27 @@ export default async function page(props: {
   const [copipes, count] = await fetchSearchCopipes(searchText, page)
 
   return (
-    <SideMenuLayout>
-      <VStack>
-        <SearchForm />
+    <VStack>
+      <SearchForm />
 
-        <Container>
-          {copipes.length == 0 ? (
-            <Text textStyle="noHit" variant="body1">
-              該当なし
-            </Text>
-          ) : (
-            copipes.map((copipe) => (
-              <CopipeCardItem copipeItem={copipe} key={copipe.id} />
-            ))
-          )}
-        </Container>
+      <Container>
+        {copipes.length == 0 ? (
+          <Text textStyle="noHit" variant="body1">
+            該当なし
+          </Text>
+        ) : (
+          copipes.map((copipe) => (
+            <CopipeCardItem copipeItem={copipe} key={copipe.id} />
+          ))
+        )}
+      </Container>
 
-        <CopipePagination
-          page={page}
-          params={{ name: "text", param: searchText }}
-          total={Math.ceil(count / 10)}
-          url="/search"
-        />
-      </VStack>
-    </SideMenuLayout>
+      <CopipePagination
+        page={page}
+        params={{ name: "text", param: searchText }}
+        total={Math.ceil(count / 10)}
+        url="/search"
+      />
+    </VStack>
   )
 }
