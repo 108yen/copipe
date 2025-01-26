@@ -1,6 +1,7 @@
 import { fetchCopipe } from "@/db/server/copipes"
 import Comment from "@/modules/comment"
 import { CopipeCardItem } from "@/modules/copipeCardItem"
+import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { Container, VStack } from "@yamada-ui/react"
 
 import ArchivesPagination from "./archivesPagination"
@@ -16,14 +17,16 @@ export default async function page({
   const { afterId, beforeId } = await checkBeforeAndAfterPage(id)
 
   return (
-    <VStack>
-      <Container>
-        <CopipeCardItem copipeItem={copipe} />
-      </Container>
+    <SideMenuLayout>
+      <VStack>
+        <Container>
+          <CopipeCardItem copipeItem={copipe} />
+        </Container>
 
-      <Comment comments={copipe.comments} copipe_id={id} />
+        <Comment comments={copipe.comments} copipe_id={id} />
 
-      <ArchivesPagination afterId={afterId} beforeId={beforeId} />
-    </VStack>
+        <ArchivesPagination afterId={afterId} beforeId={beforeId} />
+      </VStack>
+    </SideMenuLayout>
   )
 }
