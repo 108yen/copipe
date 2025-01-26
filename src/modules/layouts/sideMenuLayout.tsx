@@ -1,10 +1,23 @@
+import { fetchRecentCopipes } from "@/db/server/copipes"
+import { fetchTags } from "@/db/server/tags"
 import AppBar from "@/modules/appBar"
 import RecentPostsCard from "@/modules/recentPostCard/recentPostCard"
 import TagListCard from "@/modules/tagListCard/tagListCard"
 import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
+import { unstable_cacheLife as cacheLife } from "next/cache"
 import { ReactNode } from "react"
 
-export default function SideMenuLayout({ children }: { children: ReactNode }) {
+export default async function SideMenuLayout({
+  children,
+}: {
+  children: ReactNode
+}) {
+  "use cache"
+  cacheLife("max")
+
+  const tags = await fetchTags()
+  const copipes = await fetchRecentCopipes()
+
   return (
     <>
       <AppBar />
@@ -20,9 +33,9 @@ export default function SideMenuLayout({ children }: { children: ReactNode }) {
           display={{ base: "block", md: "none" }}
         >
           <VStack>
-            <TagListCard />
+            <TagListCard tags={tags} />
 
-            <RecentPostsCard />
+            <RecentPostsCard copipes={copipes} />
           </VStack>
         </GridItem>
       </SimpleGrid>
