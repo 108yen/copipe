@@ -1,45 +1,19 @@
-import { fetchSearchCopipes } from "@/db/server/copipes"
-import { CopipeCardItem } from "@/modules/copipeCardItem"
-import CopipePagination from "@/modules/copipePagination"
 import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
-import SearchForm from "@/modules/searchForm"
-import { Container, Text, VStack } from "@yamada-ui/react"
+import { Suspense } from "react"
 
-export default async function page(props: {
+import { SearchPageLoading } from "./page-loading"
+import { SearchPageTemplate } from "./page-template"
+
+export default function page({
+  searchParams,
+}: {
   searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
-  const searchParams = await props.searchParams
-  const searchText =
-    typeof searchParams.text === "string" ? searchParams.text : ""
-  const page =
-    typeof searchParams.page === "string" ? Number(searchParams.page) : 1
-
-  const [copipes, count] = await fetchSearchCopipes(searchText, page)
-
   return (
     <SideMenuLayout>
-      <VStack>
-        <SearchForm />
-
-        <Container>
-          {copipes.length == 0 ? (
-            <Text textStyle="noHit" variant="body1">
-              該当なし
-            </Text>
-          ) : (
-            copipes.map((copipe) => (
-              <CopipeCardItem copipeItem={copipe} key={copipe.id} />
-            ))
-          )}
-        </Container>
-
-        <CopipePagination
-          page={page}
-          params={{ name: "text", param: searchText }}
-          total={Math.ceil(count / 10)}
-          url="/search"
-        />
-      </VStack>
+      <Suspense fallback={<SearchPageLoading />}>
+        <SearchPageTemplate searchParams={searchParams} />
+      </Suspense>
     </SideMenuLayout>
   )
 }
