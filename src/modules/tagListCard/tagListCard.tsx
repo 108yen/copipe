@@ -25,7 +25,11 @@ export default function TagListCard({ tags }: TagListCardProps) {
 
         <Box>
           {tags.map((tag) => (
-            <Link href={`/tag/${tag.id}`} key={`tag-${tag.id}`}>
+            <Link
+              href={`/tag/${tag.id}`}
+              key={`tag-${tag.id}`}
+              prefetch={false}
+            >
               <Tag
                 boxShadow="inset 0 0 0px 1px"
                 color="secondary"
