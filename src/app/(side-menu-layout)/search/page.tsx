@@ -3,6 +3,8 @@ import { Suspense } from "react"
 import { SearchPageLoading } from "./page-loading"
 import { SearchPageTemplate } from "./page-template"
 
+export const dynamic = "force-static"
+
 export default function page({
   searchParams,
 }: {
