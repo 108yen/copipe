@@ -1,5 +1,11 @@
 # copipe
 
+## 1.6.1
+
+### Patch Changes
+
+- [#137](https://github.com/108yen/copipe/pull/137) [`2417123`](https://github.com/108yen/copipe/commit/24171235f24aa070f6f890d244eb650136f5a054) Thanks [@108yen](https://github.com/108yen)! - Fixed from bug.
+
 ## 1.6.0
 
 ### Minor Changes
