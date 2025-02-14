@@ -23,6 +23,9 @@ export async function getHomePageCopipe() {
 }
 
 export async function fetchRecentCopipes() {
+  "use cache"
+  cacheLife("max")
+
   const copipes = await prisma.copipe.findMany({
     orderBy: { id: "desc" },
     select: {

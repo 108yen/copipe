@@ -4,6 +4,6 @@ export const metadata = {
   title: "検索",
 }
 
-export default async function layout({ children }: { children: ReactNode }) {
+export default function layout({ children }: { children: ReactNode }) {
   return <section>{children}</section>
 }

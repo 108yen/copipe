@@ -2,7 +2,6 @@
 const nextConfig = {
   experimental: {
     dynamicIO: true,
-    useCache: true,
   },
   reactStrictMode: true,
 }

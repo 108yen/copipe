@@ -3,7 +3,7 @@ import { config, theme } from "@/theme"
 import { YamadaUIScript } from "@/utils/yamada-ui-script"
 import { UIProvider } from "@yamada-ui/react"
 import { Metadata } from "next"
-import { ReactNode, Suspense } from "react"
+import { ReactNode } from "react"
 
 export const metadata: Metadata = {
   description:
@@ -31,24 +31,17 @@ export const metadata: Metadata = {
   },
 }
 
-export default async function RootLayout({
-  children,
-}: {
-  children: ReactNode
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="ja" suppressHydrationWarning>
-      <head>
-        <Suspense>
-          <GoogleAnalytics debugMode={process.env.NODE_ENV !== "production"} />
-        </Suspense>
-      </head>
       <body suppressHydrationWarning>
         <YamadaUIScript />
 
         <UIProvider config={config} theme={theme}>
           {children}
         </UIProvider>
+
+        <GoogleAnalytics debugMode={process.env.NODE_ENV !== "production"} />
       </body>
     </html>
   )
