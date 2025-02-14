@@ -1,5 +1,11 @@
 # copipe
 
+## 1.6.0
+
+### Minor Changes
+
+- [#134](https://github.com/108yen/copipe/pull/134) [`a03e88e`](https://github.com/108yen/copipe/commit/a03e88eb17d2d78305e55f83de6475272a41ae04) Thanks [@108yen](https://github.com/108yen)! - Migrate to dynamicIO.
+
 ## 1.5.3
 
 ### Patch Changes
