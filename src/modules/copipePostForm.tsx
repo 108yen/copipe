@@ -1,5 +1,6 @@
 "use client"
 import { event } from "@/analytics/gtag"
+import { postNewCopipe } from "@/app/postForm/serverActions"
 import {
   Button,
   FormControl,
@@ -15,21 +16,7 @@ type Inputs = {
   title: string
 }
 
-export default function CopipePostForm(props: {
-  postNewCopipe: (props: { body: string; title: string; }) => Promise<
-    | undefined
-    | {
-        error: string
-        message?: undefined
-      }
-    | {
-        error?: undefined
-        message: string
-      }
-  >
-}) {
-  const { postNewCopipe } = props
-
+export default function CopipePostForm() {
   const { control, formState, handleSubmit, reset } = useForm<Inputs>({
     defaultValues: {
       body: "",
@@ -54,26 +41,28 @@ export default function CopipePostForm(props: {
       label: "post_copipe",
     })
 
-    const result = await postNewCopipe(data)
+    try {
+      const result = await postNewCopipe(data)
 
-    if (result?.error) {
+      if (result) {
+        notice({
+          description: result.message,
+          status: "warning",
+          title: "投稿失敗",
+        })
+        reset()
+      } else {
+        notice({
+          status: "success",
+          title: "投稿完了",
+        })
+        reset()
+      }
+    } catch {
       notice({
         status: "error",
         title: "投稿失敗",
       })
-    } else if (result?.message) {
-      notice({
-        description: result.message,
-        status: "warning",
-        title: "投稿失敗",
-      })
-      reset()
-    } else {
-      notice({
-        status: "success",
-        title: "投稿完了",
-      })
-      reset()
     }
   }
 
