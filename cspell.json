@@ -14,9 +14,8 @@
     "proptypes",
     "supabase",
     "TSES",
-    "typecheck"
+    "typecheck",
+    "VERCEL"
   ],
-  "ignorePaths": [
-    "src/app/not-found.tsx"
-  ]
+  "ignorePaths": ["src/app/not-found.tsx"]
 }

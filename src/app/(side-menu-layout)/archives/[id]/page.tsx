@@ -1,29 +1,12 @@
-import { fetchCopipe } from "@/db/server/copipes"
-import Comment from "@/modules/comment"
-import { CopipeCardItem } from "@/modules/copipeCardItem"
-import { Container, VStack } from "@yamada-ui/react"
+import { Suspense } from "react"
 
-import ArchivesPagination from "./archivesPagination"
-import { checkBeforeAndAfterPage } from "./utils"
+import ArchivePageLoading from "./page-loading"
+import { ArchivePageTemplate } from "./page-template"
 
-export default async function page({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
-  const id = Number((await params).id)
-  const copipe = await fetchCopipe(id)
-  const { afterId, beforeId } = await checkBeforeAndAfterPage(id)
-
+export default function page({ params }: { params: Promise<{ id: string }> }) {
   return (
-    <VStack>
-      <Container>
-        <CopipeCardItem copipeItem={copipe} />
-      </Container>
-
-      <Comment comments={copipe.comments} copipe_id={id} />
-
-      <ArchivesPagination afterId={afterId} beforeId={beforeId} />
-    </VStack>
+    <Suspense fallback={<ArchivePageLoading />}>
+      <ArchivePageTemplate params={params} />
+    </Suspense>
   )
 }

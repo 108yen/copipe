@@ -3,7 +3,7 @@ const nextConfig = {
   experimental: {
     dynamicIO: true,
   },
-  reactStrictMode: true
+  reactStrictMode: true,
 }
 
 module.exports = nextConfig

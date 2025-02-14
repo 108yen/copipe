@@ -22,28 +22,6 @@ export async function getHomePageCopipe() {
   return { copipes, count }
 }
 
-//NOTE: recent copipe is not important. No problem if `unstable_cache` is broken.
-//
-// export const fetchRecentCopipes = cache(async () => {
-//   const copipes = await prisma.copipe.findMany({
-//     select: {
-//       id: true,
-//       title: true,
-//     },
-//     take: 100,
-//     orderBy: { id: "desc" },
-//   })
-//   console.log("get recent copipes")
-//
-//   const result: { id: number; title: string }[] = copipes.map((value) => {
-//     return {
-//       id: value.id,
-//       title: value.title!,
-//     }
-//   })
-//
-//   return result
-// })
 export async function fetchRecentCopipes() {
   "use cache"
   cacheLife("max")

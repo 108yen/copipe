@@ -4,11 +4,11 @@ import { CopipeWithTagPayload } from "@/db/query"
 import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 import {
   Box,
-  Divider,
   Heading,
   HStack,
   Icon,
   IconButton,
+  Separator,
   Spacer,
   Tag,
   Text,
@@ -28,6 +28,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
       <HStack>
         <Link
           href={"/archives/" + copipeItem.id}
+          prefetch={false}
           style={{
             overflow: "hidden",
             textDecoration: "none",
@@ -69,7 +70,7 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
           </Link>
         ))}
       </HStack>
-      <Divider />
+      <Separator />
       <Text variant="body1" whiteSpace="pre-line">
         {copipeItem.body}
       </Text>
