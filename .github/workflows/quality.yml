@@ -47,3 +47,24 @@ jobs:
 
       - name: Run format
         run: pnpm format
+
+  type:
+    name: Typescript
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run typecheck
+        run: pnpm typecheck
