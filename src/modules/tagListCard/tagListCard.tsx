@@ -1,4 +1,4 @@
-import { Tag as TagModel } from "@/models/tag"
+import { fetchTags } from "@/db/server/tags"
 import {
   Box,
   Container,
@@ -9,11 +9,9 @@ import {
 } from "@yamada-ui/react"
 import Link from "next/link"
 
-interface TagListCardProps {
-  tags: TagModel[]
-}
+export default async function TagListCard() {
+  const tags = await fetchTags()
 
-export default function TagListCard({ tags }: TagListCardProps) {
   return (
     <Container>
       <VStack>

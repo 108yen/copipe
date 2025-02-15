@@ -1,14 +1,10 @@
+import { fetchRecentCopipes } from "@/db/server/copipes"
 import { Container, Heading, Separator, Text, VStack } from "@yamada-ui/react"
 import Link from "next/link"
 
-interface RecentPostCardProps {
-  copipes: {
-    id: number
-    title: string
-  }[]
-}
+export default async function RecentPostsCard() {
+  const copipes = await fetchRecentCopipes()
 
-export default function RecentPostsCard({ copipes }: RecentPostCardProps) {
   return (
     <Container>
       <VStack>

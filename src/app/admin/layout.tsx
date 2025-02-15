@@ -2,7 +2,7 @@ import SingleComponentLayout from "@/modules/layouts/singleComponentLayout"
 import { ReactNode } from "react"
 
 export const metadata = {
-  title: "投稿フォーム",
+  title: "管理画面",
 }
 
 export default function Layout({ children }: { children: ReactNode }) {

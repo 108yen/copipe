@@ -1,23 +1,15 @@
-import { Tag } from "@/models/tag"
 import AppBar from "@/modules/appBar"
 import RecentPostsCard from "@/modules/recentPostCard/recentPostCard"
 import TagListCard from "@/modules/tagListCard/tagListCard"
 import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
-import { PropsWithChildren } from "react"
+import { PropsWithChildren, Suspense } from "react"
 
-interface SideMenuLayoutProps extends PropsWithChildren {
-  copipes: {
-    id: number
-    title: string
-  }[]
-  tags: Tag[]
-}
+import LoadingRecentPostsCard from "../recentPostCard/loading"
+import LoadingTagListCard from "../tagListCard/loading"
 
-export default function SideMenuLayout({
-  children,
-  copipes,
-  tags,
-}: SideMenuLayoutProps) {
+interface SideMenuLayoutProps extends PropsWithChildren {}
+
+export default function SideMenuLayout({ children }: SideMenuLayoutProps) {
   return (
     <>
       <AppBar />
@@ -33,9 +25,13 @@ export default function SideMenuLayout({
           display={{ base: "block", md: "none" }}
         >
           <VStack>
-            <TagListCard tags={tags} />
+            <Suspense fallback={<LoadingTagListCard />}>
+              <TagListCard />
+            </Suspense>
 
-            <RecentPostsCard copipes={copipes} />
+            <Suspense fallback={<LoadingRecentPostsCard />}>
+              <RecentPostsCard />
+            </Suspense>
           </VStack>
         </GridItem>
       </SimpleGrid>
