@@ -7,13 +7,9 @@ import {
   Tag,
   VStack,
 } from "@yamada-ui/react"
-import { unstable_cacheLife as cacheLife } from "next/cache"
 import Link from "next/link"
 
 export default async function TagListCard() {
-  "use cache"
-  cacheLife("max")
-
   const tags = await fetchTags()
 
   return (
