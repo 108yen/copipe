@@ -30,7 +30,7 @@
     "axios": "^1.6.5",
     "dayjs": "^1.11.10",
     "jotai": "^2.6.1",
-    "next": "15.2.0-canary.21",
+    "next": "15.2.0-canary.61",
     "next-auth": "^4.24.5",
     "prisma": "^6.0.0",
     "react": "19.0.0",
