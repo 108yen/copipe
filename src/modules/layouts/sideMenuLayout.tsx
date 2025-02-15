@@ -2,10 +2,7 @@ import AppBar from "@/modules/appBar"
 import RecentPostsCard from "@/modules/recentPostCard/recentPostCard"
 import TagListCard from "@/modules/tagListCard/tagListCard"
 import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
-import { PropsWithChildren, Suspense } from "react"
-
-import LoadingRecentPostsCard from "../recentPostCard/loading"
-import LoadingTagListCard from "../tagListCard/loading"
+import { PropsWithChildren } from "react"
 
 interface SideMenuLayoutProps extends PropsWithChildren {}
 
@@ -25,13 +22,9 @@ export default function SideMenuLayout({ children }: SideMenuLayoutProps) {
           display={{ base: "block", md: "none" }}
         >
           <VStack>
-            <Suspense fallback={<LoadingTagListCard />}>
-              <TagListCard />
-            </Suspense>
+            <TagListCard />
 
-            <Suspense fallback={<LoadingRecentPostsCard />}>
-              <RecentPostsCard />
-            </Suspense>
+            <RecentPostsCard />
           </VStack>
         </GridItem>
       </SimpleGrid>
