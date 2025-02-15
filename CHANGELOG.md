@@ -1,5 +1,11 @@
 # copipe
 
+## 1.6.3
+
+### Patch Changes
+
+- [#144](https://github.com/108yen/copipe/pull/144) [`8eb20a3`](https://github.com/108yen/copipe/commit/8eb20a3d4a7e767b341f2bc8cac13a091433a8ea) Thanks [@108yen](https://github.com/108yen)! - Fixed style flash.
+
 ## 1.6.2
 
 ### Patch Changes
