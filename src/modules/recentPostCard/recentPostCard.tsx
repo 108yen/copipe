@@ -1,14 +1,14 @@
+import { fetchRecentCopipes } from "@/db/server/copipes"
 import { Container, Heading, Separator, Text, VStack } from "@yamada-ui/react"
+import { unstable_cacheLife as cacheLife } from "next/cache"
 import Link from "next/link"
 
-interface RecentPostCardProps {
-  copipes: {
-    id: number
-    title: string
-  }[]
-}
+export default async function RecentPostsCard() {
+  "use cache"
+  cacheLife("max")
 
-export default function RecentPostsCard({ copipes }: RecentPostCardProps) {
+  const copipes = await fetchRecentCopipes()
+
   return (
     <Container>
       <VStack>

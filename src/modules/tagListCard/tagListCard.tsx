@@ -1,4 +1,4 @@
-import { Tag as TagModel } from "@/models/tag"
+import { fetchTags } from "@/db/server/tags"
 import {
   Box,
   Container,
@@ -7,13 +7,15 @@ import {
   Tag,
   VStack,
 } from "@yamada-ui/react"
+import { unstable_cacheLife as cacheLife } from "next/cache"
 import Link from "next/link"
 
-interface TagListCardProps {
-  tags: TagModel[]
-}
+export default async function TagListCard() {
+  "use cache"
+  cacheLife("max")
 
-export default function TagListCard({ tags }: TagListCardProps) {
+  const tags = await fetchTags()
+
   return (
     <Container>
       <VStack>
