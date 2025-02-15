@@ -74,7 +74,7 @@ export default function CopipePostForm() {
         render={({ field, fieldState }) => (
           <FormControl
             errorMessage={fieldState.error?.message}
-            isInvalid={fieldState.invalid}
+            invalid={fieldState.invalid}
           >
             <Input
               {...field}
@@ -92,7 +92,7 @@ export default function CopipePostForm() {
         render={({ field, fieldState }) => (
           <FormControl
             errorMessage={fieldState.error?.message}
-            isInvalid={fieldState.invalid}
+            invalid={fieldState.invalid}
           >
             <Textarea
               {...field}
@@ -110,7 +110,7 @@ export default function CopipePostForm() {
       <Button
         apply="buttonStyles.default"
         colorScheme="secondary"
-        isLoading={formState.isSubmitting}
+        loading={formState.isSubmitting}
         onClick={handleSubmit(onSubmit)}
         variant="outline"
       >
