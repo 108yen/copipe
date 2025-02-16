@@ -1,3 +1,4 @@
+import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { Suspense } from "react"
 
 import { SearchPageLoading } from "./page-loading"
@@ -9,8 +10,10 @@ export default function page({
   searchParams: Promise<Record<string, string | string[] | undefined>>
 }) {
   return (
-    <Suspense fallback={<SearchPageLoading />}>
-      <SearchPageTemplate searchParams={searchParams} />
-    </Suspense>
+    <SideMenuLayout>
+      <Suspense fallback={<SearchPageLoading />}>
+        <SearchPageTemplate searchParams={searchParams} />
+      </Suspense>
+    </SideMenuLayout>
   )
 }

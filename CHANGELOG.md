@@ -1,5 +1,11 @@
 # copipe
 
+## 1.6.4
+
+### Patch Changes
+
+- [#146](https://github.com/108yen/copipe/pull/146) [`06a6485`](https://github.com/108yen/copipe/commit/06a6485b1f55869aeb57470df24ac16919886607) Thanks [@108yen](https://github.com/108yen)! - Move layout component to page files.
+
 ## 1.6.3
 
 ### Patch Changes
