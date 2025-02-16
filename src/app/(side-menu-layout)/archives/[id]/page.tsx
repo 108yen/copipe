@@ -1,4 +1,3 @@
-import SideMenuLayout from "@/modules/layouts/sideMenuLayout"
 import { Metadata } from "next/types"
 import { Suspense } from "react"
 
@@ -11,10 +10,8 @@ export const metadata: Metadata = {
 
 export default function Page({ params }: { params: Promise<{ id: string }> }) {
   return (
-    <SideMenuLayout>
-      <Suspense fallback={<ArchivePageLoading />}>
-        <ArchivePageTemplate params={params} />
-      </Suspense>
-    </SideMenuLayout>
+    <Suspense fallback={<ArchivePageLoading />}>
+      <ArchivePageTemplate params={params} />
+    </Suspense>
   )
 }
