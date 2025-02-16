@@ -1,5 +1,17 @@
 # copipe
 
+## 1.6.3
+
+### Patch Changes
+
+- [#144](https://github.com/108yen/copipe/pull/144) [`8eb20a3`](https://github.com/108yen/copipe/commit/8eb20a3d4a7e767b341f2bc8cac13a091433a8ea) Thanks [@108yen](https://github.com/108yen)! - Fixed style flash.
+
+## 1.6.2
+
+### Patch Changes
+
+- [#142](https://github.com/108yen/copipe/pull/142) [`8397658`](https://github.com/108yen/copipe/commit/839765880584112564c634105b5ccd6b0e188117) Thanks [@108yen](https://github.com/108yen)! - Revocation dynamicIO migration.
+
 ## 1.6.1
 
 ### Patch Changes
