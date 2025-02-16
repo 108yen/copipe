@@ -10,7 +10,6 @@ import {
   VStack,
 } from "@yamada-ui/react"
 import { useRouter } from "next/navigation"
-import * as React from "react"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
 
 type Inputs = {

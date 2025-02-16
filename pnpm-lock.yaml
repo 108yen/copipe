@@ -19,8 +19,8 @@ importers:
         specifier: 15.1.6
         version: 15.1.6(next@15.1.7(@babel/core@7.26.9)(react-dom@19.0.0(react@19.0.0))(react@19.0.0))(react@19.0.0)
       '@prisma/client':
-        specifier: ^6.0.0
-        version: 6.2.1(prisma@6.2.1)
+        specifier: ^6.3.1
+        version: 6.3.1(prisma@6.2.1)(typescript@5.7.3)
       '@supabase/supabase-js':
         specifier: ^2.39.2
         version: 2.48.0
@@ -1741,13 +1741,16 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@prisma/client@6.2.1':
-    resolution: {integrity: sha512-msKY2iRLISN8t5X0Tj7hU0UWet1u0KuxSPHWuf3IRkB4J95mCvGpyQBfQ6ufcmvKNOMQSq90O2iUmJEN2e5fiA==}
+  '@prisma/client@6.3.1':
+    resolution: {integrity: sha512-ARAJaPs+eBkemdky/XU3cvGRl+mIPHCN2lCXsl5Vlb0E2gV+R6IN7aCI8CisRGszEZondwIsW9Iz8EJkTdykyA==}
     engines: {node: '>=18.18'}
     peerDependencies:
       prisma: '*'
+      typescript: '>=5.1.0'
     peerDependenciesMeta:
       prisma:
+        optional: true
+      typescript:
         optional: true
 
   '@prisma/debug@6.2.1':
@@ -7988,9 +7991,10 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@prisma/client@6.2.1(prisma@6.2.1)':
+  '@prisma/client@6.3.1(prisma@6.2.1)(typescript@5.7.3)':
     optionalDependencies:
       prisma: 6.2.1
+      typescript: 5.7.3
 
   '@prisma/debug@6.2.1': {}
 
