@@ -19,7 +19,6 @@ export default async function RecentPostsCard() {
             <Link
               href={`/archives/${copipe.id}`}
               key={`recent-copipe-${copipe.id}`}
-              prefetch={false}
               style={{
                 overflow: "hidden",
                 textDecoration: "none",

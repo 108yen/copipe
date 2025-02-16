@@ -23,11 +23,7 @@ export default async function TagListCard() {
 
         <Box>
           {tags.map((tag) => (
-            <Link
-              href={`/tag/${tag.id}`}
-              key={`tag-${tag.id}`}
-              prefetch={false}
-            >
+            <Link href={`/tag/${tag.id}`} key={`tag-${tag.id}`}>
               <Tag
                 boxShadow="inset 0 0 0px 1px"
                 color="secondary"
