@@ -3,7 +3,7 @@
 import { prisma } from "@/db/db"
 import { revalidatePath } from "next/cache"
 
-export async function postNewCopipe(props: { body: string; title: string; }) {
+export async function postNewCopipe(props: { body: string; title: string }) {
   const { body, title } = props
 
   if (await checkDuplicate(body)) {
@@ -22,7 +22,9 @@ export async function postNewCopipe(props: { body: string; title: string; }) {
     })
     .then(() => {
       console.log("post copipe in postForm")
-      revalidatePath("/")
+
+      revalidatePath("/", "page")
+      revalidatePath("/search", "page")
     })
 }
 
@@ -34,5 +36,6 @@ async function checkDuplicate(body: string) {
       },
     },
   })
+
   return copipe != null
 }

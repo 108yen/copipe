@@ -27,6 +27,7 @@ export default async function Page(props: {
           <CopipeCardItem copipeItem={e} key={e.id} />
         ))}
       </Container>
+
       <CopipePagination
         page={page}
         total={Math.ceil(count / 10)}

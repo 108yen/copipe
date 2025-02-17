@@ -14,6 +14,7 @@ export default async function Page(props: {
   return (
     <VStack>
       <AdminPageTemplate copipes={copipes} tags={tags} />
+
       <CopipePagination
         page={page}
         total={count ? Math.ceil(count / 100) : 0}
