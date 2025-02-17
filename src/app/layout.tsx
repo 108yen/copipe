@@ -40,6 +40,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         <UIProvider config={config} theme={theme}>
           <AppBar />
+
           {children}
         </UIProvider>
 

@@ -2,7 +2,7 @@ import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
 import LoadingSearchForm from "@/modules/loadingSearchForm"
 import { Container } from "@yamada-ui/react"
 
-export function SearchPageLoading() {
+export default function Loading() {
   return (
     <>
       <LoadingSearchForm />

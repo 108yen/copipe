@@ -28,7 +28,6 @@ export function CopipeCardItem(props: { copipeItem: CopipeWithTagPayload }) {
       <HStack>
         <Link
           href={"/archives/" + copipeItem.id}
-          prefetch={false}
           style={{
             overflow: "hidden",
             textDecoration: "none",

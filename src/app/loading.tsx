@@ -1,9 +1,9 @@
-import { Center, Loading } from "@yamada-ui/react"
+import { Center, Loading as UILoading } from "@yamada-ui/react"
 
-export default function loading() {
+export default function Loading() {
   return (
     <Center h="3xs" w="full">
-      <Loading fontSize="2xl" />
+      <UILoading fontSize="2xl" />
     </Center>
   )
 }

@@ -43,6 +43,8 @@ export const fetchRecentCopipes = unstable_cache(
   ["recent-copipes"],
 )
 
+export type FetchRecentCopipesReturn = ReturnType<typeof fetchRecentCopipes>
+
 export async function fetchTagCopipes(tagId: number, page: number) {
   const tagQuery = {
     copipeToTag: {

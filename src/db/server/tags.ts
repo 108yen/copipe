@@ -23,6 +23,8 @@ export const fetchTags = unstable_cache(
   ["tags"],
 )
 
+export type FetchTagsReturn = ReturnType<typeof fetchTags>
+
 export async function fetchTag(id: number) {
   const tag = await prisma.tag
     .findUniqueOrThrow({

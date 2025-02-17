@@ -1,0 +1,5 @@
+---
+"copipe": patch
+---
+
+Removed `Suspense`.
