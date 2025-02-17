@@ -1,5 +1,7 @@
-import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
-import LoadingSearchForm from "@/modules/loadingSearchForm"
+import {
+  CopipeCardItemSkelton,
+  LoadingSearchForm,
+} from "@/ui/components/loading"
 import { Container } from "@yamada-ui/react"
 
 export default function Loading() {
