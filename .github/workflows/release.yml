@@ -29,15 +29,24 @@ jobs:
       contents: write
 
     steps:
+      - name: Generate Token
+        id: app-token
+        uses: actions/create-github-app-token@v1
+        with:
+          app-id: ${{ secrets.BOT_APP_ID }}
+          private-key: ${{ secrets.BOT_PRIVATE_KEY }}
+
       - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
+          token: ${{ steps.app-token.outputs.token }}
 
       - name: Setup Git user
         run: |
-          git config --global user.email "kazuking.1911@gmail.com"
-          git config --global user.name "108yen"
+          git config --global user.email "github-actions@github.com"
+          git config --global user.name "github-actions"
 
       - name: Create GitHub Release
         uses: 108yen/changeset-release@v1
@@ -45,3 +54,10 @@ jobs:
           target: release
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Merge branch
+        run: |
+          set -x
+          git switch main
+          git merge release
+          git push
