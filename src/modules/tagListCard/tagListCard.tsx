@@ -1,4 +1,4 @@
-import { fetchTags } from "@/db/server/tags"
+import { FetchTagsReturn } from "@/db/server/tags"
 import {
   Box,
   Container,
@@ -9,9 +9,10 @@ import {
 } from "@yamada-ui/react"
 import Link from "next/link"
 
-export default async function TagListCard() {
-  const tags = await fetchTags()
-
+interface TagListCardProps {
+  tags: Awaited<FetchTagsReturn>
+}
+export default function TagListCard({ tags }: TagListCardProps) {
   return (
     <Container>
       <VStack>
@@ -23,11 +24,7 @@ export default async function TagListCard() {
 
         <Box>
           {tags.map((tag) => (
-            <Link
-              href={`/tag/${tag.id}`}
-              key={`tag-${tag.id}`}
-              prefetch={false}
-            >
+            <Link href={`/tag/${tag.id}`} key={`tag-${tag.id}`}>
               <Tag
                 boxShadow="inset 0 0 0px 1px"
                 color="secondary"

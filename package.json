@@ -1,6 +1,6 @@
 {
   "name": "copipe",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "private": true,
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "scripts": {
@@ -22,7 +22,7 @@
   "dependencies": {
     "@mui/icons-material": "^6.0.0",
     "@next/third-parties": "15.1.6",
-    "@prisma/client": "^6.0.0",
+    "@prisma/client": "^6.3.1",
     "@supabase/supabase-js": "^2.39.2",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
@@ -61,7 +61,7 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "15.1.6",
+    "eslint-config-next": "15.1.7",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-perfectionist": "^4.7.0",
