@@ -1,5 +1,11 @@
 # copipe
 
+## 1.6.5
+
+### Patch Changes
+
+- [#148](https://github.com/108yen/copipe/pull/148) [`6ca42e5`](https://github.com/108yen/copipe/commit/6ca42e5ad32e77e70278142a6667adc75dab5a23) Thanks [@108yen](https://github.com/108yen)! - Removed `Suspense`.
+
 ## 1.6.4
 
 ### Patch Changes
