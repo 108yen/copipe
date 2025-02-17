@@ -1,3 +1,4 @@
+"use client"
 import { CommentPayload, CommentsPayload } from "@/db/query"
 import { postComment } from "@/server-actions"
 import dayjs from "@/utils/dayjs"
