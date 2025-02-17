@@ -1,4 +1,4 @@
-export type Copipe = {
+export interface Copipe {
   body: string
   id: number
   inserted_at: Date
