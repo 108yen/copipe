@@ -40,5 +40,5 @@ export async function updateTags(copipe_id: number, tag_ids: number[]) {
   } catch (error) {
     return { error: JSON.stringify(error) }
   }
-  revalidatePath("/admin/[page]", "page")
+  revalidatePath("/", "layout")
 }

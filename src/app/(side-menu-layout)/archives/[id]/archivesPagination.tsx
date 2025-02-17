@@ -17,19 +17,19 @@ export default function ArchivesPagination(props: {
       <ButtonGroup bg="white" isAttached variant="outline">
         <Button
           disabled={beforeId == -1}
-          leftIcon={<Icon as={ArrowBackIosIcon} />}
           onClick={() => {
             router.push(`/archives/${beforeId}`)
           }}
+          startIcon={<Icon as={ArrowBackIosIcon} />}
         >
           前のコピペ
         </Button>
         <Button
           disabled={afterId == -1}
+          endIcon={<Icon as={ArrowForwardIosIcon} />}
           onClick={() => {
             router.push(`/archives/${afterId}`)
           }}
-          rightIcon={<Icon as={ArrowForwardIosIcon} />}
         >
           次のコピペ
         </Button>

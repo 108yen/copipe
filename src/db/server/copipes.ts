@@ -45,73 +45,83 @@ export const fetchRecentCopipes = unstable_cache(
 
 export type FetchRecentCopipesReturn = ReturnType<typeof fetchRecentCopipes>
 
-export async function fetchTagCopipes(tagId: number, page: number) {
-  const tagQuery = {
-    copipeToTag: {
-      some: {
-        tag_id: tagId,
+export const fetchTagCopipes = unstable_cache(
+  async function (tagId: number, page: number) {
+    const tagQuery = {
+      copipeToTag: {
+        some: {
+          tag_id: tagId,
+        },
       },
-    },
-  }
+    }
 
-  const result = await prisma.$transaction([
-    prisma.copipe.findMany({
-      orderBy: { id: "desc" },
-      select: copipeWithTag,
-      skip: (page - 1) * 10,
-      take: 10,
-      where: tagQuery,
-    }),
-    prisma.copipe.count({
-      where: tagQuery,
-    }),
-  ])
-  console.log(`get copipes tagId:${tagId} page:${page}`)
+    const result = await prisma.$transaction([
+      prisma.copipe.findMany({
+        orderBy: { id: "desc" },
+        select: copipeWithTag,
+        skip: (page - 1) * 10,
+        take: 10,
+        where: tagQuery,
+      }),
+      prisma.copipe.count({
+        where: tagQuery,
+      }),
+    ])
+    console.log(`get copipes tagId:${tagId} page:${page}`)
 
-  return result
-}
+    return result
+  },
+  ["tag-copipes"],
+)
 
-export async function fetchSearchCopipes(searchText: string, page: number) {
-  const searchQuery =
-    searchText == ""
-      ? {}
-      : {
-          body: {
-            contains: searchText,
-          },
-        }
+export const fetchSearchCopipes = unstable_cache(
+  async function fetchSearchCopipes(searchText: string, page: number) {
+    const searchQuery =
+      searchText == ""
+        ? {}
+        : {
+            body: {
+              contains: searchText,
+            },
+          }
 
-  const result = await prisma.$transaction([
-    prisma.copipe.findMany({
-      orderBy: { id: "desc" },
-      select: copipeWithTag,
-      skip: (page - 1) * 10,
-      take: 10,
-      where: searchQuery,
-    }),
-    prisma.copipe.count({
-      where: searchQuery,
-    }),
-  ])
+    const result = await prisma.$transaction([
+      prisma.copipe.findMany({
+        orderBy: { id: "desc" },
+        select: copipeWithTag,
+        skip: (page - 1) * 10,
+        take: 10,
+        where: searchQuery,
+      }),
+      prisma.copipe.count({
+        where: searchQuery,
+      }),
+    ])
 
-  console.log(`get copipes search:${searchText} page:${page}`)
+    console.log(`get copipes search:${searchText} page:${page}`)
 
-  return result
-}
+    return result
+  },
+  ["search-copipes"],
+)
 
-export async function fetchCopipe(id: number) {
-  const copipe = await prisma.copipe
-    .findUniqueOrThrow({
-      select: copipeWithTagComment,
-      where: { id: id },
-    })
-    .catch(() => {
-      notFound()
-    })
-  console.log(`get copipe in archives/${id}`)
+export const fetchCopipe = unstable_cache(
+  async function (id: number) {
+    const copipe = await prisma.copipe
+      .findUniqueOrThrow({
+        select: copipeWithTagComment,
+        where: { id: id },
+      })
+      .catch(() => {
+        notFound()
+      })
+    console.log(`get copipe in archives/${id}`)
 
-  return copipe
-}
+    return copipe
+  },
+  ["copipe"],
+  { revalidate: 20 },
+)
 
 export async function getCopipeIds() {
   const ids = await prisma.copipe
