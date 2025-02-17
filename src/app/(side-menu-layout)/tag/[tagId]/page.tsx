@@ -1,7 +1,5 @@
 import { fetchTagCopipes } from "@/db/server/copipes"
-import { CopipeCardItem } from "@/modules/copipeCardItem"
-import CopipePagination from "@/modules/copipePagination"
-import { Container, VStack } from "@yamada-ui/react"
+import { TagPageTemplate } from "@/ui/templates"
 import { Metadata } from "next/types"
 
 export const metadata: Metadata = {
@@ -18,21 +16,7 @@ export default async function Page(props: {
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1
 
-  const [copipes, count] = await fetchTagCopipes(tagId, page)
+  const data = await fetchTagCopipes(tagId, page)
 
-  return (
-    <VStack>
-      <Container>
-        {copipes.map((e) => (
-          <CopipeCardItem copipeItem={e} key={e.id} />
-        ))}
-      </Container>
-
-      <CopipePagination
-        page={page}
-        total={Math.ceil(count / 10)}
-        url={`/tag/${tagId}`}
-      />
-    </VStack>
-  )
+  return <TagPageTemplate data={data} page={page} tagId={tagId} />
 }

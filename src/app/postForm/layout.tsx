@@ -1,4 +1,4 @@
-import SingleComponentLayout from "@/modules/layouts/singleComponentLayout"
+import { SingleComponentLayout } from "@/ui/layouts"
 import { ReactNode } from "react"
 
 export const metadata = {

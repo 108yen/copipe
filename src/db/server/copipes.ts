@@ -19,6 +19,8 @@ export async function getHomePageCopipe() {
   return { copipes, count }
 }
 
+export type GetHomePageCopipeReturn = ReturnType<typeof getHomePageCopipe>
+
 export const fetchRecentCopipes = unstable_cache(
   async function () {
     const copipes = await prisma.copipe.findMany({
@@ -74,8 +76,10 @@ export const fetchTagCopipes = unstable_cache(
   ["tag-copipes"],
 )
 
+export type FetchTagCopipes = ReturnType<typeof fetchTagCopipes>
+
 export const fetchSearchCopipes = unstable_cache(
-  async function fetchSearchCopipes(searchText: string, page: number) {
+  async function (searchText: string, page: number) {
     const searchQuery =
       searchText == ""
         ? {}
@@ -105,6 +109,8 @@ export const fetchSearchCopipes = unstable_cache(
   ["search-copipes"],
 )
 
+export type FetchSearchCopipes = ReturnType<typeof fetchSearchCopipes>
+
 export const fetchCopipe = unstable_cache(
   async function (id: number) {
     const copipe = await prisma.copipe
@@ -122,6 +128,8 @@ export const fetchCopipe = unstable_cache(
   ["copipe"],
   { revalidate: 20 },
 )
+
+export type FetchCopipeReturn = ReturnType<typeof fetchCopipe>
 
 export async function getCopipeIds() {
   const ids = await prisma.copipe
