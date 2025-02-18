@@ -1,5 +1,11 @@
 # copipe
 
+## 1.7.2
+
+### Patch Changes
+
+- [`a8ee8c6`](https://github.com/108yen/copipe/commit/a8ee8c6e417b0fe27de3355cf320452020bb2ecc) Thanks [@108yen](https://github.com/108yen)! - Fixed revalidation of dynamic route.
+
 ## 1.7.1
 
 ### Patch Changes
