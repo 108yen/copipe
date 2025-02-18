@@ -1,5 +1,11 @@
 # copipe
 
+## 1.7.0
+
+### Minor Changes
+
+- [#152](https://github.com/108yen/copipe/pull/152) [`b7536df`](https://github.com/108yen/copipe/commit/b7536dfdd61c1de3d796e68e0a469e82eed8fe50) Thanks [@108yen](https://github.com/108yen)! - Enhance data cache.
+
 ## 1.6.5
 
 ### Patch Changes
