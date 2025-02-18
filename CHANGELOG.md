@@ -1,5 +1,13 @@
 # copipe
 
+## 1.7.1
+
+### Patch Changes
+
+- [`9cedc7c`](https://github.com/108yen/copipe/commit/9cedc7cf785b5c5a3d4c7eb6e2bac5fe132c56d5) Thanks [@108yen](https://github.com/108yen)! - Fixed revalidation.
+
+- [`777ffd8`](https://github.com/108yen/copipe/commit/777ffd8adf88a74293ba70969d62d388f8efa992) Thanks [@108yen](https://github.com/108yen)! - Fixed layout of non-side menu page.
+
 ## 1.7.0
 
 ### Minor Changes
