@@ -7,7 +7,7 @@ export function SingleComponentLayout({
   children,
 }: SingleComponentLayoutProps) {
   return (
-    <Container apply="gridStyle.grid" as="main">
+    <Container as="main" layerStyle="singleComponentWrapper">
       {children}
     </Container>
   )
