@@ -1,5 +1,4 @@
-import LoadingComment from "@/modules/comment/loading"
-import { CopipeCardItemSkelton } from "@/modules/copipeCardItemSkeleton"
+import { CopipeCardItemSkelton, LoadingComment } from "@/ui/components/loading"
 import { Container, VStack } from "@yamada-ui/react"
 
 export default function Loading() {

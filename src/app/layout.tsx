@@ -1,6 +1,6 @@
 import GoogleAnalytics from "@/analytics/GoogleAnalytics"
-import AppBar from "@/modules/appBar"
 import { config, theme } from "@/theme"
+import { Header } from "@/ui/components/layouts"
 import { YamadaUIScript } from "@/utils/yamada-ui-script"
 import { UIProvider } from "@yamada-ui/react"
 import { Metadata } from "next"
@@ -39,7 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <YamadaUIScript />
 
         <UIProvider config={config} theme={theme}>
-          <AppBar />
+          <Header />
 
           {children}
         </UIProvider>

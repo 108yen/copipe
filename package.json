@@ -1,6 +1,6 @@
 {
   "name": "copipe",
-  "version": "1.6.5",
+  "version": "1.7.0",
   "private": true,
   "packageManager": "pnpm@9.15.4+sha512.b2dc20e2fc72b3e18848459b37359a32064663e5627a51e4c74b2c29dd8e8e0491483c3abb40789cfd578bf362fb6ba8261b05f0387d76792ed6e23ea3b1b6a0",
   "scripts": {
@@ -32,7 +32,6 @@
     "jotai": "^2.6.1",
     "next": "15.1.7",
     "next-auth": "^4.24.5",
-    "prisma": "^6.0.0",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "react-hook-form": "^7.49.2",
@@ -45,17 +44,6 @@
     "@commitlint/config-conventional": "^19.6.0",
     "@cspell/eslint-plugin": "^8.17.2",
     "@eslint/compat": "^1.2.5",
-    "@storybook/addon-essentials": "^8.0.0",
-    "@storybook/addon-interactions": "^8.0.0",
-    "@storybook/addon-links": "^8.0.0",
-    "@storybook/addon-onboarding": "^8.0.0",
-    "@storybook/blocks": "^8.0.0",
-    "@storybook/jest": "^0.2.3",
-    "@storybook/nextjs": "^8.0.0",
-    "@storybook/react": "^8.0.0",
-    "@storybook/test": "^8.0.0",
-    "@storybook/testing-library": "^0.2.2",
-    "@storybook/theming": "^8.0.0",
     "@types/gtag.js": "^0.0.20",
     "@types/node": "^22.0.0",
     "@typescript-eslint/eslint-plugin": "^8.0.0",
@@ -72,8 +60,7 @@
     "lefthook": "^1.10.10",
     "next-sitemap": "^4.2.3",
     "prettier": "^3.1.1",
-    "storybook": "^8.0.0",
-    "storybook-dark-mode": "^4.0.0",
+    "prisma": "^6.3.1",
     "typescript-eslint": "^8.21.0"
   },
   "pnpm": {

@@ -1,11 +1,7 @@
-import { fetchCopipe } from "@/db/server/copipes"
-import Comment from "@/modules/comment"
-import { CopipeCardItem } from "@/modules/copipeCardItem"
-import { Container, VStack } from "@yamada-ui/react"
+import { fetchCopipe, getCopipeIds } from "@/db/server/copipes"
+import { ArchivesPageTemplate } from "@/ui/templates"
+import { checkBeforeAndAfterPage } from "@/utils/check-before-and-after-page"
 import { Metadata } from "next/types"
-
-import ArchivesPagination from "./archivesPagination"
-import { checkBeforeAndAfterPage } from "./utils"
 
 export const metadata: Metadata = {
   title: "アーカイブ",
@@ -20,17 +16,16 @@ export default async function Page({
   const id = Number(idProp)
 
   const copipe = await fetchCopipe(id)
-  const { afterId, beforeId } = await checkBeforeAndAfterPage(id)
+  const ids = await getCopipeIds()
+
+  const { afterId, beforeId } = checkBeforeAndAfterPage(ids, id)
 
   return (
-    <VStack>
-      <Container>
-        <CopipeCardItem copipeItem={copipe} />
-      </Container>
-
-      <Comment comments={copipe.comments} copipe_id={id} />
-
-      <ArchivesPagination afterId={afterId} beforeId={beforeId} />
-    </VStack>
+    <ArchivesPageTemplate
+      afterId={afterId}
+      beforeId={beforeId}
+      copipe={copipe}
+      id={id}
+    />
   )
 }

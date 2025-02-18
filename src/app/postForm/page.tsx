@@ -1,10 +1,5 @@
-import CopipePostForm from "@/modules/copipePostForm"
-import { Container } from "@yamada-ui/react"
+import { CopipePostForm } from "@/ui/templates"
 
 export default function Page() {
-  return (
-    <Container>
-      <CopipePostForm />
-    </Container>
-  )
+  return <CopipePostForm />
 }
