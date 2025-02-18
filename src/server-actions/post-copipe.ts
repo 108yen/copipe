@@ -23,8 +23,8 @@ export async function postCopipe(props: { body: string; title: string }) {
     .then(() => {
       console.log("post copipe in postForm")
 
-      revalidatePath("/", "page")
-      revalidatePath("/search", "page")
+      revalidatePath("/(side-menu-layout)", "page")
+      revalidatePath("/(side-menu-layout)/search", "page")
     })
 }
 

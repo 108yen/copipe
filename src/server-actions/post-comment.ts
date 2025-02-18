@@ -18,6 +18,6 @@ export async function postComment(copipe_id: number, body: string) {
   } catch (error) {
     return { error: JSON.stringify(error) }
   } finally {
-    revalidatePath(`/archives/${copipe_id}`, "page")
+    revalidatePath(`/(side-menu-layout)/archives/${copipe_id}`, "page")
   }
 }
