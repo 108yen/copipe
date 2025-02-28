@@ -21,11 +21,15 @@ export default async function Page({
   const { afterId, beforeId } = checkBeforeAndAfterPage(ids, id)
 
   return (
-    <ArchivesPageTemplate
-      afterId={afterId}
-      beforeId={beforeId}
-      copipe={copipe}
-      id={id}
-    />
+    <>
+      <title>{`${copipe.title} | copipe`}</title>
+
+      <ArchivesPageTemplate
+        afterId={afterId}
+        beforeId={beforeId}
+        copipe={copipe}
+        id={id}
+      />
+    </>
   )
 }
