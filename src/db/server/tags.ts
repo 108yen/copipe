@@ -25,14 +25,19 @@ export const fetchTags = unstable_cache(
 
 export type FetchTagsReturn = ReturnType<typeof fetchTags>
 
-export async function fetchTag(id: number) {
-  const tag = await prisma.tag
-    .findUniqueOrThrow({
-      select: { body: true },
-      where: { id },
-    })
-    .catch(() => {
-      notFound()
-    })
-  return tag
-}
+export const fetchTag = unstable_cache(
+  async function (id: number) {
+    const tag = await prisma.tag
+      .findUniqueOrThrow({
+        select: { body: true },
+        where: { id },
+      })
+      .catch(() => {
+        notFound()
+      })
+    return tag
+  },
+  ["tag"],
+)
+
+export type FetchTagReturn = ReturnType<typeof fetchTag>
