@@ -1,7 +1,9 @@
 import {
+  Center,
   Container,
   DiscList,
   Heading,
+  HStack,
   ListItem,
   Separator,
   Text,
@@ -14,10 +16,13 @@ export default function page() {
       <Heading textAlign="center" textStyle="aboutPageHeading" variant="h3">
         本サイトについて
       </Heading>
+
       <Heading textStyle="aboutPageHeading" variant="h4">
         1. はじめに
       </Heading>
+
       <Separator />
+
       <Text>
         当サイトでは2ch/5chやまとめサイトなどで話題になった有名なコピペや、笑えるコピペを収集しています。コピペの検索、投稿、コメントが可能です。
       </Text>
@@ -25,7 +30,9 @@ export default function page() {
       <Heading textStyle="aboutPageHeading" variant="h4">
         2. 禁止事項
       </Heading>
+
       <Separator />
+
       <DiscList>
         <ListItem>当サイトの利用に際して、以下の行為は禁止とします。</ListItem>
         <ListItem>違法行為、またはそのおそれのある行為</ListItem>
@@ -39,10 +46,13 @@ export default function page() {
           (Webスクレイピング行為等)
         </ListItem>
       </DiscList>
+
       <Heading textStyle="aboutPageHeading" variant="h4">
         3. Google Analytics
       </Heading>
+
       <Separator sx={{ marginY: 1 }} />
+
       <Text>
         サイトの利用状況を把握するために、Google
         Analyticsを使用しています。GoogleによるCookieの利用方法やオプトアウトの方法は、下記のリンクから確認できます。
@@ -89,6 +99,26 @@ export default function page() {
           </Link>
         </ListItem>
       </DiscList>
+
+      <Center mt="lg">
+        <HStack
+          as="p"
+          color={["blackAlpha.700", "whiteAlpha.600"]}
+          fontSize="xs"
+          gap="sm"
+        >
+          <Text as="span">developer:</Text>
+
+          <Text
+            _hover={{ textDecorationLine: "underline" }}
+            as={Link}
+            href="https://108yen.github.io/profile/"
+            target="_blank"
+          >
+            108yen
+          </Text>
+        </HStack>
+      </Center>
     </Container>
   )
 }
