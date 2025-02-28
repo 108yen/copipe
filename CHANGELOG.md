@@ -1,5 +1,11 @@
 # copipe
 
+## 1.7.3
+
+### Patch Changes
+
+- [#161](https://github.com/108yen/copipe/pull/161) [`5a6a032`](https://github.com/108yen/copipe/commit/5a6a032addd41b993709ca724589b47f120e9323) Thanks [@108yen](https://github.com/108yen)! - Updated archive page title.
+
 ## 1.7.2
 
 ### Patch Changes
