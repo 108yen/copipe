@@ -1,4 +1,5 @@
 import { fetchTagCopipes } from "@/db/server/copipes"
+import { fetchTag } from "@/db/server/tags"
 import { TagPageTemplate } from "@/ui/templates"
 import { Metadata } from "next/types"
 
@@ -16,7 +17,14 @@ export default async function Page(props: {
   const page =
     typeof searchParams.page === "string" ? Number(searchParams.page) : 1
 
+  const tagName = await fetchTag(tagId)
   const data = await fetchTagCopipes(tagId, page)
 
-  return <TagPageTemplate data={data} page={page} tagId={tagId} />
+  return (
+    <>
+      <title>{`${tagName} | copipe`}</title>
+
+      <TagPageTemplate data={data} page={page} tagId={tagId} />
+    </>
+  )
 }
