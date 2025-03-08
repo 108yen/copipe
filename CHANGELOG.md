@@ -1,5 +1,11 @@
 # copipe
 
+## 1.7.4
+
+### Patch Changes
+
+- [`6d7e5b8`](https://github.com/108yen/copipe/commit/6d7e5b8797db0a8ca2f54b9e91d44657b3ce56e1) Thanks [@108yen](https://github.com/108yen)! - Added developer link.
+
 ## 1.7.3
 
 ### Patch Changes
