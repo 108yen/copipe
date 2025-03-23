@@ -1,6 +1,6 @@
 {
   "name": "copipe",
-  "version": "1.7.3",
+  "version": "1.7.4",
   "private": true,
   "packageManager": "pnpm@9.15.9",
   "scripts": {
