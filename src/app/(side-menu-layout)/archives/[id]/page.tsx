@@ -1,17 +1,14 @@
 import { fetchCopipe, getCopipeIds } from "@/db/server/copipes"
 import { ArchivesPageTemplate } from "@/ui/templates"
 import { checkBeforeAndAfterPage } from "@/utils/check-before-and-after-page"
+import { NextPageProps } from "next"
 import { Metadata } from "next/types"
 
 export const metadata: Metadata = {
   title: "アーカイブ",
 }
 
-export default async function Page({
-  params,
-}: {
-  params: Promise<{ id: string }>
-}) {
+export default async function Page({ params }: NextPageProps<{ id: string }>) {
   const { id: idProp } = await params
   const id = Number(idProp)
 
