@@ -5,16 +5,13 @@ import { prisma } from "../db"
 import { copipeWithTag, copipeWithTagComment } from "../query"
 
 export async function getHomePageCopipe() {
-  const [copipes, count] = await prisma.$transaction([
-    prisma.copipe.findMany({
-      orderBy: {
-        id: "desc",
-      },
-      select: copipeWithTag,
-      take: 10,
-    }),
-    prisma.copipe.count(),
-  ])
+  const [copipes, count] = await prisma.copipe.findManyAndCount({
+    orderBy: {
+      id: "desc",
+    },
+    select: copipeWithTag,
+    take: 10,
+  })
 
   return { copipes, count }
 }
@@ -57,18 +54,14 @@ export const fetchTagCopipes = unstable_cache(
       },
     }
 
-    const result = await prisma.$transaction([
-      prisma.copipe.findMany({
-        orderBy: { id: "desc" },
-        select: copipeWithTag,
-        skip: (page - 1) * 10,
-        take: 10,
-        where: tagQuery,
-      }),
-      prisma.copipe.count({
-        where: tagQuery,
-      }),
-    ])
+    const result = await prisma.copipe.findManyAndCount({
+      orderBy: { id: "desc" },
+      select: copipeWithTag,
+      skip: (page - 1) * 10,
+      take: 10,
+      where: tagQuery,
+    })
+
     console.log(`get copipes tagId:${tagId} page:${page}`)
 
     return result
@@ -89,18 +82,13 @@ export const fetchSearchCopipes = unstable_cache(
             },
           }
 
-    const result = await prisma.$transaction([
-      prisma.copipe.findMany({
-        orderBy: { id: "desc" },
-        select: copipeWithTag,
-        skip: (page - 1) * 10,
-        take: 10,
-        where: searchQuery,
-      }),
-      prisma.copipe.count({
-        where: searchQuery,
-      }),
-    ])
+    const result = await prisma.copipe.findManyAndCount({
+      orderBy: { id: "desc" },
+      select: copipeWithTag,
+      skip: (page - 1) * 10,
+      take: 10,
+      where: searchQuery,
+    })
 
     console.log(`get copipes search:${searchText} page:${page}`)
 
