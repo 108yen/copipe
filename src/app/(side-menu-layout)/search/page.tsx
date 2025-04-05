@@ -1,23 +1,25 @@
 import { fetchSearchCopipes } from "@/db/server/copipes"
+import { searchPageScheme } from "@/schemes"
 import { SearchPageTemplate } from "@/ui/templates"
+import { NextPageProps } from "next"
+import { notFound } from "next/navigation"
 import { Metadata } from "next/types"
 
 export const metadata: Metadata = {
   title: "検索",
 }
 
-export default async function page({
-  searchParams: searchParamsProps,
-}: {
-  searchParams: Promise<Record<string, string | string[] | undefined>>
-}) {
-  const searchParams = await searchParamsProps
-  const searchText =
-    typeof searchParams.text === "string" ? searchParams.text : ""
-  const page =
-    typeof searchParams.page === "string" ? Number(searchParams.page) : 1
+export default async function page({ searchParams }: NextPageProps) {
+  const computedSearchParams = await searchParams
+  const parseResult = searchPageScheme.safeParse(computedSearchParams)
 
-  const data = await fetchSearchCopipes(searchText, page)
+  if (!parseResult.success) {
+    notFound()
+  }
 
-  return <SearchPageTemplate data={data} page={page} searchText={searchText} />
+  const { page, text } = parseResult.data
+
+  const data = await fetchSearchCopipes(text, page)
+
+  return <SearchPageTemplate data={data} page={page} searchText={text} />
 }
