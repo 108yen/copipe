@@ -1,6 +1,5 @@
 "use client"
 import { extendConfig, extendTheme, UsageTheme } from "@yamada-ui/react"
-
 import { components } from "./components"
 import { customConfig } from "./config"
 import { semantics } from "./semantics"

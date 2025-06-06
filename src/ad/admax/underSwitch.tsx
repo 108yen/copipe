@@ -2,7 +2,6 @@
 import { Box } from "@yamada-ui/react"
 import { usePathname } from "next/navigation"
 import { useEffect } from "react"
-
 import { AdmaxAdType } from "./conf"
 
 export default function AdmaxUnderSwitch() {

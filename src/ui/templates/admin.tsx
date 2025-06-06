@@ -4,7 +4,6 @@ import { CopipeWithTagPayload, TagPayload } from "@/db/query"
 import { updateTags } from "@/server-actions"
 import { VStack } from "@yamada-ui/react"
 import { useState } from "react"
-
 import { TitleList } from "../components/data-display"
 import { Pagination } from "../components/navigation"
 import { EditModal } from "../components/overlay"
