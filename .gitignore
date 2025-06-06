@@ -38,3 +38,6 @@ next-env.d.ts
 .vercel
 .env
 .eslintcache
+
+# eslint
+eslint-typegen.d.ts

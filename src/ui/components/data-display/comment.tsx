@@ -4,7 +4,6 @@ import { postComment } from "@/server-actions"
 import dayjs from "@/utils/dayjs"
 import { Container, Separator, Text, VStack } from "@yamada-ui/react"
 import { useOptimistic } from "react"
-
 import { CommentForm } from "../form"
 interface CommentItemProps {
   comment: CommentPayload
