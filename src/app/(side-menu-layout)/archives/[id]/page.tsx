@@ -1,10 +1,10 @@
+import { NextPageProps } from "next"
+import { notFound } from "next/navigation"
+import { Metadata } from "next/types"
 import { fetchCopipe, getCopipeIds } from "@/db/server/copipes"
 import { archivesPageScheme } from "@/schemes"
 import { ArchivesPageTemplate } from "@/ui/templates"
 import { checkBeforeAndAfterPage } from "@/utils/check-before-and-after-page"
-import { NextPageProps } from "next"
-import { notFound } from "next/navigation"
-import { Metadata } from "next/types"
 
 export const metadata: Metadata = {
   title: "アーカイブ",

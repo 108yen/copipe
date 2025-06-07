@@ -1,6 +1,4 @@
 "use client"
-import { event } from "@/analytics/gtag"
-import { postCopipe } from "@/server-actions"
 import {
   Button,
   Container,
@@ -11,6 +9,8 @@ import {
   VStack,
 } from "@yamada-ui/react"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
+import { event } from "@/analytics/gtag"
+import { postCopipe } from "@/server-actions"
 
 type Inputs = {
   body: string

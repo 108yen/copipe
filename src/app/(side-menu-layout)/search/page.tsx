@@ -1,9 +1,9 @@
-import { fetchSearchCopipes } from "@/db/server/copipes"
-import { searchPageScheme } from "@/schemes"
-import { SearchPageTemplate } from "@/ui/templates"
 import { NextPageProps } from "next"
 import { notFound } from "next/navigation"
 import { Metadata } from "next/types"
+import { fetchSearchCopipes } from "@/db/server/copipes"
+import { searchPageScheme } from "@/schemes"
+import { SearchPageTemplate } from "@/ui/templates"
 
 export const metadata: Metadata = {
   title: "検索",

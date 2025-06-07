@@ -1,8 +1,8 @@
+import { Container, Text, VStack } from "@yamada-ui/react"
 import { FetchSearchCopipes } from "@/db/server/copipes"
 import { CopipeCardItem } from "@/ui/components/data-display"
 import { SearchForm } from "@/ui/components/form"
 import { Pagination } from "@/ui/components/navigation"
-import { Container, Text, VStack } from "@yamada-ui/react"
 
 interface SearchPageTemplateProps {
   data: Awaited<FetchSearchCopipes>

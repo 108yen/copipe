@@ -1,6 +1,6 @@
-import { FetchRecentCopipesReturn } from "@/db/server/copipes"
 import { Container, Heading, Separator, Text, VStack } from "@yamada-ui/react"
 import Link from "next/link"
+import { FetchRecentCopipesReturn } from "@/db/server/copipes"
 
 interface RecentPostsCardProps {
   copipes: Awaited<FetchRecentCopipesReturn>

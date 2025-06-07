@@ -1,6 +1,5 @@
 "use client"
 
-import { CopipeWithTagPayload, TagPayload } from "@/db/query"
 import {
   Button,
   Modal,
@@ -13,6 +12,7 @@ import {
   useNotice,
 } from "@yamada-ui/react"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
+import { CopipeWithTagPayload, TagPayload } from "@/db/query"
 
 type Inputs = {
   tags: string[]
