@@ -1,10 +1,10 @@
+import { NextPageProps } from "next"
+import { notFound } from "next/navigation"
+import { Metadata } from "next/types"
 import { fetchTagCopipes } from "@/db/server/copipes"
 import { fetchTag } from "@/db/server/tags"
 import { tagPageScheme } from "@/schemes"
 import { TagPageTemplate } from "@/ui/templates"
-import { NextPageProps } from "next"
-import { notFound } from "next/navigation"
-import { Metadata } from "next/types"
 
 export const metadata: Metadata = {
   title: "タグ",

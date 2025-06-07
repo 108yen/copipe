@@ -1,7 +1,7 @@
+import { Container, VStack } from "@yamada-ui/react"
 import { FetchTagCopipes } from "@/db/server/copipes"
 import { CopipeCardItem } from "@/ui/components/data-display"
 import { Pagination } from "@/ui/components/navigation"
-import { Container, VStack } from "@yamada-ui/react"
 
 interface TagPageTemplateProps {
   data: Awaited<FetchTagCopipes>

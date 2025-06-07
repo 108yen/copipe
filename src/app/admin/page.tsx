@@ -1,6 +1,6 @@
+import { NextPageProps } from "next"
 import { fetchAdminCopipes } from "@/db/server/copipes"
 import { AdminPageTemplate } from "@/ui/templates"
-import { NextPageProps } from "next"
 
 export default async function Page({ searchParams }: NextPageProps) {
   const { page: pageProp } = await searchParams

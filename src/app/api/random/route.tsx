@@ -1,5 +1,5 @@
-import getTweet from "@/utils/tweet"
 import { NextResponse } from "next/server"
+import getTweet from "@/utils/tweet"
 
 export const dynamic = "force-dynamic"
 

@@ -1,7 +1,7 @@
+import { PropsWithChildren } from "react"
 import { fetchRecentCopipes } from "@/db/server/copipes"
 import { fetchTags } from "@/db/server/tags"
 import { SideMenuLayout } from "@/ui/layouts"
-import { PropsWithChildren } from "react"
 
 interface LayoutProps extends PropsWithChildren {}
 
