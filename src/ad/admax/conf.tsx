@@ -4,8 +4,6 @@ export type AdmaxAdType = {
 }
 
 declare global {
-  // eslint-disable-next-line no-var
   var admaxads: AdmaxAdType[]
-  // eslint-disable-next-line no-var
   var __admax_tag__: unknown
 }
