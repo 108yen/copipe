@@ -20,7 +20,7 @@ importers:
         version: 15.3.3(next@15.3.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))(react@19.1.0)
       '@prisma/client':
         specifier: ^6.3.1
-        version: 6.9.0(prisma@6.9.0(typescript@5.8.3))(typescript@5.8.3)
+        version: 6.9.0(prisma@6.10.1(typescript@5.8.3))(typescript@5.8.3)
       '@supabase/supabase-js':
         specifier: ^2.39.2
         version: 2.50.0
@@ -69,10 +69,10 @@ importers:
         version: 0.5.1
       '@changesets/cli':
         specifier: ^2.27.9
-        version: 2.29.4
+        version: 2.29.5
       '@commitlint/cli':
         specifier: ^19.6.1
-        version: 19.8.1(@types/node@22.15.31)(typescript@5.8.3)
+        version: 19.8.1(@types/node@22.15.32)(typescript@5.8.3)
       '@commitlint/config-conventional':
         specifier: ^19.6.0
         version: 19.8.1
@@ -93,7 +93,7 @@ importers:
         version: 0.0.20
       '@types/node':
         specifier: ^22.0.0
-        version: 22.15.31
+        version: 22.15.32
       '@typescript-eslint/eslint-plugin':
         specifier: ^8.0.0
         version: 8.34.1(@typescript-eslint/parser@8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
@@ -141,7 +141,7 @@ importers:
         version: 16.2.0
       lefthook:
         specifier: ^1.10.10
-        version: 1.11.13
+        version: 1.11.14
       next-sitemap:
         specifier: ^4.2.3
         version: 4.2.3(next@15.3.3(react-dom@19.1.0(react@19.1.0))(react@19.1.0))
@@ -150,7 +150,7 @@ importers:
         version: 3.5.3
       prisma:
         specifier: ^6.3.1
-        version: 6.9.0(typescript@5.8.3)
+        version: 6.10.1(typescript@5.8.3)
       typescript-eslint:
         specifier: ^8.21.0
         version: 8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)
@@ -212,8 +212,8 @@ packages:
   '@changesets/apply-release-plan@7.0.12':
     resolution: {integrity: sha512-EaET7As5CeuhTzvXTQCRZeBUcisoYPDDcXvgTE/2jmmypKp0RC7LxKj/yzqeh/1qFTZI7oDGFcL1PHRuQuketQ==}
 
-  '@changesets/assemble-release-plan@6.0.8':
-    resolution: {integrity: sha512-y8+8LvZCkKJdbUlpXFuqcavpzJR80PN0OIfn8HZdwK7Sh6MgLXm4hKY5vu6/NDoKp8lAlM4ERZCqRMLxP4m+MQ==}
+  '@changesets/assemble-release-plan@6.0.9':
+    resolution: {integrity: sha512-tPgeeqCHIwNo8sypKlS3gOPmsS3wP0zHt67JDuL20P4QcXiw/O4Hl7oXiuLnP9yg+rXLQ2sScdV1Kkzde61iSQ==}
 
   '@changesets/changelog-git@0.2.1':
     resolution: {integrity: sha512-x/xEleCFLH28c3bQeQIyeZf8lFXyDFVn1SgcBiR2Tw/r4IAWlk1fzxCEZ6NxQAjF2Nwtczoen3OA2qR+UawQ8Q==}
@@ -221,8 +221,8 @@ packages:
   '@changesets/changelog-github@0.5.1':
     resolution: {integrity: sha512-BVuHtF+hrhUScSoHnJwTELB4/INQxVFc+P/Qdt20BLiBFIHFJDDUaGsZw+8fQeJTRP5hJZrzpt3oZWh0G19rAQ==}
 
-  '@changesets/cli@2.29.4':
-    resolution: {integrity: sha512-VW30x9oiFp/un/80+5jLeWgEU6Btj8IqOgI+X/zAYu4usVOWXjPIK5jSSlt5jsCU7/6Z7AxEkarxBxGUqkAmNg==}
+  '@changesets/cli@2.29.5':
+    resolution: {integrity: sha512-0j0cPq3fgxt2dPdFsg4XvO+6L66RC0pZybT9F4dG5TBrLA3jA/1pNkdTXH9IBBVHkgsKrNKenI3n1mPyPlIydg==}
     hasBin: true
 
   '@changesets/config@3.1.1':
@@ -237,8 +237,8 @@ packages:
   '@changesets/get-github-info@0.6.0':
     resolution: {integrity: sha512-v/TSnFVXI8vzX9/w3DU2Ol+UlTZcu3m0kXTjTT4KlAdwSvwutcByYwyYn9hwerPWfPkT2JfpoX0KgvCEi8Q/SA==}
 
-  '@changesets/get-release-plan@4.0.12':
-    resolution: {integrity: sha512-KukdEgaafnyGryUwpHG2kZ7xJquOmWWWk5mmoeQaSvZTWH1DC5D/Sw6ClgGFYtQnOMSQhgoEbDxAbpIIayKH1g==}
+  '@changesets/get-release-plan@4.0.13':
+    resolution: {integrity: sha512-DWG1pus72FcNeXkM12tx+xtExyH/c9I1z+2aXlObH3i9YA7+WZEVaiHzHl03thpvAgWTRaH64MpfHxozfF7Dvg==}
 
   '@changesets/get-version-range-type@0.4.0':
     resolution: {integrity: sha512-hwawtob9DryoGTpixy1D3ZXbGgJu1Rhr+ySH2PvTLHvkZuQ7sRT4oQwMh0hbqZH1weAooedEjRsbrWcGLCeyVQ==}
@@ -1191,23 +1191,23 @@ packages:
       typescript:
         optional: true
 
-  '@prisma/config@6.9.0':
-    resolution: {integrity: sha512-Wcfk8/lN3WRJd5w4jmNQkUwhUw0eksaU/+BlAJwPQKW10k0h0LC9PD/6TQFmqKVbHQL0vG2z266r0S1MPzzhbA==}
+  '@prisma/config@6.10.1':
+    resolution: {integrity: sha512-kz4/bnqrOrzWo8KzYguN0cden4CzLJJ+2VSpKtF8utHS3l1JS0Lhv6BLwpOX6X9yNreTbZQZwewb+/BMPDCIYQ==}
 
-  '@prisma/debug@6.9.0':
-    resolution: {integrity: sha512-bFeur/qi/Q+Mqk4JdQ3R38upSYPebv5aOyD1RKywVD+rAMLtRkmTFn28ZuTtVOnZHEdtxnNOCH+bPIeSGz1+Fg==}
+  '@prisma/debug@6.10.1':
+    resolution: {integrity: sha512-k2YT53cWxv9OLjW4zSYTZ6Z7j0gPfCzcr2Mj99qsuvlxr8WAKSZ2NcSR0zLf/mP4oxnYG842IMj3utTgcd7CaA==}
 
-  '@prisma/engines-version@6.9.0-10.81e4af48011447c3cc503a190e86995b66d2a28e':
-    resolution: {integrity: sha512-Qp9gMoBHgqhKlrvumZWujmuD7q4DV/gooEyPCLtbkc13EZdSz2RsGUJ5mHb3RJgAbk+dm6XenqG7obJEhXcJ6Q==}
+  '@prisma/engines-version@6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c':
+    resolution: {integrity: sha512-ZJFTsEqapiTYVzXya6TUKYDFnSWCNegfUiG5ik9fleQva5Sk3DNyyUi7X1+0ZxWFHwHDr6BZV5Vm+iwP+LlciA==}
 
-  '@prisma/engines@6.9.0':
-    resolution: {integrity: sha512-im0X0bwDLA0244CDf8fuvnLuCQcBBdAGgr+ByvGfQY9wWl6EA+kRGwVk8ZIpG65rnlOwtaWIr/ZcEU5pNVvq9g==}
+  '@prisma/engines@6.10.1':
+    resolution: {integrity: sha512-Q07P5rS2iPwk2IQr/rUQJ42tHjpPyFcbiH7PXZlV81Ryr9NYIgdxcUrwgVOWVm5T7ap02C0dNd1dpnNcSWig8A==}
 
-  '@prisma/fetch-engine@6.9.0':
-    resolution: {integrity: sha512-PMKhJdl4fOdeE3J3NkcWZ+tf3W6rx3ht/rLU8w4SXFRcLhd5+3VcqY4Kslpdm8osca4ej3gTfB3+cSk5pGxgFg==}
+  '@prisma/fetch-engine@6.10.1':
+    resolution: {integrity: sha512-clmbG/Jgmrc/n6Y77QcBmAUlq9LrwI9Dbgy4pq5jeEARBpRCWJDJ7PWW1P8p0LfFU0i5fsyO7FqRzRB8mkdS4g==}
 
-  '@prisma/get-platform@6.9.0':
-    resolution: {integrity: sha512-/B4n+5V1LI/1JQcHp+sUpyRT1bBgZVPHbsC4lt4/19Xp4jvNIVcq5KYNtQDk5e/ukTSjo9PZVAxxy9ieFtlpTQ==}
+  '@prisma/get-platform@6.10.1':
+    resolution: {integrity: sha512-4CY5ndKylcsce9Mv+VWp5obbR2/86SHOLVV053pwIkhVtT9C9A83yqiqI/5kJM9T1v1u1qco/bYjDKycmei9HA==}
 
   '@rtsao/scc@1.1.0':
     resolution: {integrity: sha512-zt6OdqaDoOnJ1ZYsCYGt9YmWzDXl4vQdKTyJev62gFhRGKdx7mcT54V9KIjg+d2wi9EXsPvAPKe7i7WjfVWB8g==}
@@ -1281,8 +1281,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@22.15.31':
-    resolution: {integrity: sha512-jnVe5ULKl6tijxUhvQeNbQG/84fHfg+yMak02cT8QVhBx/F05rAVxCGBYYTh2EKz22D6JF5ktXuNwdx7b9iEGw==}
+  '@types/node@22.15.32':
+    resolution: {integrity: sha512-3jigKqgSjsH6gYZv2nEsqdXfZqIFGAV36XYYjf9KGZ3PSG+IhLecqPnI310RvjutyMwifE2hhhNEklOUrvx/wA==}
 
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
@@ -3183,58 +3183,58 @@ packages:
     resolution: {integrity: sha512-MbjN408fEndfiQXbFQ1vnd+1NoLDsnQW41410oQBXiyXDMYH5z505juWa4KUE1LqxRC7DgOgZDbKLxHIwm27hA==}
     engines: {node: '>=0.10'}
 
-  lefthook-darwin-arm64@1.11.13:
-    resolution: {integrity: sha512-gHwHofXupCtzNLN+8esdWfFTnAEkmBxE/WKA0EwxPPJXdZYa1GUsiG5ipq/CdG/0j8ekYyM9Hzyrrk5BqJ42xw==}
+  lefthook-darwin-arm64@1.11.14:
+    resolution: {integrity: sha512-YPbUK6kGytY5W6aNUrzK7Vod3ynLVvj5JQiBh0DjlxCHMgIQPpFkDfwQzGw1E8CySyC95HXO83En5Ule8umS7g==}
     cpu: [arm64]
     os: [darwin]
 
-  lefthook-darwin-x64@1.11.13:
-    resolution: {integrity: sha512-zYxkWNUirmTidhskY9J9AwxvdMi3YKH+TqZ3AQ1EOqkOwPBWJQW5PbnzsXDrd3YnrtZScYm/tE/moXJpEPPIpQ==}
+  lefthook-darwin-x64@1.11.14:
+    resolution: {integrity: sha512-l9RhSBp1SHqLCjSGWoeeVWqKcTBOMW8v2CCYrUt5eb6sik7AjT6+Neqf3sClsXH7SjELjj43yjmg6loqPtfDgg==}
     cpu: [x64]
     os: [darwin]
 
-  lefthook-freebsd-arm64@1.11.13:
-    resolution: {integrity: sha512-gJzWnllcMcivusmPorEkXPpEciKotlBHn7QxWwYaSjss/U3YdZu+NTjDO30b3qeiVlyq4RAZ4BPKJODXxHHwUA==}
+  lefthook-freebsd-arm64@1.11.14:
+    resolution: {integrity: sha512-oSdJKGGMohktFXC6faZCUt5afyHpDwWGIWAkHGgOXUVD/LiZDEn6U/8cQmKm1UAfBySuPTtfir0VeM04y6188g==}
     cpu: [arm64]
     os: [freebsd]
 
-  lefthook-freebsd-x64@1.11.13:
-    resolution: {integrity: sha512-689XdchgtDvZQWFFx1szUvm/mqrq/v6laki0odq5FAfcSgUeLu3w+z6UicBS5l55eFJuQTDNKARFqrKJ04e+Vw==}
+  lefthook-freebsd-x64@1.11.14:
+    resolution: {integrity: sha512-gZdMWZwOtIhIPK3GPYac7JhXrxF188gkw65i6O7CedS/meDlK2vjBv5BUVLeD/satv4+jibEdV0h4Qqu/xIh2A==}
     cpu: [x64]
     os: [freebsd]
 
-  lefthook-linux-arm64@1.11.13:
-    resolution: {integrity: sha512-ujCLbaZg5S/Ao8KZAcNSb+Y3gl898ZEM0YKyiZmZo22dFFpm/5gcV46pF3xaqIw5IpH+3YYDTKDU+qTetmARyQ==}
+  lefthook-linux-arm64@1.11.14:
+    resolution: {integrity: sha512-sZmqbTsGQFQw7gbfi9eIHFOxfcs66QfZYLRMh1DktODhyhRXB8RtI6KMeKCtPEGLhbK55/I4TprC8Qvj86UBgw==}
     cpu: [arm64]
     os: [linux]
 
-  lefthook-linux-x64@1.11.13:
-    resolution: {integrity: sha512-O5WdodeBtFOXQlvPcckqp4W/yqVM9DbVQBkvOxwSJlmsxO4sGYK1TqdxH9ihLB85B2kPPssZj9ze36/oizzhVQ==}
+  lefthook-linux-x64@1.11.14:
+    resolution: {integrity: sha512-c+to1BRzFe419SNXAR6YpCBP8EVWxvUxlON3Z+efzmrHhdlhm7LvEoJcN4RQE4Gc2rJQJNe87OjsEZQkc4uQLg==}
     cpu: [x64]
     os: [linux]
 
-  lefthook-openbsd-arm64@1.11.13:
-    resolution: {integrity: sha512-SyBpciUfvY/lUDbZu7L6MtL/SVG2+yMTckBgb4PdJQhJlisY0IsyOYdlTw2icPPrY7JnwdsFv8UW0EJOB76W4g==}
+  lefthook-openbsd-arm64@1.11.14:
+    resolution: {integrity: sha512-fivG3D9G4ASRCTf3ecfz1WdnrHCW9pezaI8v1NVve8t6B2q0d0yeaje5dfhoAsAvwiFPRaMzka1Qaoyu8O8G9Q==}
     cpu: [arm64]
     os: [openbsd]
 
-  lefthook-openbsd-x64@1.11.13:
-    resolution: {integrity: sha512-6+/0j6O2dzo9cjTWUKfL2J6hRR7Krna/ssqnW8cWh8QHZKO9WJn34epto9qgjeHwSysou8byI7Mwv5zOGthLCQ==}
+  lefthook-openbsd-x64@1.11.14:
+    resolution: {integrity: sha512-vikmG0jf7JVKR3be6Wk3l1jtEdedEqk1BTdsaHFX1bj0qk0azcqlZ819Wt/IoyIYDzQCHKowZ6DuXsRjT+RXWA==}
     cpu: [x64]
     os: [openbsd]
 
-  lefthook-windows-arm64@1.11.13:
-    resolution: {integrity: sha512-w5TwZ8bsZ17uOMtYGc5oEb4tCHjNTSeSXRy6H9Yic8E7IsPZtZLkaZGnIIwgXFuhhrcCdc6FuTvKt2tyV7EW2g==}
+  lefthook-windows-arm64@1.11.14:
+    resolution: {integrity: sha512-5PoAJ9QKaqxJn1NWrhrhXpAROpl/dT7bGTo7VMj2ATO1cpRatbn6p+ssvc3tgeriFThowFb1D11Fg6OlFLi6UQ==}
     cpu: [arm64]
     os: [win32]
 
-  lefthook-windows-x64@1.11.13:
-    resolution: {integrity: sha512-7lvwnIs8CNOXKU4y3i1Pbqna+QegIORkSD2VCuHBNpIJ8H84NpjoG3tKU91IM/aI1a2eUvCk+dw+1rfMRz7Ytg==}
+  lefthook-windows-x64@1.11.14:
+    resolution: {integrity: sha512-kBeOPR0Aj5hQGxoBBntgz5/e/xaH5Vnzlq9lJjHW8sf23qu/JVUGg6ceCoicyVWJi+ZOBliTa8KzwCu+mgyJjw==}
     cpu: [x64]
     os: [win32]
 
-  lefthook@1.11.13:
-    resolution: {integrity: sha512-SDTk3D4nW1XRpR9u9fdYQ/qj1xeZVIwZmIFdJUnyq+w9ZLdCCvIrOmtD8SFiJowSevISjQDC+f9nqyFXUxc0SQ==}
+  lefthook@1.11.14:
+    resolution: {integrity: sha512-Dv91Lnu/0jLT5pCZE0IkEfrpTXUhyX9WG4upEMPkKPCl5aBgJdoqVw/hbh8drcVrC6y7k1PqsRmWSERmO57weQ==}
     hasBin: true
 
   levn@0.4.1:
@@ -3635,8 +3635,8 @@ packages:
   pretty-format@3.8.0:
     resolution: {integrity: sha512-WuxUnVtlWL1OfZFQFuqvnvs6MiAGk9UNsBostyBOB0Is9wb5uRESevA6rnl/rkksXaGX3GzZhPup5d6Vp1nFew==}
 
-  prisma@6.9.0:
-    resolution: {integrity: sha512-resJAwMyZREC/I40LF6FZ6rZTnlrlrYrb63oW37Gq+U+9xHwbyMSPJjKtM7VZf3gTO86t/Oyz+YeSXr3CmAY1Q==}
+  prisma@6.10.1:
+    resolution: {integrity: sha512-khhlC/G49E4+uyA3T3H5PRBut486HD2bDqE2+rvkU0pwk9IAqGFacLFUyIx9Uw+W2eCtf6XGwsp+/strUwMNPw==}
     engines: {node: '>=18.18'}
     hasBin: true
     peerDependencies:
@@ -4347,7 +4347,7 @@ snapshots:
       resolve-from: 5.0.0
       semver: 7.7.2
 
-  '@changesets/assemble-release-plan@6.0.8':
+  '@changesets/assemble-release-plan@6.0.9':
     dependencies:
       '@changesets/errors': 0.2.0
       '@changesets/get-dependents-graph': 2.1.3
@@ -4368,15 +4368,15 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@changesets/cli@2.29.4':
+  '@changesets/cli@2.29.5':
     dependencies:
       '@changesets/apply-release-plan': 7.0.12
-      '@changesets/assemble-release-plan': 6.0.8
+      '@changesets/assemble-release-plan': 6.0.9
       '@changesets/changelog-git': 0.2.1
       '@changesets/config': 3.1.1
       '@changesets/errors': 0.2.0
       '@changesets/get-dependents-graph': 2.1.3
-      '@changesets/get-release-plan': 4.0.12
+      '@changesets/get-release-plan': 4.0.13
       '@changesets/git': 3.0.4
       '@changesets/logger': 0.1.1
       '@changesets/pre': 2.0.2
@@ -4427,9 +4427,9 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@changesets/get-release-plan@4.0.12':
+  '@changesets/get-release-plan@4.0.13':
     dependencies:
-      '@changesets/assemble-release-plan': 6.0.8
+      '@changesets/assemble-release-plan': 6.0.9
       '@changesets/config': 3.1.1
       '@changesets/pre': 2.0.2
       '@changesets/read': 0.6.5
@@ -4488,11 +4488,11 @@ snapshots:
       human-id: 4.1.1
       prettier: 2.8.8
 
-  '@commitlint/cli@19.8.1(@types/node@22.15.31)(typescript@5.8.3)':
+  '@commitlint/cli@19.8.1(@types/node@22.15.32)(typescript@5.8.3)':
     dependencies:
       '@commitlint/format': 19.8.1
       '@commitlint/lint': 19.8.1
-      '@commitlint/load': 19.8.1(@types/node@22.15.31)(typescript@5.8.3)
+      '@commitlint/load': 19.8.1(@types/node@22.15.32)(typescript@5.8.3)
       '@commitlint/read': 19.8.1
       '@commitlint/types': 19.8.1
       tinyexec: 1.0.1
@@ -4539,7 +4539,7 @@ snapshots:
       '@commitlint/rules': 19.8.1
       '@commitlint/types': 19.8.1
 
-  '@commitlint/load@19.8.1(@types/node@22.15.31)(typescript@5.8.3)':
+  '@commitlint/load@19.8.1(@types/node@22.15.32)(typescript@5.8.3)':
     dependencies:
       '@commitlint/config-validator': 19.8.1
       '@commitlint/execute-rule': 19.8.1
@@ -4547,7 +4547,7 @@ snapshots:
       '@commitlint/types': 19.8.1
       chalk: 5.4.1
       cosmiconfig: 9.0.0(typescript@5.8.3)
-      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.31)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3)
+      cosmiconfig-typescript-loader: 6.1.0(@types/node@22.15.32)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
@@ -5330,35 +5330,35 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@prisma/client@6.9.0(prisma@6.9.0(typescript@5.8.3))(typescript@5.8.3)':
+  '@prisma/client@6.9.0(prisma@6.10.1(typescript@5.8.3))(typescript@5.8.3)':
     optionalDependencies:
-      prisma: 6.9.0(typescript@5.8.3)
+      prisma: 6.10.1(typescript@5.8.3)
       typescript: 5.8.3
 
-  '@prisma/config@6.9.0':
+  '@prisma/config@6.10.1':
     dependencies:
       jiti: 2.4.2
 
-  '@prisma/debug@6.9.0': {}
+  '@prisma/debug@6.10.1': {}
 
-  '@prisma/engines-version@6.9.0-10.81e4af48011447c3cc503a190e86995b66d2a28e': {}
+  '@prisma/engines-version@6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c': {}
 
-  '@prisma/engines@6.9.0':
+  '@prisma/engines@6.10.1':
     dependencies:
-      '@prisma/debug': 6.9.0
-      '@prisma/engines-version': 6.9.0-10.81e4af48011447c3cc503a190e86995b66d2a28e
-      '@prisma/fetch-engine': 6.9.0
-      '@prisma/get-platform': 6.9.0
+      '@prisma/debug': 6.10.1
+      '@prisma/engines-version': 6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c
+      '@prisma/fetch-engine': 6.10.1
+      '@prisma/get-platform': 6.10.1
 
-  '@prisma/fetch-engine@6.9.0':
+  '@prisma/fetch-engine@6.10.1':
     dependencies:
-      '@prisma/debug': 6.9.0
-      '@prisma/engines-version': 6.9.0-10.81e4af48011447c3cc503a190e86995b66d2a28e
-      '@prisma/get-platform': 6.9.0
+      '@prisma/debug': 6.10.1
+      '@prisma/engines-version': 6.10.1-1.9b628578b3b7cae625e8c927178f15a170e74a9c
+      '@prisma/get-platform': 6.10.1
 
-  '@prisma/get-platform@6.9.0':
+  '@prisma/get-platform@6.10.1':
     dependencies:
-      '@prisma/debug': 6.9.0
+      '@prisma/debug': 6.10.1
 
   '@rtsao/scc@1.1.0': {}
 
@@ -5443,7 +5443,7 @@ snapshots:
 
   '@types/conventional-commits-parser@5.0.1':
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
 
   '@types/estree@1.0.8': {}
 
@@ -5455,7 +5455,7 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@22.15.31':
+  '@types/node@22.15.32':
     dependencies:
       undici-types: 6.21.0
 
@@ -5471,7 +5471,7 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
 
   '@typescript-eslint/eslint-plugin@8.34.1(@typescript-eslint/parser@8.34.1(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3))(eslint@9.29.0(jiti@2.4.2))(typescript@5.8.3)':
     dependencies:
@@ -7198,9 +7198,9 @@ snapshots:
 
   core-util-is@1.0.3: {}
 
-  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.31)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3):
+  cosmiconfig-typescript-loader@6.1.0(@types/node@22.15.32)(cosmiconfig@9.0.0(typescript@5.8.3))(typescript@5.8.3):
     dependencies:
-      '@types/node': 22.15.31
+      '@types/node': 22.15.32
       cosmiconfig: 9.0.0(typescript@5.8.3)
       jiti: 2.4.2
       typescript: 5.8.3
@@ -8420,48 +8420,48 @@ snapshots:
     dependencies:
       language-subtag-registry: 0.3.23
 
-  lefthook-darwin-arm64@1.11.13:
+  lefthook-darwin-arm64@1.11.14:
     optional: true
 
-  lefthook-darwin-x64@1.11.13:
+  lefthook-darwin-x64@1.11.14:
     optional: true
 
-  lefthook-freebsd-arm64@1.11.13:
+  lefthook-freebsd-arm64@1.11.14:
     optional: true
 
-  lefthook-freebsd-x64@1.11.13:
+  lefthook-freebsd-x64@1.11.14:
     optional: true
 
-  lefthook-linux-arm64@1.11.13:
+  lefthook-linux-arm64@1.11.14:
     optional: true
 
-  lefthook-linux-x64@1.11.13:
+  lefthook-linux-x64@1.11.14:
     optional: true
 
-  lefthook-openbsd-arm64@1.11.13:
+  lefthook-openbsd-arm64@1.11.14:
     optional: true
 
-  lefthook-openbsd-x64@1.11.13:
+  lefthook-openbsd-x64@1.11.14:
     optional: true
 
-  lefthook-windows-arm64@1.11.13:
+  lefthook-windows-arm64@1.11.14:
     optional: true
 
-  lefthook-windows-x64@1.11.13:
+  lefthook-windows-x64@1.11.14:
     optional: true
 
-  lefthook@1.11.13:
+  lefthook@1.11.14:
     optionalDependencies:
-      lefthook-darwin-arm64: 1.11.13
-      lefthook-darwin-x64: 1.11.13
-      lefthook-freebsd-arm64: 1.11.13
-      lefthook-freebsd-x64: 1.11.13
-      lefthook-linux-arm64: 1.11.13
-      lefthook-linux-x64: 1.11.13
-      lefthook-openbsd-arm64: 1.11.13
-      lefthook-openbsd-x64: 1.11.13
-      lefthook-windows-arm64: 1.11.13
-      lefthook-windows-x64: 1.11.13
+      lefthook-darwin-arm64: 1.11.14
+      lefthook-darwin-x64: 1.11.14
+      lefthook-freebsd-arm64: 1.11.14
+      lefthook-freebsd-x64: 1.11.14
+      lefthook-linux-arm64: 1.11.14
+      lefthook-linux-x64: 1.11.14
+      lefthook-openbsd-arm64: 1.11.14
+      lefthook-openbsd-x64: 1.11.14
+      lefthook-windows-arm64: 1.11.14
+      lefthook-windows-x64: 1.11.14
 
   levn@0.4.1:
     dependencies:
@@ -8812,10 +8812,10 @@ snapshots:
 
   pretty-format@3.8.0: {}
 
-  prisma@6.9.0(typescript@5.8.3):
+  prisma@6.10.1(typescript@5.8.3):
     dependencies:
-      '@prisma/config': 6.9.0
-      '@prisma/engines': 6.9.0
+      '@prisma/config': 6.10.1
+      '@prisma/engines': 6.10.1
     optionalDependencies:
       typescript: 5.8.3
 
