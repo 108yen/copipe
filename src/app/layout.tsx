@@ -1,10 +1,10 @@
+import { UIProvider } from "@yamada-ui/react"
+import { Metadata } from "next"
+import { ReactNode } from "react"
 import GoogleAnalytics from "@/analytics/GoogleAnalytics"
 import { config, theme } from "@/theme"
 import { Header } from "@/ui/components/layouts"
 import { YamadaUIScript } from "@/utils/yamada-ui-script"
-import { UIProvider } from "@yamada-ui/react"
-import { Metadata } from "next"
-import { ReactNode } from "react"
 
 export const metadata: Metadata = {
   description:
