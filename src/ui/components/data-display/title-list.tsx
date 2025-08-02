@@ -1,4 +1,3 @@
-import { CopipeWithTagPayload } from "@/db/query"
 import EditIcon from "@mui/icons-material/Edit"
 import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
 import {
@@ -10,6 +9,7 @@ import {
   IconButton,
   Spacer,
 } from "@yamada-ui/react"
+import { CopipeWithTagPayload } from "@/db/query"
 
 interface TitleListItemProps {
   copipe: CopipeWithTagPayload
