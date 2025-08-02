@@ -1,5 +1,11 @@
 # copipe
 
+## 1.7.5
+
+### Patch Changes
+
+- [#184](https://github.com/108yen/copipe/pull/184) [`c3e0d14`](https://github.com/108yen/copipe/commit/c3e0d14dd816158f47cc05a3c16160e93e198f0b) Thanks [@108yen](https://github.com/108yen)! - Updated page params validation and create new prisma quary.
+
 ## 1.7.4
 
 ### Patch Changes
