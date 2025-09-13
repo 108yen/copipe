@@ -2,7 +2,7 @@
   "name": "copipe",
   "version": "1.7.4",
   "private": true,
-  "packageManager": "pnpm@10.15.0",
+  "packageManager": "pnpm@10.16.1",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@prisma/client",
