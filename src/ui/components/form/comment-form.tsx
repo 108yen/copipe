@@ -1,7 +1,5 @@
 "use client"
 
-import { event } from "@/analytics/gtag"
-import { CommentPayload } from "@/db/query"
 import {
   Button,
   FormControl,
@@ -10,6 +8,8 @@ import {
   VStack,
 } from "@yamada-ui/react"
 import { Controller, SubmitHandler, useForm } from "react-hook-form"
+import { event } from "@/analytics/gtag"
+import { CommentPayload } from "@/db/query"
 
 type Inputs = {
   body: string
