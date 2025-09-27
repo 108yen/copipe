@@ -1,7 +1,7 @@
 "use server"
 
-import { prisma } from "@/db/db"
 import { revalidatePath } from "next/cache"
+import { prisma } from "@/db/db"
 
 export async function postComment(copipe_id: number, body: string) {
   try {

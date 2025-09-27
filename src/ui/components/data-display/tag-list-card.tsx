@@ -1,4 +1,3 @@
-import { FetchTagsReturn } from "@/db/server/tags"
 import {
   Box,
   Container,
@@ -8,6 +7,7 @@ import {
   VStack,
 } from "@yamada-ui/react"
 import Link from "next/link"
+import { FetchTagsReturn } from "@/db/server/tags"
 
 interface TagListCardProps {
   tags: Awaited<FetchTagsReturn>

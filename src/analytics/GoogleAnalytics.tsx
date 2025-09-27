@@ -1,7 +1,6 @@
 "use client"
 
 import Script from "next/script"
-
 import { GA_MEASUREMENT_ID } from "./gtag"
 
 export default function GoogleAnalytics({
