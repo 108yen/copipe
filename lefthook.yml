@@ -24,5 +24,9 @@ commit-msg:
 post-merge:
   commands:
     pnpm:
-      glob: "{package.json,pnpm-lock.yaml}"
-      run: pnpm install
+      run: pnpm install --frozen-lockfile
+
+post-checkout:
+  commands:
+    pnpm:
+      run: pnpm install --frozen-lockfile
