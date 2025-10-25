@@ -9,6 +9,7 @@
   "assignees": ["108yen"],
   "prHourlyLimit": 10,
   "automerge": true,
+  "minimumReleaseAge": "7 days",
   "packageRules": [
     {
       "groupName": "dependencies",
