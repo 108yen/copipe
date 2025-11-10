@@ -58,6 +58,7 @@ export function CommentForm({
       body: data.body,
       copipe_id: copipe_id,
       created_at: new Date(),
+       
       id: Math.floor(Math.random() * 10000),
     })
 
