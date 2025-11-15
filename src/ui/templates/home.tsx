@@ -1,8 +1,8 @@
+import { Container, VStack } from "@yamada-ui/react"
 import { GetHomePageCopipeReturn } from "@/db/server/copipes"
 import { CopipeCardItem } from "@/ui/components/data-display"
 import { SearchForm } from "@/ui/components/form"
 import { Pagination } from "@/ui/components/navigation"
-import { Container, VStack } from "@yamada-ui/react"
 
 interface HomePageTemplateProps extends Awaited<GetHomePageCopipeReturn> {}
 
