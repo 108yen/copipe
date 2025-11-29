@@ -1,8 +1,8 @@
+import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
+import { PropsWithChildren } from "react"
 import { FetchRecentCopipesReturn } from "@/db/server/copipes"
 import { FetchTagsReturn } from "@/db/server/tags"
 import { RecentPostsCard, TagListCard } from "@/ui/components/data-display"
-import { GridItem, SimpleGrid, VStack } from "@yamada-ui/react"
-import { PropsWithChildren } from "react"
 
 interface SideMenuLayoutProps extends PropsWithChildren {
   copipes: Awaited<FetchRecentCopipesReturn>
