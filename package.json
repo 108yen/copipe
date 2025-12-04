@@ -31,7 +31,8 @@
     "postinstall": "prisma generate",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "clean": "pnpx rimraf .turbo .next node_modules pnpm-lock.yaml"
   },
   "dependencies": {
     "@mui/icons-material": "^7.0.0",
