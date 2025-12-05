@@ -19,7 +19,7 @@ importers:
         specifier: 15.5.6
         version: 15.5.6(next@16.0.7(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
       '@prisma/client':
-        specifier: ^6.3.1
+        specifier: 6.19.0
         version: 6.19.0(prisma@6.19.0(typescript@5.9.3))(typescript@5.9.3)
       '@supabase/supabase-js':
         specifier: ^2.39.2
@@ -149,7 +149,7 @@ importers:
         specifier: ^3.1.1
         version: 3.7.1
       prisma:
-        specifier: ^6.3.1
+        specifier: 6.19.0
         version: 6.19.0(typescript@5.9.3)
       typescript-eslint:
         specifier: ^8.21.0
