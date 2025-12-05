@@ -1,11 +1,9 @@
 "use client"
 
-import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 import {
   Box,
   Heading,
   HStack,
-  Icon,
   IconButton,
   Separator,
   Spacer,
@@ -14,6 +12,7 @@ import {
 } from "@yamada-ui/react"
 import Link from "next/link"
 import { CopipeWithTagPayload } from "@/db/query"
+import { CopyIcon } from "../icon"
 
 async function handleClickCopy(copyText: null | string) {
   if (copyText == null) return
@@ -49,7 +48,7 @@ export function CopipeCardItem({
         <IconButton
           aria-label="copy"
           color="secondary"
-          icon={<Icon as={ContentCopyIcon} size="xl" />}
+          icon={<CopyIcon fontSize="xl" />}
           onClick={() => handleClickCopy(copipeItem.body)}
           size="xs"
           variant="ghost"

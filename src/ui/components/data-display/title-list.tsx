@@ -1,11 +1,9 @@
-import EditIcon from "@mui/icons-material/Edit"
-import ErrorOutlineIcon from "@mui/icons-material/ErrorOutline"
+import { CircleAlertIcon, PencilIcon } from "@yamada-ui/lucide"
 import {
   Accordion,
   AccordionItem,
   AccordionLabel,
   AccordionPanel,
-  Icon,
   IconButton,
   Spacer,
 } from "@yamada-ui/react"
@@ -22,13 +20,13 @@ function TitleListItem({ copipe, openModal }: TitleListItemProps) {
   return (
     <AccordionItem>
       <AccordionLabel gap={1}>
-        {notSetTag ? <Icon as={ErrorOutlineIcon} color="warning" /> : null}
+        {notSetTag ? <CircleAlertIcon color="warning" /> : null}
         {copipe.title}
 
         <Spacer />
 
         <IconButton
-          icon={<Icon as={EditIcon} />}
+          icon={<PencilIcon />}
           onClick={() => {
             openModal(copipe)
           }}

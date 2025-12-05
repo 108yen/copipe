@@ -1,5 +1,6 @@
 "use client"
-import SearchIcon from "@mui/icons-material/Search"
+
+import { SearchIcon } from "@yamada-ui/lucide"
 import {
   Button,
   Card,

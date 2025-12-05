@@ -31,12 +31,12 @@
     "clean": "pnpx rimraf .turbo .next node_modules pnpm-lock.yaml"
   },
   "dependencies": {
-    "@mui/icons-material": "^7.0.0",
     "@next/third-parties": "15.5.6",
     "@prisma/client": "6.19.0",
     "@supabase/supabase-js": "^2.39.2",
     "@types/react": "npm:types-react@19.0.0-rc.1",
     "@types/react-dom": "npm:types-react-dom@19.0.0",
+    "@yamada-ui/lucide": "^1.10.5",
     "@yamada-ui/react": "^1.7.4",
     "axios": "^1.6.5",
     "dayjs": "^1.11.10",
