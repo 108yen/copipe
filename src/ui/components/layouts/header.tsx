@@ -1,6 +1,6 @@
-import ContentCopyIcon from "@mui/icons-material/ContentCopy"
-import { Box, Heading, HStack, Icon, Text } from "@yamada-ui/react"
+import { Box, Heading, HStack, Text } from "@yamada-ui/react"
 import Link from "next/link"
+import { CopyIcon } from "../icon"
 
 export function Header() {
   return (
@@ -22,7 +22,7 @@ export function Header() {
           }}
         >
           <HStack alignItems="center">
-            <Icon as={ContentCopyIcon} />
+            <CopyIcon fontSize="2xl" />
             <Heading fontFamily="san-serif" fontSize="25px" variant="h1">
               copipe
             </Heading>

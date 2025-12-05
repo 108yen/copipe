@@ -1,7 +1,6 @@
-import { Tag } from "@/models/tag"
 import { unstable_cache } from "next/cache"
 import { notFound } from "next/navigation"
-
+import { Tag } from "@/models/tag"
 import { prisma } from "../db"
 
 export const fetchTags = unstable_cache(

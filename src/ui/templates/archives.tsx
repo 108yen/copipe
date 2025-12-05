@@ -1,6 +1,5 @@
-import { FetchCopipeReturn } from "@/db/server/copipes"
 import { Container, VStack } from "@yamada-ui/react"
-
+import { FetchCopipeReturn } from "@/db/server/copipes"
 import { Comment, CopipeCardItem } from "../components/data-display"
 import { ArchivesPagination } from "../components/navigation"
 

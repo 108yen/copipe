@@ -1,6 +1,5 @@
 "use client"
-import ArrowBackIosIcon from "@mui/icons-material/ArrowBackIos"
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos"
+import { ArrowLeftIcon, ArrowRightIcon } from "@yamada-ui/lucide"
 import { Box, Button, ButtonGroup, Icon } from "@yamada-ui/react"
 import { useRouter } from "next/navigation"
 
@@ -20,13 +19,13 @@ export function ArchivesPagination(props: {
           onClick={() => {
             router.push(`/archives/${beforeId}`)
           }}
-          startIcon={<Icon as={ArrowBackIosIcon} />}
+          startIcon={<Icon as={ArrowLeftIcon} />}
         >
           前のコピペ
         </Button>
         <Button
           disabled={afterId == -1}
-          endIcon={<Icon as={ArrowForwardIosIcon} />}
+          endIcon={<Icon as={ArrowRightIcon} />}
           onClick={() => {
             router.push(`/archives/${afterId}`)
           }}

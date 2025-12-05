@@ -1,14 +1,13 @@
-import ContentCopyIcon from "@mui/icons-material/ContentCopy"
 import {
   Box,
   HStack,
-  Icon,
   IconButton,
   Separator,
   Skeleton,
   SkeletonText,
   Spacer,
 } from "@yamada-ui/react"
+import { CopyIcon } from "../icon"
 
 export function CopipeCardItemSkelton() {
   return (
@@ -21,7 +20,7 @@ export function CopipeCardItemSkelton() {
         <IconButton
           aria-label="copy"
           color="secondary"
-          icon={<Icon as={ContentCopyIcon} size="xl" />}
+          icon={<CopyIcon fontSize="xl" />}
           size="xs"
           variant="ghost"
         />
