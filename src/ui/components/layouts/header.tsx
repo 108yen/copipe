@@ -22,7 +22,7 @@ export function Header() {
           }}
         >
           <HStack alignItems="center">
-            <CopyIcon />
+            <CopyIcon fontSize="2xl" />
             <Heading fontFamily="san-serif" fontSize="25px" variant="h1">
               copipe
             </Heading>
