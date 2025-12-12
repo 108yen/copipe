@@ -1,5 +1,11 @@
 # copipe
 
+## 1.7.6
+
+### Patch Changes
+
+- [`c237745`](https://github.com/108yen/copipe/commit/c23774530fc80b8e42a5e19bc39d670f187445a3) Thanks [@renovate[bot]](https://github.com/renovate%5Bbot%5D)! - Vulnerability countermeasures.
+
 ## 1.7.5
 
 ### Patch Changes
