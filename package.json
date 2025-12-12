@@ -1,6 +1,6 @@
 {
   "name": "copipe",
-  "version": "1.7.5",
+  "version": "1.7.6",
   "private": true,
   "packageManager": "pnpm@10.24.0",
   "pnpm": {
@@ -41,7 +41,7 @@
     "axios": "^1.6.5",
     "dayjs": "^1.11.10",
     "jotai": "^2.6.1",
-    "next": "15.5.7",
+    "next": "15.5.8",
     "next-auth": "^4.24.5",
     "react": "19.2.0",
     "react-dom": "19.2.0",
@@ -64,7 +64,7 @@
     "@typescript-eslint/parser": "^8.0.0",
     "@typescript-eslint/utils": "^8.33.1",
     "eslint": "^9.39.0",
-    "eslint-config-next": "16.0.3",
+    "eslint-config-next": "16.0.5",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
