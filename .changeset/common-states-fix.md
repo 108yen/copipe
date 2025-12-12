@@ -1,0 +1,5 @@
+---
+"copipe": patch
+---
+
+Vulnerability countermeasures.
