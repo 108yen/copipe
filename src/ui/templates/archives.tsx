@@ -1,30 +1,33 @@
+"use cache"
 import { Container, VStack } from "@yamada-ui/react"
-import { FetchCopipeReturn } from "@/db/server/copipes"
+import { fetchCopipe, getCopipeIds } from "@/db/server/copipes"
+import { checkBeforeAndAfterPage } from "@/utils/check-before-and-after-page"
 import { Comment, CopipeCardItem } from "../components/data-display"
 import { ArchivesPagination } from "../components/navigation"
 
 interface ArchivesPageTemplateProps {
-  afterId: number
-  beforeId: number
-  copipe: Awaited<FetchCopipeReturn>
   id: number
 }
 
-export function ArchivesPageTemplate({
-  afterId,
-  beforeId,
-  copipe,
-  id,
-}: ArchivesPageTemplateProps) {
+export async function ArchivesPageTemplate({ id }: ArchivesPageTemplateProps) {
+  const copipe = await fetchCopipe(id)
+  const ids = await getCopipeIds()
+
+  const { afterId, beforeId } = checkBeforeAndAfterPage(ids, id)
+
   return (
-    <VStack>
-      <Container>
-        <CopipeCardItem copipeItem={copipe} />
-      </Container>
+    <>
+      <title>{`${copipe.title} | copipe`}</title>
 
-      <Comment comments={copipe.comments} copipe_id={id} />
+      <VStack>
+        <Container>
+          <CopipeCardItem copipeItem={copipe} />
+        </Container>
 
-      <ArchivesPagination afterId={afterId} beforeId={beforeId} />
-    </VStack>
+        <Comment comments={copipe.comments} copipe_id={id} />
+
+        <ArchivesPagination afterId={afterId} beforeId={beforeId} />
+      </VStack>
+    </>
   )
 }
