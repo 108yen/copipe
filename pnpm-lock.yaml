@@ -9,14 +9,14 @@ importers:
   .:
     dependencies:
       '@next/third-parties':
-        specifier: 15.5.6
-        version: 15.5.6(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
+        specifier: 15.5.9
+        version: 15.5.9(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
       '@prisma/client':
-        specifier: 6.19.0
-        version: 6.19.0(prisma@6.19.1(typescript@5.9.3))(typescript@5.9.3)
+        specifier: 6.19.1
+        version: 6.19.1(prisma@6.19.1(typescript@5.9.3))(typescript@5.9.3)
       '@supabase/supabase-js':
         specifier: ^2.39.2
-        version: 2.86.0
+        version: 2.89.0
       '@types/react':
         specifier: npm:types-react@19.0.0-rc.1
         version: types-react@19.0.0-rc.1
@@ -25,10 +25,10 @@ importers:
         version: types-react-dom@19.0.0
       '@yamada-ui/lucide':
         specifier: ^1.10.5
-        version: 1.10.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
+        version: 1.10.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
       '@yamada-ui/react':
         specifier: ^1.7.4
-        version: 1.7.8(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(motion@12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
+        version: 1.7.8(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(motion@12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
       axios:
         specifier: ^1.6.5
         version: 1.13.2
@@ -37,28 +37,28 @@ importers:
         version: 1.11.19
       jotai:
         specifier: ^2.6.1
-        version: 2.15.1(@babel/core@7.28.5)(@babel/template@7.27.2)(react@19.2.0)(types-react@19.0.0-rc.1)
+        version: 2.16.0(@babel/core@7.28.5)(@babel/template@7.27.2)(react@19.2.3)(types-react@19.0.0-rc.1)
       next:
         specifier: 15.5.9
-        version: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       next-auth:
         specifier: ^4.24.5
-        version: 4.24.13(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 4.24.13(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       react:
-        specifier: 19.2.0
-        version: 19.2.0
+        specifier: 19.2.3
+        version: 19.2.3
       react-dom:
-        specifier: 19.2.0
-        version: 19.2.0(react@19.2.0)
+        specifier: 19.2.3
+        version: 19.2.3(react@19.2.3)
       react-hook-form:
         specifier: ^7.49.2
-        version: 7.66.1(react@19.2.0)
+        version: 7.69.0(react@19.2.3)
       typescript:
         specifier: ^5.6.3
         version: 5.9.3
       zod:
         specifier: ^4.0.0
-        version: 4.1.13
+        version: 4.2.1
     devDependencies:
       '@changesets/changelog-github':
         specifier: ^0.5.0
@@ -125,7 +125,7 @@ importers:
         version: 7.0.1(eslint@9.39.2(jiti@2.6.1))
       eslint-plugin-storybook:
         specifier: ^10.0.0
-        version: 10.1.10(eslint@9.39.2(jiti@2.6.1))(storybook@10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3)
+        version: 10.1.10(eslint@9.39.2(jiti@2.6.1))(storybook@10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3)
       eslint-plugin-unused-imports:
         specifier: ^4.0.0
         version: 4.3.0(@typescript-eslint/eslint-plugin@8.50.0(@typescript-eslint/parser@8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3))(eslint@9.39.2(jiti@2.6.1))
@@ -140,7 +140,7 @@ importers:
         version: 2.0.12
       next-sitemap:
         specifier: ^4.2.3
-        version: 4.2.3(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))
+        version: 4.2.3(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))
       prettier:
         specifier: ^3.1.1
         version: 3.7.4
@@ -1130,8 +1130,8 @@ packages:
     cpu: [x64]
     os: [win32]
 
-  '@next/third-parties@15.5.6':
-    resolution: {integrity: sha512-B1BLvEi7edGERNN0njxpiqbqkp3zAZ69eJ5C0vwj/XINRzcC25b9MCqxbSHq094d306H65UnlhEkBv+a8c74iA==}
+  '@next/third-parties@15.5.9':
+    resolution: {integrity: sha512-kX8u/o+NMUwib5Rn+J9zhx47wZZzgxW3Q/OTuqG4gcZS80jARZCU/9bQ5hGL6V9XGDWZiR/Lycs7Dg8Y+xOfCw==}
     peerDependencies:
       next: ^13.0.0 || ^14.0.0 || ^15.0.0
       react: ^18.2.0 || 19.0.0-rc-de68d2f4-20241204 || ^19.0.0
@@ -1162,8 +1162,8 @@ packages:
   '@popperjs/core@2.11.8':
     resolution: {integrity: sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==}
 
-  '@prisma/client@6.19.0':
-    resolution: {integrity: sha512-QXFT+N/bva/QI2qoXmjBzL7D6aliPffIwP+81AdTGq0FXDoLxLkWivGMawG8iM5B9BKfxLIXxfWWAF6wbuJU6g==}
+  '@prisma/client@6.19.1':
+    resolution: {integrity: sha512-4SXj4Oo6HyQkLUWT8Ke5R0PTAfVOKip5Roo+6+b2EDTkFg5be0FnBWiuRJc0BC0sRQIWGMLKW1XguhVfW/z3/A==}
     engines: {node: '>=18.18'}
     peerDependencies:
       prisma: '*'
@@ -1207,28 +1207,28 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@supabase/auth-js@2.86.0':
-    resolution: {integrity: sha512-3xPqMvBWC6Haqpr6hEWmSUqDq+6SA1BAEdbiaHdAZM9QjZ5uiQJ+6iD9pZOzOa6MVXZh4GmwjhC9ObIG0K1NcA==}
+  '@supabase/auth-js@2.89.0':
+    resolution: {integrity: sha512-wiWZdz8WMad8LQdJMWYDZ2SJtZP5MwMqzQq3ehtW2ngiI3UTgbKiFrvMUUS3KADiVlk4LiGfODB2mrYx7w2f8w==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/functions-js@2.86.0':
-    resolution: {integrity: sha512-AlOoVfeaq9XGlBFIyXTmb+y+CZzxNO4wWbfgRM6iPpNU5WCXKawtQYSnhivi3UVxS7GA0rWovY4d6cIAxZAojA==}
+  '@supabase/functions-js@2.89.0':
+    resolution: {integrity: sha512-XEueaC5gMe5NufNYfBh9kPwJlP5M2f+Ogr8rvhmRDAZNHgY6mI35RCkYDijd92pMcNM7g8pUUJov93UGUnqfyw==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/postgrest-js@2.86.0':
-    resolution: {integrity: sha512-QVf+wIXILcZJ7IhWhWn+ozdf8B+oO0Ulizh2AAPxD/6nQL+x3r9lJ47a+fpc/jvAOGXMbkeW534Kw6jz7e8iIA==}
+  '@supabase/postgrest-js@2.89.0':
+    resolution: {integrity: sha512-/b0fKrxV9i7RNOEXMno/I1862RsYhuUo+Q6m6z3ar1f4ulTMXnDfv0y4YYxK2POcgrOXQOgKYQx1eArybyNvtg==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/realtime-js@2.86.0':
-    resolution: {integrity: sha512-dyS8bFoP29R/sj5zLi0AP3JfgG8ar1nuImcz5jxSx7UIW7fbFsXhUCVrSY2Ofo0+Ev6wiATiSdBOzBfWaiFyPA==}
+  '@supabase/realtime-js@2.89.0':
+    resolution: {integrity: sha512-aMOvfDb2a52u6PX6jrrjvACHXGV3zsOlWRzZsTIOAJa0hOVvRp01AwC1+nLTGUzxzezejrYeCX+KnnM1xHdl+w==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/storage-js@2.86.0':
-    resolution: {integrity: sha512-PM47jX/Mfobdtx7NNpoj9EvlrkapAVTQBZgGGslEXD6NS70EcGjhgRPBItwHdxZPM5GwqQ0cGMN06uhjeY2mHQ==}
+  '@supabase/storage-js@2.89.0':
+    resolution: {integrity: sha512-6zKcXofk/M/4Eato7iqpRh+B+vnxeiTumCIP+Tz26xEqIiywzD9JxHq+udRrDuv6hXE+pmetvJd8n5wcf4MFRQ==}
     engines: {node: '>=20.0.0'}
 
-  '@supabase/supabase-js@2.86.0':
-    resolution: {integrity: sha512-BaC9sv5+HGNy1ulZwY8/Ev7EjfYYmWD4fOMw9bDBqTawEj6JHAiOHeTwXLRzVaeSay4p17xYLN2NSCoGgXMQnw==}
+  '@supabase/supabase-js@2.89.0':
+    resolution: {integrity: sha512-KlaRwSfFA0fD73PYVMHj5/iXFtQGCcX7PSx0FdQwYEEw9b2wqM7GxadY+5YwcmuEhalmjFB/YvqaoNVF+sWUlg==}
     engines: {node: '>=20.0.0'}
 
   '@swc/helpers@0.5.15':
@@ -1284,8 +1284,8 @@ packages:
   '@types/parse-json@4.0.2':
     resolution: {integrity: sha512-dISoDXWWQwUquiKsyZ4Ng+HX2KsPL7LyHKHQwgGFEA3IaKac4Obd+h2a/a6waisAoepJlBcx9paWqjA8/HVjCw==}
 
-  '@types/phoenix@1.6.6':
-    resolution: {integrity: sha512-PIzZZlEppgrpoT2QgbnDU+MMzuR6BbCjllj0bM70lWoejMeNJAxCchxnv7J3XFkI8MpygtRpzXrIlmWUBclP5A==}
+  '@types/phoenix@1.6.7':
+    resolution: {integrity: sha512-oN9ive//QSBkf19rfDv45M7eZPi0eEXylht2OLEXicu5b4KoQ1OzXIw+xDSGWxSxe1JmepRR/ZH283vsu518/Q==}
 
   '@types/react@19.2.7':
     resolution: {integrity: sha512-MWtvHrGZLFttgeEj28VXHxpmwYbor/ATPYbBfSFZEIRK0ecCFLl2Qo55z52Hss+UV9CRN7trSeq1zbgx7YDWWg==}
@@ -3051,8 +3051,8 @@ packages:
     resolution: {integrity: sha512-tsYlhAYpjCKa//8rXZ9DqKEawhPoSytweBC2eNvcaDK+57RZLHGqNs3PZTQO6yekLFSuvA6AlnAfrw1uBvtb+Q==}
     hasBin: true
 
-  iceberg-js@0.8.0:
-    resolution: {integrity: sha512-kmgmea2nguZEvRqW79gDqNXyxA3OS5WIgMVffrHpqXV4F/J4UmNIw2vstixioLTNSkd5rFB8G0s3Lwzogm6OFw==}
+  iceberg-js@0.8.1:
+    resolution: {integrity: sha512-1dhVQZXhcHje7798IVM+xoo/1ZdVfzOMIc8/rgVSijRK38EDqOJoGula9N/8ZI5RD8QTxNQtK/Gozpr+qUqRRA==}
     engines: {node: '>=20.0.0'}
 
   iconv-lite@0.7.0:
@@ -3233,8 +3233,8 @@ packages:
   jose@4.15.9:
     resolution: {integrity: sha512-1vUQX+IdDMVPj4k8kOxgUqlcK518yluMuGZwqlr44FS1ppZB/5GWh4rZG89erpOBOJjU/OBsnCVFfapsRz6nEA==}
 
-  jotai@2.15.1:
-    resolution: {integrity: sha512-yHT1HAZ3ba2Q8wgaUQ+xfBzEtcS8ie687I8XVCBinfg4bNniyqLIN+utPXWKQE93LMF5fPbQSVRZqgpcN5yd6Q==}
+  jotai@2.16.0:
+    resolution: {integrity: sha512-NmkwPBet0SHQ28GBfEb10sqnbVOYyn6DL4iazZgGRDUKxSWL0iqcm+IK4TqTSFC2ixGk+XX2e46Wbv364a3cKg==}
     engines: {node: '>=12.20.0'}
     peerDependencies:
       '@babel/core': '>=7.0.0'
@@ -3814,10 +3814,10 @@ packages:
     peerDependencies:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0 || ^19.0.0-rc
 
-  react-dom@19.2.0:
-    resolution: {integrity: sha512-UlbRu4cAiGaIewkPyiRGJk0imDN2T3JjieT6spoL2UeSf5od4n5LB/mQ4ejmxhCFT1tYe8IvaFulzynWovsEFQ==}
+  react-dom@19.2.3:
+    resolution: {integrity: sha512-yELu4WmLPw5Mr/lmeEpox5rw3RETacE++JgHqQzd2dg+YbJuat3jH4ingc+WPZhxaoFzdv9y33G+F7Nl5O0GBg==}
     peerDependencies:
-      react: ^19.2.0
+      react: ^19.2.3
 
   react-fast-compare@3.2.2:
     resolution: {integrity: sha512-nsO+KSNgo1SbJqJEYRE9ERzo7YtYbou/OqjSQKxV7jcKox7+usiUVZOAC+XnDOABXggQTno0Y1CpVnuWEc1boQ==}
@@ -3831,8 +3831,8 @@ packages:
       '@types/react':
         optional: true
 
-  react-hook-form@7.66.1:
-    resolution: {integrity: sha512-2KnjpgG2Rhbi+CIiIBQQ9Df6sMGH5ExNyFl4Hw9qO7pIqMBR8Bvu9RQyjl3JM4vehzCh9soiNUM/xYMswb2EiA==}
+  react-hook-form@7.69.0:
+    resolution: {integrity: sha512-yt6ZGME9f4F6WHwevrvpAjh42HMvocuSnSIHUGycBqXIJdhqGSPQzTpGF+1NLREk/58IdPxEMfPcFCjlMhclGw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^16.8.0 || ^17 || ^18 || ^19
@@ -3879,8 +3879,8 @@ packages:
       '@types/react':
         optional: true
 
-  react@19.2.0:
-    resolution: {integrity: sha512-tmbWg6W31tQLeB5cdIBOicJDJRR2KzXsV7uSK9iNfLWQ5bIZfxuPEHp7M8wiHyHnn0DD1i7w3Zmin0FtkrwoCQ==}
+  react@19.2.3:
+    resolution: {integrity: sha512-Ku/hhYbVjOQnXDZFv2+RibmLFGwFdeeKHFcOTlrt7xplBnya5OGn/hIRDsqDiSUcfORsDC7MPxwork8jBwsIWA==}
     engines: {node: '>=0.10.0'}
 
   read-yaml-file@1.1.0:
@@ -4380,8 +4380,8 @@ packages:
     peerDependencies:
       zod: ^3.25.0 || ^4.0.0
 
-  zod@4.1.13:
-    resolution: {integrity: sha512-AvvthqfqrAhNH9dnfmrfKzX5upOdjUVJYFqNSlkmGf64gRaTzlPwz99IHYnVs28qYAybvAlBV+H7pn0saFY4Ig==}
+  zod@4.2.1:
+    resolution: {integrity: sha512-0wZ1IRqGGhMP76gLqz8EyfBXKk0J2qo2+H3fi4mcUP/KtTocoX08nmIAHl1Z2kJIZbZee8KOpBCSNPRgauucjw==}
 
 snapshots:
 
@@ -5041,17 +5041,17 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
       '@babel/runtime': 7.28.4
       '@emotion/babel-plugin': 11.13.5
       '@emotion/cache': 11.14.0
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.0)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.3)
       '@emotion/utils': 1.4.2
       '@emotion/weak-memoize': 0.3.1
       hoist-non-react-statics: 3.3.2
-      react: 19.2.0
+      react: 19.2.3
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
     transitivePeerDependencies:
@@ -5067,16 +5067,16 @@ snapshots:
 
   '@emotion/sheet@1.4.0': {}
 
-  '@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
       '@babel/runtime': 7.28.4
       '@emotion/babel-plugin': 11.13.5
       '@emotion/is-prop-valid': 1.4.0
-      '@emotion/react': 11.11.0(react@19.2.0)(types-react@19.0.0-rc.1)
+      '@emotion/react': 11.11.0(react@19.2.3)(types-react@19.0.0-rc.1)
       '@emotion/serialize': 1.3.3
-      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.0)
+      '@emotion/use-insertion-effect-with-fallbacks': 1.2.0(react@19.2.3)
       '@emotion/utils': 1.4.2
-      react: 19.2.0
+      react: 19.2.3
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
     transitivePeerDependencies:
@@ -5084,9 +5084,9 @@ snapshots:
 
   '@emotion/unitless@0.10.0': {}
 
-  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.2.0)':
+  '@emotion/use-insertion-effect-with-fallbacks@1.2.0(react@19.2.3)':
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
 
   '@emotion/utils@1.4.2': {}
 
@@ -5417,10 +5417,10 @@ snapshots:
   '@next/swc-win32-x64-msvc@15.5.7':
     optional: true
 
-  '@next/third-parties@15.5.6(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)':
+  '@next/third-parties@15.5.9(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)':
     dependencies:
-      next: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      react: 19.2.0
+      next: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
       third-party-capital: 1.0.20
 
   '@nodelib/fs.scandir@2.1.5':
@@ -5443,7 +5443,7 @@ snapshots:
 
   '@popperjs/core@2.11.8': {}
 
-  '@prisma/client@6.19.0(prisma@6.19.1(typescript@5.9.3))(typescript@5.9.3)':
+  '@prisma/client@6.19.1(prisma@6.19.1(typescript@5.9.3))(typescript@5.9.3)':
     optionalDependencies:
       prisma: 6.19.1(typescript@5.9.3)
       typescript: 5.9.3
@@ -5484,26 +5484,26 @@ snapshots:
 
   '@storybook/global@5.0.0': {}
 
-  '@storybook/icons@2.0.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@storybook/icons@2.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
-  '@supabase/auth-js@2.86.0':
+  '@supabase/auth-js@2.89.0':
     dependencies:
       tslib: 2.8.1
 
-  '@supabase/functions-js@2.86.0':
+  '@supabase/functions-js@2.89.0':
     dependencies:
       tslib: 2.8.1
 
-  '@supabase/postgrest-js@2.86.0':
+  '@supabase/postgrest-js@2.89.0':
     dependencies:
       tslib: 2.8.1
 
-  '@supabase/realtime-js@2.86.0':
+  '@supabase/realtime-js@2.89.0':
     dependencies:
-      '@types/phoenix': 1.6.6
+      '@types/phoenix': 1.6.7
       '@types/ws': 8.18.1
       tslib: 2.8.1
       ws: 8.18.3
@@ -5511,18 +5511,18 @@ snapshots:
       - bufferutil
       - utf-8-validate
 
-  '@supabase/storage-js@2.86.0':
+  '@supabase/storage-js@2.89.0':
     dependencies:
-      iceberg-js: 0.8.0
+      iceberg-js: 0.8.1
       tslib: 2.8.1
 
-  '@supabase/supabase-js@2.86.0':
+  '@supabase/supabase-js@2.89.0':
     dependencies:
-      '@supabase/auth-js': 2.86.0
-      '@supabase/functions-js': 2.86.0
-      '@supabase/postgrest-js': 2.86.0
-      '@supabase/realtime-js': 2.86.0
-      '@supabase/storage-js': 2.86.0
+      '@supabase/auth-js': 2.89.0
+      '@supabase/functions-js': 2.89.0
+      '@supabase/postgrest-js': 2.89.0
+      '@supabase/realtime-js': 2.89.0
+      '@supabase/storage-js': 2.89.0
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
@@ -5589,7 +5589,7 @@ snapshots:
 
   '@types/parse-json@4.0.2': {}
 
-  '@types/phoenix@1.6.6': {}
+  '@types/phoenix@1.6.7': {}
 
   '@types/react@19.2.7':
     dependencies:
@@ -5771,1184 +5771,1184 @@ snapshots:
       loupe: 3.2.1
       tinyrainbow: 2.0.0
 
-  '@yamada-ui/accordion@2.0.25(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/accordion@2.0.25(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/alert@1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/alert@1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/autocomplete@1.6.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/autocomplete@1.6.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/avatar@1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/avatar@1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/image': 1.3.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/image': 1.3.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/badge@1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/badge@1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/breadcrumb@1.4.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/breadcrumb@1.4.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/button@1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/button@1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/card@1.0.52(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/checkbox@1.3.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/layouts': 1.4.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/close-button@1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/card@1.0.52(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/checkbox@1.3.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/layouts': 1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/color-picker@1.4.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/close-button@1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/input': 1.0.57(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/use-eye-dropper': 1.0.27(react@19.2.0)
-      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.0)
-      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-pan-event': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-size': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/core@1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/color-picker@1.4.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/input': 1.0.57(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/use-eye-dropper': 1.0.27(react@19.2.3)
+      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.3)
+      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-pan-event': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-size': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/core@1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
       '@emotion/css': 11.11.0
-      '@emotion/react': 11.11.0(react@19.2.0)(types-react@19.0.0-rc.1)
+      '@emotion/react': 11.11.0(react@19.2.3)(types-react@19.0.0-rc.1)
       '@emotion/sheet': 1.4.0
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
       csstype: 3.2.3
-      react: 19.2.0
+      react: 19.2.3
       react-fast-compare: 3.2.2
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/data-list@1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/data-list@1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/editable@1.0.56(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/editable@1.0.56(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-focus': 1.0.30(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-focus': 1.0.30(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/empty-state@1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/empty-state@1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/file-button@1.1.22(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/file-button@1.1.22(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/file-input@1.0.57(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/file-input@1.0.57(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/focus-lock@1.0.31(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/focus-lock@1.0.31(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-      react-focus-lock: 2.13.6(react@19.2.0)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+      react-focus-lock: 2.13.6(react@19.2.3)(types-react@19.0.0-rc.1)
     transitivePeerDependencies:
       - '@types/react'
 
-  '@yamada-ui/for@1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/for@1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/form-control@2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      '@yamada-ui/visually-hidden': 1.0.24(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/format@1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/form-control@2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      '@yamada-ui/visually-hidden': 1.0.24(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/highlight@1.0.51(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/format@1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/typography': 1.1.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/icon@1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/highlight@1.0.51(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/typography': 1.1.9(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/image@1.3.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/icon@1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/indicator@1.1.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/image@1.3.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/infinite-scroll-area@1.2.19(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/indicator@1.1.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-infinite-scroll': 1.1.13(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/input@1.0.57(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/infinite-scroll-area@1.2.19(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/file-input': 1.0.57(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-infinite-scroll': 1.1.13(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/kbd@1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/input@1.0.57(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/file-input': 1.0.57(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/layouts@1.4.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/kbd@1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/link@1.0.51(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/layouts@1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/list@1.0.54(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/link@1.0.51(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/loading@1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/list@1.0.54(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/use-timeout': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-      react-remove-scroll: 2.7.1(react@19.2.0)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/loading@1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/use-timeout': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+      react-remove-scroll: 2.7.1(react@19.2.3)(types-react@19.0.0-rc.1)
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/lucide@1.10.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/lucide@1.10.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      lucide-react: 0.475.0(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      lucide-react: 0.475.0(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/menu@1.5.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/menu@1.5.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/modal@1.4.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/modal@1.4.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/focus-lock': 1.0.31(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-      react-remove-scroll: 2.7.1(react@19.2.0)(types-react@19.0.0-rc.1)
+      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/focus-lock': 1.0.31(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+      react-remove-scroll: 2.7.1(react@19.2.3)(types-react@19.0.0-rc.1)
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/motion@2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/motion@2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      motion: 12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      motion: 12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/native-select@1.0.59(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/native-select@1.0.59(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/native-table@1.0.52(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/native-table@1.0.52(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/notice@1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/notice@1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/alert': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/use-timeout': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/alert': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/use-timeout': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/number-input@1.2.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/number-input@1.2.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-counter': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-interval': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-counter': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-interval': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/pagination@1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/pagination@1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/password-input@1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/password-input@1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/pin-input@1.2.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/pin-input@1.2.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/popover@1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/popover@1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/use-focus': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-popper': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/use-focus': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-popper': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/portal@1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@yamada-ui/portal@1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
-  '@yamada-ui/progress@1.2.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/progress@1.2.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/providers@1.4.6(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/providers@1.4.6(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@emotion/react': 11.11.0(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/notice': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/theme': 1.20.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      '@emotion/react': 11.11.0(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/notice': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/theme': 1.20.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - supports-color
 
-  '@yamada-ui/radio@1.3.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/radio@1.3.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/layouts': 1.4.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/layouts': 1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/rating@1.1.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/rating@1.1.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/react@1.7.8(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(motion@12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@emotion/react': 11.11.0(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@emotion/styled': 11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/accordion': 2.0.25(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/alert': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/autocomplete': 1.6.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/avatar': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/badge': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/breadcrumb': 1.4.5(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/card': 1.0.52(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/checkbox': 1.3.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/color-picker': 1.4.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/data-list': 1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/editable': 1.0.56(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/empty-state': 1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/file-button': 1.1.22(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/file-input': 1.0.57(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/focus-lock': 1.0.31(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/for': 1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/format': 1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/highlight': 1.0.51(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/image': 1.3.11(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/indicator': 1.1.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/infinite-scroll-area': 1.2.19(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/input': 1.0.57(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/kbd': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/layouts': 1.4.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/link': 1.0.51(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/list': 1.0.54(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/menu': 1.5.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/modal': 1.4.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/native-select': 1.0.59(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/native-table': 1.0.52(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/notice': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/number-input': 1.2.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/pagination': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/password-input': 1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/pin-input': 1.2.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/progress': 1.2.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/providers': 1.4.6(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/radio': 1.3.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/rating': 1.1.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/reorder': 2.0.26(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/resizable': 1.3.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/scroll-area': 1.0.51(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/segmented-control': 1.1.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/select': 1.8.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/skeleton': 1.1.18(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/slider': 1.3.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/snacks': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/stat': 1.0.52(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/status': 1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/stepper': 1.0.55(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/switch': 1.2.10(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/tabs': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/tag': 1.1.14(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/textarea': 1.1.42(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/theme': 1.20.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/theme-tools': 1.1.18(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/toggle': 1.0.37(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/tooltip': 1.2.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/typography': 1.1.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-async-callback': 1.0.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-boolean': 1.0.3(react@19.2.0)
-      '@yamada-ui/use-breakpoint': 1.4.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-clipboard': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-counter': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-eye-dropper': 1.0.27(react@19.2.0)
-      '@yamada-ui/use-focus': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.0)
-      '@yamada-ui/use-hover': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-idle': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-infinite-scroll': 1.1.13(react@19.2.0)
-      '@yamada-ui/use-interval': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.0)
-      '@yamada-ui/use-local-storage': 1.0.30(react@19.2.0)
-      '@yamada-ui/use-media-query': 1.0.64(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-os': 1.1.0(react@19.2.0)
-      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-pan-event': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-popper': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-previous': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-processing': 1.0.7(react@19.2.0)
-      '@yamada-ui/use-resize-observer': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-size': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-timeout': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-window-event': 1.0.30(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      '@yamada-ui/visually-hidden': 1.0.24(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      motion: 12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - '@types/react'
-      - supports-color
-
-  '@yamada-ui/reorder@2.0.26(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/resizable@1.3.4(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/react@1.7.8(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(motion@12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-      react-resizable-panels: 2.1.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@emotion/react': 11.11.0(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@emotion/styled': 11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/accordion': 2.0.25(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/alert': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/autocomplete': 1.6.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/avatar': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/badge': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/breadcrumb': 1.4.5(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/button': 1.0.59(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/card': 1.0.52(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/checkbox': 1.3.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/color-picker': 1.4.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/data-list': 1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/editable': 1.0.56(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/empty-state': 1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/file-button': 1.1.22(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/file-input': 1.0.57(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/focus-lock': 1.0.31(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/for': 1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/format': 1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/highlight': 1.0.51(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/image': 1.3.11(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/indicator': 1.1.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/infinite-scroll-area': 1.2.19(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/input': 1.0.57(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/kbd': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/layouts': 1.4.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/link': 1.0.51(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/list': 1.0.54(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/menu': 1.5.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/modal': 1.4.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/native-select': 1.0.59(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/native-table': 1.0.52(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/notice': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/number-input': 1.2.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/pagination': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/password-input': 1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/pin-input': 1.2.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/progress': 1.2.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/providers': 1.4.6(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/radio': 1.3.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/rating': 1.1.15(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/reorder': 2.0.26(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/resizable': 1.3.4(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/scroll-area': 1.0.51(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/segmented-control': 1.1.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/select': 1.8.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/skeleton': 1.1.18(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/slider': 1.3.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/snacks': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/stat': 1.0.52(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/status': 1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/stepper': 1.0.55(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/switch': 1.2.10(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/tabs': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/tag': 1.1.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/textarea': 1.1.42(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/theme': 1.20.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/theme-tools': 1.1.18(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/toggle': 1.0.37(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/tooltip': 1.2.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/typography': 1.1.9(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-async-callback': 1.0.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-boolean': 1.0.3(react@19.2.3)
+      '@yamada-ui/use-breakpoint': 1.4.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-clipboard': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-counter': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-eye-dropper': 1.0.27(react@19.2.3)
+      '@yamada-ui/use-focus': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.3)
+      '@yamada-ui/use-hover': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-idle': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-infinite-scroll': 1.1.13(react@19.2.3)
+      '@yamada-ui/use-interval': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.3)
+      '@yamada-ui/use-local-storage': 1.0.30(react@19.2.3)
+      '@yamada-ui/use-media-query': 1.0.64(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-os': 1.1.0(react@19.2.3)
+      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-pan-event': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-popper': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-previous': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-processing': 1.0.7(react@19.2.3)
+      '@yamada-ui/use-resize-observer': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-size': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-timeout': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-token': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-window-event': 1.0.30(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      '@yamada-ui/visually-hidden': 1.0.24(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      motion: 12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
     transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
       - '@types/react'
-      - react-dom
       - supports-color
 
-  '@yamada-ui/ripple@1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/reorder@2.0.26(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/scroll-area@1.0.51(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/resizable@1.3.4(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+      react-resizable-panels: 2.1.9(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/segmented-control@1.1.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/ripple@1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@emotion/is-prop-valid'
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/select@1.8.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/skeleton@1.1.18(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/scroll-area@1.0.51(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-previous': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/slider@1.3.8(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/segmented-control@1.1.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.0)
-      '@yamada-ui/use-pan-event': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-size': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/snacks@1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/alert': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-timeout': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-focus-visible': 1.1.17(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/stat@1.0.52(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/select@1.8.12(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/status@1.0.7(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/stepper@1.0.55(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
-    transitivePeerDependencies:
-      - '@types/react'
-      - react-dom
-      - supports-color
-
-  '@yamada-ui/switch@1.2.10(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
-    dependencies:
-      '@yamada-ui/checkbox': 1.3.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/popover': 1.5.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/tabs@1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/skeleton@1.1.18(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-descendant': 1.0.31(react@19.2.0)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-animation': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-previous': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/slider@1.3.8(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.3)
+      '@yamada-ui/use-pan-event': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-size': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/snacks@1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/alert': 1.1.13(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/close-button': 1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-timeout': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/tag@1.1.14(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/stat@1.0.52(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/icon': 1.1.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/textarea@1.1.42(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/status@1.0.7(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/theme-tools@1.1.18(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/stepper@1.0.55(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/theme': 1.20.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/switch@1.2.10(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/checkbox': 1.3.8(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/tabs@1.0.56(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-descendant': 1.0.31(react@19.2.3)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@emotion/is-prop-valid'
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/tag@1.1.14(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/icon': 1.1.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-clickable': 1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/textarea@1.1.42(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/form-control': 2.1.15(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
+    transitivePeerDependencies:
+      - '@types/react'
+      - react-dom
+      - supports-color
+
+  '@yamada-ui/theme-tools@1.1.18(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
+    dependencies:
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/theme': 1.20.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
     transitivePeerDependencies:
       - '@types/react'
       - react
       - react-dom
       - supports-color
 
-  '@yamada-ui/theme@1.20.6(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/theme@1.20.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
     transitivePeerDependencies:
       - '@types/react'
       - react
       - react-dom
       - supports-color
 
-  '@yamada-ui/toggle@1.0.37(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/toggle@1.0.37(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/ripple': 1.0.53(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/tooltip@1.2.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/tooltip@1.2.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/portal': 1.0.30(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
-      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.0)
-      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-popper': 1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/portal': 1.0.30(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
+      '@yamada-ui/transitions': 1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-disclosure': 1.1.6(react@19.2.3)
+      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-outside-click': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-popper': 1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/transitions@1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/transitions@1.1.20(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.0)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/motion': 2.3.4(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-controllable-state': 1.0.29(react@19.2.3)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/typography@1.1.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/typography@1.1.9(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-animation@1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-animation@1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-boolean': 1.0.3(react@19.2.0)
-      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-boolean': 1.0.3(react@19.2.3)
+      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
       csstype: 3.2.3
-      react: 19.2.0
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-async-callback@1.0.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-async-callback@1.0.14(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-processing': 1.0.7(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/loading': 1.1.33(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-processing': 1.0.7(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-boolean@1.0.3(react@19.2.0)':
+  '@yamada-ui/use-boolean@1.0.3(react@19.2.3)':
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
 
-  '@yamada-ui/use-breakpoint@1.4.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-breakpoint@1.4.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-clickable@1.2.23(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-clickable@1.2.23(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-clipboard@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-clipboard@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
       copy-to-clipboard: 3.3.3
-      react: 19.2.0
+      react: 19.2.3
 
-  '@yamada-ui/use-controllable-state@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-controllable-state@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-counter@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-counter@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-descendant@1.0.31(react@19.2.0)':
+  '@yamada-ui/use-descendant@1.0.31(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-disclosure@1.1.6(react@19.2.0)':
+  '@yamada-ui/use-disclosure@1.1.6(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-event-listener@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-event-listener@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-eye-dropper@1.0.27(react@19.2.0)':
+  '@yamada-ui/use-eye-dropper@1.0.27(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-focus-visible@1.1.17(react@19.2.0)':
+  '@yamada-ui/use-focus-visible@1.1.17(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-focus@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-focus@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/use-event-listener': 1.0.29(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-hover@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-hover@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-idle@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-idle@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-infinite-scroll@1.1.13(react@19.2.0)':
+  '@yamada-ui/use-infinite-scroll@1.1.13(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-interval@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-interval@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-latest-ref@1.0.3(react@19.2.0)':
+  '@yamada-ui/use-latest-ref@1.0.3(react@19.2.3)':
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
 
-  '@yamada-ui/use-local-storage@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-local-storage@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/use-window-event': 1.0.30(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/use-window-event': 1.0.30(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-media-query@1.0.64(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-media-query@1.0.64(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/providers': 1.4.6(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.0)(types-react@19.0.0-rc.1))(react@19.2.0)(types-react@19.0.0-rc.1))(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/providers': 1.4.6(@emotion/is-prop-valid@1.4.0)(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(@emotion/styled@11.11.0(@emotion/react@11.11.0(react@19.2.3)(types-react@19.0.0-rc.1))(react@19.2.3)(types-react@19.0.0-rc.1))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@emotion/is-prop-valid'
       - '@emotion/react'
@@ -6957,97 +6957,97 @@ snapshots:
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-os@1.1.0(react@19.2.0)':
+  '@yamada-ui/use-os@1.1.0(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-outside-click@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-outside-click@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-pan-event@1.0.31(react@19.2.0)':
+  '@yamada-ui/use-pan-event@1.0.31(react@19.2.3)':
     dependencies:
-      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
+      '@yamada-ui/use-latest-ref': 1.0.3(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
       framesync: 6.1.2
-      react: 19.2.0
+      react: 19.2.3
 
-  '@yamada-ui/use-popper@1.0.50(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-popper@1.0.50(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
       '@popperjs/core': 2.11.8
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-value': 1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-previous@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-previous@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-processing@1.0.7(react@19.2.0)':
+  '@yamada-ui/use-processing@1.0.7(react@19.2.3)':
     dependencies:
-      '@yamada-ui/use-boolean': 1.0.3(react@19.2.0)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/use-boolean': 1.0.3(react@19.2.3)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-resize-observer@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-resize-observer@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-size@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-size@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-timeout@1.0.29(react@19.2.0)':
+  '@yamada-ui/use-timeout@1.0.29(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/use-token@1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-token@1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-value@1.1.38(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/use-value@1.1.38(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/use-breakpoint': 1.4.21(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/use-breakpoint': 1.4.21(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
       - supports-color
 
-  '@yamada-ui/use-window-event@1.0.30(react@19.2.0)':
+  '@yamada-ui/use-window-event@1.0.30(react@19.2.3)':
     dependencies:
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
 
-  '@yamada-ui/utils@1.7.2(react@19.2.0)':
+  '@yamada-ui/utils@1.7.2(react@19.2.3)':
     dependencies:
       color2k: 2.0.3
-      react: 19.2.0
+      react: 19.2.3
 
-  '@yamada-ui/visually-hidden@1.0.24(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)':
+  '@yamada-ui/visually-hidden@1.0.24(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)':
     dependencies:
-      '@yamada-ui/core': 1.17.3(react-dom@19.2.0(react@19.2.0))(react@19.2.0)(types-react@19.0.0-rc.1)
-      '@yamada-ui/utils': 1.7.2(react@19.2.0)
-      react: 19.2.0
+      '@yamada-ui/core': 1.17.3(react-dom@19.2.3(react@19.2.3))(react@19.2.3)(types-react@19.0.0-rc.1)
+      '@yamada-ui/utils': 1.7.2(react@19.2.3)
+      react: 19.2.3
     transitivePeerDependencies:
       - '@types/react'
       - react-dom
@@ -7838,8 +7838,8 @@ snapshots:
       '@babel/parser': 7.28.5
       eslint: 9.39.2(jiti@2.6.1)
       hermes-parser: 0.25.1
-      zod: 4.1.13
-      zod-validation-error: 4.0.2(zod@4.1.13)
+      zod: 4.2.1
+      zod-validation-error: 4.0.2(zod@4.2.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -7865,11 +7865,11 @@ snapshots:
       string.prototype.matchall: 4.0.12
       string.prototype.repeat: 1.0.0
 
-  eslint-plugin-storybook@10.1.10(eslint@9.39.2(jiti@2.6.1))(storybook@10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(typescript@5.9.3):
+  eslint-plugin-storybook@10.1.10(eslint@9.39.2(jiti@2.6.1))(storybook@10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(typescript@5.9.3):
     dependencies:
       '@typescript-eslint/utils': 8.50.0(eslint@9.39.2(jiti@2.6.1))(typescript@5.9.3)
       eslint: 9.39.2(jiti@2.6.1)
-      storybook: 10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      storybook: 10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -8049,15 +8049,15 @@ snapshots:
       hasown: 2.0.2
       mime-types: 2.1.35
 
-  framer-motion@12.23.24(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  framer-motion@12.23.24(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       motion-dom: 12.23.23
       motion-utils: 12.23.6
       tslib: 2.8.1
     optionalDependencies:
       '@emotion/is-prop-valid': 1.4.0
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   framesync@6.1.2:
     dependencies:
@@ -8211,7 +8211,7 @@ snapshots:
 
   human-id@4.1.3: {}
 
-  iceberg-js@0.8.0: {}
+  iceberg-js@0.8.1: {}
 
   iconv-lite@0.7.0:
     dependencies:
@@ -8385,12 +8385,12 @@ snapshots:
 
   jose@4.15.9: {}
 
-  jotai@2.15.1(@babel/core@7.28.5)(@babel/template@7.27.2)(react@19.2.0)(types-react@19.0.0-rc.1):
+  jotai@2.16.0(@babel/core@7.28.5)(@babel/template@7.27.2)(react@19.2.3)(types-react@19.0.0-rc.1):
     optionalDependencies:
       '@babel/core': 7.28.5
       '@babel/template': 7.27.2
       '@types/react': types-react@19.0.0-rc.1
-      react: 19.2.0
+      react: 19.2.3
 
   js-tokens@4.0.0: {}
 
@@ -8543,9 +8543,9 @@ snapshots:
     dependencies:
       yallist: 4.0.0
 
-  lucide-react@0.475.0(react@19.2.0):
+  lucide-react@0.475.0(react@19.2.3):
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
 
   lz-string@1.5.0: {}
 
@@ -8584,14 +8584,14 @@ snapshots:
 
   motion-utils@12.23.6: {}
 
-  motion@12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  motion@12.5.0(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
-      framer-motion: 12.23.24(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      framer-motion: 12.23.24(@emotion/is-prop-valid@1.4.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       tslib: 2.8.1
     optionalDependencies:
       '@emotion/is-prop-valid': 1.4.0
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
   mri@1.2.0: {}
 
@@ -8605,38 +8605,38 @@ snapshots:
 
   natural-orderby@5.0.0: {}
 
-  next-auth@4.24.13(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  next-auth@4.24.13(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
       '@panva/hkdf': 1.2.1
       cookie: 0.7.2
       jose: 4.15.9
-      next: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      next: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       oauth: 0.9.15
       openid-client: 5.7.1
       preact: 10.27.2
       preact-render-to-string: 5.2.6(preact@10.27.2)
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
       uuid: 8.3.2
 
-  next-sitemap@4.2.3(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)):
+  next-sitemap@4.2.3(next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)):
     dependencies:
       '@corex/deepmerge': 4.0.43
       '@next/env': 13.5.11
       fast-glob: 3.3.3
       minimist: 1.2.8
-      next: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      next: 15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
 
-  next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  next@15.5.9(@babel/core@7.28.5)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@next/env': 15.5.9
       '@swc/helpers': 0.5.15
       caniuse-lite: 1.0.30001757
       postcss: 8.4.31
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
-      styled-jsx: 5.1.6(@babel/core@7.28.5)(react@19.2.0)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
+      styled-jsx: 5.1.6(@babel/core@7.28.5)(react@19.2.3)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.7
       '@next/swc-darwin-x64': 15.5.7
@@ -8881,71 +8881,71 @@ snapshots:
       defu: 6.1.4
       destr: 2.0.5
 
-  react-clientside-effect@1.2.8(react@19.2.0):
+  react-clientside-effect@1.2.8(react@19.2.3):
     dependencies:
       '@babel/runtime': 7.28.4
-      react: 19.2.0
+      react: 19.2.3
 
-  react-dom@19.2.0(react@19.2.0):
+  react-dom@19.2.3(react@19.2.3):
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
       scheduler: 0.27.0
 
   react-fast-compare@3.2.2: {}
 
-  react-focus-lock@2.13.6(react@19.2.0)(types-react@19.0.0-rc.1):
+  react-focus-lock@2.13.6(react@19.2.3)(types-react@19.0.0-rc.1):
     dependencies:
       '@babel/runtime': 7.28.4
       focus-lock: 1.3.6
       prop-types: 15.8.1
-      react: 19.2.0
-      react-clientside-effect: 1.2.8(react@19.2.0)
-      use-callback-ref: 1.3.3(react@19.2.0)(types-react@19.0.0-rc.1)
-      use-sidecar: 1.1.3(react@19.2.0)(types-react@19.0.0-rc.1)
+      react: 19.2.3
+      react-clientside-effect: 1.2.8(react@19.2.3)
+      use-callback-ref: 1.3.3(react@19.2.3)(types-react@19.0.0-rc.1)
+      use-sidecar: 1.1.3(react@19.2.3)(types-react@19.0.0-rc.1)
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
 
-  react-hook-form@7.66.1(react@19.2.0):
+  react-hook-form@7.69.0(react@19.2.3):
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
 
   react-is@16.13.1: {}
 
   react-is@17.0.2: {}
 
-  react-remove-scroll-bar@2.3.8(react@19.2.0)(types-react@19.0.0-rc.1):
+  react-remove-scroll-bar@2.3.8(react@19.2.3)(types-react@19.0.0-rc.1):
     dependencies:
-      react: 19.2.0
-      react-style-singleton: 2.2.3(react@19.2.0)(types-react@19.0.0-rc.1)
+      react: 19.2.3
+      react-style-singleton: 2.2.3(react@19.2.3)(types-react@19.0.0-rc.1)
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
 
-  react-remove-scroll@2.7.1(react@19.2.0)(types-react@19.0.0-rc.1):
+  react-remove-scroll@2.7.1(react@19.2.3)(types-react@19.0.0-rc.1):
     dependencies:
-      react: 19.2.0
-      react-remove-scroll-bar: 2.3.8(react@19.2.0)(types-react@19.0.0-rc.1)
-      react-style-singleton: 2.2.3(react@19.2.0)(types-react@19.0.0-rc.1)
+      react: 19.2.3
+      react-remove-scroll-bar: 2.3.8(react@19.2.3)(types-react@19.0.0-rc.1)
+      react-style-singleton: 2.2.3(react@19.2.3)(types-react@19.0.0-rc.1)
       tslib: 2.8.1
-      use-callback-ref: 1.3.3(react@19.2.0)(types-react@19.0.0-rc.1)
-      use-sidecar: 1.1.3(react@19.2.0)(types-react@19.0.0-rc.1)
+      use-callback-ref: 1.3.3(react@19.2.3)(types-react@19.0.0-rc.1)
+      use-sidecar: 1.1.3(react@19.2.3)(types-react@19.0.0-rc.1)
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
 
-  react-resizable-panels@2.1.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  react-resizable-panels@2.1.9(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
-      react: 19.2.0
-      react-dom: 19.2.0(react@19.2.0)
+      react: 19.2.3
+      react-dom: 19.2.3(react@19.2.3)
 
-  react-style-singleton@2.2.3(react@19.2.0)(types-react@19.0.0-rc.1):
+  react-style-singleton@2.2.3(react@19.2.3)(types-react@19.0.0-rc.1):
     dependencies:
       get-nonce: 1.0.1
-      react: 19.2.0
+      react: 19.2.3
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
 
-  react@19.2.0: {}
+  react@19.2.3: {}
 
   read-yaml-file@1.1.0:
     dependencies:
@@ -9160,10 +9160,10 @@ snapshots:
       es-errors: 1.3.0
       internal-slot: 1.1.0
 
-  storybook@10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.0(react@19.2.0))(react@19.2.0):
+  storybook@10.1.0(@testing-library/dom@10.4.1)(prettier@3.7.4)(react-dom@19.2.3(react@19.2.3))(react@19.2.3):
     dependencies:
       '@storybook/global': 5.0.0
-      '@storybook/icons': 2.0.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@storybook/icons': 2.0.1(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
       '@testing-library/jest-dom': 6.9.1
       '@testing-library/user-event': 14.6.1(@testing-library/dom@10.4.1)
       '@vitest/expect': 3.2.4
@@ -9171,7 +9171,7 @@ snapshots:
       esbuild: 0.27.2
       recast: 0.23.11
       semver: 7.7.3
-      use-sync-external-store: 1.6.0(react@19.2.0)
+      use-sync-external-store: 1.6.0(react@19.2.3)
       ws: 8.18.3
     optionalDependencies:
       prettier: 3.7.4
@@ -9250,10 +9250,10 @@ snapshots:
 
   strip-json-comments@3.1.1: {}
 
-  styled-jsx@5.1.6(@babel/core@7.28.5)(react@19.2.0):
+  styled-jsx@5.1.6(@babel/core@7.28.5)(react@19.2.3):
     dependencies:
       client-only: 0.0.1
-      react: 19.2.0
+      react: 19.2.3
     optionalDependencies:
       '@babel/core': 7.28.5
 
@@ -9418,24 +9418,24 @@ snapshots:
     dependencies:
       punycode: 2.3.1
 
-  use-callback-ref@1.3.3(react@19.2.0)(types-react@19.0.0-rc.1):
+  use-callback-ref@1.3.3(react@19.2.3)(types-react@19.0.0-rc.1):
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
 
-  use-sidecar@1.1.3(react@19.2.0)(types-react@19.0.0-rc.1):
+  use-sidecar@1.1.3(react@19.2.3)(types-react@19.0.0-rc.1):
     dependencies:
       detect-node-es: 1.1.0
-      react: 19.2.0
+      react: 19.2.3
       tslib: 2.8.1
     optionalDependencies:
       '@types/react': types-react@19.0.0-rc.1
 
-  use-sync-external-store@1.6.0(react@19.2.0):
+  use-sync-external-store@1.6.0(react@19.2.3):
     dependencies:
-      react: 19.2.0
+      react: 19.2.3
 
   uuid@8.3.2: {}
 
@@ -9533,8 +9533,8 @@ snapshots:
 
   yocto-queue@1.2.2: {}
 
-  zod-validation-error@4.0.2(zod@4.1.13):
+  zod-validation-error@4.0.2(zod@4.2.1):
     dependencies:
-      zod: 4.1.13
+      zod: 4.2.1
 
-  zod@4.1.13: {}
+  zod@4.2.1: {}
