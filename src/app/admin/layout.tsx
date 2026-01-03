@@ -1,3 +1,5 @@
+"use cache"
+
 import { ReactNode } from "react"
 import { SingleComponentLayout } from "@/ui/layouts"
 
