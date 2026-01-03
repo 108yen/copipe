@@ -1,3 +1,5 @@
+"use cache"
+
 import { getHomePageCopipe } from "@/db/server/copipes"
 import { HomePageTemplate } from "@/ui/templates"
 

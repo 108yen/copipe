@@ -1,3 +1,5 @@
+"use cache"
+
 import { UIProvider } from "@yamada-ui/react"
 import { Metadata } from "next"
 import { ReactNode } from "react"

@@ -1,3 +1,5 @@
+"use cache"
+
 import { PropsWithChildren } from "react"
 import { fetchRecentCopipes } from "@/db/server/copipes"
 import { fetchTags } from "@/db/server/tags"
