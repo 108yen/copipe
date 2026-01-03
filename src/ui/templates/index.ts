@@ -1,5 +1,4 @@
 export * from "./admin"
-export * from "./archives"
 export * from "./home"
 export * from "./post-form"
 export * from "./search"
