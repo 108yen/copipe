@@ -17,8 +17,6 @@ export async function TagPageTemplate({
   params,
   searchParams,
 }: TagPageTemplateProps) {
-  "use cache: remote"
-
   const { tagId } = await params
   const { page } = await searchParams
 

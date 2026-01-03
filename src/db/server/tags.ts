@@ -4,9 +4,6 @@ import { Tag } from "@/models/tag"
 import { prisma } from "../db"
 
 export async function fetchTags() {
-  "use cache: remote"
-  cacheTag("tags")
-
   const tags = await prisma.tag.findMany()
 
   console.log("get tag list")
