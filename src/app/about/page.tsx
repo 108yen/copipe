@@ -12,7 +12,7 @@ import {
 } from "@yamada-ui/react"
 import Link from "next/link"
 
-export default function page() {
+export default async function page() {
   return (
     <Container>
       <Heading textAlign="center" textStyle="aboutPageHeading" variant="h3">

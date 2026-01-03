@@ -2,6 +2,6 @@
 
 import { CopipePostForm } from "@/ui/templates"
 
-export default function Page() {
+export default async function Page() {
   return <CopipePostForm />
 }

@@ -7,6 +7,6 @@ export const metadata = {
   title: "このサイトについて",
 }
 
-export default function layout({ children }: { children: ReactNode }) {
+export default async function layout({ children }: { children: ReactNode }) {
   return <SingleComponentLayout>{children}</SingleComponentLayout>
 }
