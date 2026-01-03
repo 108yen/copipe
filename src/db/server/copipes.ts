@@ -1,7 +1,7 @@
-import { unstable_cache } from "next/cache"
+import { cacheLife, unstable_cache } from "next/cache"
 import { notFound } from "next/navigation"
 import { prisma } from "../db"
-import { copipeWithTag, copipeWithTagComment } from "../query"
+import { copipeWithTag } from "../query"
 
 export async function getHomePageCopipe() {
   const [copipes, count] = await prisma.copipe.findManyAndCount({
@@ -68,7 +68,7 @@ export const fetchTagCopipes = unstable_cache(
   ["tag-copipes"],
 )
 
-export type FetchSearchCopipes = ReturnType<typeof fetchSearchCopipes>
+export type FetchCopipeReturn = ReturnType<typeof fetchCopipe>
 
 export async function fetchSearchCopipes(searchText: string, page: number) {
   const searchQuery =
@@ -93,29 +93,44 @@ export async function fetchSearchCopipes(searchText: string, page: number) {
   return result
 }
 
+export type FetchSearchCopipes = ReturnType<typeof fetchSearchCopipes>
+
+export async function fetchCopipe(id: number) {
+  "use cache: remote"
+  cacheLife("max")
+
+  const copipe = await prisma.copipe
+    .findUniqueOrThrow({
+      select: copipeWithTag,
+      where: { id: id },
+    })
+    .catch(() => {
+      notFound()
+    })
+  console.log(`get copipe in archives/${id}`)
+
+  return copipe
+}
+
 export type FetchTagCopipes = ReturnType<typeof fetchTagCopipes>
 
-export const fetchCopipe = unstable_cache(
-  async function (id: number) {
-    const copipe = await prisma.copipe
-      .findUniqueOrThrow({
-        select: copipeWithTagComment,
-        where: { id: id },
-      })
-      .catch(() => {
-        notFound()
-      })
-    console.log(`get copipe in archives/${id}`)
+export async function fetchCopipeComment(id: number) {
+  "use cache: remote"
+  cacheLife("default")
 
-    return copipe
-  },
-  ["copipe"],
-  { revalidate: 20 },
-)
+  const comments = await prisma.comments
+    .findMany({
+      where: { copipe_id: id },
+    })
+    .catch(() => notFound())
 
-export type FetchCopipeReturn = ReturnType<typeof fetchCopipe>
+  return comments
+}
 
 export async function getCopipeIds() {
+  "use cache: remote"
+  cacheLife("max")
+
   const ids = await prisma.copipe
     .findMany({
       select: {
