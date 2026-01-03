@@ -68,35 +68,32 @@ export const fetchTagCopipes = unstable_cache(
   ["tag-copipes"],
 )
 
-export type FetchTagCopipes = ReturnType<typeof fetchTagCopipes>
-
-export const fetchSearchCopipes = unstable_cache(
-  async function (searchText: string, page: number) {
-    const searchQuery =
-      searchText == ""
-        ? {}
-        : {
-            body: {
-              contains: searchText,
-            },
-          }
-
-    const result = await prisma.copipe.findManyAndCount({
-      orderBy: { id: "desc" },
-      select: copipeWithTag,
-      skip: (page - 1) * 10,
-      take: 10,
-      where: searchQuery,
-    })
-
-    console.log(`get copipes search:${searchText} page:${page}`)
-
-    return result
-  },
-  ["search-copipes"],
-)
-
 export type FetchSearchCopipes = ReturnType<typeof fetchSearchCopipes>
+
+export async function fetchSearchCopipes(searchText: string, page: number) {
+  const searchQuery =
+    searchText == ""
+      ? {}
+      : {
+          body: {
+            contains: searchText,
+          },
+        }
+
+  const result = await prisma.copipe.findManyAndCount({
+    orderBy: { id: "desc" },
+    select: copipeWithTag,
+    skip: (page - 1) * 10,
+    take: 10,
+    where: searchQuery,
+  })
+
+  console.log(`get copipes search:${searchText} page:${page}`)
+
+  return result
+}
+
+export type FetchTagCopipes = ReturnType<typeof fetchTagCopipes>
 
 export const fetchCopipe = unstable_cache(
   async function (id: number) {

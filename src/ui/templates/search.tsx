@@ -1,20 +1,28 @@
 import { Container, Text, VStack } from "@yamada-ui/react"
-import { FetchSearchCopipes } from "@/db/server/copipes"
+import { notFound } from "next/navigation"
+import { fetchSearchCopipes } from "@/db/server/copipes"
+import { searchPageScheme } from "@/schemes"
 import { CopipeCardItem } from "@/ui/components/data-display"
 import { SearchForm } from "@/ui/components/form"
 import { Pagination } from "@/ui/components/navigation"
 
 interface SearchPageTemplateProps {
-  data: Awaited<FetchSearchCopipes>
-  page: number
-  searchText: string
+  searchParams: Promise<Record<string, string | string[] | undefined>>
 }
 
-export function SearchPageTemplate({
-  data,
-  page,
-  searchText,
+export async function SearchPageTemplate({
+  searchParams,
 }: SearchPageTemplateProps) {
+  const computedSearchParams = await searchParams
+  const parseResult = searchPageScheme.safeParse(computedSearchParams)
+
+  if (!parseResult.success) {
+    notFound()
+  }
+
+  const { page, text } = parseResult.data
+
+  const data = await fetchSearchCopipes(text, page)
   const [copipes, count] = data
 
   return (
@@ -35,7 +43,7 @@ export function SearchPageTemplate({
 
       <Pagination
         page={page}
-        params={{ name: "text", param: searchText }}
+        params={{ name: "text", param: parseResult.data.text }}
         total={Math.ceil(count / 10)}
         url="/search"
       />

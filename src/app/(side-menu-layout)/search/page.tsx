@@ -1,8 +1,11 @@
+import { Container } from "@yamada-ui/react"
 import { NextPageProps } from "next"
-import { notFound } from "next/navigation"
 import { Metadata } from "next/types"
-import { fetchSearchCopipes } from "@/db/server/copipes"
-import { searchPageScheme } from "@/schemes"
+import { Suspense } from "react"
+import {
+  CopipeCardItemSkelton,
+  LoadingSearchForm,
+} from "@/ui/components/loading"
 import { SearchPageTemplate } from "@/ui/templates"
 
 export const metadata: Metadata = {
@@ -10,16 +13,23 @@ export const metadata: Metadata = {
 }
 
 export default async function page({ searchParams }: NextPageProps) {
-  const computedSearchParams = await searchParams
-  const parseResult = searchPageScheme.safeParse(computedSearchParams)
+  return (
+    <Suspense fallback={<Loading />}>
+      <SearchPageTemplate searchParams={searchParams} />
+    </Suspense>
+  )
+}
 
-  if (!parseResult.success) {
-    notFound()
-  }
+function Loading() {
+  return (
+    <>
+      <LoadingSearchForm />
 
-  const { page, text } = parseResult.data
-
-  const data = await fetchSearchCopipes(text, page)
-
-  return <SearchPageTemplate data={data} page={page} searchText={text} />
+      <Container>
+        {[...Array(10)].map((_, index) => (
+          <CopipeCardItemSkelton key={`skelton-${index}`} />
+        ))}
+      </Container>
+    </>
+  )
 }
