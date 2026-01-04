@@ -19,6 +19,10 @@ export async function getHomePageCopipe() {
 export type FetchCopipeReturn = ReturnType<typeof fetchCopipe>
 
 export async function fetchRecentCopipes() {
+  "use cache: remote"
+  cacheTag("recent-copipes")
+  cacheLife("weeks")
+
   const copipes = await prisma.copipe.findMany({
     orderBy: { id: "desc" },
     select: {
