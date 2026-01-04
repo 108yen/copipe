@@ -1,5 +1,11 @@
 # copipe
 
+## 1.8.0
+
+### Minor Changes
+
+- [#327](https://github.com/108yen/copipe/pull/327) [`33da1e8`](https://github.com/108yen/copipe/commit/33da1e8626d6aacd88eb945522a1f5ff7978fab4) Thanks [@108yen](https://github.com/108yen)! - Updated Next.js to v16.
+
 ## 1.7.6
 
 ### Patch Changes
