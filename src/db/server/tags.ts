@@ -1,9 +1,13 @@
-import { cacheTag } from "next/cache"
+import { cacheLife, cacheTag } from "next/cache"
 import { notFound } from "next/navigation"
 import { Tag } from "@/models/tag"
 import { prisma } from "../db"
 
 export async function fetchTags() {
+  "use cache: remote"
+  cacheTag("tags")
+  cacheLife("max")
+
   const tags = await prisma.tag.findMany()
 
   console.log("get tag list")
