@@ -1,7 +1,8 @@
-import { unstable_cache } from "next/cache"
+import { cacheLife } from "next/cache"
+import { cacheTag } from "next/dist/server/use-cache/cache-tag"
 import { notFound } from "next/navigation"
 import { prisma } from "../db"
-import { copipeWithTag, copipeWithTagComment } from "../query"
+import { copipeWithTag } from "../query"
 
 export async function getHomePageCopipe() {
   const [copipes, count] = await prisma.copipe.findManyAndCount({
@@ -15,110 +16,119 @@ export async function getHomePageCopipe() {
   return { copipes, count }
 }
 
-export type GetHomePageCopipeReturn = ReturnType<typeof getHomePageCopipe>
+export type FetchCopipeReturn = ReturnType<typeof fetchCopipe>
 
-export const fetchRecentCopipes = unstable_cache(
-  async function () {
-    const copipes = await prisma.copipe.findMany({
-      orderBy: { id: "desc" },
-      select: {
-        id: true,
-        title: true,
-      },
-      take: 100,
-    })
-    console.log("get recent copipes")
+export async function fetchRecentCopipes() {
+  const copipes = await prisma.copipe.findMany({
+    orderBy: { id: "desc" },
+    select: {
+      id: true,
+      title: true,
+    },
+    take: 100,
+  })
+  console.log("get recent copipes")
 
-    const result: { id: number; title: string }[] = copipes.map((value) => {
-      return {
-        id: value.id,
-        title: value.title!,
-      }
-    })
+  const result: { id: number; title: string }[] = copipes.map((value) => {
+    return {
+      id: value.id,
+      title: value.title!,
+    }
+  })
 
-    return result
-  },
-  ["recent-copipes"],
-)
+  return result
+}
 
 export type FetchRecentCopipesReturn = ReturnType<typeof fetchRecentCopipes>
 
-export const fetchTagCopipes = unstable_cache(
-  async function (tagId: number, page: number) {
-    const tagQuery = {
-      copipeToTag: {
-        some: {
-          tag_id: tagId,
-        },
+export async function fetchTagCopipes(tagId: number, page: number) {
+  "use cache: remote"
+  cacheTag("tag-copipes")
+
+  const tagQuery = {
+    copipeToTag: {
+      some: {
+        tag_id: tagId,
       },
-    }
+    },
+  }
 
-    const result = await prisma.copipe.findManyAndCount({
-      orderBy: { id: "desc" },
-      select: copipeWithTag,
-      skip: (page - 1) * 10,
-      take: 10,
-      where: tagQuery,
-    })
+  const result = await prisma.copipe.findManyAndCount({
+    orderBy: { id: "desc" },
+    select: copipeWithTag,
+    skip: (page - 1) * 10,
+    take: 10,
+    where: tagQuery,
+  })
 
-    console.log(`get copipes tagId:${tagId} page:${page}`)
+  console.log(`get copipes tagId:${tagId} page:${page}`)
 
-    return result
-  },
-  ["tag-copipes"],
-)
-
-export type FetchTagCopipes = ReturnType<typeof fetchTagCopipes>
-
-export const fetchSearchCopipes = unstable_cache(
-  async function (searchText: string, page: number) {
-    const searchQuery =
-      searchText == ""
-        ? {}
-        : {
-            body: {
-              contains: searchText,
-            },
-          }
-
-    const result = await prisma.copipe.findManyAndCount({
-      orderBy: { id: "desc" },
-      select: copipeWithTag,
-      skip: (page - 1) * 10,
-      take: 10,
-      where: searchQuery,
-    })
-
-    console.log(`get copipes search:${searchText} page:${page}`)
-
-    return result
-  },
-  ["search-copipes"],
-)
+  return result
+}
 
 export type FetchSearchCopipes = ReturnType<typeof fetchSearchCopipes>
 
-export const fetchCopipe = unstable_cache(
-  async function (id: number) {
-    const copipe = await prisma.copipe
-      .findUniqueOrThrow({
-        select: copipeWithTagComment,
-        where: { id: id },
-      })
-      .catch(() => {
-        notFound()
-      })
-    console.log(`get copipe in archives/${id}`)
+export async function fetchSearchCopipes(searchText: string, page: number) {
+  const searchQuery =
+    searchText == ""
+      ? {}
+      : {
+          body: {
+            contains: searchText,
+          },
+        }
 
-    return copipe
-  },
-  ["copipe"],
-  { revalidate: 20 },
-)
+  const result = await prisma.copipe.findManyAndCount({
+    orderBy: { id: "desc" },
+    select: copipeWithTag,
+    skip: (page - 1) * 10,
+    take: 10,
+    where: searchQuery,
+  })
 
-export type FetchCopipeReturn = ReturnType<typeof fetchCopipe>
+  console.log(`get copipes search:${searchText} page:${page}`)
+
+  return result
+}
+
+export type FetchTagCopipes = ReturnType<typeof fetchTagCopipes>
+
+export async function fetchCopipe(id: number) {
+  "use cache: remote"
+  cacheLife("max")
+
+  const copipe = await prisma.copipe
+    .findUniqueOrThrow({
+      select: copipeWithTag,
+      where: { id: id },
+    })
+    .catch(() => {
+      notFound()
+    })
+  console.log(`get copipe in archives/${id}`)
+
+  return copipe
+}
+
+export type GetHomePageCopipeReturn = ReturnType<typeof getHomePageCopipe>
+
+export async function fetchCopipeComment(id: number) {
+  "use cache: remote"
+  cacheLife("default")
+
+  const comments = await prisma.comments
+    .findMany({
+      where: { copipe_id: id },
+    })
+    .catch(() => notFound())
+
+  return comments
+}
 
 export async function getCopipeIds() {
+  "use cache: remote"
+  cacheLife("max")
+
   const ids = await prisma.copipe
     .findMany({
       select: {

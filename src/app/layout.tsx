@@ -1,3 +1,5 @@
+"use cache"
+
 import { UIProvider } from "@yamada-ui/react"
 import { Metadata } from "next"
 import { ReactNode } from "react"
@@ -32,7 +34,11 @@ export const metadata: Metadata = {
   },
 }
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: ReactNode
+}) {
   return (
     <html lang="ja" suppressHydrationWarning>
       <body suppressHydrationWarning>

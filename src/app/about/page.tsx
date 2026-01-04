@@ -1,3 +1,5 @@
+"use cache"
+
 import {
   Center,
   Container,
@@ -8,9 +10,9 @@ import {
   Separator,
   Text,
 } from "@yamada-ui/react"
-import Link from "next/link"
+import { Link } from "@/ui/components/navigation"
 
-export default function page() {
+export default async function page() {
   return (
     <Container>
       <Heading textAlign="center" textStyle="aboutPageHeading" variant="h3">
@@ -60,42 +62,26 @@ export default function page() {
       <DiscList>
         <ListItem>
           <Link
-            aria-label="google link"
-            href="https://policies.google.com/technologies/cookies?hl=ja"
-            style={{
-              textDecoration: `none`,
+            _hover={{
+              textDecorationLine: "underline",
             }}
+            aria-label="google opt out link"
+            href="https://policies.google.com/technologies/cookies?hl=ja"
             target="_blank"
           >
-            <Text
-              sx={{
-                "&:hover": {
-                  textDecorationLine: `underline`,
-                },
-              }}
-            >
-              GoogleによるCookieの利用方法
-            </Text>
+            GoogleによるCookieの利用方法
           </Link>
         </ListItem>
         <ListItem>
           <Link
+            _hover={{
+              textDecorationLine: "underline",
+            }}
             aria-label="google opt out link"
             href="https://support.google.com/analytics/answer/181881?hl=ja"
-            style={{
-              textDecoration: `none`,
-            }}
             target="_blank"
           >
-            <Text
-              sx={{
-                "&:hover": {
-                  textDecorationLine: `underline`,
-                },
-              }}
-            >
-              Google Analyticsのオプトアウト
-            </Text>
+            Google Analyticsのオプトアウト
           </Link>
         </ListItem>
       </DiscList>
@@ -109,14 +95,13 @@ export default function page() {
         >
           <Text as="span">developer:</Text>
 
-          <Text
+          <Link
             _hover={{ textDecorationLine: "underline" }}
-            as={Link}
             href="https://108yen.github.io/profile/"
             target="_blank"
           >
             108yen
-          </Text>
+          </Link>
         </HStack>
       </Center>
     </Container>

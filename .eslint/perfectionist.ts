@@ -13,7 +13,7 @@ export const perfectionistConfig: Linter.Config = {
     "perfectionist/sort-classes": "off",
     "perfectionist/sort-imports": [
       "error",
-      { newlinesBetween: "never", type: "natural" },
+      { newlinesBetween: "ignore", type: "natural" },
     ],
     "perfectionist/sort-modules": [
       "error",
