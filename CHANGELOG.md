@@ -1,5 +1,11 @@
 # copipe
 
+## 1.8.1
+
+### Patch Changes
+
+- [#329](https://github.com/108yen/copipe/pull/329) [`4d4dde4`](https://github.com/108yen/copipe/commit/4d4dde428b0fa41839d285f67b4a1c9625176a6f) Thanks [@108yen](https://github.com/108yen)! - Fixed layout component is not cached in dynamic routing.
+
 ## 1.8.0
 
 ### Minor Changes
