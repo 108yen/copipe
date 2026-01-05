@@ -1,6 +1,6 @@
 "use server"
 
-import { revalidatePath } from "next/cache"
+import { updateTag } from "next/cache"
 import { prisma } from "@/db/db"
 
 export async function postComment(copipe_id: number, body: string) {
@@ -18,6 +18,6 @@ export async function postComment(copipe_id: number, body: string) {
   } catch (error) {
     return { error: JSON.stringify(error) }
   } finally {
-    revalidatePath(`/archives/${copipe_id}`)
+    updateTag(`comments-${copipe_id}`)
   }
 }
