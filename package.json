@@ -2,7 +2,7 @@
   "name": "copipe",
   "version": "1.8.1",
   "private": true,
-  "packageManager": "pnpm@10.26.2",
+  "packageManager": "pnpm@10.27.0",
   "pnpm": {
     "onlyBuiltDependencies": [
       "@prisma/engines",
