@@ -26,8 +26,8 @@ function Loading() {
       <LoadingSearchForm />
 
       <Container>
-        {[...Array(10)].map((_, index) => (
-          <CopipeCardItemSkelton key={`skelton-${index}`} />
+        {[...Array(10).keys()].map((id) => (
+          <CopipeCardItemSkelton key={`skelton-${id}`} />
         ))}
       </Container>
     </>
