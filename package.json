@@ -11,7 +11,15 @@
       "sharp",
       "@prisma/client",
       "lefthook"
-    ]
+    ],
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint-plugin-import>eslint": "^10",
+        "eslint-plugin-jsx-a11y>eslint": "^10",
+        "eslint-plugin-react>eslint": "^10",
+        "eslint-plugin-react-hooks>eslint": "^10"
+      }
+    }
   },
   "scripts": {
     "prepare": "lefthook install",
@@ -63,13 +71,13 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "@typescript-eslint/utils": "^8.33.1",
-    "eslint": "^9.39.0",
+    "eslint": "^10.0.0",
     "eslint-config-next": "16.1.6",
     "eslint-config-prettier": "^10.0.0",
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-perfectionist": "^5.0.0",
-    "eslint-plugin-react": "^7.37.4",
+    "@eslint-react/eslint-plugin": "^2.0.0",
     "eslint-plugin-react-hooks": "^7.0.1",
     "eslint-plugin-storybook": "^10.0.0",
     "eslint-plugin-unused-imports": "^4.0.0",
