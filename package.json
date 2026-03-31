@@ -46,7 +46,6 @@
     "@types/react-dom": "npm:types-react-dom@19.0.0",
     "@yamada-ui/lucide": "^1.10.5",
     "@yamada-ui/react": "^1.7.4",
-    "axios": "^1.6.5",
     "dayjs": "^1.11.10",
     "jotai": "^2.6.1",
     "next": "16.1.6",

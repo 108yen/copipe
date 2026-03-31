@@ -26,7 +26,7 @@ post-merge:
     pnpm:
       run: pnpm install --frozen-lockfile
 
-post-checkout:
-  commands:
-    pnpm:
-      run: pnpm install --frozen-lockfile
+# post-checkout:
+#   commands:
+#     pnpm:
+#       run: pnpm install --frozen-lockfile
