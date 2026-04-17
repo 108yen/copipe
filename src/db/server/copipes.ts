@@ -119,12 +119,14 @@ export type GetHomePageCopipeReturn = ReturnType<typeof getHomePageCopipe>
 export async function fetchCopipeComment(id: number) {
   "use cache: remote"
   cacheLife("default")
+  cacheTag(`comments-${id}`)
 
   const comments = await prisma.comments
     .findMany({
       where: { copipe_id: id },
     })
     .catch(() => notFound())
+  console.log(`get comments in archives/${id}`)
 
   return comments
 }
