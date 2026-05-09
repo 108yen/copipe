@@ -1,4 +1,4 @@
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - "next"
-  - "@next/env"
+  - "@next/*"
