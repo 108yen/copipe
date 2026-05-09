@@ -1,4 +1,12 @@
+allowBuilds:
+  "@prisma/client": false
+  "@prisma/engines": false
+  esbuild: false
+  lefthook: true
+  prisma: true
+  sharp: false
+  unrs-resolver: false
 minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - "next"
-  - "@next/env"
+  - "@next/*"
