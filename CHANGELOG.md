@@ -1,5 +1,13 @@
 # copipe
 
+## 1.8.2
+
+### Patch Changes
+
+- [#332](https://github.com/108yen/copipe/pull/332) [`e6d2e99`](https://github.com/108yen/copipe/commit/e6d2e996d5a7843218a16d376065572b451b28cd) Thanks [@108yen](https://github.com/108yen)! - Updated archives comment cache management.
+
+- [#404](https://github.com/108yen/copipe/pull/404) [`ff20797`](https://github.com/108yen/copipe/commit/ff207970b1d4847242ec48950313253fc808fc19) Thanks [@108yen](https://github.com/108yen)! - Updated dependencies.
+
 ## 1.8.1
 
 ### Patch Changes
