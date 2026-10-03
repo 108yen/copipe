@@ -10,3 +10,5 @@ minimumReleaseAge: 10080
 minimumReleaseAgeExclude:
   - "next"
   - "@next/*"
+  # Renovate security update: next-auth@4.24.15
+  - next-auth@4.24.15
